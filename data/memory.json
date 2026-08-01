@@ -1,0 +1,32 @@
+{
+    "last_topic": "Fonksiyonlar",
+    "completed_topics": [
+        "Sayılar",
+        "Fonksiyonlar"
+    ],
+    "weak_topics": [
+        "Problemler",
+        "Fonksiyonlar"
+    ],
+    "study_history": [
+        {
+            "topic": "Fonksiyonlar",
+            "duration": 45
+        }
+    ],
+    "quiz_history": [
+        {
+            "topic": "Fonksiyonlar",
+            "score": 80
+        },
+        {
+            "topic": "Fonksiyonlar",
+            "score": 50.0
+        },
+        {
+            "topic": "Fonksiyonlar",
+            "score": 50.0
+        }
+    ],
+    "last_study_date": ""
+}

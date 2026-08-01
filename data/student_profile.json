@@ -1,11 +1,12 @@
 {
-  "name": "",
-  "grade": "",
-  "goal": "TYT AYT",
-  "target_rank": "",
-  "strengths": [],
-  "weaknesses": [],
-  "completed_topics": [],
-  "missing_topics": [],
-  "notes": ""
+    "name": "",
+    "grade": 9,
+    "goal": "TYT",
+    "level": "beginner",
+    "learning_style": "normal",
+    "current_subject": "",
+    "current_topic": "",
+    "weak_topics": [],
+    "strong_topics": [],
+    "completed_topics": []
 }
