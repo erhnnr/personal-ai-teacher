@@ -1,64 +1,163 @@
 """
-Module:
-EIE-012 Prompt Builder
+EIE-092 Decision-Aware Prompt Builder
 
 Purpose:
-Generate the complete prompt for the AI Teacher.
+Generate teacher prompt with student intelligence
+and deterministic learning decisions.
 """
+
 
 from student import load_student
 from memory import load_memory
+from study_log import load_logs
+
+from student_intelligence import (
+    create_student_insight
+)
+
+from learning_decision import (
+    decide_learning_action
+)
+
 
 
 def build_prompt(question, plan):
 
+
     student = load_student()
+
     memory = load_memory()
 
-    completed = ", ".join(memory["completed_topics"])
-    weak = ", ".join(memory["weak_topics"])
+    logs = load_logs()
+
+
+
+    insight = create_student_insight(
+        logs
+    )
+
+
+
+    decision = decide_learning_action(
+
+        question,
+
+        student,
+
+        insight
+
+    )
+
+
+
+    completed = ", ".join(
+        memory["completed_topics"]
+    )
+
+
+    weak = ", ".join(
+        memory["weak_topics"]
+    )
+
+
 
     if not completed:
+
         completed = "Henüz yok"
 
+
+
     if not weak:
+
         weak = "Yok"
 
-    prompt = f"""
-Sen deneyimli bir TYT ve AYT öğretmenisin.
 
-==================================
+
+
+
+    prompt = f"""
+
+Sen deneyimli TYT ve AYT öğretmenisin.
+
+Öğrenci YKS 2027 hazırlanıyor.
+
+
+
+==============================
 ÖĞRENCİ PROFİLİ
-==================================
+==============================
 
 Sınıf:
 {student.grade}
 
+Alan:
+{student.field}
+
 Hedef:
 {student.goal}
+
+Kariyer:
+{student.career_goal}
 
 Seviye:
 {student.level}
 
-Öğrenme Stili:
-{student.learning_style}
 
-==================================
+
+==============================
 ÖĞRENCİ HAFIZASI
-==================================
+==============================
 
-Son Konu:
+Son konu:
 {memory["last_topic"]}
 
-Tamamlanan Konular:
+Tamamlanan:
 {completed}
 
-Zayıf Konular:
+Zayıf:
 {weak}
 
-==================================
-BUGÜNKÜ DERS
-==================================
+
+
+==============================
+ÖĞRENCİ İSTİHBARATI
+==============================
+
+Güçlü:
+{insight.strong_topics}
+
+Zayıf:
+{insight.weak_topics}
+
+Toplam çalışma:
+{insight.total_study_time} dakika
+
+Risk:
+{insight.risk_level}
+
+
+
+==============================
+PEDAGOJİK KARAR
+==============================
+
+Aksiyon:
+{decision.action}
+
+Konu:
+{decision.topic}
+
+Sebep:
+{decision.reason}
+
+Öncelik:
+{decision.priority}
+
+
+
+==============================
+DERS PLANI
+==============================
 
 Ders:
 {plan.subject}
@@ -66,39 +165,31 @@ Ders:
 Sınıf:
 {plan.grade}
 
-Konu Listesi:
+Konular:
 {plan.topics}
 
-==================================
-PLAN DURUMU
-==================================
 
-İzin:
-{plan.allowed}
 
-Açıklama:
-{plan.reason}
-
-Sonraki Konu:
-{plan.next_topic}
-
-==================================
+==============================
 ÖĞRENCİ SORUSU
-==================================
+==============================
 
 {question}
 
-==================================
-ANLATIM KURALLARI
-==================================
 
-• Çok basit anlat.
-• Günlük hayattan örnek ver.
-• Adım adım ilerle.
-• Gereksiz teori verme.
-• Öğrencinin seviyesine uygun konuş.
-• En sonunda 3 kısa soru sor.
+
+==============================
+ÖĞRETİM KURALLARI
+==============================
+
+- Önce pedagojik kararı uygula.
+- Öğrenci seviyesine göre anlat.
+- Eksik temel varsa geri dön.
+- Basit örnekler kullan.
+- Adım adım ilerle.
+- Ders sonunda kısa sorular sor.
 
 """
+
 
     return prompt

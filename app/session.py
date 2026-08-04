@@ -19,6 +19,8 @@ from memory import (
     add_weak_topic
 )
 
+from conversation import ConversationContext
+
 
 
 class LearningSession:
@@ -36,9 +38,15 @@ class LearningSession:
 
         self.answer = None
 
+        self.context = ConversationContext()
+
+        self.status = "created"
+
 
 
     def start(self):
+
+        self.context.load()
 
         self.plan = create_plan(
             self.question
@@ -48,6 +56,15 @@ class LearningSession:
         self.quiz = generate_quiz(
             self.plan
         )
+
+
+        self.context.add_message(
+            "student",
+            self.question
+        )
+
+
+        self.status = "started"
 
 
         return self
@@ -64,6 +81,15 @@ class LearningSession:
         )
 
 
+        self.context.add_message(
+            "teacher",
+            self.answer
+        )
+
+
+        self.status = "teaching"
+
+
         return self.answer
 
 
@@ -78,6 +104,7 @@ class LearningSession:
 
 
         topic = self.quiz.topic
+
 
 
         update_topic_progress(
@@ -100,17 +127,22 @@ class LearningSession:
         })
 
 
+
         if self.result.score >= 80:
 
             add_completed_topic(
                 topic
             )
 
+
         else:
 
             add_weak_topic(
                 topic
             )
+
+
+        self.status = "completed"
 
 
         return self.result

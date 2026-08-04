@@ -1,12 +1,36 @@
 {
     "name": "",
-    "grade": 9,
-    "goal": "TYT",
-    "level": "beginner",
+    "grade": 12,
+    "exam": "YKS",
+    "target_year": 2027,
+    "goal": "YKS",
+    "field": "Sayısal",
+    "career_goal": [
+        "Tıp",
+        "Mühendislik"
+    ],
+    "level": "intermediate",
     "learning_style": "normal",
+    "math_level": 80,
+    "physics_level": 0,
+    "chemistry_level": 0,
+    "biology_level": 0,
+    "turkish_level": 75,
     "current_subject": "",
     "current_topic": "",
-    "weak_topics": [],
-    "strong_topics": [],
-    "completed_topics": []
+    "weak_topics": [
+        "Fonksiyonlar"
+    ],
+    "strong_topics": [
+        "Sayılar"
+    ],
+    "completed_topics": [],
+    "assessment_completed": true,
+    "daily_study_time": 0,
+    "science_level": 60,
+    "problem_solving_level": 55,
+    "exam_year": 2027,
+    "target_exam": "YKS",
+    "target_level": "high_achievement",
+    "preparation_phase": "foundation"
 }

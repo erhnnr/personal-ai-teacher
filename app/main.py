@@ -1,4 +1,4 @@
-from llm import ask_teacher
+from teacher import ask_teacher
 
 
 print("AI TYT Öğretmen hazır.")
