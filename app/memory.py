@@ -8,7 +8,12 @@ Manage student memory.
 import json
 from pathlib import Path
 
-MEMORY_FILE = Path(__file__).parent.parent / "data" / "memory.json"
+MEMORY_FILE = (
+    Path(__file__).parent.parent
+    / "data"
+    / "runtime"
+    / "memory.json"
+)
 
 DEFAULT_MEMORY = {
     "last_topic": "",

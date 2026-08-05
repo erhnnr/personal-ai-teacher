@@ -15,6 +15,7 @@ from datetime import datetime
 LOG_FILE = (
     Path(__file__).parent.parent
     / "data"
+    / "student"
     / "study_log.json"
 )
 

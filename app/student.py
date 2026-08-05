@@ -10,7 +10,12 @@ import json
 from pathlib import Path
 
 
-DATA_FILE = Path(__file__).parent.parent / "data" / "student_profile.json"
+DATA_FILE = (
+    Path(__file__).parent.parent
+    / "data"
+    / "student"
+    / "student_profile.json"
+)
 
 
 

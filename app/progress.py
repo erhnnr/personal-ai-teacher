@@ -10,7 +10,12 @@ import json
 from pathlib import Path
 
 
-PROGRESS_FILE = Path(__file__).parent.parent / "data" / "progress.json"
+PROGRESS_FILE = (
+    Path(__file__).parent.parent
+    / "data"
+    / "student"
+    / "progress.json"
+)
 
 
 
