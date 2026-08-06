@@ -1,0 +1,53 @@
+{
+  "id": "MAT12-LIMIT-001",
+  "subject": "Matematik",
+  "grade": 12,
+  "topic": "Limit",
+  "level": "basic",
+
+  "concept": "Limit kavramının temel mantığı",
+
+  "prerequisites": [
+    "Fonksiyonlar",
+    "Cebirsel işlemler"
+  ],
+
+  "explanation": {
+    "summary": "Limit, bir fonksiyonun belirli bir noktaya yaklaşırken davranışını inceler.",
+
+    "details": [
+      "Limitte temel fikir, x değerinin bir noktaya yaklaşırken fonksiyon değerinin hangi değere yaklaştığını bulmaktır.",
+      "Bir fonksiyon ilgili noktada tanımlı olmasa bile limiti olabilir.",
+      "Sağdan ve soldan yaklaşım değerleri limit analizinde önemlidir."
+    ]
+  },
+
+  "learning_objectives": [
+    "Limit kavramını anlamak",
+    "Yaklaşma mantığını kavramak",
+    "Basit limit problemlerini çözebilmek"
+  ],
+
+  "common_mistakes": [
+    {
+      "mistake": "Fonksiyon noktada tanımsızsa limit yoktur düşüncesi",
+      "correction": "Fonksiyon değeri ile limit değeri farklı olabilir."
+    },
+    {
+      "mistake": "Direkt yerine koymayı her zaman uygulamak",
+      "correction": "Önce belirsizlik kontrol edilmelidir."
+    }
+  ],
+
+  "examples": [
+    {
+      "title": "Basit limit yaklaşımı",
+      "difficulty": "basic",
+      "description": "Fonksiyon değerinin bir noktaya yaklaşımı incelenir."
+    }
+  ],
+
+  "related_questions": [
+    "MAT12-LIMIT-Q001"
+  ]
+}

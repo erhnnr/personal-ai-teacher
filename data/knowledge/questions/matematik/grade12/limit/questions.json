@@ -1,0 +1,30 @@
+[
+  {
+    "id": "MAT12-LIMIT-Q001",
+    "subject": "Matematik",
+    "grade": 12,
+    "topic": "Limit",
+    "difficulty": "basic",
+    "skill": "limit kavramını anlama",
+
+    "question": "Limit kavramı aşağıdakilerden hangisini inceler?",
+
+    "choices": [
+      "Fonksiyonun sadece tanımlı olduğu noktadaki değerini",
+      "Fonksiyonun bir noktaya yaklaşırken davranışını",
+      "Fonksiyonun türev değerini",
+      "Fonksiyonun maksimum değerini"
+    ],
+
+    "answer": "B",
+
+    "solution_id": "MAT12-LIMIT-S001",
+
+    "misconception_target": "LIMIT-M001",
+
+    "tags": [
+      "temel_kavram",
+      "TYT-AYT"
+    ]
+  }
+]

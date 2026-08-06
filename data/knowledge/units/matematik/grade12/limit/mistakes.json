@@ -1,0 +1,21 @@
+{
+  "topic": "Limit",
+
+  "mistakes": [
+
+    {
+      "id": "LIMIT-M001",
+      "error": "Fonksiyon tanımsızsa limit yoktur düşüncesi",
+      "explanation": "Limit değeri fonksiyonun noktadaki değerinden bağımsız olabilir.",
+      "teacher_action": "Noktanın çevresindeki yaklaşımı tekrar göster."
+    },
+
+    {
+      "id": "LIMIT-M002",
+      "error": "Her limitte direkt yerine koyma yapmak",
+      "explanation": "0/0 belirsizliği varsa işlem gerekir.",
+      "teacher_action": "Belirsizlik türlerini çalıştır."
+    }
+
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "topic": "Limit",
+
+  "examples": [
+
+    {
+      "id": "LIMIT-E001",
+      "level": "basic",
+      "type": "concept",
+
+      "question":
+      "Bir fonksiyonun x değeri bir sayıya yaklaşırken aldığı değer inceleniyorsa hangi kavram kullanılır?",
+
+      "answer":
+      "Limit kavramı kullanılır.",
+
+      "learning_point":
+      "Limit yaklaşma davranışını inceler."
+    }
+
+  ]
+}

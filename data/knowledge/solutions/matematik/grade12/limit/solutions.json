@@ -1,0 +1,19 @@
+[
+  {
+    "id": "MAT12-LIMIT-S001",
+
+    "question_id": "MAT12-LIMIT-Q001",
+
+    "strategy": "kavramsal analiz",
+
+    "steps": [
+      "Limit, fonksiyonun bir noktaya yaklaşırken gösterdiği davranışı inceler.",
+      "Fonksiyonun o noktadaki değeri ile limit değeri farklı olabilir.",
+      "Bu nedenle doğru cevap yaklaşma davranışını ifade eden seçenektir."
+    ],
+
+    "final_answer": "B",
+
+    "learning_note": "Limitin temel fikri yaklaşmadır."
+  }
+]
