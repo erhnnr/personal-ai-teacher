@@ -1,28 +1,28 @@
 {
-  "topic": "Limit",
+    "topic": "Limit",
 
-  "prerequisites": [
-    {
-      "topic": "Fonksiyonlar",
-      "reason": "Limit kavramı fonksiyonların davranışını anlamaya dayanır."
-    },
-    {
-      "topic": "Cebirsel İşlemler",
-      "reason": "Limit sorularında sadeleştirme ve dönüşüm işlemleri kullanılır."
-    }
-  ],
+    "prerequisites": [
+        {
+            "topic": "Fonksiyonlar",
+            "reason": "Limit kavramı fonksiyonların davranışını anlamaya dayanır."
+        },
+        {
+            "topic": "Cebirsel İşlemler",
+            "reason": "Limit sorularında sadeleştirme ve dönüşüm işlemleri kullanılır."
+        }
+    ],
 
-  "next_topics": [
-    {
-      "topic": "Türev",
-      "reason": "Türev limit kavramı üzerine kuruludur."
-    }
-  ],
+    "next_topics": [
+        {
+            "topic": "Türev",
+            "reason": "Türev limit kavramı üzerine kuruludur."
+        }
+    ],
 
-  "related_topics": [
-    {
-      "topic": "Süreklilik",
-      "relation": "yakın kavram"
-    }
-  ]
+    "related_topics": [
+        {
+            "topic": "Süreklilik",
+            "relation": "yakın kavram"
+        }
+    ]
 }

@@ -1,53 +1,63 @@
 {
-  "id": "MAT12-LIMIT-001",
-  "subject": "Matematik",
-  "grade": 12,
-  "topic": "Limit",
-  "level": "basic",
+    "id": "matematik.grade12.limit",
+   "subject": "Matematik",
+    "grade": "12",
+    "topic": "Limit",
+    "learning_objectives": [
+        "Limit kavramını sezgisel ve matematiksel olarak açıklayabilme",
+        "Bir fonksiyonun belirli bir noktadaki limitini hesaplayabilme",
+        "Sağdan ve soldan limit kavramlarını ayırt edebilme",
+        "Limit kurallarını kullanarak ifadeleri çözebilme",
+        "Süreklilik ile limit arasındaki ilişkiyi anlayabilme"
+    ],
 
-  "concept": "Limit kavramının temel mantığı",
+    "prerequisites": [
+        "Fonksiyon kavramı",
+        "Cebirsel işlemler",
+        "Denklemler ve eşitsizlikler",
+        "Grafik okuma"
+    ],
 
-  "prerequisites": [
-    "Fonksiyonlar",
-    "Cebirsel işlemler"
-  ],
+    "core_concepts": [
+        "Yaklaşma fikri",
+        "Limit kavramı",
+        "Sağdan limit",
+        "Soldan limit",
+        "Tek taraflı limit",
+        "Sonsuzda limit",
+        "Süreklilik ve limit ilişkisi"
+    ],
 
-  "explanation": {
-    "summary": "Limit, bir fonksiyonun belirli bir noktaya yaklaşırken davranışını inceler.",
+    "definitions": [
+        {
+            "term": "Limit",
+            "definition": "Bir fonksiyonun değişken belirli bir değere yaklaşırken fonksiyon değerinin yaklaştığı değerdir."
+        },
+        {
+            "term": "Sağdan Limit",
+            "definition": "Değişkenin bir noktaya sağ taraftan yaklaşması durumunda fonksiyonun ulaştığı değerdir."
+        },
+        {
+            "term": "Soldan Limit",
+            "definition": "Değişkenin bir noktaya sol taraftan yaklaşması durumunda fonksiyonun ulaştığı değerdir."
+        }
+    ],
 
-    "details": [
-      "Limitte temel fikir, x değerinin bir noktaya yaklaşırken fonksiyon değerinin hangi değere yaklaştığını bulmaktır.",
-      "Bir fonksiyon ilgili noktada tanımlı olmasa bile limiti olabilir.",
-      "Sağdan ve soldan yaklaşım değerleri limit analizinde önemlidir."
+    "rules": [
+        "Limit varsa sağdan ve soldan limit birbirine eşit olmalıdır.",
+        "Polinomlarda limit doğrudan yerine koyma ile bulunabilir.",
+        "Limit işlemlerinde temel işlem kuralları kullanılabilir."
+    ],
+
+    "common_confusions": [
+        "Fonksiyon değeri ile limit değerini aynı sanmak",
+        "Grafikte boşluk varsa limit yok sanmak",
+        "Sağdan ve soldan limitleri karıştırmak"
+    ],
+
+    "teaching_notes": [
+        "Limit önce sezgisel yaklaşma fikriyle anlatılmalıdır.",
+        "Grafik yorumlama mutlaka kullanılmalıdır.",
+        "Formüllerden önce kavramsal temel kurulmalıdır."
     ]
-  },
-
-  "learning_objectives": [
-    "Limit kavramını anlamak",
-    "Yaklaşma mantığını kavramak",
-    "Basit limit problemlerini çözebilmek"
-  ],
-
-  "common_mistakes": [
-    {
-      "mistake": "Fonksiyon noktada tanımsızsa limit yoktur düşüncesi",
-      "correction": "Fonksiyon değeri ile limit değeri farklı olabilir."
-    },
-    {
-      "mistake": "Direkt yerine koymayı her zaman uygulamak",
-      "correction": "Önce belirsizlik kontrol edilmelidir."
-    }
-  ],
-
-  "examples": [
-    {
-      "title": "Basit limit yaklaşımı",
-      "difficulty": "basic",
-      "description": "Fonksiyon değerinin bir noktaya yaklaşımı incelenir."
-    }
-  ],
-
-  "related_questions": [
-    "MAT12-LIMIT-Q001"
-  ]
 }

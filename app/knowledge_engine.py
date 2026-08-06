@@ -17,7 +17,6 @@ KNOWLEDGE_DIR = (
 )
 
 
-
 def load_json(path):
 
     with open(
@@ -34,12 +33,9 @@ def find_knowledge_units():
 
     units = []
 
-
     if not KNOWLEDGE_DIR.exists():
 
         return units
-
-
 
     for file in KNOWLEDGE_DIR.rglob("concept.json"):
 
@@ -53,8 +49,13 @@ def find_knowledge_units():
 
             continue
 
-
     return units
+
+
+
+def normalize(value):
+
+    return str(value).strip().lower()
 
 
 
@@ -66,7 +67,6 @@ def get_knowledge(
 
     units = find_knowledge_units()
 
-
     return [
 
         unit
@@ -74,11 +74,11 @@ def get_knowledge(
         for unit in units
 
         if (
-            unit.get("subject") == subject
+            normalize(unit.get("subject")) == normalize(subject)
             and
-            unit.get("grade") == grade
+            normalize(unit.get("grade")) == normalize(grade)
             and
-            unit.get("topic") == topic
+            normalize(unit.get("topic")) == normalize(topic)
         )
 
     ]
@@ -93,13 +93,11 @@ def get_topic_path(topic):
 
         data = load_json(file)
 
-        if data.get("topic") == topic:
+        if normalize(data.get("topic")) == normalize(topic):
 
             return file.parent
 
-
     return None
-
 
 
 
@@ -110,11 +108,9 @@ def get_related_file(
 
     folder = get_topic_path(topic)
 
-
     if not folder:
 
         return None
-
 
 
     file = folder / filename
@@ -123,7 +119,6 @@ def get_related_file(
     if not file.exists():
 
         return None
-
 
 
     return load_json(file)
@@ -173,7 +168,6 @@ def get_learning_package(
     if not concept:
 
         return None
-
 
 
     return {
