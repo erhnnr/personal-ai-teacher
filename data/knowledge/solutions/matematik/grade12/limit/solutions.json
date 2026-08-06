@@ -1,19 +1,132 @@
 [
   {
     "id": "MAT12-LIMIT-S001",
-
     "question_id": "MAT12-LIMIT-Q001",
-
     "strategy": "kavramsal analiz",
-
     "steps": [
-      "Limit, fonksiyonun bir noktaya yaklaşırken gösterdiği davranışı inceler.",
+      "Limit, fonksiyonun belirli bir noktaya yaklaşırken nasıl davrandığını inceler.",
       "Fonksiyonun o noktadaki değeri ile limit değeri farklı olabilir.",
-      "Bu nedenle doğru cevap yaklaşma davranışını ifade eden seçenektir."
+      "Doğru seçenek yaklaşma davranışını ifade eder."
     ],
-
     "final_answer": "B",
-
-    "learning_note": "Limitin temel fikri yaklaşmadır."
+    "common_error": "Fonksiyon değerini limit değeri ile karıştırmak.",
+    "teacher_note": "Önce yaklaşma fikri anlatılmalıdır."
+  },
+  {
+    "id": "MAT12-LIMIT-S002",
+    "question_id": "MAT12-LIMIT-Q002",
+    "strategy": "limit ve fonksiyon değeri ayrımı",
+    "steps": [
+      "Limit, x değeri 2'ye yaklaşırken incelenir.",
+      "Fonksiyonun gerçek değeri 5 olsa bile yaklaşma değeri 7 olabilir.",
+      "Bu nedenle limit değeri 7'dir."
+    ],
+    "final_answer": "C",
+    "common_error": "f(2) ile limit değerinin her zaman aynı olduğunu düşünmek.",
+    "teacher_note": "Limit ve fonksiyon değeri farkı vurgulanmalı."
+  },
+  {
+    "id": "MAT12-LIMIT-S003",
+    "question_id": "MAT12-LIMIT-Q003",
+    "strategy": "doğrudan yerine koyma",
+    "steps": [
+      "Polinom ifadelerde limit doğrudan yerine koyma ile bulunabilir.",
+      "x yerine 2 yazılır.",
+      "2+3 işlemi yapılır."
+    ],
+    "final_answer": "C",
+    "common_error": "Her limit sorusunda karmaşık işlem gerektiğini düşünmek.",
+    "teacher_note": "Basit limitlerde temel işlem yeterlidir."
+  },
+  {
+    "id": "MAT12-LIMIT-S004",
+    "question_id": "MAT12-LIMIT-Q004",
+    "strategy": "tek taraflı limit analizi",
+    "steps": [
+      "Sağdan ve soldan limit değerleri karşılaştırılır.",
+      "İki değer eşitse limit vardır.",
+      "Sonuç ortak değer olan 4'tür."
+    ],
+    "final_answer": "B",
+    "common_error": "Tek taraflı limitleri ayrı ayrı değerlendirip sonucu yanlış yorumlamak.",
+    "teacher_note": "Sağ limit = sol limit koşulu öğretilmeli."
+  },
+  {
+    "id": "MAT12-LIMIT-S005",
+    "question_id": "MAT12-LIMIT-Q005",
+    "strategy": "belirsizlik çözümü",
+    "steps": [
+      "0/0 ifadesi belirsizlik belirtir.",
+      "İfade sadeleştirme veya dönüşüm işlemleriyle düzenlenir.",
+      "Sonrasında limit tekrar hesaplanır."
+    ],
+    "final_answer": "B",
+    "common_error": "0/0 görünce limit yok sanmak.",
+    "teacher_note": "Belirsizlik ile limit yokluğunu ayır."
+  },
+  {
+    "id": "MAT12-LIMIT-S006",
+    "question_id": "MAT12-LIMIT-Q006",
+    "strategy": "polinom limit yöntemi",
+    "steps": [
+      "Polinom fonksiyonlar süreklidir.",
+      "Limit hesabında doğrudan yerine koyma kullanılabilir.",
+      "Bu nedenle özel dönüşüm gerekmez."
+    ],
+    "final_answer": "C",
+    "common_error": "Her limit sorusunu zor işlem olarak görmek.",
+    "teacher_note": "Limit kurallarının temelini öğret."
+  },
+  {
+    "id": "MAT12-LIMIT-S007",
+    "question_id": "MAT12-LIMIT-Q007",
+    "strategy": "grafik yorumlama",
+    "steps": [
+      "Açık daire fonksiyon değerinin farklı olabileceğini gösterir.",
+      "Limit çevredeki yaklaşma davranışına bakar.",
+      "Fonksiyon değeri ve limit farklı olabilir."
+    ],
+    "final_answer": "B",
+    "common_error": "Açık daire gördüğünde limit yok sanmak.",
+    "teacher_note": "Grafik okuma becerisi geliştirilmelidir."
+  },
+  {
+    "id": "MAT12-LIMIT-S008",
+    "question_id": "MAT12-LIMIT-Q008",
+    "strategy": "rasyonel ifade sadeleştirme",
+    "steps": [
+      "0/0 belirsizliği tespit edilir.",
+      "Pay ve payda ortak çarpanlara ayrılır.",
+      "Sadeleştirme sonrası limit hesaplanır."
+    ],
+    "final_answer": "A",
+    "common_error": "Belirsizlikte işlemi bırakmak.",
+    "teacher_note": "Cebirsel dönüşüm pratiği yapılmalı."
+  },
+  {
+    "id": "MAT12-LIMIT-S009",
+    "question_id": "MAT12-LIMIT-Q009",
+    "strategy": "süreklilik koşulu",
+    "steps": [
+      "Süreklilik için limitin var olması gerekir.",
+      "Limit değeri fonksiyon değerine eşit olmalıdır.",
+      "Bu koşul sağlanırsa fonksiyon süreklidir."
+    ],
+    "final_answer": "A",
+    "common_error": "Sürekliliği sadece grafiğin şekli olarak düşünmek.",
+    "teacher_note": "Limit-süreklilik bağlantısı kurulmalı."
+  },
+  {
+    "id": "MAT12-LIMIT-S010",
+    "question_id": "MAT12-LIMIT-Q010",
+    "strategy": "tek taraflı limit karşılaştırması",
+    "steps": [
+      "Sağdan ve soldan limit değerleri karşılaştırılır.",
+      "Değerler farklıysa ortak yaklaşma değeri yoktur.",
+      "Bu durumda limit yoktur."
+    ],
+    "final_answer": "B",
+    "common_error": "Tek taraflı limitlerden birini yeterli görmek.",
+    "teacher_note": "İki taraflı limit mantığı pekiştirilmeli."
   }
 ]

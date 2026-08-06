@@ -4,27 +4,244 @@
     "subject": "Matematik",
     "grade": 12,
     "topic": "Limit",
-    "difficulty": "basic",
-    "skill": "limit kavramını anlama",
-
+    "difficulty": "easy",
+    "concepts": [
+      "limit_tanimi",
+      "yaklasma_fikri"
+    ],
     "question": "Limit kavramı aşağıdakilerden hangisini inceler?",
-
     "choices": [
       "Fonksiyonun sadece tanımlı olduğu noktadaki değerini",
       "Fonksiyonun bir noktaya yaklaşırken davranışını",
       "Fonksiyonun türev değerini",
       "Fonksiyonun maksimum değerini"
     ],
-
     "answer": "B",
-
     "solution_id": "MAT12-LIMIT-S001",
-
     "misconception_target": "LIMIT-M001",
-
     "tags": [
       "temel_kavram",
-      "TYT-AYT"
+      "TYT_AYT"
+    ]
+  },
+  {
+    "id": "MAT12-LIMIT-Q002",
+    "subject": "Matematik",
+    "grade": 12,
+    "topic": "Limit",
+    "difficulty": "easy",
+    "concepts": [
+      "fonksiyon_degeri",
+      "limit_degeri"
+    ],
+    "question": "Bir fonksiyonun x=2 noktasındaki değeri 5, fakat x değeri 2'ye yaklaşırken fonksiyon 7'ye yaklaşıyorsa limit değeri kaçtır?",
+    "choices": [
+      "2",
+      "5",
+      "7",
+      "0"
+    ],
+    "answer": "C",
+    "solution_id": "MAT12-LIMIT-S002",
+    "misconception_target": "LIMIT-M001",
+    "tags": [
+      "kavramsal",
+      "AYT"
+    ]
+  },
+  {
+    "id": "MAT12-LIMIT-Q003",
+    "subject": "Matematik",
+    "grade": 12,
+    "topic": "Limit",
+    "difficulty": "easy",
+    "concepts": [
+      "dogrudan_yerine_koyma"
+    ],
+    "question": "lim(x→2)(x+3) işleminin sonucu kaçtır?",
+    "choices": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "answer": "C",
+    "solution_id": "MAT12-LIMIT-S003",
+    "misconception_target": "LIMIT-M002",
+    "tags": [
+      "hesaplama",
+      "TYT_AYT"
+    ]
+  },
+  {
+    "id": "MAT12-LIMIT-Q004",
+    "subject": "Matematik",
+    "grade": 12,
+    "topic": "Limit",
+    "difficulty": "medium",
+    "concepts": [
+      "sagdan_limit",
+      "soldan_limit"
+    ],
+    "question": "Bir noktada sağdan limit 4, soldan limit 4 ise limit hakkında ne söylenebilir?",
+    "choices": [
+      "Limit yoktur",
+      "Limit vardır ve 4'tür",
+      "Fonksiyon süreksizdir",
+      "Türev kesinlikle yoktur"
+    ],
+    "answer": "B",
+    "solution_id": "MAT12-LIMIT-S004",
+    "misconception_target": "LIMIT-M003",
+    "tags": [
+      "tek_tarafli_limit",
+      "AYT"
+    ]
+  },
+  {
+    "id": "MAT12-LIMIT-Q005",
+    "subject": "Matematik",
+    "grade": 12,
+    "topic": "Limit",
+    "difficulty": "medium",
+    "concepts": [
+      "belirsizlik",
+      "0_belirsizligi"
+    ],
+    "question": "Bir limit işleminde 0/0 belirsizliği oluştuğunda genellikle hangi işlem yapılır?",
+    "choices": [
+      "Fonksiyon tamamen silinir",
+      "Sadeleştirme veya dönüşüm yapılır",
+      "Limit kesinlikle yoktur",
+      "Türev alınır"
+    ],
+    "answer": "B",
+    "solution_id": "MAT12-LIMIT-S005",
+    "misconception_target": "LIMIT-M002",
+    "tags": [
+      "belirsizlik",
+      "AYT"
+    ]
+  },
+  {
+    "id": "MAT12-LIMIT-Q006",
+    "subject": "Matematik",
+    "grade": 12,
+    "topic": "Limit",
+    "difficulty": "medium",
+    "concepts": [
+      "polinom_limit"
+    ],
+    "question": "Polinom fonksiyonlarda limit genellikle nasıl hesaplanır?",
+    "choices": [
+      "Grafik çizerek",
+      "Türev alarak",
+      "Doğrudan yerine koyarak",
+      "İntegral alarak"
+    ],
+    "answer": "C",
+    "solution_id": "MAT12-LIMIT-S006",
+    "misconception_target": "LIMIT-M002",
+    "tags": [
+      "polinom",
+      "AYT"
+    ]
+  },
+  {
+    "id": "MAT12-LIMIT-Q007",
+    "subject": "Matematik",
+    "grade": 12,
+    "topic": "Limit",
+    "difficulty": "medium",
+    "concepts": [
+      "grafik_yorumlama"
+    ],
+    "question": "Grafikte bir noktada açık daire bulunması her zaman ne anlamına gelir?",
+    "choices": [
+      "Limit kesinlikle yoktur",
+      "Fonksiyon değeri ile limit farklı olabilir",
+      "Fonksiyon sabittir",
+      "Türev vardır"
+    ],
+    "answer": "B",
+    "solution_id": "MAT12-LIMIT-S007",
+    "misconception_target": "LIMIT-M001",
+    "tags": [
+      "grafik",
+      "yorum"
+    ]
+  },
+  {
+    "id": "MAT12-LIMIT-Q008",
+    "subject": "Matematik",
+    "grade": 12,
+    "topic": "Limit",
+    "difficulty": "hard",
+    "concepts": [
+      "rasyonel_limit",
+      "sadelestirme"
+    ],
+    "question": "0/0 belirsizliği veren rasyonel limit sorularında ilk amaç nedir?",
+    "choices": [
+      "Pay ve paydayı sadeleştirmek",
+      "Sonucu tahmin etmek",
+      "Türev almak",
+      "Grafiği kaldırmak"
+    ],
+    "answer": "A",
+    "solution_id": "MAT12-LIMIT-S008",
+    "misconception_target": "LIMIT-M002",
+    "tags": [
+      "ileri_limit"
+    ]
+  },
+  {
+    "id": "MAT12-LIMIT-Q009",
+    "subject": "Matematik",
+    "grade": 12,
+    "topic": "Limit",
+    "difficulty": "hard",
+    "concepts": [
+      "sureklilik",
+      "limit_iliskisi"
+    ],
+    "question": "Bir fonksiyonun bir noktada sürekli olması için hangi koşul gereklidir?",
+    "choices": [
+      "Limitin fonksiyon değerine eşit olması",
+      "Türevin sıfır olması",
+      "Fonksiyonun maksimum olması",
+      "Grafiğin doğru olması"
+    ],
+    "answer": "A",
+    "solution_id": "MAT12-LIMIT-S009",
+    "misconception_target": "LIMIT-M001",
+    "tags": [
+      "sureklilik",
+      "AYT"
+    ]
+  },
+  {
+    "id": "MAT12-LIMIT-Q010",
+    "subject": "Matematik",
+    "grade": 12,
+    "topic": "Limit",
+    "difficulty": "hard",
+    "concepts": [
+      "limit_analizi"
+    ],
+    "question": "Sağdan ve soldan limit değerleri farklıysa hangi sonuç çıkarılır?",
+    "choices": [
+      "Limit vardır",
+      "Limit yoktur",
+      "Fonksiyon polinomdur",
+      "Türev vardır"
+    ],
+    "answer": "B",
+    "solution_id": "MAT12-LIMIT-S010",
+    "misconception_target": "LIMIT-M003",
+    "tags": [
+      "tek_tarafli_limit",
+      "AYT"
     ]
   }
 ]

@@ -78,43 +78,65 @@ def get_questions(
 
     questions = get_all_questions()
 
-
     result = []
+
+
+    difficulty_map = {
+        "basic": [
+            "basic",
+            "easy"
+        ],
+        "easy": [
+            "basic",
+            "easy"
+        ],
+        "medium": [
+            "medium",
+            "intermediate"
+        ],
+        "hard": [
+            "hard",
+            "advanced"
+        ]
+    }
+
+
+    allowed_difficulties = None
+
+
+    if difficulty:
+
+        allowed_difficulties = difficulty_map.get(
+            difficulty,
+            [difficulty]
+        )
 
 
     for question in questions:
 
 
         if question.get("subject") != subject:
-
             continue
 
 
         if question.get("grade") != grade:
-
             continue
 
 
         if question.get("topic") != topic:
-
             continue
 
 
-        if (
-            difficulty
-            and
-            question.get("difficulty") != difficulty
-        ):
+        if allowed_difficulties:
 
-            continue
+            if question.get("difficulty") not in allowed_difficulties:
+                continue
 
 
         result.append(question)
 
 
-
     return result
-
 
 
 def get_question_by_id(

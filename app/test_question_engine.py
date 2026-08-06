@@ -5,7 +5,6 @@ from question_engine import (
 )
 
 
-
 def test_load_questions():
 
     questions = get_all_questions()
@@ -22,7 +21,7 @@ def test_get_limit_questions():
         "Limit"
     )
 
-    assert len(result) == 1
+    assert len(result) > 0
 
     assert result[0]["topic"] == "Limit"
 
@@ -37,7 +36,7 @@ def test_filter_difficulty():
         "basic"
     )
 
-    assert len(result) == 1
+    assert len(result) >= 1
 
 
 
