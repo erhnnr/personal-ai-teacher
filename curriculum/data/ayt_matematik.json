@@ -1,0 +1,136 @@
+﻿[
+  {
+    "subject": "Matematik",
+    "exam": "AYT",
+    "topic": "Fonksiyonlar",
+    "priority": "high",
+    "dependencies": [],
+    "next_topics": [
+      "Polinomlar"
+    ],
+    "estimated_hours": 12,
+    "difficulty": "medium",
+    "question_weight": "high"
+  },
+  {
+    "subject": "Matematik",
+    "exam": "AYT",
+    "topic": "Polinomlar",
+    "priority": "high",
+    "dependencies": [
+      "Fonksiyonlar"
+    ],
+    "next_topics": [
+      "İkinci Derece Denklemler"
+    ],
+    "estimated_hours": 10,
+    "difficulty": "medium",
+    "question_weight": "medium"
+  },
+  {
+    "subject": "Matematik",
+    "exam": "AYT",
+    "topic": "İkinci Derece Denklemler",
+    "priority": "high",
+    "dependencies": [
+      "Polinomlar"
+    ],
+    "next_topics": [
+      "Trigonometri"
+    ],
+    "estimated_hours": 10,
+    "difficulty": "medium",
+    "question_weight": "medium"
+  },
+  {
+    "subject": "Matematik",
+    "exam": "AYT",
+    "topic": "Trigonometri",
+    "priority": "high",
+    "dependencies": [
+      "Fonksiyonlar"
+    ],
+    "next_topics": [
+      "Logaritma"
+    ],
+    "estimated_hours": 18,
+    "difficulty": "hard",
+    "question_weight": "high"
+  },
+  {
+    "subject": "Matematik",
+    "exam": "AYT",
+    "topic": "Logaritma",
+    "priority": "high",
+    "dependencies": [
+      "Fonksiyonlar",
+      "Üslü Sayılar"
+    ],
+    "next_topics": [
+      "Diziler"
+    ],
+    "estimated_hours": 12,
+    "difficulty": "medium",
+    "question_weight": "high"
+  },
+  {
+    "subject": "Matematik",
+    "exam": "AYT",
+    "topic": "Diziler",
+    "priority": "medium",
+    "dependencies": [
+      "Fonksiyonlar",
+      "Logaritma"
+    ],
+    "next_topics": [
+      "Limit"
+    ],
+    "estimated_hours": 8,
+    "difficulty": "medium",
+    "question_weight": "medium"
+  },
+  {
+    "subject": "Matematik",
+    "exam": "AYT",
+    "topic": "Limit",
+    "priority": "critical",
+    "dependencies": [
+      "Fonksiyonlar",
+      "Polinomlar"
+    ],
+    "next_topics": [
+      "Türev"
+    ],
+    "estimated_hours": 12,
+    "difficulty": "hard",
+    "question_weight": "very_high"
+  },
+  {
+    "subject": "Matematik",
+    "exam": "AYT",
+    "topic": "Türev",
+    "priority": "critical",
+    "dependencies": [
+      "Limit"
+    ],
+    "next_topics": [
+      "İntegral"
+    ],
+    "estimated_hours": 18,
+    "difficulty": "hard",
+    "question_weight": "very_high"
+  },
+  {
+    "subject": "Matematik",
+    "exam": "AYT",
+    "topic": "İntegral",
+    "priority": "critical",
+    "dependencies": [
+      "Türev"
+    ],
+    "next_topics": [],
+    "estimated_hours": 20,
+    "difficulty": "hard",
+    "question_weight": "very_high"
+  }
+]

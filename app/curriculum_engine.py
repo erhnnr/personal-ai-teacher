@@ -5,32 +5,25 @@ Purpose:
 Manage TYT and AYT curriculum structure.
 """
 
+import json
+from pathlib import Path
+
 
 YKS_CURRICULUM = {
-
 
     "TYT": {
 
         "Matematik": [
 
             "Sayılar",
-
             "Bölme ve Bölünebilme",
-
             "EBOB-EKOK",
-
             "Rasyonel Sayılar",
-
             "Üslü Sayılar",
-
             "Köklü Sayılar",
-
             "Denklemler",
-
             "Eşitsizlikler",
-
             "Fonksiyonlar",
-
             "Problemler"
 
         ],
@@ -39,11 +32,8 @@ YKS_CURRICULUM = {
         "Türkçe": [
 
             "Sözcükte Anlam",
-
             "Cümlede Anlam",
-
             "Paragraf",
-
             "Dil Bilgisi"
 
         ],
@@ -52,9 +42,7 @@ YKS_CURRICULUM = {
         "Fizik": [
 
             "Fizik Bilimine Giriş",
-
             "Madde ve Özellikleri",
-
             "Hareket"
 
         ],
@@ -63,9 +51,7 @@ YKS_CURRICULUM = {
         "Kimya": [
 
             "Kimya Bilimi",
-
             "Atom ve Periyodik Sistem",
-
             "Kimyasal Türler"
 
         ],
@@ -74,9 +60,7 @@ YKS_CURRICULUM = {
         "Biyoloji": [
 
             "Canlıların Ortak Özellikleri",
-
             "Hücre",
-
             "Kalıtım"
 
         ]
@@ -84,34 +68,21 @@ YKS_CURRICULUM = {
     },
 
 
-
     "AYT": {
-
 
         "Matematik": [
 
             "Fonksiyonlar",
-
             "Polinomlar",
-
             "İkinci Derece Denklemler",
-
             "Permütasyon",
-
             "Kombinasyon",
-
             "Olasılık",
-
             "Trigonometri",
-
             "Logaritma",
-
             "Diziler",
-
             "Limit",
-
             "Türev",
-
             "İntegral"
 
         ],
@@ -120,11 +91,8 @@ YKS_CURRICULUM = {
         "Fizik": [
 
             "Elektrik",
-
             "Manyetizma",
-
             "Dalgalar",
-
             "Modern Fizik"
 
         ],
@@ -133,9 +101,7 @@ YKS_CURRICULUM = {
         "Kimya": [
 
             "Gazlar",
-
             "Kimyasal Denge",
-
             "Organik Kimya"
 
         ],
@@ -144,9 +110,7 @@ YKS_CURRICULUM = {
         "Biyoloji": [
 
             "Sistemler",
-
             "Genetik",
-
             "Ekoloji"
 
         ]
@@ -157,6 +121,9 @@ YKS_CURRICULUM = {
 
 
 
+# =================================================
+# Eski Curriculum API
+# =================================================
 
 
 def get_subject_topics(subject, grade):
@@ -165,7 +132,7 @@ def get_subject_topics(subject, grade):
     Eski API korunuyor.
 
     Örnek:
-    get_subject_topics("Matematik",9)
+    get_subject_topics("Matematik",12)
     """
 
     grade = int(grade)
@@ -188,8 +155,6 @@ def get_subject_topics(subject, grade):
 
 
 
-
-
 def is_topic_available(
     subject,
     grade,
@@ -200,8 +165,6 @@ def is_topic_available(
         subject,
         grade
     )
-
-
 
 
 
@@ -233,8 +196,6 @@ def get_next_topic(
 
 
 
-
-
 def get_previous_topics(
     subject,
     grade,
@@ -258,3 +219,85 @@ def get_previous_topics(
 
 
     return []
+
+
+
+# =================================================
+# EID-010 Curriculum Intelligence Layer
+# =================================================
+
+
+CURRICULUM_DATA_DIR = (
+
+    Path(__file__).parent.parent
+    / "curriculum"
+    / "data"
+
+)
+
+
+
+def load_curriculum_data():
+
+    data = []
+
+
+    if not CURRICULUM_DATA_DIR.exists():
+
+        return data
+
+
+    for file in CURRICULUM_DATA_DIR.glob(
+        "*.json"
+    ):
+
+        try:
+
+            with open(
+                file,
+                "r",
+                encoding="utf-8-sig"
+            ) as f:
+
+                items = json.load(f)
+
+                data.extend(items)
+
+
+        except Exception as e:
+
+            print(
+                "CURRICULUM LOAD ERROR:",
+                e
+            )
+
+            continue
+
+
+    return data
+
+def get_topic_info(
+    exam,
+    subject,
+    topic
+):
+
+    curriculum = load_curriculum_data()
+
+
+    for item in curriculum:
+
+        if (
+
+            item.get("exam") == exam
+
+            and item.get("subject") == subject
+
+            and item.get("topic") == topic
+
+        ):
+
+            return item
+
+
+    return None
