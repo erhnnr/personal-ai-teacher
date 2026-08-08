@@ -1,0 +1,357 @@
+[
+  {
+    "subject": "Biyoloji",
+    "exam": "AYT",
+    "topic": "Sinir Sistemi",
+    "subtopics": [
+      "Nöron",
+      "İmpuls oluşumu ve iletimi",
+      "Merkezi sinir sistemi",
+      "Çevresel sinir sistemi",
+      "Beyin",
+      "Omurilik",
+      "Refleks",
+      "Otonom sinir sistemi"
+    ],
+    "priority": "critical",
+    "dependencies": ["TYT Hücre"],
+    "next_topics": ["Endokrin Sistem"],
+    "estimated_hours": 10,
+    "difficulty": "hard",
+    "question_weight": "very_high"
+  },
+  {
+    "subject": "Biyoloji",
+    "exam": "AYT",
+    "topic": "Endokrin Sistem",
+    "subtopics": [
+      "Hormon",
+      "Hipofiz bezi",
+      "Tiroit bezi",
+      "Paratiroit bezi",
+      "Böbreküstü bezleri",
+      "Pankreas",
+      "Eşeysel bezler",
+      "Hormonların geri bildirim mekanizması"
+    ],
+    "priority": "critical",
+    "dependencies": ["Sinir Sistemi"],
+    "next_topics": ["Duyu Organları"],
+    "estimated_hours": 9,
+    "difficulty": "hard",
+    "question_weight": "high"
+  },
+  {
+    "subject": "Biyoloji",
+    "exam": "AYT",
+    "topic": "Duyu Organları",
+    "subtopics": [
+      "Reseptörler",
+      "Göz",
+      "Görme olayı",
+      "Kulak",
+      "İşitme ve denge",
+      "Burun",
+      "Dil",
+      "Deri"
+    ],
+    "priority": "high",
+    "dependencies": ["Sinir Sistemi"],
+    "next_topics": ["Destek ve Hareket Sistemi"],
+    "estimated_hours": 8,
+    "difficulty": "medium",
+    "question_weight": "high"
+  },
+  {
+    "subject": "Biyoloji",
+    "exam": "AYT",
+    "topic": "Destek ve Hareket Sistemi",
+    "subtopics": [
+      "İskelet sistemi",
+      "Kemik",
+      "Eklem",
+      "Kas dokusu",
+      "Çizgili kas",
+      "Düz kas",
+      "Kalp kası",
+      "Kas kasılması"
+    ],
+    "priority": "high",
+    "dependencies": ["TYT Hücre"],
+    "next_topics": ["Sindirim Sistemi"],
+    "estimated_hours": 8,
+    "difficulty": "medium",
+    "question_weight": "high"
+  },
+  {
+    "subject": "Biyoloji",
+    "exam": "AYT",
+    "topic": "Sindirim Sistemi",
+    "subtopics": [
+      "Sindirim",
+      "Mekanik sindirim",
+      "Kimyasal sindirim",
+      "Sindirim organları",
+      "Sindirim enzimleri",
+      "Besinlerin sindirimi",
+      "Emilim"
+    ],
+    "priority": "critical",
+    "dependencies": ["TYT Canlıların Temel Bileşenleri"],
+    "next_topics": ["Dolaşım Sistemleri"],
+    "estimated_hours": 9,
+    "difficulty": "medium",
+    "question_weight": "very_high"
+  },
+  {
+    "subject": "Biyoloji",
+    "exam": "AYT",
+    "topic": "Dolaşım Sistemleri",
+    "subtopics": [
+      "Kalp",
+      "Kalbin çalışması",
+      "Kan damarları",
+      "Kan",
+      "Kan grupları",
+      "Küçük kan dolaşımı",
+      "Büyük kan dolaşımı",
+      "Lenf sistemi"
+    ],
+    "priority": "critical",
+    "dependencies": ["TYT Hücre"],
+    "next_topics": ["Bağışıklık Sistemi"],
+    "estimated_hours": 11,
+    "difficulty": "hard",
+    "question_weight": "very_high"
+  },
+  {
+    "subject": "Biyoloji",
+    "exam": "AYT",
+    "topic": "Bağışıklık Sistemi",
+    "subtopics": [
+      "Doğal bağışıklık",
+      "Kazanılmış bağışıklık",
+      "Antijen",
+      "Antikor",
+      "Lenfosit",
+      "Aşı",
+      "Serum",
+      "Bağışıklık hafızası"
+    ],
+    "priority": "high",
+    "dependencies": ["Dolaşım Sistemleri"],
+    "next_topics": ["Solunum Sistemi"],
+    "estimated_hours": 7,
+    "difficulty": "medium",
+    "question_weight": "high"
+  },
+  {
+    "subject": "Biyoloji",
+    "exam": "AYT",
+    "topic": "Solunum Sistemi",
+    "subtopics": [
+      "Solunum organları",
+      "Akciğer",
+      "Soluk alıp verme",
+      "Gaz alışverişi",
+      "Oksijen taşınması",
+      "Karbondioksit taşınması"
+    ],
+    "priority": "critical",
+    "dependencies": ["Dolaşım Sistemleri"],
+    "next_topics": ["Üriner Sistem"],
+    "estimated_hours": 8,
+    "difficulty": "medium",
+    "question_weight": "high"
+  },
+  {
+    "subject": "Biyoloji",
+    "exam": "AYT",
+    "topic": "Üriner Sistem",
+    "subtopics": [
+      "Böbrek",
+      "Nefron",
+      "Süzülme",
+      "Geri emilim",
+      "Salgılama",
+      "İdrar oluşumu",
+      "Su ve tuz dengesi"
+    ],
+    "priority": "critical",
+    "dependencies": [
+      "Dolaşım Sistemleri",
+      "Endokrin Sistem"
+    ],
+    "next_topics": ["Üreme Sistemi ve Embriyonik Gelişim"],
+    "estimated_hours": 9,
+    "difficulty": "hard",
+    "question_weight": "high"
+  },
+  {
+    "subject": "Biyoloji",
+    "exam": "AYT",
+    "topic": "Üreme Sistemi ve Embriyonik Gelişim",
+    "subtopics": [
+      "Erkek üreme sistemi",
+      "Dişi üreme sistemi",
+      "Gamet oluşumu",
+      "Menstrual döngü",
+      "Döllenme",
+      "Embriyonik gelişim",
+      "Plasenta"
+    ],
+    "priority": "critical",
+    "dependencies": [
+      "Endokrin Sistem",
+      "TYT Hücre Bölünmeleri ve Üreme"
+    ],
+    "next_topics": ["Komünite ve Popülasyon Ekolojisi"],
+    "estimated_hours": 10,
+    "difficulty": "hard",
+    "question_weight": "very_high"
+  },
+  {
+    "subject": "Biyoloji",
+    "exam": "AYT",
+    "topic": "Komünite ve Popülasyon Ekolojisi",
+    "subtopics": [
+      "Komünite",
+      "Popülasyon",
+      "Tür içi ilişkiler",
+      "Türler arası ilişkiler",
+      "Rekabet",
+      "Av-avcı ilişkisi",
+      "Süksesyon",
+      "Popülasyon büyümesi",
+      "Taşıma kapasitesi"
+    ],
+    "priority": "critical",
+    "dependencies": [
+      "TYT Ekosistem Ekolojisi",
+      "TYT Popülasyon Ekolojisi"
+    ],
+    "next_topics": ["Genden Proteine"],
+    "estimated_hours": 10,
+    "difficulty": "medium",
+    "question_weight": "high"
+  },
+  {
+    "subject": "Biyoloji",
+    "exam": "AYT",
+    "topic": "Genden Proteine",
+    "subtopics": [
+      "DNA'nın yapısı",
+      "DNA replikasyonu",
+      "RNA",
+      "Transkripsiyon",
+      "Genetik kod",
+      "Translasyon",
+      "Protein sentezi",
+      "Gen mutasyonları"
+    ],
+    "priority": "critical",
+    "dependencies": [
+      "TYT Kalıtım",
+      "TYT Hücre"
+    ],
+    "next_topics": ["Biyoteknoloji ve Genetik Mühendisliği"],
+    "estimated_hours": 14,
+    "difficulty": "hard",
+    "question_weight": "very_high"
+  },
+  {
+    "subject": "Biyoloji",
+    "exam": "AYT",
+    "topic": "Biyoteknoloji ve Genetik Mühendisliği",
+    "subtopics": [
+      "Rekombinant DNA",
+      "Gen klonlama",
+      "PCR",
+      "DNA parmak izi",
+      "Gen terapisi",
+      "Klonlama",
+      "Genetiği değiştirilmiş organizmalar",
+      "Biyoteknolojik uygulamalar"
+    ],
+    "priority": "high",
+    "dependencies": ["Genden Proteine"],
+    "next_topics": ["Canlılarda Enerji Dönüşümleri"],
+    "estimated_hours": 8,
+    "difficulty": "hard",
+    "question_weight": "high"
+  },
+  {
+    "subject": "Biyoloji",
+    "exam": "AYT",
+    "topic": "Canlılarda Enerji Dönüşümleri",
+    "subtopics": [
+      "ATP",
+      "Fotosentez",
+      "Fotosentez pigmentleri",
+      "Işığa bağımlı tepkimeler",
+      "Calvin döngüsü",
+      "Kemosentez",
+      "Hücresel solunum",
+      "Glikoliz",
+      "Krebs döngüsü",
+      "Elektron taşıma sistemi",
+      "Fermantasyon"
+    ],
+    "priority": "critical",
+    "dependencies": [
+      "TYT Canlıların Temel Bileşenleri",
+      "TYT Hücre"
+    ],
+    "next_topics": ["Bitki Biyolojisi"],
+    "estimated_hours": 17,
+    "difficulty": "hard",
+    "question_weight": "very_high"
+  },
+  {
+    "subject": "Biyoloji",
+    "exam": "AYT",
+    "topic": "Bitki Biyolojisi",
+    "subtopics": [
+      "Bitkisel dokular",
+      "Bitkilerde taşıma",
+      "Kök",
+      "Gövde",
+      "Yaprak",
+      "Stoma",
+      "Transpirasyon",
+      "Bitki hormonları",
+      "Bitkilerde hareket"
+    ],
+    "priority": "critical",
+    "dependencies": [
+      "Canlılarda Enerji Dönüşümleri",
+      "TYT Canlıların Sınıflandırılması"
+    ],
+    "next_topics": ["Bitkilerde Üreme"],
+    "estimated_hours": 13,
+    "difficulty": "hard",
+    "question_weight": "very_high"
+  },
+  {
+    "subject": "Biyoloji",
+    "exam": "AYT",
+    "topic": "Bitkilerde Üreme",
+    "subtopics": [
+      "Çiçeğin yapısı",
+      "Tozlaşma",
+      "Döllenme",
+      "Tohum oluşumu",
+      "Meyve oluşumu",
+      "Çimlenme"
+    ],
+    "priority": "high",
+    "dependencies": [
+      "Bitki Biyolojisi",
+      "TYT Hücre Bölünmeleri ve Üreme"
+    ],
+    "next_topics": [],
+    "estimated_hours": 8,
+    "difficulty": "medium",
+    "question_weight": "high"
+  }
+]

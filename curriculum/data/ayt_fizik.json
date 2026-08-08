@@ -1,0 +1,304 @@
+[
+  {
+    "subject": "Fizik",
+    "exam": "AYT",
+    "topic": "Vektörler",
+    "subtopics": [
+      "Skaler ve vektörel büyüklükler",
+      "Vektörlerin bileşenleri",
+      "Vektörlerde toplama",
+      "Vektörlerde çıkarma",
+      "Bileşke vektör"
+    ],
+    "priority": "high",
+    "dependencies": ["TYT Hareket ve Kuvvet"],
+    "next_topics": ["Kuvvet Tork ve Denge"],
+    "estimated_hours": 7,
+    "difficulty": "medium",
+    "question_weight": "high"
+  },
+  {
+    "subject": "Fizik",
+    "exam": "AYT",
+    "topic": "Kuvvet Tork ve Denge",
+    "subtopics": [
+      "Kuvvet",
+      "Bileşke kuvvet",
+      "Denge",
+      "Tork",
+      "Kütle merkezi",
+      "Ağırlık merkezi",
+      "Denge koşulları"
+    ],
+    "priority": "critical",
+    "dependencies": ["Vektörler"],
+    "next_topics": ["Basit Makineler"],
+    "estimated_hours": 10,
+    "difficulty": "hard",
+    "question_weight": "very_high"
+  },
+  {
+    "subject": "Fizik",
+    "exam": "AYT",
+    "topic": "Basit Makineler",
+    "subtopics": [
+      "Kaldıraçlar",
+      "Makaralar",
+      "Eğik düzlem",
+      "Çıkrık",
+      "Vida",
+      "Dişli çarklar",
+      "Mekanik avantaj",
+      "Verim"
+    ],
+    "priority": "high",
+    "dependencies": ["Kuvvet Tork ve Denge"],
+    "next_topics": ["Hareket"],
+    "estimated_hours": 7,
+    "difficulty": "medium",
+    "question_weight": "medium"
+  },
+  {
+    "subject": "Fizik",
+    "exam": "AYT",
+    "topic": "Hareket",
+    "subtopics": [
+      "Konum",
+      "Hız",
+      "İvme",
+      "Düzgün doğrusal hareket",
+      "Düzgün hızlanan hareket",
+      "Grafik yorumlama",
+      "Bağıl hareket"
+    ],
+    "priority": "critical",
+    "dependencies": ["Vektörler"],
+    "next_topics": ["Newton'un Hareket Yasaları"],
+    "estimated_hours": 12,
+    "difficulty": "medium",
+    "question_weight": "very_high"
+  },
+  {
+    "subject": "Fizik",
+    "exam": "AYT",
+    "topic": "Newton'un Hareket Yasaları",
+    "subtopics": [
+      "Newton'un birinci yasası",
+      "Newton'un ikinci yasası",
+      "Newton'un üçüncü yasası",
+      "Sürtünme kuvveti",
+      "Bağlı cisimler",
+      "Eğik düzlem",
+      "Net kuvvet ve ivme"
+    ],
+    "priority": "critical",
+    "dependencies": ["Hareket"],
+    "next_topics": ["İş Enerji ve Güç"],
+    "estimated_hours": 12,
+    "difficulty": "hard",
+    "question_weight": "very_high"
+  },
+  {
+    "subject": "Fizik",
+    "exam": "AYT",
+    "topic": "İş Enerji ve Güç",
+    "subtopics": [
+      "İş",
+      "Kinetik enerji",
+      "Potansiyel enerji",
+      "Mekanik enerji",
+      "Enerjinin korunumu",
+      "Güç",
+      "Yay potansiyel enerjisi"
+    ],
+    "priority": "critical",
+    "dependencies": ["Newton'un Hareket Yasaları"],
+    "next_topics": ["İtme ve Momentum"],
+    "estimated_hours": 11,
+    "difficulty": "medium",
+    "question_weight": "very_high"
+  },
+  {
+    "subject": "Fizik",
+    "exam": "AYT",
+    "topic": "İtme ve Momentum",
+    "subtopics": [
+      "Momentum",
+      "İtme",
+      "Momentumun korunumu",
+      "Çarpışmalar",
+      "Patlamalar",
+      "Kütle merkezi hareketi"
+    ],
+    "priority": "critical",
+    "dependencies": ["İş Enerji ve Güç"],
+    "next_topics": ["Elektrik ve Manyetizma"],
+    "estimated_hours": 10,
+    "difficulty": "hard",
+    "question_weight": "very_high"
+  },
+  {
+    "subject": "Fizik",
+    "exam": "AYT",
+    "topic": "Elektrik ve Manyetizma",
+    "subtopics": [
+      "Elektriksel kuvvet",
+      "Elektrik alan",
+      "Elektriksel potansiyel",
+      "Sığa",
+      "Kondansatör",
+      "Manyetik alan",
+      "Akım taşıyan telin manyetik alanı",
+      "Manyetik kuvvet"
+    ],
+    "priority": "critical",
+    "dependencies": ["TYT Elektrik ve Manyetizma"],
+    "next_topics": ["Elektrik Devreleri"],
+    "estimated_hours": 16,
+    "difficulty": "hard",
+    "question_weight": "very_high"
+  },
+  {
+    "subject": "Fizik",
+    "exam": "AYT",
+    "topic": "Elektrik Devreleri",
+    "subtopics": [
+      "Akım",
+      "Potansiyel fark",
+      "Direnç",
+      "Ohm yasası",
+      "Seri bağlama",
+      "Paralel bağlama",
+      "Kirchhoff yasaları",
+      "Elektriksel güç"
+    ],
+    "priority": "critical",
+    "dependencies": ["Elektrik ve Manyetizma"],
+    "next_topics": ["Elektromanyetik İndüksiyon ve Alternatif Akım"],
+    "estimated_hours": 12,
+    "difficulty": "hard",
+    "question_weight": "very_high"
+  },
+  {
+    "subject": "Fizik",
+    "exam": "AYT",
+    "topic": "Elektromanyetik İndüksiyon ve Alternatif Akım",
+    "subtopics": [
+      "Manyetik akı",
+      "Faraday yasası",
+      "Lenz yasası",
+      "İndüksiyon emk",
+      "Alternatif akım",
+      "Transformatör",
+      "Enerji iletimi"
+    ],
+    "priority": "critical",
+    "dependencies": ["Elektrik Devreleri"],
+    "next_topics": ["Çembersel Hareket"],
+    "estimated_hours": 11,
+    "difficulty": "hard",
+    "question_weight": "high"
+  },
+  {
+    "subject": "Fizik",
+    "exam": "AYT",
+    "topic": "Çembersel Hareket",
+    "subtopics": [
+      "Açısal hız",
+      "Çizgisel hız",
+      "Merkezcil ivme",
+      "Merkezcil kuvvet",
+      "Düzgün çembersel hareket"
+    ],
+    "priority": "critical",
+    "dependencies": [
+      "Newton'un Hareket Yasaları",
+      "Hareket"
+    ],
+    "next_topics": ["Basit Harmonik Hareket"],
+    "estimated_hours": 9,
+    "difficulty": "hard",
+    "question_weight": "high"
+  },
+  {
+    "subject": "Fizik",
+    "exam": "AYT",
+    "topic": "Basit Harmonik Hareket",
+    "subtopics": [
+      "Basit harmonik hareket",
+      "Periyot",
+      "Frekans",
+      "Yay sarkacı",
+      "Basit sarkaç",
+      "Enerji dönüşümü"
+    ],
+    "priority": "high",
+    "dependencies": ["Çembersel Hareket"],
+    "next_topics": ["Dalga Mekaniği"],
+    "estimated_hours": 9,
+    "difficulty": "hard",
+    "question_weight": "high"
+  },
+  {
+    "subject": "Fizik",
+    "exam": "AYT",
+    "topic": "Dalga Mekaniği",
+    "subtopics": [
+      "Dalga hareketi",
+      "Dalga hızı",
+      "Girişim",
+      "Kırınım",
+      "Doppler olayı",
+      "Elektromanyetik dalgalar"
+    ],
+    "priority": "critical",
+    "dependencies": [
+      "TYT Dalgalar",
+      "Basit Harmonik Hareket"
+    ],
+    "next_topics": ["Modern Fizik"],
+    "estimated_hours": 11,
+    "difficulty": "hard",
+    "question_weight": "very_high"
+  },
+  {
+    "subject": "Fizik",
+    "exam": "AYT",
+    "topic": "Modern Fizik",
+    "subtopics": [
+      "Özel görelilik",
+      "Kuantum fiziğine giriş",
+      "Fotoelektrik olay",
+      "Compton olayı",
+      "Madde dalgaları",
+      "Atom modelleri",
+      "Enerji seviyeleri"
+    ],
+    "priority": "critical",
+    "dependencies": ["Dalga Mekaniği"],
+    "next_topics": ["Modern Fiziğin Teknolojideki Uygulamaları"],
+    "estimated_hours": 13,
+    "difficulty": "hard",
+    "question_weight": "very_high"
+  },
+  {
+    "subject": "Fizik",
+    "exam": "AYT",
+    "topic": "Modern Fiziğin Teknolojideki Uygulamaları",
+    "subtopics": [
+      "Görüntüleme teknolojileri",
+      "Lazer",
+      "Yarı iletkenler",
+      "LED",
+      "Güneş pilleri",
+      "Süper iletkenlik",
+      "Nanoteknoloji"
+    ],
+    "priority": "high",
+    "dependencies": ["Modern Fizik"],
+    "next_topics": [],
+    "estimated_hours": 7,
+    "difficulty": "medium",
+    "question_weight": "high"
+  }
+]

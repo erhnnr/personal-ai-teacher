@@ -1,0 +1,204 @@
+[
+  {
+    "subject": "Din Kültürü",
+    "exam": "TYT",
+    "topic": "Bilgi ve İnanç",
+    "subtopics": [
+      "Bilginin kaynakları",
+      "Akıl",
+      "Vahiy",
+      "Duyular",
+      "İnanç kavramı",
+      "İman ve bilgi ilişkisi",
+      "İslam inanç esasları"
+    ],
+    "priority": "critical",
+    "dependencies": [],
+    "next_topics": ["Din ve İslam"],
+    "estimated_hours": 6,
+    "difficulty": "medium",
+    "question_weight": "high"
+  },
+  {
+    "subject": "Din Kültürü",
+    "exam": "TYT",
+    "topic": "Din ve İslam",
+    "subtopics": [
+      "Din kavramı",
+      "Dinin kaynağı",
+      "İslam'ın temel özellikleri",
+      "İman",
+      "İbadet",
+      "Ahlak",
+      "İslam'ın evrenselliği"
+    ],
+    "priority": "critical",
+    "dependencies": ["Bilgi ve İnanç"],
+    "next_topics": ["İslam ve İbadet"],
+    "estimated_hours": 6,
+    "difficulty": "medium",
+    "question_weight": "high"
+  },
+  {
+    "subject": "Din Kültürü",
+    "exam": "TYT",
+    "topic": "İslam ve İbadet",
+    "subtopics": [
+      "İbadetin anlamı",
+      "İbadetin amacı",
+      "Namaz",
+      "Oruç",
+      "Zekât",
+      "Hac",
+      "Dua",
+      "İbadet ve ahlak ilişkisi"
+    ],
+    "priority": "critical",
+    "dependencies": ["Din ve İslam"],
+    "next_topics": ["Gençlik ve Değerler"],
+    "estimated_hours": 7,
+    "difficulty": "medium",
+    "question_weight": "very_high"
+  },
+  {
+    "subject": "Din Kültürü",
+    "exam": "TYT",
+    "topic": "Gençlik ve Değerler",
+    "subtopics": [
+      "Değer kavramı",
+      "Ahlaki değerler",
+      "Adalet",
+      "Doğruluk",
+      "Sorumluluk",
+      "Sabır",
+      "Yardımlaşma",
+      "Gençlik ve ahlak"
+    ],
+    "priority": "critical",
+    "dependencies": ["İslam ve İbadet"],
+    "next_topics": ["Gönül Coğrafyamız"],
+    "estimated_hours": 6,
+    "difficulty": "easy",
+    "question_weight": "high"
+  },
+  {
+    "subject": "Din Kültürü",
+    "exam": "TYT",
+    "topic": "Gönül Coğrafyamız",
+    "subtopics": [
+      "İslam medeniyeti",
+      "Türklerin İslamiyet ile ilişkisi",
+      "Anadolu'da İslam",
+      "İslam kültür havzaları",
+      "Ortak kültürel miras"
+    ],
+    "priority": "medium",
+    "dependencies": ["Gençlik ve Değerler"],
+    "next_topics": ["Allah İnsan İlişkisi"],
+    "estimated_hours": 5,
+    "difficulty": "easy",
+    "question_weight": "medium"
+  },
+  {
+    "subject": "Din Kültürü",
+    "exam": "TYT",
+    "topic": "Allah İnsan İlişkisi",
+    "subtopics": [
+      "Allah inancı",
+      "Allah'ın varlığı ve birliği",
+      "İnsan ve yaratıcı ilişkisi",
+      "Dua",
+      "Tövbe",
+      "İbadet",
+      "Allah'a güven"
+    ],
+    "priority": "critical",
+    "dependencies": ["Bilgi ve İnanç"],
+    "next_topics": ["Hz. Muhammed ve Gençlik"],
+    "estimated_hours": 7,
+    "difficulty": "medium",
+    "question_weight": "very_high"
+  },
+  {
+    "subject": "Din Kültürü",
+    "exam": "TYT",
+    "topic": "Hz. Muhammed ve Gençlik",
+    "subtopics": [
+      "Hz. Muhammed'in gençliği",
+      "Hz. Muhammed'in örnekliği",
+      "Genç sahabiler",
+      "Peygamber sevgisi",
+      "Hz. Muhammed'in ahlakı"
+    ],
+    "priority": "critical",
+    "dependencies": ["Allah İnsan İlişkisi"],
+    "next_topics": ["Din ve Hayat"],
+    "estimated_hours": 6,
+    "difficulty": "easy",
+    "question_weight": "high"
+  },
+  {
+    "subject": "Din Kültürü",
+    "exam": "TYT",
+    "topic": "Din ve Hayat",
+    "subtopics": [
+      "Din ve birey",
+      "Din ve toplum",
+      "Din ve aile",
+      "Din ve ekonomi",
+      "Din ve çevre",
+      "Din ve kültür",
+      "Dinin toplumsal işlevi"
+    ],
+    "priority": "critical",
+    "dependencies": ["Din ve İslam"],
+    "next_topics": ["Ahlaki Tutum ve Davranışlar"],
+    "estimated_hours": 7,
+    "difficulty": "medium",
+    "question_weight": "high"
+  },
+  {
+    "subject": "Din Kültürü",
+    "exam": "TYT",
+    "topic": "Ahlaki Tutum ve Davranışlar",
+    "subtopics": [
+      "Ahlak",
+      "İyi davranış",
+      "Kötü davranış",
+      "Adalet",
+      "Merhamet",
+      "Doğruluk",
+      "Yardımlaşma",
+      "Kul hakkı",
+      "İsraf"
+    ],
+    "priority": "critical",
+    "dependencies": ["Din ve Hayat"],
+    "next_topics": ["İslam Düşüncesinde Yorumlar"],
+    "estimated_hours": 7,
+    "difficulty": "medium",
+    "question_weight": "very_high"
+  },
+  {
+    "subject": "Din Kültürü",
+    "exam": "TYT",
+    "topic": "İslam Düşüncesinde Yorumlar",
+    "subtopics": [
+      "Yorum farklılıklarının nedenleri",
+      "İtikadi yorumlar",
+      "Siyasi yorumlar",
+      "Fıkhi yorumlar",
+      "Mezhep kavramı",
+      "Yorum farklılıklarına saygı"
+    ],
+    "priority": "high",
+    "dependencies": [
+      "Din ve İslam",
+      "Ahlaki Tutum ve Davranışlar"
+    ],
+    "next_topics": [],
+    "estimated_hours": 7,
+    "difficulty": "medium",
+    "question_weight": "high"
+  }
+]

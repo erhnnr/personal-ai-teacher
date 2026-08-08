@@ -1,0 +1,207 @@
+[
+  {
+    "subject": "Felsefe",
+    "exam": "TYT",
+    "topic": "Felsefenin Doğası",
+    "subtopics": [
+      "Felsefenin anlamı",
+      "Felsefi düşüncenin özellikleri",
+      "Felsefi soru",
+      "Felsefenin ortaya çıkışı",
+      "Felsefenin bilimle ilişkisi",
+      "Felsefenin dinle ilişkisi",
+      "Felsefenin sanatla ilişkisi",
+      "Felsefenin bireysel ve toplumsal işlevleri"
+    ],
+    "priority": "critical",
+    "dependencies": [],
+    "next_topics": ["Felsefe Mantık ve Argümantasyon"],
+    "estimated_hours": 6,
+    "difficulty": "easy",
+    "question_weight": "high"
+  },
+  {
+    "subject": "Felsefe",
+    "exam": "TYT",
+    "topic": "Felsefe Mantık ve Argümantasyon",
+    "subtopics": [
+      "Akıl yürütme",
+      "Önerme",
+      "Argüman",
+      "Öncül ve sonuç",
+      "Tutarlılık",
+      "Geçerlilik",
+      "Doğruluk",
+      "Çelişki",
+      "Temellendirme",
+      "Safsata"
+    ],
+    "priority": "critical",
+    "dependencies": ["Felsefenin Doğası"],
+    "next_topics": ["Varlık Felsefesi"],
+    "estimated_hours": 8,
+    "difficulty": "medium",
+    "question_weight": "very_high"
+  },
+  {
+    "subject": "Felsefe",
+    "exam": "TYT",
+    "topic": "Varlık Felsefesi",
+    "subtopics": [
+      "Varlık kavramı",
+      "Ontoloji",
+      "Varlığın mahiyeti",
+      "Varlığın temel yapısı",
+      "İdealizm",
+      "Materyalizm",
+      "Düalizm",
+      "Oluşçuluk",
+      "Fenomenoloji"
+    ],
+    "priority": "critical",
+    "dependencies": ["Felsefe Mantık ve Argümantasyon"],
+    "next_topics": ["Bilgi Felsefesi"],
+    "estimated_hours": 7,
+    "difficulty": "medium",
+    "question_weight": "high"
+  },
+  {
+    "subject": "Felsefe",
+    "exam": "TYT",
+    "topic": "Bilgi Felsefesi",
+    "subtopics": [
+      "Bilgi kavramı",
+      "Özne ve nesne",
+      "Bilginin kaynağı",
+      "Bilginin doğruluğu",
+      "Bilginin sınırları",
+      "Rasyonalizm",
+      "Empirizm",
+      "Kritisizm",
+      "Septisizm",
+      "Pozitivizm"
+    ],
+    "priority": "critical",
+    "dependencies": ["Varlık Felsefesi"],
+    "next_topics": ["Ahlak Felsefesi"],
+    "estimated_hours": 8,
+    "difficulty": "medium",
+    "question_weight": "very_high"
+  },
+  {
+    "subject": "Felsefe",
+    "exam": "TYT",
+    "topic": "Ahlak Felsefesi",
+    "subtopics": [
+      "Ahlak kavramı",
+      "İyi ve kötü",
+      "Özgürlük ve sorumluluk",
+      "Evrensel ahlak yasası",
+      "Hazcılık",
+      "Faydacılık",
+      "Ödev ahlakı",
+      "Erdem etiği",
+      "Ahlaki eylemin amacı"
+    ],
+    "priority": "critical",
+    "dependencies": ["Bilgi Felsefesi"],
+    "next_topics": ["Estetik ve Sanat Felsefesi"],
+    "estimated_hours": 8,
+    "difficulty": "medium",
+    "question_weight": "very_high"
+  },
+  {
+    "subject": "Felsefe",
+    "exam": "TYT",
+    "topic": "Estetik ve Sanat Felsefesi",
+    "subtopics": [
+      "Estetik",
+      "Sanat",
+      "Güzellik",
+      "Sanat eseri",
+      "Sanatçı",
+      "Sanatın işlevi",
+      "Sanat kuramları",
+      "Güzelliğin kaynağı"
+    ],
+    "priority": "high",
+    "dependencies": ["Ahlak Felsefesi"],
+    "next_topics": ["Siyaset Felsefesi"],
+    "estimated_hours": 6,
+    "difficulty": "medium",
+    "question_weight": "medium"
+  },
+  {
+    "subject": "Felsefe",
+    "exam": "TYT",
+    "topic": "Siyaset Felsefesi",
+    "subtopics": [
+      "Devlet",
+      "İktidar",
+      "Egemenlik",
+      "Meşruiyet",
+      "Hak",
+      "Adalet",
+      "Özgürlük",
+      "Eşitlik",
+      "İdeal devlet düzeni",
+      "Birey ve devlet ilişkisi"
+    ],
+    "priority": "critical",
+    "dependencies": ["Ahlak Felsefesi"],
+    "next_topics": ["Din Felsefesi"],
+    "estimated_hours": 7,
+    "difficulty": "medium",
+    "question_weight": "high"
+  },
+  {
+    "subject": "Felsefe",
+    "exam": "TYT",
+    "topic": "Din Felsefesi",
+    "subtopics": [
+      "Din felsefesinin konusu",
+      "Tanrı'nın varlığı problemi",
+      "İnanç",
+      "Akıl ve inanç ilişkisi",
+      "Teizm",
+      "Deizm",
+      "Ateizm",
+      "Agnostisizm",
+      "Kötülük problemi"
+    ],
+    "priority": "high",
+    "dependencies": [
+      "Varlık Felsefesi",
+      "Bilgi Felsefesi"
+    ],
+    "next_topics": ["Bilim Felsefesi"],
+    "estimated_hours": 6,
+    "difficulty": "medium",
+    "question_weight": "high"
+  },
+  {
+    "subject": "Felsefe",
+    "exam": "TYT",
+    "topic": "Bilim Felsefesi",
+    "subtopics": [
+      "Bilim",
+      "Bilimsel yöntem",
+      "Bilimsel bilgi",
+      "Bilimin özellikleri",
+      "Bilimde doğrulama",
+      "Bilimde yanlışlama",
+      "Bilimsel paradigma",
+      "Bilimin değeri",
+      "Bilim ve toplum"
+    ],
+    "priority": "critical",
+    "dependencies": [
+      "Bilgi Felsefesi",
+      "Felsefe Mantık ve Argümantasyon"
+    ],
+    "next_topics": [],
+    "estimated_hours": 7,
+    "difficulty": "medium",
+    "question_weight": "high"
+  }
+]

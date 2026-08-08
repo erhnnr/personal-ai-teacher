@@ -2,105 +2,238 @@
   {
     "subject": "Matematik",
     "exam": "AYT",
-    "topic": "Fonksiyonlar",
+    "topic": "Temel Kavramlar ve Sayılar",
+    "subtopics": [
+      "Sayı kümeleri",
+      "Bölünebilme",
+      "Rasyonel sayılar",
+      "Üslü ifadeler",
+      "Köklü ifadeler",
+      "Mutlak değer",
+      "Sayı basamakları"
+    ],
     "priority": "high",
     "dependencies": [],
-    "next_topics": [
-      "Polinomlar"
+    "next_topics": ["Denklemler ve Eşitsizlikler"],
+    "estimated_hours": 6,
+    "difficulty": "medium",
+    "question_weight": "medium"
+  },
+  {
+    "subject": "Matematik",
+    "exam": "AYT",
+    "topic": "Denklemler ve Eşitsizlikler",
+    "subtopics": [
+      "Birinci derece denklemler",
+      "İkinci derece denklemler",
+      "Denklem sistemleri",
+      "Birinci derece eşitsizlikler",
+      "İkinci derece eşitsizlikler",
+      "Eşitsizlik sistemleri"
     ],
-    "estimated_hours": 12,
+    "priority": "critical",
+    "dependencies": ["Temel Kavramlar ve Sayılar"],
+    "next_topics": ["Fonksiyonlar"],
+    "estimated_hours": 10,
     "difficulty": "medium",
     "question_weight": "high"
   },
   {
     "subject": "Matematik",
     "exam": "AYT",
-    "topic": "Polinomlar",
-    "priority": "high",
-    "dependencies": [
-      "Fonksiyonlar"
+    "topic": "Fonksiyonlar",
+    "subtopics": [
+      "Fonksiyon kavramı",
+      "Tanım ve görüntü kümeleri",
+      "Fonksiyonlarda işlemler",
+      "Bileşke fonksiyon",
+      "Ters fonksiyon",
+      "Fonksiyon grafikleri",
+      "Fonksiyon dönüşümleri",
+      "Parçalı fonksiyonlar"
     ],
-    "next_topics": [
-      "İkinci Derece Denklemler"
-    ],
-    "estimated_hours": 10,
+    "priority": "critical",
+    "dependencies": ["Denklemler ve Eşitsizlikler"],
+    "next_topics": ["Polinomlar"],
+    "estimated_hours": 14,
     "difficulty": "medium",
-    "question_weight": "medium"
+    "question_weight": "very_high"
   },
   {
     "subject": "Matematik",
     "exam": "AYT",
-    "topic": "İkinci Derece Denklemler",
-    "priority": "high",
-    "dependencies": [
-      "Polinomlar"
+    "topic": "Polinomlar",
+    "subtopics": [
+      "Polinom kavramı",
+      "Polinomlarda işlemler",
+      "Polinomlarda bölme",
+      "Kalan teoremi",
+      "Çarpan teoremi",
+      "Polinom denklemleri"
     ],
-    "next_topics": [
-      "Trigonometri"
-    ],
+    "priority": "critical",
+    "dependencies": ["Fonksiyonlar"],
+    "next_topics": ["İkinci Dereceden Denklemler"],
     "estimated_hours": 10,
     "difficulty": "medium",
-    "question_weight": "medium"
+    "question_weight": "high"
+  },
+  {
+    "subject": "Matematik",
+    "exam": "AYT",
+    "topic": "İkinci Dereceden Denklemler",
+    "subtopics": [
+      "İkinci derece denklem",
+      "Diskriminant",
+      "Kökler",
+      "Kökler ile katsayılar arasındaki ilişkiler",
+      "Parabol",
+      "İkinci dereceden fonksiyon grafikleri",
+      "Maksimum ve minimum"
+    ],
+    "priority": "critical",
+    "dependencies": ["Polinomlar"],
+    "next_topics": ["Karmaşık Sayılar"],
+    "estimated_hours": 12,
+    "difficulty": "medium",
+    "question_weight": "very_high"
+  },
+  {
+    "subject": "Matematik",
+    "exam": "AYT",
+    "topic": "Karmaşık Sayılar",
+    "subtopics": [
+      "Sanal birim",
+      "Karmaşık sayı",
+      "Karmaşık sayılarda işlemler",
+      "Karmaşık düzlem"
+    ],
+    "priority": "medium",
+    "dependencies": ["İkinci Dereceden Denklemler"],
+    "next_topics": ["Permütasyon Kombinasyon ve Binom"],
+    "estimated_hours": 5,
+    "difficulty": "medium",
+    "question_weight": "low"
+  },
+  {
+    "subject": "Matematik",
+    "exam": "AYT",
+    "topic": "Permütasyon Kombinasyon ve Binom",
+    "subtopics": [
+      "Sayma yöntemleri",
+      "Faktöriyel",
+      "Permütasyon",
+      "Kombinasyon",
+      "Binom açılımı",
+      "Pascal üçgeni"
+    ],
+    "priority": "high",
+    "dependencies": ["Temel Kavramlar ve Sayılar"],
+    "next_topics": ["Olasılık"],
+    "estimated_hours": 10,
+    "difficulty": "medium",
+    "question_weight": "high"
+  },
+  {
+    "subject": "Matematik",
+    "exam": "AYT",
+    "topic": "Olasılık",
+    "subtopics": [
+      "Örnek uzay",
+      "Olay",
+      "Koşullu olasılık",
+      "Bağımsız olaylar",
+      "Bağımlı olaylar",
+      "Olasılık hesapları"
+    ],
+    "priority": "high",
+    "dependencies": ["Permütasyon Kombinasyon ve Binom"],
+    "next_topics": ["Trigonometri"],
+    "estimated_hours": 9,
+    "difficulty": "medium",
+    "question_weight": "high"
   },
   {
     "subject": "Matematik",
     "exam": "AYT",
     "topic": "Trigonometri",
-    "priority": "high",
-    "dependencies": [
-      "Fonksiyonlar"
+    "subtopics": [
+      "Açı ölçüleri",
+      "Trigonometrik oranlar",
+      "Birim çember",
+      "Trigonometrik fonksiyonlar",
+      "Trigonometrik özdeşlikler",
+      "Toplam ve fark formülleri",
+      "İki kat açı formülleri",
+      "Trigonometrik denklemler",
+      "Trigonometrik grafikler"
     ],
-    "next_topics": [
-      "Logaritma"
-    ],
+    "priority": "critical",
+    "dependencies": ["Fonksiyonlar"],
+    "next_topics": ["Logaritma"],
     "estimated_hours": 18,
+    "difficulty": "hard",
+    "question_weight": "very_high"
+  },
+  {
+    "subject": "Matematik",
+    "exam": "AYT",
+    "topic": "Logaritma",
+    "subtopics": [
+      "Üstel fonksiyon",
+      "Logaritma tanımı",
+      "Logaritmanın özellikleri",
+      "Logaritmik fonksiyon",
+      "Logaritmik denklemler",
+      "Logaritmik eşitsizlikler"
+    ],
+    "priority": "critical",
+    "dependencies": [
+      "Fonksiyonlar",
+      "Temel Kavramlar ve Sayılar"
+    ],
+    "next_topics": ["Diziler"],
+    "estimated_hours": 10,
     "difficulty": "hard",
     "question_weight": "high"
   },
   {
     "subject": "Matematik",
     "exam": "AYT",
-    "topic": "Logaritma",
+    "topic": "Diziler",
+    "subtopics": [
+      "Dizi kavramı",
+      "Genel terim",
+      "Aritmetik dizi",
+      "Geometrik dizi",
+      "Dizilerde toplam"
+    ],
     "priority": "high",
-    "dependencies": [
-      "Fonksiyonlar",
-      "Üslü Sayılar"
-    ],
-    "next_topics": [
-      "Diziler"
-    ],
-    "estimated_hours": 12,
+    "dependencies": ["Fonksiyonlar"],
+    "next_topics": ["Limit"],
+    "estimated_hours": 9,
     "difficulty": "medium",
     "question_weight": "high"
   },
   {
     "subject": "Matematik",
     "exam": "AYT",
-    "topic": "Diziler",
-    "priority": "medium",
-    "dependencies": [
-      "Fonksiyonlar",
-      "Logaritma"
-    ],
-    "next_topics": [
-      "Limit"
-    ],
-    "estimated_hours": 8,
-    "difficulty": "medium",
-    "question_weight": "medium"
-  },
-  {
-    "subject": "Matematik",
-    "exam": "AYT",
     "topic": "Limit",
+    "subtopics": [
+      "Limit kavramı",
+      "Sağdan limit",
+      "Soldan limit",
+      "Limit kuralları",
+      "Belirsizlikler",
+      "Sonsuzda limit",
+      "Süreklilik"
+    ],
     "priority": "critical",
     "dependencies": [
       "Fonksiyonlar",
       "Polinomlar"
     ],
-    "next_topics": [
-      "Türev"
-    ],
+    "next_topics": ["Türev"],
     "estimated_hours": 12,
     "difficulty": "hard",
     "question_weight": "very_high"
@@ -109,14 +242,22 @@
     "subject": "Matematik",
     "exam": "AYT",
     "topic": "Türev",
+    "subtopics": [
+      "Türevin tanımı",
+      "Türev alma kuralları",
+      "Bileşke fonksiyonun türevi",
+      "Trigonometrik fonksiyonların türevi",
+      "Üstel ve logaritmik fonksiyonların türevi",
+      "Teğet ve normal",
+      "Artan ve azalan fonksiyonlar",
+      "Ekstremum",
+      "Maksimum minimum problemleri",
+      "Grafik yorumlama"
+    ],
     "priority": "critical",
-    "dependencies": [
-      "Limit"
-    ],
-    "next_topics": [
-      "İntegral"
-    ],
-    "estimated_hours": 18,
+    "dependencies": ["Limit"],
+    "next_topics": ["İntegral"],
+    "estimated_hours": 20,
     "difficulty": "hard",
     "question_weight": "very_high"
   },
@@ -124,12 +265,84 @@
     "subject": "Matematik",
     "exam": "AYT",
     "topic": "İntegral",
+    "subtopics": [
+      "Belirsiz integral",
+      "İntegral alma kuralları",
+      "Belirli integral",
+      "İntegral ve türev ilişkisi",
+      "Alan hesaplama",
+      "İki eğri arasındaki alan"
+    ],
+    "priority": "critical",
+    "dependencies": ["Türev"],
+    "next_topics": [],
+    "estimated_hours": 18,
+    "difficulty": "hard",
+    "question_weight": "very_high"
+  },
+  {
+    "subject": "Matematik",
+    "exam": "AYT",
+    "topic": "Analitik Geometri",
+    "subtopics": [
+      "Koordinat sistemi",
+      "İki nokta arası uzaklık",
+      "Doğru parçasının orta noktası",
+      "Doğrunun eğimi",
+      "Doğru denklemi",
+      "Paralel ve dik doğrular",
+      "Noktanın doğruya uzaklığı"
+    ],
     "priority": "critical",
     "dependencies": [
-      "Türev"
+      "Denklemler ve Eşitsizlikler",
+      "Fonksiyonlar"
+    ],
+    "next_topics": ["Çember ve Daire"],
+    "estimated_hours": 12,
+    "difficulty": "medium",
+    "question_weight": "very_high"
+  },
+  {
+    "subject": "Matematik",
+    "exam": "AYT",
+    "topic": "Çember ve Daire",
+    "subtopics": [
+      "Çember",
+      "Dairenin temel elemanları",
+      "Çemberde açı",
+      "Teğet",
+      "Kiriş",
+      "Çember denklemi",
+      "Dairede alan"
+    ],
+    "priority": "high",
+    "dependencies": [
+      "Analitik Geometri",
+      "Trigonometri"
     ],
     "next_topics": [],
-    "estimated_hours": 20,
+    "estimated_hours": 10,
+    "difficulty": "medium",
+    "question_weight": "high"
+  },
+  {
+    "subject": "Matematik",
+    "exam": "AYT",
+    "topic": "Geometri ve Uzay",
+    "subtopics": [
+      "Üçgenler",
+      "Dörtgenler",
+      "Çokgenler",
+      "Benzerlik",
+      "Alan",
+      "Katı cisimler",
+      "Uzay geometrisi"
+    ],
+    "priority": "critical",
+    "dependencies": ["Trigonometri"],
+    "next_topics": [],
+    "estimated_hours": 18,
     "difficulty": "hard",
     "question_weight": "very_high"
   }

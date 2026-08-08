@@ -1,0 +1,275 @@
+[
+  {
+    "subject": "Kimya",
+    "exam": "AYT",
+    "topic": "Modern Atom Teorisi",
+    "subtopics": [
+      "Atom modelleri",
+      "Kuantum modeli",
+      "Atom orbitalleri",
+      "Kuantum sayıları",
+      "Elektron dizilimleri",
+      "Periyodik özellikler",
+      "İyonlaşma enerjisi",
+      "Elektronegatiflik"
+    ],
+    "priority": "critical",
+    "dependencies": ["TYT Atom ve Periyodik Sistem"],
+    "next_topics": ["Gazlar"],
+    "estimated_hours": 12,
+    "difficulty": "hard",
+    "question_weight": "very_high"
+  },
+  {
+    "subject": "Kimya",
+    "exam": "AYT",
+    "topic": "Gazlar",
+    "subtopics": [
+      "Gazların özellikleri",
+      "Gaz basıncı",
+      "Boyle yasası",
+      "Charles yasası",
+      "Gay-Lussac yasası",
+      "Avogadro yasası",
+      "İdeal gaz denklemi",
+      "Kısmi basınç",
+      "Gerçek gazlar"
+    ],
+    "priority": "critical",
+    "dependencies": [
+      "Modern Atom Teorisi",
+      "TYT Mol ve Kimyasal Hesaplamalar"
+    ],
+    "next_topics": ["Sıvı Çözeltiler ve Çözünürlük"],
+    "estimated_hours": 12,
+    "difficulty": "hard",
+    "question_weight": "very_high"
+  },
+  {
+    "subject": "Kimya",
+    "exam": "AYT",
+    "topic": "Sıvı Çözeltiler ve Çözünürlük",
+    "subtopics": [
+      "Çözelti",
+      "Çözünme",
+      "Derişim",
+      "Molarite",
+      "Molalite",
+      "Mol kesri",
+      "Çözünürlük",
+      "Çözünürlüğü etkileyen faktörler",
+      "Koligatif özellikler"
+    ],
+    "priority": "critical",
+    "dependencies": [
+      "TYT Karışımlar",
+      "Gazlar"
+    ],
+    "next_topics": ["Kimyasal Tepkimelerde Enerji"],
+    "estimated_hours": 13,
+    "difficulty": "hard",
+    "question_weight": "very_high"
+  },
+  {
+    "subject": "Kimya",
+    "exam": "AYT",
+    "topic": "Kimyasal Tepkimelerde Enerji",
+    "subtopics": [
+      "Sistem ve çevre",
+      "Isı ve enerji",
+      "Entalpi",
+      "Endotermik tepkime",
+      "Ekzotermik tepkime",
+      "Bağ enerjileri",
+      "Hess yasası",
+      "Standart oluşum entalpisi"
+    ],
+    "priority": "critical",
+    "dependencies": [
+      "TYT Mol ve Kimyasal Hesaplamalar"
+    ],
+    "next_topics": ["Kimyasal Tepkimelerde Hız"],
+    "estimated_hours": 11,
+    "difficulty": "hard",
+    "question_weight": "very_high"
+  },
+  {
+    "subject": "Kimya",
+    "exam": "AYT",
+    "topic": "Kimyasal Tepkimelerde Hız",
+    "subtopics": [
+      "Tepkime hızı",
+      "Ortalama tepkime hızı",
+      "Çarpışma teorisi",
+      "Aktivasyon enerjisi",
+      "Derişimin hıza etkisi",
+      "Sıcaklığın hıza etkisi",
+      "Yüzey alanının hıza etkisi",
+      "Katalizör"
+    ],
+    "priority": "critical",
+    "dependencies": ["Kimyasal Tepkimelerde Enerji"],
+    "next_topics": ["Kimyasal Denge"],
+    "estimated_hours": 10,
+    "difficulty": "hard",
+    "question_weight": "very_high"
+  },
+  {
+    "subject": "Kimya",
+    "exam": "AYT",
+    "topic": "Kimyasal Denge",
+    "subtopics": [
+      "Denge kavramı",
+      "Denge sabiti",
+      "Homojen denge",
+      "Heterojen denge",
+      "Le Chatelier ilkesi",
+      "Derişimin dengeye etkisi",
+      "Basıncın dengeye etkisi",
+      "Sıcaklığın dengeye etkisi"
+    ],
+    "priority": "critical",
+    "dependencies": ["Kimyasal Tepkimelerde Hız"],
+    "next_topics": ["Asit Baz Dengesi"],
+    "estimated_hours": 13,
+    "difficulty": "hard",
+    "question_weight": "very_high"
+  },
+  {
+    "subject": "Kimya",
+    "exam": "AYT",
+    "topic": "Asit Baz Dengesi",
+    "subtopics": [
+      "Asit ve baz teorileri",
+      "Kuvvetli asit ve bazlar",
+      "Zayıf asit ve bazlar",
+      "Suyun iyonlaşması",
+      "pH",
+      "pOH",
+      "Asit ve baz iyonlaşma sabitleri",
+      "Tampon çözeltiler",
+      "Titrasyon"
+    ],
+    "priority": "critical",
+    "dependencies": [
+      "Kimyasal Denge",
+      "TYT Asitler Bazlar ve Tuzlar"
+    ],
+    "next_topics": ["Çözünürlük Dengesi"],
+    "estimated_hours": 14,
+    "difficulty": "hard",
+    "question_weight": "very_high"
+  },
+  {
+    "subject": "Kimya",
+    "exam": "AYT",
+    "topic": "Çözünürlük Dengesi",
+    "subtopics": [
+      "Çözünürlük",
+      "Çözünürlük çarpımı",
+      "Ksp",
+      "Ortak iyon etkisi",
+      "Çökelme",
+      "Seçimli çöktürme"
+    ],
+    "priority": "high",
+    "dependencies": [
+      "Kimyasal Denge",
+      "Sıvı Çözeltiler ve Çözünürlük"
+    ],
+    "next_topics": ["Kimya ve Elektrik"],
+    "estimated_hours": 9,
+    "difficulty": "hard",
+    "question_weight": "high"
+  },
+  {
+    "subject": "Kimya",
+    "exam": "AYT",
+    "topic": "Kimya ve Elektrik",
+    "subtopics": [
+      "Redoks tepkimeleri",
+      "Yükseltgenme basamağı",
+      "Galvanik hücre",
+      "Elektrot",
+      "Anot ve katot",
+      "Standart elektrot potansiyeli",
+      "Pil gerilimi",
+      "Elektroliz",
+      "Faraday yasaları"
+    ],
+    "priority": "critical",
+    "dependencies": ["Kimyasal Denge"],
+    "next_topics": ["Karbon Kimyasına Giriş"],
+    "estimated_hours": 15,
+    "difficulty": "hard",
+    "question_weight": "very_high"
+  },
+  {
+    "subject": "Kimya",
+    "exam": "AYT",
+    "topic": "Karbon Kimyasına Giriş",
+    "subtopics": [
+      "Karbon atomunun özellikleri",
+      "Hibritleşme",
+      "Sigma bağı",
+      "Pi bağı",
+      "Molekül geometrisi",
+      "Organik ve anorganik bileşikler",
+      "İzomerlik"
+    ],
+    "priority": "critical",
+    "dependencies": [
+      "Modern Atom Teorisi",
+      "TYT Kimyasal Türler Arası Etkileşimler"
+    ],
+    "next_topics": ["Organik Bileşikler"],
+    "estimated_hours": 11,
+    "difficulty": "hard",
+    "question_weight": "very_high"
+  },
+  {
+    "subject": "Kimya",
+    "exam": "AYT",
+    "topic": "Organik Bileşikler",
+    "subtopics": [
+      "Hidrokarbonlar",
+      "Alkanlar",
+      "Alkenler",
+      "Alkinler",
+      "Aromatik bileşikler",
+      "Alkoller",
+      "Eterler",
+      "Aldehitler",
+      "Ketonlar",
+      "Karboksilik asitler",
+      "Esterler",
+      "Aminler"
+    ],
+    "priority": "critical",
+    "dependencies": ["Karbon Kimyasına Giriş"],
+    "next_topics": ["Enerji Kaynakları ve Bilimsel Gelişmeler"],
+    "estimated_hours": 20,
+    "difficulty": "hard",
+    "question_weight": "very_high"
+  },
+  {
+    "subject": "Kimya",
+    "exam": "AYT",
+    "topic": "Enerji Kaynakları ve Bilimsel Gelişmeler",
+    "subtopics": [
+      "Fosil yakıtlar",
+      "Yenilenebilir enerji kaynakları",
+      "Hidrojen enerjisi",
+      "Nükleer enerji",
+      "Nanoteknoloji",
+      "Sürdürülebilir kimya",
+      "Çevre ve enerji"
+    ],
+    "priority": "medium",
+    "dependencies": ["Organik Bileşikler"],
+    "next_topics": [],
+    "estimated_hours": 6,
+    "difficulty": "medium",
+    "question_weight": "medium"
+  }
+]
