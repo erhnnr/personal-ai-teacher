@@ -1,0 +1,311 @@
+[
+  {
+    "subject": "Tarih",
+    "exam": "TYT",
+    "topic": "Tarih ve Zaman",
+    "subtopics": [
+      "Tarih biliminin konusu",
+      "Tarihin kaynakları",
+      "Tarihî bilginin oluşumu",
+      "Takvimler",
+      "Zamanın dönemlendirilmesi",
+      "Tarihe yardımcı bilimler"
+    ],
+    "priority": "medium",
+    "dependencies": [],
+    "next_topics": ["İnsanlığın İlk Dönemleri"],
+    "estimated_hours": 4,
+    "difficulty": "easy",
+    "question_weight": "low"
+  },
+  {
+    "subject": "Tarih",
+    "exam": "TYT",
+    "topic": "İnsanlığın İlk Dönemleri",
+    "subtopics": [
+      "İlk insan toplulukları",
+      "Yerleşik hayata geçiş",
+      "Tarım Devrimi",
+      "İlk şehirler",
+      "Yazının icadı",
+      "İlk Çağ medeniyetleri",
+      "Mezopotamya",
+      "Mısır",
+      "Anadolu medeniyetleri"
+    ],
+    "priority": "high",
+    "dependencies": ["Tarih ve Zaman"],
+    "next_topics": ["Orta Çağ'da Dünya"],
+    "estimated_hours": 7,
+    "difficulty": "medium",
+    "question_weight": "medium"
+  },
+  {
+    "subject": "Tarih",
+    "exam": "TYT",
+    "topic": "Orta Çağ'da Dünya",
+    "subtopics": [
+      "Orta Çağ siyasi yapıları",
+      "Feodalite",
+      "Bizans",
+      "Sasani Devleti",
+      "Avrupa'da toplumsal yapı",
+      "Ticaret yolları",
+      "Bilim ve kültür"
+    ],
+    "priority": "medium",
+    "dependencies": ["İnsanlığın İlk Dönemleri"],
+    "next_topics": ["İlk ve Orta Çağlarda Türk Dünyası"],
+    "estimated_hours": 6,
+    "difficulty": "medium",
+    "question_weight": "medium"
+  },
+  {
+    "subject": "Tarih",
+    "exam": "TYT",
+    "topic": "İlk ve Orta Çağlarda Türk Dünyası",
+    "subtopics": [
+      "Türklerin ana yurdu",
+      "İlk Türk devletleri",
+      "Asya Hun Devleti",
+      "Kök Türkler",
+      "Uygurlar",
+      "Kut anlayışı",
+      "Türk devlet teşkilatı",
+      "Türklerde toplum",
+      "Türklerde kültür ve medeniyet"
+    ],
+    "priority": "critical",
+    "dependencies": ["Orta Çağ'da Dünya"],
+    "next_topics": ["İslam Medeniyetinin Doğuşu"],
+    "estimated_hours": 9,
+    "difficulty": "medium",
+    "question_weight": "high"
+  },
+  {
+    "subject": "Tarih",
+    "exam": "TYT",
+    "topic": "İslam Medeniyetinin Doğuşu",
+    "subtopics": [
+      "İslamiyet öncesi Arabistan",
+      "Hz. Muhammed dönemi",
+      "Hicret",
+      "Medine İslam Devleti",
+      "Dört Halife dönemi",
+      "Emeviler",
+      "Abbasiler",
+      "İslam medeniyetinde bilim ve kültür"
+    ],
+    "priority": "high",
+    "dependencies": ["Orta Çağ'da Dünya"],
+    "next_topics": ["Türklerin İslamiyet'i Kabulü ve İlk Türk İslam Devletleri"],
+    "estimated_hours": 8,
+    "difficulty": "medium",
+    "question_weight": "high"
+  },
+  {
+    "subject": "Tarih",
+    "exam": "TYT",
+    "topic": "Türklerin İslamiyet'i Kabulü ve İlk Türk İslam Devletleri",
+    "subtopics": [
+      "Türklerin İslamiyet ile karşılaşması",
+      "Talas Savaşı",
+      "Karahanlılar",
+      "Gazneliler",
+      "Büyük Selçuklu Devleti",
+      "Türk İslam devlet teşkilatı",
+      "Türk İslam kültür ve medeniyeti"
+    ],
+    "priority": "critical",
+    "dependencies": [
+      "İlk ve Orta Çağlarda Türk Dünyası",
+      "İslam Medeniyetinin Doğuşu"
+    ],
+    "next_topics": ["Yerleşme ve Devletleşme Sürecinde Selçuklu Türkiyesi"],
+    "estimated_hours": 9,
+    "difficulty": "medium",
+    "question_weight": "high"
+  },
+  {
+    "subject": "Tarih",
+    "exam": "TYT",
+    "topic": "Yerleşme ve Devletleşme Sürecinde Selçuklu Türkiyesi",
+    "subtopics": [
+      "Malazgirt Savaşı",
+      "Anadolu'nun Türkleşmesi",
+      "Türkiye Selçuklu Devleti",
+      "Haçlı Seferleri",
+      "Anadolu Türk beylikleri",
+      "Selçuklu kültür ve medeniyeti"
+    ],
+    "priority": "critical",
+    "dependencies": ["Türklerin İslamiyet'i Kabulü ve İlk Türk İslam Devletleri"],
+    "next_topics": ["Beylikten Devlete Osmanlı"],
+    "estimated_hours": 8,
+    "difficulty": "medium",
+    "question_weight": "high"
+  },
+  {
+    "subject": "Tarih",
+    "exam": "TYT",
+    "topic": "Beylikten Devlete Osmanlı",
+    "subtopics": [
+      "Osmanlı Beyliği'nin kuruluşu",
+      "Kuruluş teorileri",
+      "İlk Osmanlı hükümdarları",
+      "Rumeli'ye geçiş",
+      "Balkan fetihleri",
+      "Ankara Savaşı",
+      "Fetret Devri"
+    ],
+    "priority": "critical",
+    "dependencies": ["Yerleşme ve Devletleşme Sürecinde Selçuklu Türkiyesi"],
+    "next_topics": ["Dünya Gücü Osmanlı"],
+    "estimated_hours": 9,
+    "difficulty": "medium",
+    "question_weight": "very_high"
+  },
+  {
+    "subject": "Tarih",
+    "exam": "TYT",
+    "topic": "Dünya Gücü Osmanlı",
+    "subtopics": [
+      "İstanbul'un fethi",
+      "Fatih Sultan Mehmet dönemi",
+      "Yavuz Sultan Selim dönemi",
+      "Kanuni Sultan Süleyman dönemi",
+      "Osmanlı kara ve deniz hâkimiyeti",
+      "Osmanlı devlet teşkilatı",
+      "Toplum ve ekonomi"
+    ],
+    "priority": "critical",
+    "dependencies": ["Beylikten Devlete Osmanlı"],
+    "next_topics": ["Değişen Dünya Dengeleri Karşısında Osmanlı"],
+    "estimated_hours": 10,
+    "difficulty": "medium",
+    "question_weight": "very_high"
+  },
+  {
+    "subject": "Tarih",
+    "exam": "TYT",
+    "topic": "Değişen Dünya Dengeleri Karşısında Osmanlı",
+    "subtopics": [
+      "Coğrafi keşiflerin etkileri",
+      "Avrupa'daki siyasi değişimler",
+      "Osmanlı'da değişim",
+      "17. yüzyıl siyasi gelişmeleri",
+      "Islahat hareketleri",
+      "Osmanlı-Avrupa ilişkileri"
+    ],
+    "priority": "high",
+    "dependencies": ["Dünya Gücü Osmanlı"],
+    "next_topics": ["Değişim Çağında Avrupa ve Osmanlı"],
+    "estimated_hours": 8,
+    "difficulty": "medium",
+    "question_weight": "high"
+  },
+  {
+    "subject": "Tarih",
+    "exam": "TYT",
+    "topic": "Değişim Çağında Avrupa ve Osmanlı",
+    "subtopics": [
+      "Rönesans",
+      "Reform",
+      "Aydınlanma",
+      "Bilim Devrimi",
+      "Sanayi Devrimi",
+      "Fransız İhtilali",
+      "Osmanlı yenileşme hareketleri"
+    ],
+    "priority": "critical",
+    "dependencies": ["Değişen Dünya Dengeleri Karşısında Osmanlı"],
+    "next_topics": ["Uluslararası İlişkilerde Denge Stratejisi"],
+    "estimated_hours": 9,
+    "difficulty": "medium",
+    "question_weight": "high"
+  },
+  {
+    "subject": "Tarih",
+    "exam": "TYT",
+    "topic": "Uluslararası İlişkilerde Denge Stratejisi",
+    "subtopics": [
+      "19. yüzyılda Osmanlı",
+      "Milliyetçilik hareketleri",
+      "Şark Meselesi",
+      "Tanzimat Fermanı",
+      "Islahat Fermanı",
+      "I. Meşrutiyet",
+      "II. Meşrutiyet",
+      "Osmanlı'da modernleşme"
+    ],
+    "priority": "critical",
+    "dependencies": ["Değişim Çağında Avrupa ve Osmanlı"],
+    "next_topics": ["20. Yüzyıl Başlarında Osmanlı Devleti ve Dünya"],
+    "estimated_hours": 10,
+    "difficulty": "hard",
+    "question_weight": "very_high"
+  },
+  {
+    "subject": "Tarih",
+    "exam": "TYT",
+    "topic": "20. Yüzyıl Başlarında Osmanlı Devleti ve Dünya",
+    "subtopics": [
+      "Trablusgarp Savaşı",
+      "Balkan Savaşları",
+      "I. Dünya Savaşı",
+      "Osmanlı Devleti'nin savaşa girişi",
+      "Cepheler",
+      "Mondros Ateşkes Antlaşması",
+      "İşgaller"
+    ],
+    "priority": "critical",
+    "dependencies": ["Uluslararası İlişkilerde Denge Stratejisi"],
+    "next_topics": ["Millî Mücadele"],
+    "estimated_hours": 10,
+    "difficulty": "hard",
+    "question_weight": "very_high"
+  },
+  {
+    "subject": "Tarih",
+    "exam": "TYT",
+    "topic": "Millî Mücadele",
+    "subtopics": [
+      "Mustafa Kemal'in Samsun'a çıkışı",
+      "Havza Genelgesi",
+      "Amasya Genelgesi",
+      "Erzurum Kongresi",
+      "Sivas Kongresi",
+      "Misak-ı Millî",
+      "TBMM'nin açılması",
+      "Kurtuluş Savaşı cepheleri",
+      "Mudanya Ateşkes Antlaşması",
+      "Lozan Barış Antlaşması"
+    ],
+    "priority": "critical",
+    "dependencies": ["20. Yüzyıl Başlarında Osmanlı Devleti ve Dünya"],
+    "next_topics": ["Atatürkçülük ve Türk İnkılabı"],
+    "estimated_hours": 14,
+    "difficulty": "hard",
+    "question_weight": "very_high"
+  },
+  {
+    "subject": "Tarih",
+    "exam": "TYT",
+    "topic": "Atatürkçülük ve Türk İnkılabı",
+    "subtopics": [
+      "Atatürk ilkeleri",
+      "Siyasi inkılaplar",
+      "Hukuk alanındaki inkılaplar",
+      "Eğitim ve kültür alanındaki inkılaplar",
+      "Toplumsal inkılaplar",
+      "Ekonomi alanındaki gelişmeler",
+      "Atatürk dönemi dış politika"
+    ],
+    "priority": "critical",
+    "dependencies": ["Millî Mücadele"],
+    "next_topics": [],
+    "estimated_hours": 12,
+    "difficulty": "medium",
+    "question_weight": "very_high"
+  }
+]
