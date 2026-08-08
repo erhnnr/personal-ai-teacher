@@ -106,9 +106,36 @@ def test_tyt_fizik_hareket_metadata():
     assert topic is not None
     assert topic["priority"] == "critical"
     assert topic["difficulty"] == "medium"
-
     assert "Newton'un hareket yasaları" in topic["subtopics"]
-
     assert "Fizik Bilimine Giriş" in topic["dependencies"]
-
     assert "İş Güç ve Enerji" in topic["next_topics"]
+
+
+def test_tyt_kimya_curriculum_loaded():
+
+    curriculum = load_curriculum_data()
+
+    topics = [
+        item
+        for item in curriculum
+        if item.get("exam") == "TYT"
+        and item.get("subject") == "Kimya"
+    ]
+
+    assert len(topics) == 10
+
+
+def test_tyt_kimya_mol_metadata():
+
+    topic = get_topic_info(
+        "TYT",
+        "Kimya",
+        "Mol ve Kimyasal Hesaplamalar"
+    )
+
+    assert topic is not None
+    assert topic["priority"] == "critical"
+    assert topic["difficulty"] == "hard"
+    assert "Mol kavramı" in topic["subtopics"]
+    assert "Kimyanın Temel Kanunları" in topic["dependencies"]
+    assert "Karışımlar" in topic["next_topics"]

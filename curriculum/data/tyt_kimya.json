@@ -1,0 +1,217 @@
+[
+  {
+    "subject": "Kimya",
+    "exam": "TYT",
+    "topic": "Kimya Bilimi",
+    "subtopics": [
+      "Kimyanın tanımı",
+      "Kimyanın alt disiplinleri",
+      "Kimyanın günlük hayattaki yeri",
+      "Kimya laboratuvarı",
+      "Laboratuvar güvenliği",
+      "Kimyasal maddelerin güvenli kullanımı"
+    ],
+    "priority": "medium",
+    "dependencies": [],
+    "next_topics": ["Atom ve Periyodik Sistem"],
+    "estimated_hours": 4,
+    "difficulty": "easy",
+    "question_weight": "low"
+  },
+  {
+    "subject": "Kimya",
+    "exam": "TYT",
+    "topic": "Atom ve Periyodik Sistem",
+    "subtopics": [
+      "Atom modelleri",
+      "Atomun yapısı",
+      "Proton",
+      "Nötron",
+      "Elektron",
+      "Atom numarası",
+      "Kütle numarası",
+      "İzotop",
+      "Periyodik tablo",
+      "Periyodik özellikler"
+    ],
+    "priority": "critical",
+    "dependencies": ["Kimya Bilimi"],
+    "next_topics": ["Kimyasal Türler Arası Etkileşimler"],
+    "estimated_hours": 10,
+    "difficulty": "medium",
+    "question_weight": "very_high"
+  },
+  {
+    "subject": "Kimya",
+    "exam": "TYT",
+    "topic": "Kimyasal Türler Arası Etkileşimler",
+    "subtopics": [
+      "İyonik bağ",
+      "Kovalent bağ",
+      "Metalik bağ",
+      "Lewis yapıları",
+      "Moleküller arası etkileşimler",
+      "Hidrojen bağı",
+      "Dipol-dipol etkileşimi",
+      "London kuvvetleri"
+    ],
+    "priority": "critical",
+    "dependencies": ["Atom ve Periyodik Sistem"],
+    "next_topics": ["Maddenin Halleri"],
+    "estimated_hours": 11,
+    "difficulty": "medium",
+    "question_weight": "very_high"
+  },
+  {
+    "subject": "Kimya",
+    "exam": "TYT",
+    "topic": "Maddenin Halleri",
+    "subtopics": [
+      "Katılar",
+      "Sıvılar",
+      "Gazlar",
+      "Plazma",
+      "Hal değişimleri",
+      "Buharlaşma",
+      "Yoğuşma",
+      "Kaynama",
+      "Erime",
+      "Donma",
+      "Süblimleşme"
+    ],
+    "priority": "high",
+    "dependencies": ["Kimyasal Türler Arası Etkileşimler"],
+    "next_topics": ["Doğa ve Kimya"],
+    "estimated_hours": 8,
+    "difficulty": "medium",
+    "question_weight": "high"
+  },
+  {
+    "subject": "Kimya",
+    "exam": "TYT",
+    "topic": "Doğa ve Kimya",
+    "subtopics": [
+      "Su ve hayat",
+      "Su kaynakları",
+      "Su kirliliği",
+      "Hava kirliliği",
+      "Toprak kirliliği",
+      "Çevresel kimya",
+      "Sürdürülebilirlik"
+    ],
+    "priority": "medium",
+    "dependencies": ["Maddenin Halleri"],
+    "next_topics": ["Kimyanın Temel Kanunları"],
+    "estimated_hours": 5,
+    "difficulty": "easy",
+    "question_weight": "medium"
+  },
+  {
+    "subject": "Kimya",
+    "exam": "TYT",
+    "topic": "Kimyanın Temel Kanunları",
+    "subtopics": [
+      "Kütlenin korunumu kanunu",
+      "Sabit oranlar kanunu",
+      "Katlı oranlar kanunu",
+      "Birleşme oranları"
+    ],
+    "priority": "critical",
+    "dependencies": [
+      "Atom ve Periyodik Sistem"
+    ],
+    "next_topics": ["Mol ve Kimyasal Hesaplamalar"],
+    "estimated_hours": 7,
+    "difficulty": "medium",
+    "question_weight": "high"
+  },
+  {
+    "subject": "Kimya",
+    "exam": "TYT",
+    "topic": "Mol ve Kimyasal Hesaplamalar",
+    "subtopics": [
+      "Mol kavramı",
+      "Avogadro sayısı",
+      "Mol-kütle ilişkisi",
+      "Tanecik sayısı",
+      "Kimyasal denklem",
+      "Denklem denkleştirme",
+      "Stokiyometrik hesaplamalar"
+    ],
+    "priority": "critical",
+    "dependencies": [
+      "Kimyanın Temel Kanunları",
+      "Atom ve Periyodik Sistem"
+    ],
+    "next_topics": ["Karışımlar"],
+    "estimated_hours": 12,
+    "difficulty": "hard",
+    "question_weight": "very_high"
+  },
+  {
+    "subject": "Kimya",
+    "exam": "TYT",
+    "topic": "Karışımlar",
+    "subtopics": [
+      "Homojen karışımlar",
+      "Heterojen karışımlar",
+      "Çözeltiler",
+      "Çözünme",
+      "Derişim",
+      "Yüzde derişim",
+      "Karışımları ayırma yöntemleri"
+    ],
+    "priority": "critical",
+    "dependencies": [
+      "Mol ve Kimyasal Hesaplamalar"
+    ],
+    "next_topics": ["Asitler Bazlar ve Tuzlar"],
+    "estimated_hours": 10,
+    "difficulty": "medium",
+    "question_weight": "very_high"
+  },
+  {
+    "subject": "Kimya",
+    "exam": "TYT",
+    "topic": "Asitler Bazlar ve Tuzlar",
+    "subtopics": [
+      "Asitlerin özellikleri",
+      "Bazların özellikleri",
+      "Asit-baz tepkimeleri",
+      "Nötralleşme",
+      "pH kavramı",
+      "Tuzlar",
+      "Asit ve bazların günlük hayattaki kullanımı"
+    ],
+    "priority": "critical",
+    "dependencies": [
+      "Kimyasal Türler Arası Etkileşimler"
+    ],
+    "next_topics": ["Kimya Her Yerde"],
+    "estimated_hours": 9,
+    "difficulty": "medium",
+    "question_weight": "high"
+  },
+  {
+    "subject": "Kimya",
+    "exam": "TYT",
+    "topic": "Kimya Her Yerde",
+    "subtopics": [
+      "Temizlik maddeleri",
+      "Polimerler",
+      "Kozmetik ürünler",
+      "İlaçlar",
+      "Gıda kimyası",
+      "Yağlar",
+      "Günlük yaşamda kimyasallar"
+    ],
+    "priority": "medium",
+    "dependencies": [
+      "Asitler Bazlar ve Tuzlar"
+    ],
+    "next_topics": [],
+    "estimated_hours": 6,
+    "difficulty": "easy",
+    "question_weight": "medium"
+  }
+]
