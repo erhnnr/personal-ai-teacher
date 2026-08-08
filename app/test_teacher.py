@@ -3,9 +3,15 @@ from types import SimpleNamespace
 import pytest
 
 import teacher
+
 from planner import create_plan
 from prompt_builder import build_prompt
-from teacher import TeacherError
+
+from teacher import (
+    TeacherError,
+    KnowledgeNotReadyError,
+    LanguageSafetyError,
+)
 
 
 def test_teacher_prompt_pipeline():
@@ -24,6 +30,7 @@ def test_teacher_prompt_pipeline():
     assert plan is not None
     assert prompt is not None
     assert "Fonksiyonlar" in prompt
+    assert "Yalnızca Türkçe yanıt ver" in prompt
 
 
 def test_teacher_rejects_empty_question():
@@ -36,9 +43,39 @@ def test_teacher_rejects_empty_question():
         )
 
 
+def test_teacher_blocks_unverified_knowledge(
+    monkeypatch
+):
+
+    monkeypatch.setattr(
+        teacher,
+        "build_verified_context",
+        lambda plan: None
+    )
+
+    with pytest.raises(
+        KnowledgeNotReadyError
+    ) as exc_info:
+
+        teacher.ask_teacher(
+            "Sinir Sistemi konusunu anlat."
+        )
+
+    assert (
+        "doğrulanmış ders içeriği henüz hazır değil"
+        in str(exc_info.value)
+    )
+
+
 def test_teacher_handles_offline_llm(
     monkeypatch
 ):
+
+    monkeypatch.setattr(
+        teacher,
+        "build_verified_context",
+        lambda plan: "Verified knowledge"
+    )
 
     monkeypatch.setattr(
         teacher,
@@ -67,6 +104,12 @@ def test_teacher_handles_offline_llm(
 def test_teacher_rejects_missing_model(
     monkeypatch
 ):
+
+    monkeypatch.setattr(
+        teacher,
+        "build_verified_context",
+        lambda plan: "Verified knowledge"
+    )
 
     monkeypatch.setattr(
         teacher,
@@ -100,6 +143,14 @@ def test_teacher_generates_response(
 
     monkeypatch.setattr(
         teacher,
+        "build_verified_context",
+        lambda plan: (
+            "Verified limit knowledge"
+        )
+    )
+
+    monkeypatch.setattr(
+        teacher,
         "check_llm_connection",
         lambda: {
             "connected": True,
@@ -108,14 +159,6 @@ def test_teacher_generates_response(
             ],
             "error": None,
         }
-    )
-
-    monkeypatch.setattr(
-        teacher,
-        "build_verified_context",
-        lambda plan: (
-            "Verified limit knowledge"
-        )
     )
 
     fake_response = SimpleNamespace(
@@ -159,7 +202,7 @@ def test_teacher_generates_response(
     monkeypatch.setattr(
         teacher.client.chat.completions,
         "create",
-        fake_create
+        fake_create,
     )
 
     result = teacher.ask_teacher(
@@ -178,6 +221,12 @@ def test_teacher_rejects_empty_model_response(
 
     monkeypatch.setattr(
         teacher,
+        "build_verified_context",
+        lambda plan: "Verified knowledge"
+    )
+
+    monkeypatch.setattr(
+        teacher,
         "check_llm_connection",
         lambda: {
             "connected": True,
@@ -186,12 +235,6 @@ def test_teacher_rejects_empty_model_response(
             ],
             "error": None,
         }
-    )
-
-    monkeypatch.setattr(
-        teacher,
-        "build_verified_context",
-        lambda plan: None
     )
 
     fake_response = SimpleNamespace(
@@ -207,7 +250,7 @@ def test_teacher_rejects_empty_model_response(
     monkeypatch.setattr(
         teacher.client.chat.completions,
         "create",
-        lambda **kwargs: fake_response
+        lambda **kwargs: fake_response,
     )
 
     with pytest.raises(
@@ -220,5 +263,77 @@ def test_teacher_rejects_empty_model_response(
 
     assert (
         "empty response"
+        in str(exc_info.value)
+    )
+
+
+def test_disallowed_script_detector():
+
+    assert (
+        teacher.contains_disallowed_script(
+            "Limit, yaklaşma davranışını inceler."
+        )
+        is False
+    )
+
+    assert (
+        teacher.contains_disallowed_script(
+            "Limit kavramı şöyle açıklanır: 想象一下"
+        )
+        is True
+    )
+
+
+def test_teacher_blocks_foreign_script_response(
+    monkeypatch
+):
+
+    monkeypatch.setattr(
+        teacher,
+        "build_verified_context",
+        lambda plan: "Verified knowledge"
+    )
+
+    monkeypatch.setattr(
+        teacher,
+        "check_llm_connection",
+        lambda: {
+            "connected": True,
+            "models": [
+                teacher.MODEL_NAME
+            ],
+            "error": None,
+        }
+    )
+
+    fake_response = SimpleNamespace(
+        choices=[
+            SimpleNamespace(
+                message=SimpleNamespace(
+                    content=(
+                        "Limit yaklaşma davranışıdır. "
+                        "想象一下"
+                    )
+                )
+            )
+        ]
+    )
+
+    monkeypatch.setattr(
+        teacher.client.chat.completions,
+        "create",
+        lambda **kwargs: fake_response,
+    )
+
+    with pytest.raises(
+        LanguageSafetyError
+    ) as exc_info:
+
+        teacher.ask_teacher(
+            "Limit nedir?"
+        )
+
+    assert (
+        "Türkçe dışı bir yazı sistemi"
         in str(exc_info.value)
     )
