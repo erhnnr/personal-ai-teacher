@@ -187,6 +187,9 @@ def build_prompt(
 ):
     """
     Build strict JSON-generation instructions.
+
+    Mathematics examples must include a
+    machine-checkable validation block.
     """
 
     curriculum_json = json.dumps(
@@ -194,6 +197,78 @@ def build_prompt(
         ensure_ascii=False,
         indent=2,
     )
+
+    math_validation_instruction = ""
+
+    if normalize(record["subject"]) == normalize("Matematik"):
+        math_validation_instruction = """
+MATEMATİK İÇİN ZORUNLU KURAL:
+
+Her examples öğesinde "validation" alanı bulunmalıdır.
+
+Validation, sorudaki matematiği makinenin bağımsız
+olarak kontrol edebileceği biçimde tanımlamalıdır.
+
+Desteklenen validation type değerleri:
+
+- arithmetic
+- equation
+- inequality
+- polynomial_remainder
+- function_value
+- function_range
+- combination
+- permutation
+- trigonometric_value
+- distance_2d
+- indefinite_integral
+- definite_integral
+
+Matematiksel ifadelerde:
+- çarpma için *
+- üs için **
+- pi için pi
+- karekök için sqrt(...)
+kullan.
+
+Doğal dildeki question, answer ve validation
+aynı matematiksel problemi temsil etmelidir.
+
+Soruyu desteklenen validation tiplerinden biriyle
+güvenilir biçimde ifade edemiyorsan o örneği üretme.
+
+ÖRNEK — DENKLEM:
+
+"validation": {
+  "type": "equation",
+  "expression": "3*x + 5",
+  "variable": "x",
+  "relation": "=",
+  "rhs": 14,
+  "expected": 3
+}
+
+ÖRNEK — POLİNOM KALANI:
+
+"validation": {
+  "type": "polynomial_remainder",
+  "polynomial": "3*x**2 + 5*x - 2",
+  "variable": "x",
+  "divisor_root": 1,
+  "expected": 6
+}
+
+ÖRNEK — BELİRLİ İNTEGRAL:
+
+"validation": {
+  "type": "definite_integral",
+  "expression": "2*x",
+  "variable": "x",
+  "lower": 0,
+  "upper": 3,
+  "expected": 9
+}
+""".strip()
 
     return f"""
 Sen YKS için eğitim içerik taslağı hazırlayan bir sistemsin.
@@ -215,6 +290,8 @@ KURALLAR:
 - Belirsiz integralde +C sabitini unutma.
 - Belirli integral hesaplarında alt ve üst sınırı doğru uygula.
 - Matematiksel bir sonuçtan emin değilsen o örneği üretme.
+
+{math_validation_instruction}
 
 MÜFREDAT KAYDI:
 
@@ -260,7 +337,10 @@ JSON üst yapısı:
         "type": "concept",
         "question": "string",
         "answer": "string",
-        "learning_point": "string"
+        "learning_point": "string",
+        "validation": {{
+          "type": "supported_validation_type"
+        }}
       }}
     ]
   }},
@@ -318,6 +398,8 @@ intermediate
 advanced
 
 değerlerinden biri olabilir.
+
+Konu Matematik ise her örnekte "validation" ZORUNLUDUR.
 """.strip()
 
 
@@ -527,6 +609,102 @@ def update_draft_metadata(
     )
 
 
+
+
+SUPPORTED_MATH_VALIDATION_TYPES = {
+    "arithmetic",
+    "equation",
+    "inequality",
+    "polynomial_remainder",
+    "function_value",
+    "function_range",
+    "combination",
+    "permutation",
+    "trigonometric_value",
+    "distance_2d",
+    "indefinite_integral",
+    "definite_integral",
+}
+
+
+def validate_generated_math_package(
+    package,
+    subject,
+):
+    """
+    Enforce machine-checkable validation blocks
+    before a generated Mathematics draft is saved.
+
+    This is a generation safety gate.
+
+    It does not establish factual correctness.
+    """
+
+    if normalize(subject) != normalize("Matematik"):
+        return
+
+    examples_section = package.get(
+        "examples"
+    )
+
+    if not isinstance(
+        examples_section,
+        dict,
+    ):
+        raise ValueError(
+            "Mathematics draft has no valid examples section."
+        )
+
+    examples = examples_section.get(
+        "examples"
+    )
+
+    if not isinstance(
+        examples,
+        list,
+    ) or not examples:
+        raise ValueError(
+            "Mathematics draft must contain examples."
+        )
+
+    for index, example in enumerate(
+        examples,
+        start=1,
+    ):
+        if not isinstance(
+            example,
+            dict,
+        ):
+            raise ValueError(
+                f"Mathematics example {index} is invalid."
+            )
+
+        validation = example.get(
+            "validation"
+        )
+
+        if not isinstance(
+            validation,
+            dict,
+        ):
+            raise ValueError(
+                f"Mathematics example {index} "
+                f"is missing validation."
+            )
+
+        validation_type = validation.get(
+            "type"
+        )
+
+        if validation_type not in (
+            SUPPORTED_MATH_VALIDATION_TYPES
+        ):
+            raise ValueError(
+                f"Mathematics example {index} "
+                f"has unsupported validation type: "
+                f"{validation_type}"
+            )
+
 def generate_one(
     record,
     grade,
@@ -579,6 +757,11 @@ def generate_one(
         package,
         record,
         grade,
+    )
+
+    validate_generated_math_package(
+        package,
+        record["subject"],
     )
 
     return package

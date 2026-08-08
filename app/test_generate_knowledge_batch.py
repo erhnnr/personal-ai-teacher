@@ -266,3 +266,75 @@ def test_slugify_handles_turkish_i():
         )
         == "is_enerji_ve_guc"
     )
+
+
+def test_math_package_without_validation_is_rejected():
+
+    package = {
+        "examples": {
+            "topic": "Matematik",
+            "examples": [
+                {
+                    "id": "E1",
+                    "question": "2 + 2 kaçtır?",
+                    "answer": "4",
+                    "learning_point": "Toplama",
+                }
+            ],
+        }
+    }
+
+    try:
+        generate_knowledge_batch.validate_generated_math_package(
+            package,
+            "Matematik",
+        )
+
+        assert False, (
+            "Missing validation should have been rejected."
+        )
+
+    except ValueError as exc:
+
+        assert (
+            "missing validation"
+            in str(exc)
+        )
+
+
+def test_math_package_with_unsupported_validation_is_rejected():
+
+    package = {
+        "examples": {
+            "topic": "Matematik",
+            "examples": [
+                {
+                    "id": "E1",
+                    "question": "Bir matematik sorusu.",
+                    "answer": "Bir cevap.",
+                    "learning_point": "Test",
+                    "validation": {
+                        "type": "unknown_math_type"
+                    },
+                }
+            ],
+        }
+    }
+
+    try:
+        generate_knowledge_batch.validate_generated_math_package(
+            package,
+            "Matematik",
+        )
+
+        assert False, (
+            "Unsupported validation type "
+            "should have been rejected."
+        )
+
+    except ValueError as exc:
+
+        assert (
+            "unsupported validation type"
+            in str(exc)
+        )
