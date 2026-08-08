@@ -78,7 +78,10 @@ def test_tyt_turkce_paragraf_metadata():
     assert topic["difficulty"] == "hard"
     assert "Ana düşünce" in topic["subtopics"]
     assert "Cümlede Anlam" in topic["dependencies"]
-    assert "Sözel Mantık ve Muhakeme" in topic["next_topics"]
+    assert (
+        "Sözel Mantık ve Muhakeme"
+        in topic["next_topics"]
+    )
 
 
 def test_tyt_fizik_curriculum_loaded():
@@ -106,9 +109,18 @@ def test_tyt_fizik_hareket_metadata():
     assert topic is not None
     assert topic["priority"] == "critical"
     assert topic["difficulty"] == "medium"
-    assert "Newton'un hareket yasaları" in topic["subtopics"]
-    assert "Fizik Bilimine Giriş" in topic["dependencies"]
-    assert "İş Güç ve Enerji" in topic["next_topics"]
+    assert (
+        "Newton'un hareket yasaları"
+        in topic["subtopics"]
+    )
+    assert (
+        "Fizik Bilimine Giriş"
+        in topic["dependencies"]
+    )
+    assert (
+        "İş Güç ve Enerji"
+        in topic["next_topics"]
+    )
 
 
 def test_tyt_kimya_curriculum_loaded():
@@ -137,5 +149,47 @@ def test_tyt_kimya_mol_metadata():
     assert topic["priority"] == "critical"
     assert topic["difficulty"] == "hard"
     assert "Mol kavramı" in topic["subtopics"]
-    assert "Kimyanın Temel Kanunları" in topic["dependencies"]
+    assert (
+        "Kimyanın Temel Kanunları"
+        in topic["dependencies"]
+    )
     assert "Karışımlar" in topic["next_topics"]
+
+
+def test_tyt_biyoloji_curriculum_loaded():
+
+    curriculum = load_curriculum_data()
+
+    topics = [
+        item
+        for item in curriculum
+        if item.get("exam") == "TYT"
+        and item.get("subject") == "Biyoloji"
+    ]
+
+    assert len(topics) == 10
+
+
+def test_tyt_biyoloji_hucre_metadata():
+
+    topic = get_topic_info(
+        "TYT",
+        "Biyoloji",
+        "Hücre"
+    )
+
+    assert topic is not None
+    assert topic["priority"] == "critical"
+    assert topic["difficulty"] == "medium"
+    assert "Prokaryot hücre" in topic["subtopics"]
+    assert "Osmoz" in topic["subtopics"]
+
+    assert (
+        "Canlıların Temel Bileşenleri"
+        in topic["dependencies"]
+    )
+
+    assert (
+        "Canlıların Sınıflandırılması"
+        in topic["next_topics"]
+    )

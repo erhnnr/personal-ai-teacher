@@ -1,0 +1,234 @@
+[
+  {
+    "subject": "Biyoloji",
+    "exam": "TYT",
+    "topic": "Yaşam Bilimi Biyoloji",
+    "subtopics": [
+      "Biyolojinin konusu",
+      "Biyolojinin önemi",
+      "Bilimsel yöntem",
+      "Biyolojinin diğer bilimlerle ilişkisi",
+      "Biyolojinin günlük yaşamdaki uygulamaları"
+    ],
+    "priority": "medium",
+    "dependencies": [],
+    "next_topics": ["Canlıların Ortak Özellikleri"],
+    "estimated_hours": 3,
+    "difficulty": "easy",
+    "question_weight": "low"
+  },
+  {
+    "subject": "Biyoloji",
+    "exam": "TYT",
+    "topic": "Canlıların Ortak Özellikleri",
+    "subtopics": [
+      "Hücresel yapı",
+      "Beslenme",
+      "Solunum",
+      "Metabolizma",
+      "Büyüme ve gelişme",
+      "Hareket",
+      "Uyarılara tepki",
+      "Homeostazi",
+      "Üreme",
+      "Adaptasyon"
+    ],
+    "priority": "critical",
+    "dependencies": ["Yaşam Bilimi Biyoloji"],
+    "next_topics": ["Canlıların Temel Bileşenleri"],
+    "estimated_hours": 6,
+    "difficulty": "easy",
+    "question_weight": "high"
+  },
+  {
+    "subject": "Biyoloji",
+    "exam": "TYT",
+    "topic": "Canlıların Temel Bileşenleri",
+    "subtopics": [
+      "Su",
+      "Mineraller",
+      "Asitler ve bazlar",
+      "Karbonhidratlar",
+      "Yağlar",
+      "Proteinler",
+      "Enzimler",
+      "Vitaminler",
+      "Nükleik asitler",
+      "ATP"
+    ],
+    "priority": "critical",
+    "dependencies": ["Canlıların Ortak Özellikleri"],
+    "next_topics": ["Hücre"],
+    "estimated_hours": 10,
+    "difficulty": "medium",
+    "question_weight": "very_high"
+  },
+  {
+    "subject": "Biyoloji",
+    "exam": "TYT",
+    "topic": "Hücre",
+    "subtopics": [
+      "Hücre teorisi",
+      "Prokaryot hücre",
+      "Ökaryot hücre",
+      "Hücre zarı",
+      "Sitoplazma",
+      "Organeller",
+      "Bitki ve hayvan hücresi",
+      "Hücre zarından madde geçişleri",
+      "Difüzyon",
+      "Osmoz",
+      "Aktif taşıma",
+      "Endositoz ve ekzositoz"
+    ],
+    "priority": "critical",
+    "dependencies": ["Canlıların Temel Bileşenleri"],
+    "next_topics": ["Canlıların Sınıflandırılması"],
+    "estimated_hours": 14,
+    "difficulty": "medium",
+    "question_weight": "very_high"
+  },
+  {
+    "subject": "Biyoloji",
+    "exam": "TYT",
+    "topic": "Canlıların Sınıflandırılması",
+    "subtopics": [
+      "Sınıflandırmanın amacı",
+      "Taksonomi",
+      "Tür kavramı",
+      "İkili adlandırma",
+      "Sınıflandırma basamakları",
+      "Bakteriler",
+      "Arkeler",
+      "Protistler",
+      "Mantarlar",
+      "Bitkiler",
+      "Hayvanlar"
+    ],
+    "priority": "high",
+    "dependencies": [
+      "Canlıların Ortak Özellikleri",
+      "Hücre"
+    ],
+    "next_topics": ["Hücre Bölünmeleri ve Üreme"],
+    "estimated_hours": 10,
+    "difficulty": "medium",
+    "question_weight": "high"
+  },
+  {
+    "subject": "Biyoloji",
+    "exam": "TYT",
+    "topic": "Hücre Bölünmeleri ve Üreme",
+    "subtopics": [
+      "Hücre döngüsü",
+      "Mitoz",
+      "Mitozun canlılar için önemi",
+      "Eşeysiz üreme",
+      "Mayoz",
+      "Mayozun canlılar için önemi",
+      "Eşeyli üreme"
+    ],
+    "priority": "critical",
+    "dependencies": ["Hücre"],
+    "next_topics": ["Kalıtım"],
+    "estimated_hours": 11,
+    "difficulty": "medium",
+    "question_weight": "very_high"
+  },
+  {
+    "subject": "Biyoloji",
+    "exam": "TYT",
+    "topic": "Kalıtım",
+    "subtopics": [
+      "Gen",
+      "Alel",
+      "Genotip",
+      "Fenotip",
+      "Homozigot ve heterozigot",
+      "Baskın ve çekinik özellik",
+      "Mendel ilkeleri",
+      "Monohibrit çaprazlama",
+      "Kontrol çaprazlaması",
+      "Eş baskınlık",
+      "Çok alellilik",
+      "Kan grupları",
+      "Eşeye bağlı kalıtım"
+    ],
+    "priority": "critical",
+    "dependencies": ["Hücre Bölünmeleri ve Üreme"],
+    "next_topics": ["Ekosistem Ekolojisi"],
+    "estimated_hours": 13,
+    "difficulty": "hard",
+    "question_weight": "very_high"
+  },
+  {
+    "subject": "Biyoloji",
+    "exam": "TYT",
+    "topic": "Ekosistem Ekolojisi",
+    "subtopics": [
+      "Ekosistem",
+      "Popülasyon",
+      "Komünite",
+      "Habitat",
+      "Ekolojik niş",
+      "Besin zinciri",
+      "Besin ağı",
+      "Enerji akışı",
+      "Ekolojik piramitler",
+      "Madde döngüleri",
+      "Canlılar arası ilişkiler"
+    ],
+    "priority": "critical",
+    "dependencies": ["Canlıların Sınıflandırılması"],
+    "next_topics": ["Popülasyon Ekolojisi"],
+    "estimated_hours": 10,
+    "difficulty": "medium",
+    "question_weight": "very_high"
+  },
+  {
+    "subject": "Biyoloji",
+    "exam": "TYT",
+    "topic": "Popülasyon Ekolojisi",
+    "subtopics": [
+      "Popülasyon yoğunluğu",
+      "Popülasyon büyüklüğü",
+      "Doğum ve ölüm oranları",
+      "Göç",
+      "Taşıma kapasitesi",
+      "Popülasyon büyümesi",
+      "Yaş dağılımı"
+    ],
+    "priority": "high",
+    "dependencies": ["Ekosistem Ekolojisi"],
+    "next_topics": ["Çevre ve İnsan"],
+    "estimated_hours": 6,
+    "difficulty": "medium",
+    "question_weight": "medium"
+  },
+  {
+    "subject": "Biyoloji",
+    "exam": "TYT",
+    "topic": "Çevre ve İnsan",
+    "subtopics": [
+      "Biyoçeşitlilik",
+      "Doğal kaynaklar",
+      "Çevre sorunları",
+      "Hava kirliliği",
+      "Su kirliliği",
+      "Toprak kirliliği",
+      "Küresel iklim değişikliği",
+      "Ekolojik ayak izi",
+      "Sürdürülebilirlik",
+      "Biyolojik çeşitliliğin korunması"
+    ],
+    "priority": "high",
+    "dependencies": [
+      "Ekosistem Ekolojisi",
+      "Popülasyon Ekolojisi"
+    ],
+    "next_topics": [],
+    "estimated_hours": 7,
+    "difficulty": "easy",
+    "question_weight": "high"
+  }
+]
