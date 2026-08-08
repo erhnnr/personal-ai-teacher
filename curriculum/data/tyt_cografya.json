@@ -1,0 +1,289 @@
+[
+  {
+    "subject": "Coğrafya",
+    "exam": "TYT",
+    "topic": "Doğa ve İnsan",
+    "subtopics": [
+      "Coğrafyanın konusu",
+      "Coğrafyanın bölümleri",
+      "Doğal ve beşerî unsurlar",
+      "İnsan-doğa etkileşimi",
+      "Coğrafyanın günlük yaşamdaki önemi"
+    ],
+    "priority": "medium",
+    "dependencies": [],
+    "next_topics": ["Dünya'nın Şekli ve Hareketleri"],
+    "estimated_hours": 4,
+    "difficulty": "easy",
+    "question_weight": "low"
+  },
+  {
+    "subject": "Coğrafya",
+    "exam": "TYT",
+    "topic": "Dünya'nın Şekli ve Hareketleri",
+    "subtopics": [
+      "Dünya'nın şekli",
+      "Dünya'nın günlük hareketi",
+      "Dünya'nın yıllık hareketi",
+      "Eksen eğikliği",
+      "Mevsimlerin oluşumu",
+      "Gece-gündüz süreleri",
+      "Yerel saat"
+    ],
+    "priority": "critical",
+    "dependencies": ["Doğa ve İnsan"],
+    "next_topics": ["Coğrafi Konum"],
+    "estimated_hours": 8,
+    "difficulty": "medium",
+    "question_weight": "high"
+  },
+  {
+    "subject": "Coğrafya",
+    "exam": "TYT",
+    "topic": "Coğrafi Konum",
+    "subtopics": [
+      "Mutlak konum",
+      "Göreceli konum",
+      "Enlem",
+      "Boylam",
+      "Paraleller",
+      "Meridyenler",
+      "Türkiye'nin coğrafi konumu"
+    ],
+    "priority": "critical",
+    "dependencies": ["Dünya'nın Şekli ve Hareketleri"],
+    "next_topics": ["Harita Bilgisi"],
+    "estimated_hours": 8,
+    "difficulty": "medium",
+    "question_weight": "very_high"
+  },
+  {
+    "subject": "Coğrafya",
+    "exam": "TYT",
+    "topic": "Harita Bilgisi",
+    "subtopics": [
+      "Harita kavramı",
+      "Ölçek",
+      "Büyük ve küçük ölçekli haritalar",
+      "Uzaklık hesaplama",
+      "Alan hesaplama",
+      "İzohips",
+      "Eğim",
+      "Profil çıkarma",
+      "Harita yorumlama"
+    ],
+    "priority": "critical",
+    "dependencies": ["Coğrafi Konum"],
+    "next_topics": ["Atmosfer ve İklim"],
+    "estimated_hours": 12,
+    "difficulty": "hard",
+    "question_weight": "very_high"
+  },
+  {
+    "subject": "Coğrafya",
+    "exam": "TYT",
+    "topic": "Atmosfer ve İklim",
+    "subtopics": [
+      "Atmosferin özellikleri",
+      "Sıcaklık",
+      "Basınç",
+      "Rüzgârlar",
+      "Nem",
+      "Yağış",
+      "İklim elemanları",
+      "İklim tipleri",
+      "Türkiye'de iklim"
+    ],
+    "priority": "critical",
+    "dependencies": [
+      "Dünya'nın Şekli ve Hareketleri",
+      "Coğrafi Konum"
+    ],
+    "next_topics": ["İç ve Dış Kuvvetler"],
+    "estimated_hours": 14,
+    "difficulty": "hard",
+    "question_weight": "very_high"
+  },
+  {
+    "subject": "Coğrafya",
+    "exam": "TYT",
+    "topic": "İç ve Dış Kuvvetler",
+    "subtopics": [
+      "Orojenez",
+      "Epirojenez",
+      "Volkanizma",
+      "Depremler",
+      "Akarsular",
+      "Rüzgârlar",
+      "Buzullar",
+      "Dalga ve akıntılar",
+      "Karstik şekiller",
+      "Yer şekillerinin oluşumu"
+    ],
+    "priority": "critical",
+    "dependencies": ["Harita Bilgisi"],
+    "next_topics": ["Su Toprak ve Bitki"],
+    "estimated_hours": 12,
+    "difficulty": "medium",
+    "question_weight": "very_high"
+  },
+  {
+    "subject": "Coğrafya",
+    "exam": "TYT",
+    "topic": "Su Toprak ve Bitki",
+    "subtopics": [
+      "Su döngüsü",
+      "Akarsular",
+      "Göller",
+      "Yer altı suları",
+      "Toprak oluşumu",
+      "Toprak çeşitleri",
+      "Bitki örtüsü",
+      "Türkiye'de toprak ve bitki"
+    ],
+    "priority": "high",
+    "dependencies": [
+      "Atmosfer ve İklim",
+      "İç ve Dış Kuvvetler"
+    ],
+    "next_topics": ["Nüfus"],
+    "estimated_hours": 9,
+    "difficulty": "medium",
+    "question_weight": "high"
+  },
+  {
+    "subject": "Coğrafya",
+    "exam": "TYT",
+    "topic": "Nüfus",
+    "subtopics": [
+      "Nüfusun dağılışı",
+      "Nüfus yoğunluğu",
+      "Nüfus artışı",
+      "Nüfus politikaları",
+      "Nüfus piramitleri",
+      "Türkiye'nin nüfus özellikleri",
+      "Dünya nüfusu"
+    ],
+    "priority": "critical",
+    "dependencies": [],
+    "next_topics": ["Göç ve Yerleşme"],
+    "estimated_hours": 9,
+    "difficulty": "medium",
+    "question_weight": "very_high"
+  },
+  {
+    "subject": "Coğrafya",
+    "exam": "TYT",
+    "topic": "Göç ve Yerleşme",
+    "subtopics": [
+      "Göç kavramı",
+      "İç göç",
+      "Dış göç",
+      "Göç nedenleri",
+      "Göçün sonuçları",
+      "Kır yerleşmeleri",
+      "Şehir yerleşmeleri",
+      "Yerleşmeyi etkileyen faktörler"
+    ],
+    "priority": "critical",
+    "dependencies": ["Nüfus"],
+    "next_topics": ["Ekonomik Faaliyetler"],
+    "estimated_hours": 8,
+    "difficulty": "medium",
+    "question_weight": "high"
+  },
+  {
+    "subject": "Coğrafya",
+    "exam": "TYT",
+    "topic": "Ekonomik Faaliyetler",
+    "subtopics": [
+      "Tarım",
+      "Hayvancılık",
+      "Ormancılık",
+      "Madencilik",
+      "Sanayi",
+      "Enerji kaynakları",
+      "Ulaşım",
+      "Ticaret",
+      "Turizm",
+      "Hizmet sektörü"
+    ],
+    "priority": "critical",
+    "dependencies": [
+      "Nüfus",
+      "Göç ve Yerleşme"
+    ],
+    "next_topics": ["Bölgeler"],
+    "estimated_hours": 12,
+    "difficulty": "medium",
+    "question_weight": "very_high"
+  },
+  {
+    "subject": "Coğrafya",
+    "exam": "TYT",
+    "topic": "Bölgeler",
+    "subtopics": [
+      "Bölge kavramı",
+      "Doğal bölgeler",
+      "Beşerî bölgeler",
+      "Ekonomik bölgeler",
+      "İşlevsel bölgeler",
+      "Türkiye'nin bölgeleri"
+    ],
+    "priority": "high",
+    "dependencies": [
+      "Ekonomik Faaliyetler"
+    ],
+    "next_topics": ["Doğal Afetler"],
+    "estimated_hours": 6,
+    "difficulty": "medium",
+    "question_weight": "medium"
+  },
+  {
+    "subject": "Coğrafya",
+    "exam": "TYT",
+    "topic": "Doğal Afetler",
+    "subtopics": [
+      "Deprem",
+      "Sel",
+      "Heyelan",
+      "Çığ",
+      "Kuraklık",
+      "Erozyon",
+      "Orman yangınları",
+      "Afetlerden korunma",
+      "Türkiye'de doğal afetler"
+    ],
+    "priority": "critical",
+    "dependencies": [
+      "İç ve Dış Kuvvetler",
+      "Atmosfer ve İklim"
+    ],
+    "next_topics": ["Çevre ve Toplum"],
+    "estimated_hours": 7,
+    "difficulty": "medium",
+    "question_weight": "high"
+  },
+  {
+    "subject": "Coğrafya",
+    "exam": "TYT",
+    "topic": "Çevre ve Toplum",
+    "subtopics": [
+      "Doğal kaynak kullanımı",
+      "Çevre sorunları",
+      "Küresel iklim değişikliği",
+      "Sürdürülebilirlik",
+      "Çevre politikaları",
+      "İnsan-doğa ilişkisi"
+    ],
+    "priority": "high",
+    "dependencies": [
+      "Doğal Afetler",
+      "Ekonomik Faaliyetler"
+    ],
+    "next_topics": [],
+    "estimated_hours": 6,
+    "difficulty": "medium",
+    "question_weight": "high"
+  }
+]

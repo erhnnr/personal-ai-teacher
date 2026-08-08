@@ -240,3 +240,40 @@ def test_tyt_tarih_milli_mucadele_metadata():
         "Atatürkçülük ve Türk İnkılabı"
         in topic["next_topics"]
     )
+
+
+def test_tyt_cografya_curriculum_loaded():
+
+    curriculum = load_curriculum_data()
+
+    topics = [
+        item
+        for item in curriculum
+        if item.get("exam") == "TYT"
+        and item.get("subject") == "Coğrafya"
+    ]
+
+    assert len(topics) == 13
+
+
+def test_tyt_cografya_harita_metadata():
+
+    topic = get_topic_info(
+        "TYT",
+        "Coğrafya",
+        "Harita Bilgisi"
+    )
+
+    assert topic is not None
+    assert topic["priority"] == "critical"
+    assert topic["difficulty"] == "hard"
+
+    assert "Ölçek" in topic["subtopics"]
+    assert "İzohips" in topic["subtopics"]
+
+    assert "Coğrafi Konum" in topic["dependencies"]
+
+    assert (
+        "Atmosfer ve İklim"
+        in topic["next_topics"]
+    )
