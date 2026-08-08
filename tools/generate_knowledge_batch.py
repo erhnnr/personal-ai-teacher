@@ -5,6 +5,13 @@ Purpose:
 Generate structured knowledge DRAFTS from the current
 TYT/AYT curriculum using the local LM Studio model.
 
+Pipeline:
+Curriculum
+-> Local LLM Draft
+-> Structural Validation
+-> Deterministic Math Factual Review
+-> DRAFT status report
+
 IMPORTANT:
 Generated content is NOT verified knowledge.
 
@@ -13,7 +20,7 @@ Outputs are written to:
 data/knowledge/drafts/
 
 They must never be treated as READY merely because
-they pass structural validation.
+they pass structural or factual checks.
 """
 
 import argparse
@@ -39,6 +46,7 @@ from config import MODEL_NAME
 from curriculum_engine import load_curriculum_data
 from llm import client, check_llm_connection
 from validate_knowledge import validate_topic
+from review_math_draft import review_draft
 
 
 DRAFT_ROOT = (
@@ -80,7 +88,10 @@ def slugify(value):
     }
 
     for old, new in replacements.items():
-        value = value.replace(old, new)
+        value = value.replace(
+            old,
+            new,
+        )
 
     value = value.lower()
 
@@ -123,7 +134,7 @@ def find_existing_unit(
     """
     Check whether a real knowledge unit already exists.
 
-    Existing units are never overwritten by this tool.
+    Existing verified units are never overwritten.
     """
 
     if not UNIT_ROOT.exists():
@@ -175,9 +186,7 @@ def build_prompt(
     grade,
 ):
     """
-    Build a strict JSON-generation prompt.
-
-    The model is creating a DRAFT only.
+    Build strict JSON-generation instructions.
     """
 
     curriculum_json = json.dumps(
@@ -193,13 +202,19 @@ GÖREV:
 Aşağıdaki müfredat kaydı için yapılandırılmış bir KNOWLEDGE DRAFT üret.
 
 Bu içerik otomatik olarak doğrulanmış kabul edilmeyecek.
-Bu nedenle:
+
+KURALLAR:
+
 - Bilmediğin ayrıntıyı uydurma.
 - Tartışmalı veya emin olmadığın bilgiyi ekleme.
 - Açık, temel ve YKS seviyesinde kal.
 - Yalnızca Türkçe kullan.
-- Sayısal örneklerde hesabı kontrol et.
+- Matematiksel hesaplamaları dikkatlice kontrol et.
 - Öğrenciye öğretilebilir, kısa ve net içerik üret.
+- Sayısal örneklerde sonucu iki kez kontrol et.
+- Belirsiz integralde +C sabitini unutma.
+- Belirli integral hesaplarında alt ve üst sınırı doğru uygula.
+- Matematiksel bir sonuçtan emin değilsen o örneği üretme.
 
 MÜFREDAT KAYDI:
 
@@ -215,7 +230,7 @@ Markdown kullanma.
 Kod bloğu kullanma.
 JSON dışında hiçbir açıklama yazma.
 
-JSON TAM OLARAK şu üst yapıda olmalı:
+JSON üst yapısı:
 
 {{
   "concept": {{
@@ -297,6 +312,7 @@ EN AZ:
 üret.
 
 Example level yalnızca:
+
 basic
 intermediate
 advanced
@@ -411,7 +427,7 @@ def save_draft(
     package,
 ):
     """
-    Save a generated package as DRAFT.
+    Save generated package as DRAFT.
     """
 
     draft_path = get_draft_path(
@@ -459,9 +475,11 @@ def save_draft(
         "subject": record.get("subject"),
         "topic": record.get("topic"),
         "priority": record.get("priority"),
+        "structure_status": None,
+        "factual_review_status": None,
         "warning": (
-            "Structural validation does not "
-            "constitute factual verification."
+            "Structural or deterministic validation "
+            "does not constitute full factual verification."
         ),
     }
 
@@ -471,6 +489,42 @@ def save_draft(
     )
 
     return draft_path
+
+
+def update_draft_metadata(
+    draft_path,
+    structure_status,
+    factual_review_status,
+):
+    """
+    Persist automated review results into draft metadata.
+    """
+
+    meta_path = (
+        draft_path
+        / "draft_meta.json"
+    )
+
+    metadata = load_json(
+        meta_path
+    )
+
+    metadata[
+        "structure_status"
+    ] = structure_status
+
+    metadata[
+        "factual_review_status"
+    ] = factual_review_status
+
+    metadata[
+        "verified"
+    ] = False
+
+    write_json(
+        meta_path,
+        metadata,
+    )
 
 
 def generate_one(
@@ -573,6 +627,57 @@ def select_records(
     return selected
 
 
+def run_automated_reviews(
+    draft_path,
+    subject,
+):
+    """
+    Run structural and deterministic factual checks.
+
+    Returns:
+        structure_status
+        factual_review_status
+    """
+
+    structure_valid = validate_topic(
+        draft_path,
+        verbose=False,
+    )
+
+    structure_status = (
+        "PASS"
+        if structure_valid
+        else "FAIL"
+    )
+
+    factual_review_status = (
+        "NOT_APPLICABLE"
+    )
+
+    if normalize(subject) == normalize(
+        "Matematik"
+    ):
+
+        factual_report = review_draft(
+            draft_path
+        )
+
+        factual_review_status = (
+            factual_report["status"]
+        )
+
+    update_draft_metadata(
+        draft_path,
+        structure_status,
+        factual_review_status,
+    )
+
+    return (
+        structure_status,
+        factual_review_status,
+    )
+
+
 def main():
     parser = argparse.ArgumentParser(
         description=(
@@ -661,6 +766,14 @@ def main():
     skipped_units = 0
     skipped_drafts = 0
     failed = 0
+
+    structure_pass = 0
+    structure_fail = 0
+
+    factual_pass = 0
+    factual_fail = 0
+    factual_unverified = 0
+    factual_not_applicable = 0
 
     print(
         "=" * 70
@@ -752,26 +865,54 @@ def main():
                 package,
             )
 
-            structurally_valid = (
-                validate_topic(
-                    draft_path,
-                    verbose=False,
-                )
+            (
+                structure_status,
+                factual_status,
+            ) = run_automated_reviews(
+                draft_path,
+                record["subject"],
             )
 
-            if structurally_valid:
+            if structure_status == "PASS":
 
-                print(
-                    f"DRAFT OK   | {topic} "
-                    "| STRUCTURE_VALID"
-                )
+                structure_pass += 1
 
             else:
 
-                print(
-                    f"DRAFT WARN | {topic} "
-                    "| STRUCTURE_INVALID"
-                )
+                structure_fail += 1
+
+            if factual_status == "FAIL":
+
+                factual_fail += 1
+
+            elif factual_status in (
+                "PASS",
+                "PASS_WITH_LIMITED_SCOPE",
+            ):
+
+                factual_pass += 1
+
+            elif factual_status == "UNVERIFIED":
+
+                factual_unverified += 1
+
+            else:
+
+                factual_not_applicable += 1
+
+            print(
+                f"DRAFT      | {topic}"
+            )
+
+            print(
+                f"  STRUCTURE: "
+                f"{structure_status}"
+            )
+
+            print(
+                f"  FACTUAL  : "
+                f"{factual_status}"
+            )
 
             generated += 1
 
@@ -799,19 +940,47 @@ def main():
     )
 
     print(
-        f"Generated drafts : {generated}"
+        f"Generated drafts       : {generated}"
     )
 
     print(
-        f"Existing units   : {skipped_units}"
+        f"Existing units         : {skipped_units}"
     )
 
     print(
-        f"Existing drafts  : {skipped_drafts}"
+        f"Existing drafts        : {skipped_drafts}"
     )
 
     print(
-        f"Failed           : {failed}"
+        f"Generation failures    : {failed}"
+    )
+
+    print()
+
+    print(
+        f"Structure PASS         : {structure_pass}"
+    )
+
+    print(
+        f"Structure FAIL         : {structure_fail}"
+    )
+
+    print()
+
+    print(
+        f"Factual PASS           : {factual_pass}"
+    )
+
+    print(
+        f"Factual FAIL           : {factual_fail}"
+    )
+
+    print(
+        f"Factual UNVERIFIED     : {factual_unverified}"
+    )
+
+    print(
+        f"Factual NOT_APPLICABLE : {factual_not_applicable}"
     )
 
     print()
@@ -821,12 +990,16 @@ def main():
     )
 
     print(
-        "Generated files are DRAFTS."
+        "Generated files are still DRAFTS."
     )
 
     print(
-        "They are NOT verified and are NOT "
-        "available to the student."
+        "Automated PASS does NOT mean VERIFIED."
+    )
+
+    print(
+        "Student access remains disabled until "
+        "a draft is explicitly promoted."
     )
 
 
