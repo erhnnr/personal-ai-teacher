@@ -1,0 +1,216 @@
+[
+  {
+    "subject": "Fizik",
+    "exam": "TYT",
+    "topic": "Fizik Bilimine Giriş",
+    "subtopics": [
+      "Fiziğin tanımı",
+      "Fiziğin alt dalları",
+      "Fiziğin diğer bilimlerle ilişkisi",
+      "Temel ve türetilmiş büyüklükler",
+      "Skaler ve vektörel büyüklükler",
+      "SI birim sistemi"
+    ],
+    "priority": "medium",
+    "dependencies": [],
+    "next_topics": ["Madde ve Özellikleri"],
+    "estimated_hours": 4,
+    "difficulty": "easy",
+    "question_weight": "low"
+  },
+  {
+    "subject": "Fizik",
+    "exam": "TYT",
+    "topic": "Madde ve Özellikleri",
+    "subtopics": [
+      "Kütle",
+      "Hacim",
+      "Özkütle",
+      "Dayanıklılık",
+      "Adezyon",
+      "Kohezyon",
+      "Yüzey gerilimi",
+      "Kılcallık"
+    ],
+    "priority": "high",
+    "dependencies": ["Fizik Bilimine Giriş"],
+    "next_topics": ["Hareket ve Kuvvet"],
+    "estimated_hours": 7,
+    "difficulty": "medium",
+    "question_weight": "medium"
+  },
+  {
+    "subject": "Fizik",
+    "exam": "TYT",
+    "topic": "Hareket ve Kuvvet",
+    "subtopics": [
+      "Referans noktası",
+      "Konum",
+      "Alınan yol",
+      "Yer değiştirme",
+      "Sürat",
+      "Hız",
+      "İvme",
+      "Düzgün doğrusal hareket",
+      "Kuvvet",
+      "Net kuvvet",
+      "Newton'un hareket yasaları",
+      "Eylemsizlik"
+    ],
+    "priority": "critical",
+    "dependencies": ["Fizik Bilimine Giriş"],
+    "next_topics": ["İş Güç ve Enerji"],
+    "estimated_hours": 14,
+    "difficulty": "medium",
+    "question_weight": "very_high"
+  },
+  {
+    "subject": "Fizik",
+    "exam": "TYT",
+    "topic": "İş Güç ve Enerji",
+    "subtopics": [
+      "İş",
+      "Güç",
+      "Kinetik enerji",
+      "Potansiyel enerji",
+      "Mekanik enerji",
+      "Enerjinin korunumu",
+      "Verim"
+    ],
+    "priority": "critical",
+    "dependencies": ["Hareket ve Kuvvet"],
+    "next_topics": ["Isı Sıcaklık ve Genleşme"],
+    "estimated_hours": 10,
+    "difficulty": "medium",
+    "question_weight": "high"
+  },
+  {
+    "subject": "Fizik",
+    "exam": "TYT",
+    "topic": "Isı Sıcaklık ve Genleşme",
+    "subtopics": [
+      "Isı",
+      "Sıcaklık",
+      "İç enerji",
+      "Öz ısı",
+      "Isı alışverişi",
+      "Hal değişimi",
+      "Isıl denge",
+      "Genleşme"
+    ],
+    "priority": "high",
+    "dependencies": ["Madde ve Özellikleri"],
+    "next_topics": ["Basınç"],
+    "estimated_hours": 10,
+    "difficulty": "medium",
+    "question_weight": "high"
+  },
+  {
+    "subject": "Fizik",
+    "exam": "TYT",
+    "topic": "Basınç",
+    "subtopics": [
+      "Katı basıncı",
+      "Sıvı basıncı",
+      "Gaz basıncı",
+      "Pascal prensibi",
+      "Açık hava basıncı"
+    ],
+    "priority": "high",
+    "dependencies": ["Madde ve Özellikleri"],
+    "next_topics": ["Kaldırma Kuvveti"],
+    "estimated_hours": 7,
+    "difficulty": "medium",
+    "question_weight": "medium"
+  },
+  {
+    "subject": "Fizik",
+    "exam": "TYT",
+    "topic": "Kaldırma Kuvveti",
+    "subtopics": [
+      "Arşimet ilkesi",
+      "Kaldırma kuvveti",
+      "Yüzen cisimler",
+      "Batan cisimler",
+      "Askıda kalan cisimler"
+    ],
+    "priority": "high",
+    "dependencies": [
+      "Madde ve Özellikleri",
+      "Basınç"
+    ],
+    "next_topics": [],
+    "estimated_hours": 6,
+    "difficulty": "medium",
+    "question_weight": "medium"
+  },
+  {
+    "subject": "Fizik",
+    "exam": "TYT",
+    "topic": "Elektrik ve Manyetizma",
+    "subtopics": [
+      "Elektrik yükü",
+      "Elektriklenme",
+      "Elektroskop",
+      "Elektrik akımı",
+      "Potansiyel fark",
+      "Direnç",
+      "Ohm yasası",
+      "Seri ve paralel devreler",
+      "Elektrik enerjisi",
+      "Elektriksel güç",
+      "Mıknatıs",
+      "Manyetik alan"
+    ],
+    "priority": "critical",
+    "dependencies": [],
+    "next_topics": ["AYT Elektrik ve Manyetizma"],
+    "estimated_hours": 15,
+    "difficulty": "hard",
+    "question_weight": "very_high"
+  },
+  {
+    "subject": "Fizik",
+    "exam": "TYT",
+    "topic": "Dalgalar",
+    "subtopics": [
+      "Dalga kavramı",
+      "Dalga boyu",
+      "Frekans",
+      "Periyot",
+      "Dalga hızı",
+      "Yay dalgaları",
+      "Su dalgaları",
+      "Ses dalgaları"
+    ],
+    "priority": "high",
+    "dependencies": ["Hareket ve Kuvvet"],
+    "next_topics": ["Optik"],
+    "estimated_hours": 9,
+    "difficulty": "medium",
+    "question_weight": "high"
+  },
+  {
+    "subject": "Fizik",
+    "exam": "TYT",
+    "topic": "Optik",
+    "subtopics": [
+      "Işığın yayılması",
+      "Gölge",
+      "Aydınlanma",
+      "Yansıma",
+      "Düzlem ayna",
+      "Küresel aynalar",
+      "Kırılma",
+      "Tam yansıma",
+      "Mercekler",
+      "Renk"
+    ],
+    "priority": "critical",
+    "dependencies": ["Dalgalar"],
+    "next_topics": [],
+    "estimated_hours": 13,
+    "difficulty": "medium",
+    "question_weight": "very_high"
+  }
+]

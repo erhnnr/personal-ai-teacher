@@ -79,3 +79,36 @@ def test_tyt_turkce_paragraf_metadata():
     assert "Ana düşünce" in topic["subtopics"]
     assert "Cümlede Anlam" in topic["dependencies"]
     assert "Sözel Mantık ve Muhakeme" in topic["next_topics"]
+
+
+def test_tyt_fizik_curriculum_loaded():
+
+    curriculum = load_curriculum_data()
+
+    topics = [
+        item
+        for item in curriculum
+        if item.get("exam") == "TYT"
+        and item.get("subject") == "Fizik"
+    ]
+
+    assert len(topics) == 10
+
+
+def test_tyt_fizik_hareket_metadata():
+
+    topic = get_topic_info(
+        "TYT",
+        "Fizik",
+        "Hareket ve Kuvvet"
+    )
+
+    assert topic is not None
+    assert topic["priority"] == "critical"
+    assert topic["difficulty"] == "medium"
+
+    assert "Newton'un hareket yasaları" in topic["subtopics"]
+
+    assert "Fizik Bilimine Giriş" in topic["dependencies"]
+
+    assert "İş Güç ve Enerji" in topic["next_topics"]
