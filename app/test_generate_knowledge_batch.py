@@ -25,7 +25,10 @@ if str(TOOLS_PATH) not in sys.path:
 import generate_knowledge_batch
 
 
-def write_json(path, data):
+def write_json(
+    path,
+    data,
+):
     path.write_text(
         json.dumps(
             data,
@@ -38,7 +41,7 @@ def write_json(path, data):
 
 def create_integral_draft(
     root,
-    answer,
+    expected,
 ):
     root.mkdir(
         parents=True,
@@ -97,10 +100,21 @@ def create_integral_draft(
                         "belirli integralini [1,4] "
                         "aralığında bulun."
                     ),
-                    "answer": answer,
+                    "answer": (
+                        f"∫[1 to 4] (3x + 2) dx = "
+                        f"{expected}"
+                    ),
                     "learning_point": (
                         "Belirli integral hesaplamak."
                     ),
+                    "validation": {
+                        "type": "definite_integral",
+                        "expression": "3*x + 2",
+                        "variable": "x",
+                        "lower": 1,
+                        "upper": 4,
+                        "expected": expected,
+                    },
                 }
             ],
         },
@@ -162,9 +176,7 @@ def test_batch_review_accepts_correct_math(
 
     create_integral_draft(
         tmp_path,
-        (
-            "∫[1 to 4] (3x + 2) dx = 28.5"
-        ),
+        "57/2",
     )
 
     structure, factual = (
@@ -176,10 +188,7 @@ def test_batch_review_accepts_correct_math(
     )
 
     assert structure == "PASS"
-
-    assert factual == (
-        "PASS_WITH_LIMITED_SCOPE"
-    )
+    assert factual == "PASS"
 
     metadata = json.loads(
         (
@@ -190,13 +199,10 @@ def test_batch_review_accepts_correct_math(
         )
     )
 
+    assert metadata["verified"] is False
+    assert metadata["structure_status"] == "PASS"
     assert (
-        metadata["verified"]
-        is False
-    )
-
-    assert (
-        metadata["structure_status"]
+        metadata["factual_review_status"]
         == "PASS"
     )
 
@@ -207,9 +213,7 @@ def test_batch_review_rejects_wrong_math(
 
     create_integral_draft(
         tmp_path,
-        (
-            "∫[1 to 4] (3x + 2) dx = 15"
-        ),
+        15,
     )
 
     structure, factual = (
@@ -221,7 +225,6 @@ def test_batch_review_rejects_wrong_math(
     )
 
     assert structure == "PASS"
-
     assert factual == "FAIL"
 
     metadata = json.loads(
@@ -238,10 +241,7 @@ def test_batch_review_rejects_wrong_math(
         == "FAIL"
     )
 
-    assert (
-        metadata["verified"]
-        is False
-    )
+    assert metadata["verified"] is False
 
 
 def test_slugify_handles_turkish_i():
@@ -258,4 +258,11 @@ def test_slugify_handles_turkish_i():
             "İtme ve Momentum"
         )
         == "itme_ve_momentum"
+    )
+
+    assert (
+        generate_knowledge_batch.slugify(
+            "İş Enerji ve Güç"
+        )
+        == "is_enerji_ve_guc"
     )

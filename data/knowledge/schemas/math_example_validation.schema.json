@@ -1,0 +1,382 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "math_example_validation.schema.json",
+  "title": "Personal AI Teacher Math Example Validation Contract",
+  "type": "object",
+  "required": [
+    "type"
+  ],
+  "properties": {
+    "type": {
+      "type": "string",
+      "enum": [
+        "arithmetic",
+        "equation",
+        "inequality",
+        "polynomial_remainder",
+        "function_value",
+        "function_range",
+        "sequence_term",
+        "sequence_sum",
+        "complex_expression",
+        "combination",
+        "permutation",
+        "trigonometric_value",
+        "distance_2d",
+        "indefinite_integral",
+        "definite_integral"
+      ]
+    },
+
+    "variable": {
+      "type": "string"
+    },
+
+    "expression": {
+      "type": "string"
+    },
+
+    "rhs": {
+      "type": [
+        "string",
+        "number"
+      ]
+    },
+
+    "relation": {
+      "type": "string",
+      "enum": [
+        "=",
+        "<",
+        "<=",
+        ">",
+        ">="
+      ]
+    },
+
+    "expected": {
+      "type": [
+        "string",
+        "number",
+        "array"
+      ]
+    },
+
+    "polynomial": {
+      "type": "string"
+    },
+
+    "divisor_root": {
+      "type": [
+        "string",
+        "number"
+      ]
+    },
+
+    "function": {
+      "type": "string"
+    },
+
+    "input": {
+      "type": [
+        "string",
+        "number"
+      ]
+    },
+
+    "domain": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2
+    },
+
+    "sequence": {
+      "type": "object",
+      "properties": {
+        "first_term": {
+          "type": [
+            "string",
+            "number"
+          ]
+        },
+        "difference": {
+          "type": [
+            "string",
+            "number"
+          ]
+        },
+        "ratio": {
+          "type": [
+            "string",
+            "number"
+          ]
+        },
+        "n": {
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "additionalProperties": false
+    },
+
+    "n": {
+      "type": "integer",
+      "minimum": 0
+    },
+
+    "r": {
+      "type": "integer",
+      "minimum": 0
+    },
+
+    "angle": {
+      "type": [
+        "string",
+        "number"
+      ]
+    },
+
+    "angle_unit": {
+      "type": "string",
+      "enum": [
+        "degree",
+        "radian"
+      ]
+    },
+
+    "trig_function": {
+      "type": "string",
+      "enum": [
+        "sin",
+        "cos",
+        "tan"
+      ]
+    },
+
+    "point_a": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2
+    },
+
+    "point_b": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2
+    },
+
+    "lower": {
+      "type": [
+        "string",
+        "number"
+      ]
+    },
+
+    "upper": {
+      "type": [
+        "string",
+        "number"
+      ]
+    }
+  },
+
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "type": {
+            "const": "equation"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "expression",
+          "variable",
+          "relation",
+          "rhs",
+          "expected"
+        ]
+      }
+    },
+
+    {
+      "if": {
+        "properties": {
+          "type": {
+            "const": "inequality"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "expression",
+          "variable",
+          "relation",
+          "rhs",
+          "expected"
+        ]
+      }
+    },
+
+    {
+      "if": {
+        "properties": {
+          "type": {
+            "const": "polynomial_remainder"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "polynomial",
+          "variable",
+          "divisor_root",
+          "expected"
+        ]
+      }
+    },
+
+    {
+      "if": {
+        "properties": {
+          "type": {
+            "const": "function_value"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "function",
+          "variable",
+          "input",
+          "expected"
+        ]
+      }
+    },
+
+    {
+      "if": {
+        "properties": {
+          "type": {
+            "const": "function_range"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "function",
+          "variable",
+          "domain",
+          "expected"
+        ]
+      }
+    },
+
+    {
+      "if": {
+        "properties": {
+          "type": {
+            "const": "combination"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "n",
+          "r",
+          "expected"
+        ]
+      }
+    },
+
+    {
+      "if": {
+        "properties": {
+          "type": {
+            "const": "permutation"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "n",
+          "r",
+          "expected"
+        ]
+      }
+    },
+
+    {
+      "if": {
+        "properties": {
+          "type": {
+            "const": "trigonometric_value"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "trig_function",
+          "angle",
+          "angle_unit",
+          "expected"
+        ]
+      }
+    },
+
+    {
+      "if": {
+        "properties": {
+          "type": {
+            "const": "distance_2d"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "point_a",
+          "point_b",
+          "expected"
+        ]
+      }
+    },
+
+    {
+      "if": {
+        "properties": {
+          "type": {
+            "const": "indefinite_integral"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "expression",
+          "variable"
+        ]
+      }
+    },
+
+    {
+      "if": {
+        "properties": {
+          "type": {
+            "const": "definite_integral"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "expression",
+          "variable",
+          "lower",
+          "upper",
+          "expected"
+        ]
+      }
+    }
+  ],
+
+  "additionalProperties": false
+}
