@@ -1,6 +1,75 @@
 {
-    "topic": "turev",
-    "subject": "matematik",
-    "grade": "grade12",
-    "concepts": []
+  "id": "matematik.grade12.turev",
+  "subject": "Matematik",
+  "grade": "12",
+  "topic": "Türev",
+  "learning_objectives": [
+    "Türev kavramını değişim oranı ve teğet eğimi üzerinden açıklayabilme",
+    "Bir fonksiyonun bir noktadaki türevini yorumlayabilme",
+    "Temel türev alma kurallarını kullanabilme",
+    "Polinom fonksiyonların türevini hesaplayabilme",
+    "Toplam, fark, çarpım ve bölüm durumlarında türev kurallarını uygulayabilme",
+    "Bileşke fonksiyonlarda zincir kuralını kullanabilme",
+    "Türevi artma, azalma ve ekstremum problemlerinde kullanabilme"
+  ],
+  "prerequisites": [
+    "Fonksiyonlar",
+    "Limit",
+    "Cebirsel İşlemler",
+    "Grafik Okuma"
+  ],
+  "core_concepts": [
+    "Anlık değişim oranı",
+    "Sekant eğimi",
+    "Teğet eğimi",
+    "Bir noktadaki türev",
+    "Türev fonksiyonu",
+    "Artan ve azalan fonksiyon",
+    "Kritik nokta",
+    "Yerel maksimum ve minimum"
+  ],
+  "definitions": [
+    {
+      "term": "Türev",
+      "definition": "Bir fonksiyonun bağımsız değişkendeki çok küçük bir değişime karşılık fonksiyon değerindeki değişimin anlık oranını ifade eden kavramdır."
+    },
+    {
+      "term": "Bir Noktadaki Türev",
+      "definition": "Bir fonksiyonun belirli bir noktadaki türevi, uygun limit mevcutsa o noktadaki teğetin eğimini ve anlık değişim oranını verir."
+    },
+    {
+      "term": "Türev Fonksiyonu",
+      "definition": "Bir fonksiyonun türevlenebildiği noktalardaki türev değerlerini yeni bir fonksiyon olarak ifade eden fonksiyondur."
+    },
+    {
+      "term": "Kritik Nokta",
+      "definition": "Fonksiyonun tanım kümesinde olup türevin sıfır olduğu veya türevin bulunmadığı ve ekstremum incelemesinde dikkate alınan noktadır."
+    }
+  ],
+  "rules": [
+    "Sabit bir fonksiyonun türevi sıfırdır.",
+    "f(x)=x^n biçiminde uygun kuvvet fonksiyonlarında türev n*x^(n-1) kuralıyla bulunur.",
+    "İki türevlenebilir fonksiyonun toplamının türevi, türevlerinin toplamıdır.",
+    "İki türevlenebilir fonksiyonun farkının türevi, türevlerinin farkıdır.",
+    "Çarpımın türevi f'(x)g(x)+f(x)g'(x) biçimindedir.",
+    "Bölümün türevi, paydanın sıfır olmadığı yerde, (f'(x)g(x)-f(x)g'(x))/g(x)^2 biçimindedir.",
+    "Bileşke fonksiyonların türevinde zincir kuralı kullanılır.",
+    "Bir noktada türevlenebilirlik, o noktada sürekliliği gerektirir; ancak süreklilik tek başına türevlenebilirlik için yeterli değildir.",
+    "Türev pozitif olduğu aralıklarda fonksiyon artan, türev negatif olduğu aralıklarda fonksiyon azalan davranış gösterir."
+  ],
+  "common_confusions": [
+    "Türev değerini fonksiyon değeriyle karıştırmak",
+    "Sürekliliğin her zaman türevlenebilirlik anlamına geldiğini sanmak",
+    "Çarpımın türevini yalnızca türevlerin çarpımı olarak almak",
+    "Bölüm kuralında pay ve paydanın sırasını karıştırmak",
+    "Zincir kuralında iç fonksiyonun türevini unutmak",
+    "Türevin sıfır olduğu her noktayı otomatik olarak maksimum veya minimum kabul etmek"
+  ],
+  "teaching_notes": [
+    "Türev anlatımına formüllerden önce ortalama değişim oranı ve anlık değişim oranı farkıyla başlanmalıdır.",
+    "Sekant doğrusunun teğete yaklaşması limit kavramıyla ilişkilendirilmelidir.",
+    "Öğrencinin türev ile grafik eğimi arasındaki bağlantıyı kurması sağlanmalıdır.",
+    "Türev kuralları ezberletilmeden önce basit örneklerle anlamlandırılmalıdır.",
+    "Ekstremum sorularında yalnızca türevin sıfır olması değil, işaret değişimi de incelenmelidir."
+  ]
 }

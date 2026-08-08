@@ -1,3 +1,29 @@
 {
-    "relations": []
+  "topic": "Türev",
+  "prerequisites": [
+    {
+      "topic": "Limit",
+      "reason": "Türevin matematiksel tanımı bir limit üzerinden kurulur."
+    },
+    {
+      "topic": "Fonksiyonlar",
+      "reason": "Türev, fonksiyonların değişim davranışını inceler."
+    }
+  ],
+  "next_topics": [
+    {
+      "topic": "İntegral",
+      "reason": "İntegral ve türev, kalkülüsün birbiriyle yakından ilişkili iki temel kavramıdır."
+    }
+  ],
+  "related_topics": [
+    {
+      "topic": "Fonksiyonlarda Uygulamalar",
+      "relation": "Türev artma, azalma, ekstremum ve optimizasyon incelemelerinde kullanılır."
+    },
+    {
+      "topic": "Limit",
+      "relation": "Türev tanımının temelinde limit vardır."
+    }
+  ]
 }

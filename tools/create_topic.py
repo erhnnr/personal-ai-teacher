@@ -26,25 +26,31 @@ DEFAULT_BASE_PATH = Path(
 
 def slugify(value):
     """
-    Convert a display value into a safe directory name.
+    Convert Turkish display text into a stable
+    ASCII directory name.
     """
 
-    value = str(value).strip().lower()
+    value = str(value).strip()
 
     replacements = {
+        "İ": "I",
+        "Ç": "C",
+        "Ğ": "G",
+        "Ö": "O",
+        "Ş": "S",
+        "Ü": "U",
+        "ı": "i",
         "ç": "c",
         "ğ": "g",
-        "ı": "i",
         "ö": "o",
         "ş": "s",
         "ü": "u",
     }
 
     for old, new in replacements.items():
-        value = value.replace(
-            old,
-            new,
-        )
+        value = value.replace(old, new)
+
+    value = value.lower()
 
     value = re.sub(
         r"[^a-z0-9]+",
@@ -53,7 +59,6 @@ def slugify(value):
     )
 
     return value.strip("_")
-
 
 def normalize_grade(grade):
     """

@@ -1,3 +1,29 @@
 {
-    "common_mistakes": []
+  "topic": "Türev",
+  "mistakes": [
+    {
+      "id": "TUREV-M001",
+      "error": "Çarpımın türevini f'(x)g'(x) olarak almak",
+      "explanation": "İki fonksiyonun çarpımının türevi, türevlerin doğrudan çarpımı değildir.",
+      "teacher_action": "Çarpım kuralını f'(x)g(x)+f(x)g'(x) biçiminde iki parçaya ayırarak tekrar göster."
+    },
+    {
+      "id": "TUREV-M002",
+      "error": "Zincir kuralında iç fonksiyonun türevini unutmak",
+      "explanation": "Bileşke fonksiyonun türevinde dış fonksiyonun türevinin yanında iç fonksiyonun türevi de çarpan olarak bulunmalıdır.",
+      "teacher_action": "Fonksiyonu iç ve dış fonksiyon olarak işaretleyip türevi iki aşamada aldır."
+    },
+    {
+      "id": "TUREV-M003",
+      "error": "Türev sıfırsa mutlaka maksimum veya minimum vardır demek",
+      "explanation": "Türevin sıfır olması tek başına ekstremum için yeterli değildir.",
+      "teacher_action": "Kritik noktanın iki tarafındaki türev işaretlerini inceleterek artma-azalma davranışını kontrol ettir."
+    },
+    {
+      "id": "TUREV-M004",
+      "error": "Sürekli olan her fonksiyonun türevlenebilir olduğunu düşünmek",
+      "explanation": "Türevlenebilirlik sürekliliği gerektirir fakat sürekli bir fonksiyon bazı noktalarda türevlenemeyebilir.",
+      "teacher_action": "Köşe noktası içeren basit bir grafik üzerinden süreklilik ile türevlenebilirliği karşılaştır."
+    }
+  ]
 }
