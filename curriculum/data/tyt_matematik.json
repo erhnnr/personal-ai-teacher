@@ -1,0 +1,273 @@
+[
+  {
+    "subject": "Matematik",
+    "exam": "TYT",
+    "topic": "Temel Kavramlar ve Sayılar",
+    "subtopics": [
+      "Sayı kümeleri",
+      "Tek ve çift sayılar",
+      "Pozitif ve negatif sayılar",
+      "Ardışık sayılar",
+      "Basamak kavramı",
+      "Sayı karşılaştırma"
+    ],
+    "priority": "critical",
+    "dependencies": [],
+    "next_topics": ["Bölme ve Bölünebilme"],
+    "estimated_hours": 10,
+    "difficulty": "easy",
+    "question_weight": "very_high"
+  },
+  {
+    "subject": "Matematik",
+    "exam": "TYT",
+    "topic": "Bölme ve Bölünebilme",
+    "subtopics": [
+      "Bölme işlemi",
+      "Bölünebilme kuralları",
+      "Kalan bulma"
+    ],
+    "priority": "high",
+    "dependencies": ["Temel Kavramlar ve Sayılar"],
+    "next_topics": ["EBOB-EKOK"],
+    "estimated_hours": 6,
+    "difficulty": "easy",
+    "question_weight": "medium"
+  },
+  {
+    "subject": "Matematik",
+    "exam": "TYT",
+    "topic": "EBOB-EKOK",
+    "subtopics": [
+      "Asal çarpanlara ayırma",
+      "EBOB",
+      "EKOK",
+      "EBOB-EKOK problemleri"
+    ],
+    "priority": "high",
+    "dependencies": ["Bölme ve Bölünebilme"],
+    "next_topics": ["Rasyonel Sayılar"],
+    "estimated_hours": 6,
+    "difficulty": "medium",
+    "question_weight": "medium"
+  },
+  {
+    "subject": "Matematik",
+    "exam": "TYT",
+    "topic": "Rasyonel Sayılar",
+    "subtopics": [
+      "Kesirler",
+      "Rasyonel sayı kavramı",
+      "Rasyonel sayılarda işlemler",
+      "Sıralama"
+    ],
+    "priority": "critical",
+    "dependencies": ["Temel Kavramlar ve Sayılar"],
+    "next_topics": ["Üslü Sayılar", "Köklü Sayılar"],
+    "estimated_hours": 8,
+    "difficulty": "medium",
+    "question_weight": "high"
+  },
+  {
+    "subject": "Matematik",
+    "exam": "TYT",
+    "topic": "Üslü Sayılar",
+    "subtopics": [
+      "Üs kavramı",
+      "Üslü ifadelerde işlemler",
+      "Negatif üs",
+      "Bilimsel gösterim"
+    ],
+    "priority": "critical",
+    "dependencies": ["Rasyonel Sayılar"],
+    "next_topics": ["Köklü Sayılar"],
+    "estimated_hours": 7,
+    "difficulty": "medium",
+    "question_weight": "high"
+  },
+  {
+    "subject": "Matematik",
+    "exam": "TYT",
+    "topic": "Köklü Sayılar",
+    "subtopics": [
+      "Kök kavramı",
+      "Köklü ifadelerde işlemler",
+      "Kök dışına çıkarma",
+      "Payda rasyonelleştirme"
+    ],
+    "priority": "critical",
+    "dependencies": ["Üslü Sayılar"],
+    "next_topics": ["Mutlak Değer"],
+    "estimated_hours": 8,
+    "difficulty": "medium",
+    "question_weight": "high"
+  },
+  {
+    "subject": "Matematik",
+    "exam": "TYT",
+    "topic": "Mutlak Değer",
+    "subtopics": [
+      "Mutlak değer kavramı",
+      "Mutlak değerli ifadeler",
+      "Mutlak değerli denklemler",
+      "Mutlak değerli eşitsizlikler"
+    ],
+    "priority": "high",
+    "dependencies": ["Temel Kavramlar ve Sayılar"],
+    "next_topics": ["Denklemler ve Eşitsizlikler"],
+    "estimated_hours": 6,
+    "difficulty": "medium",
+    "question_weight": "medium"
+  },
+  {
+    "subject": "Matematik",
+    "exam": "TYT",
+    "topic": "Denklemler ve Eşitsizlikler",
+    "subtopics": [
+      "Birinci derece denklemler",
+      "Denklem kurma",
+      "Birinci derece eşitsizlikler",
+      "Eşitsizlik sistemleri"
+    ],
+    "priority": "critical",
+    "dependencies": ["Rasyonel Sayılar", "Mutlak Değer"],
+    "next_topics": ["Oran-Orantı", "Problemler"],
+    "estimated_hours": 10,
+    "difficulty": "medium",
+    "question_weight": "very_high"
+  },
+  {
+    "subject": "Matematik",
+    "exam": "TYT",
+    "topic": "Oran-Orantı",
+    "subtopics": [
+      "Oran",
+      "Orantı",
+      "Doğru orantı",
+      "Ters orantı"
+    ],
+    "priority": "critical",
+    "dependencies": ["Rasyonel Sayılar"],
+    "next_topics": ["Problemler"],
+    "estimated_hours": 6,
+    "difficulty": "medium",
+    "question_weight": "high"
+  },
+  {
+    "subject": "Matematik",
+    "exam": "TYT",
+    "topic": "Problemler",
+    "subtopics": [
+      "Sayı problemleri",
+      "Kesir problemleri",
+      "Yaş problemleri",
+      "Yüzde problemleri",
+      "Kâr-zarar problemleri",
+      "Karışım problemleri",
+      "İşçi-havuz problemleri",
+      "Hareket problemleri",
+      "Tablo ve grafik problemleri",
+      "Yeni nesil muhakeme problemleri"
+    ],
+    "priority": "critical",
+    "dependencies": [
+      "Denklemler ve Eşitsizlikler",
+      "Oran-Orantı"
+    ],
+    "next_topics": [],
+    "estimated_hours": 35,
+    "difficulty": "hard",
+    "question_weight": "very_high"
+  },
+  {
+    "subject": "Matematik",
+    "exam": "TYT",
+    "topic": "Kümeler ve Mantık",
+    "subtopics": [
+      "Küme kavramı",
+      "Kümelerde işlemler",
+      "Venn şeması",
+      "Önermeler",
+      "Mantıksal bağlaçlar"
+    ],
+    "priority": "medium",
+    "dependencies": [],
+    "next_topics": ["Fonksiyonlar"],
+    "estimated_hours": 8,
+    "difficulty": "medium",
+    "question_weight": "medium"
+  },
+  {
+    "subject": "Matematik",
+    "exam": "TYT",
+    "topic": "Fonksiyonlar",
+    "subtopics": [
+      "Fonksiyon kavramı",
+      "Tanım ve değer kümesi",
+      "Fonksiyonlarda işlemler",
+      "Fonksiyon grafikleri"
+    ],
+    "priority": "critical",
+    "dependencies": [
+      "Denklemler ve Eşitsizlikler",
+      "Kümeler ve Mantık"
+    ],
+    "next_topics": ["AYT Fonksiyonlar"],
+    "estimated_hours": 10,
+    "difficulty": "medium",
+    "question_weight": "high"
+  },
+  {
+    "subject": "Matematik",
+    "exam": "TYT",
+    "topic": "Permütasyon-Kombinasyon",
+    "subtopics": [
+      "Sayma yöntemleri",
+      "Faktöriyel",
+      "Permütasyon",
+      "Kombinasyon"
+    ],
+    "priority": "high",
+    "dependencies": ["Temel Kavramlar ve Sayılar"],
+    "next_topics": ["Olasılık"],
+    "estimated_hours": 10,
+    "difficulty": "medium",
+    "question_weight": "medium"
+  },
+  {
+    "subject": "Matematik",
+    "exam": "TYT",
+    "topic": "Olasılık",
+    "subtopics": [
+      "Örnek uzay",
+      "Olay",
+      "Basit olasılık",
+      "Sayma ile olasılık"
+    ],
+    "priority": "high",
+    "dependencies": ["Permütasyon-Kombinasyon"],
+    "next_topics": [],
+    "estimated_hours": 8,
+    "difficulty": "medium",
+    "question_weight": "medium"
+  },
+  {
+    "subject": "Matematik",
+    "exam": "TYT",
+    "topic": "Veri ve İstatistik",
+    "subtopics": [
+      "Veri yorumlama",
+      "Aritmetik ortalama",
+      "Ortanca",
+      "Tepe değer",
+      "Açıklık",
+      "Tablo ve grafik yorumlama"
+    ],
+    "priority": "high",
+    "dependencies": ["Rasyonel Sayılar"],
+    "next_topics": [],
+    "estimated_hours": 7,
+    "difficulty": "easy",
+    "question_weight": "high"
+  }
+]
