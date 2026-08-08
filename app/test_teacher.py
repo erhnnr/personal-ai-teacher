@@ -1,12 +1,20 @@
+from types import SimpleNamespace
+
+import pytest
+
+import teacher
 from planner import create_plan
 from prompt_builder import build_prompt
+from teacher import TeacherError
 
 
-def test_teacher_pipeline():
+def test_teacher_prompt_pipeline():
 
     question = "Fonksiyonlar konusunu anlat."
 
-    plan = create_plan(question)
+    plan = create_plan(
+        question
+    )
 
     prompt = build_prompt(
         question,
@@ -14,7 +22,203 @@ def test_teacher_pipeline():
     )
 
     assert plan is not None
-
     assert prompt is not None
-
     assert "Fonksiyonlar" in prompt
+
+
+def test_teacher_rejects_empty_question():
+
+    with pytest.raises(
+        TeacherError
+    ):
+        teacher.ask_teacher(
+            "   "
+        )
+
+
+def test_teacher_handles_offline_llm(
+    monkeypatch
+):
+
+    monkeypatch.setattr(
+        teacher,
+        "check_llm_connection",
+        lambda: {
+            "connected": False,
+            "models": [],
+            "error": "Connection error.",
+        }
+    )
+
+    with pytest.raises(
+        TeacherError
+    ) as exc_info:
+
+        teacher.ask_teacher(
+            "Limit nedir?"
+        )
+
+    assert (
+        "LM Studio connection is not available"
+        in str(exc_info.value)
+    )
+
+
+def test_teacher_rejects_missing_model(
+    monkeypatch
+):
+
+    monkeypatch.setattr(
+        teacher,
+        "check_llm_connection",
+        lambda: {
+            "connected": True,
+            "models": [
+                "another-model"
+            ],
+            "error": None,
+        }
+    )
+
+    with pytest.raises(
+        TeacherError
+    ) as exc_info:
+
+        teacher.ask_teacher(
+            "Limit nedir?"
+        )
+
+    assert (
+        "is not available in LM Studio"
+        in str(exc_info.value)
+    )
+
+
+def test_teacher_generates_response(
+    monkeypatch
+):
+
+    monkeypatch.setattr(
+        teacher,
+        "check_llm_connection",
+        lambda: {
+            "connected": True,
+            "models": [
+                teacher.MODEL_NAME
+            ],
+            "error": None,
+        }
+    )
+
+    monkeypatch.setattr(
+        teacher,
+        "build_verified_context",
+        lambda plan: (
+            "Verified limit knowledge"
+        )
+    )
+
+    fake_response = SimpleNamespace(
+        choices=[
+            SimpleNamespace(
+                message=SimpleNamespace(
+                    content=(
+                        "Limit, bir fonksiyonun "
+                        "yaklaşma davranışını inceler."
+                    )
+                )
+            )
+        ]
+    )
+
+    def fake_create(**kwargs):
+
+        assert (
+            kwargs["model"]
+            == teacher.MODEL_NAME
+        )
+
+        assert (
+            kwargs["temperature"]
+            == teacher.LLM_TEMPERATURE
+        )
+
+        messages = kwargs[
+            "messages"
+        ]
+
+        assert len(messages) == 2
+
+        assert (
+            "Verified limit knowledge"
+            in messages[0]["content"]
+        )
+
+        return fake_response
+
+    monkeypatch.setattr(
+        teacher.client.chat.completions,
+        "create",
+        fake_create
+    )
+
+    result = teacher.ask_teacher(
+        "Limit nedir?"
+    )
+
+    assert result == (
+        "Limit, bir fonksiyonun "
+        "yaklaşma davranışını inceler."
+    )
+
+
+def test_teacher_rejects_empty_model_response(
+    monkeypatch
+):
+
+    monkeypatch.setattr(
+        teacher,
+        "check_llm_connection",
+        lambda: {
+            "connected": True,
+            "models": [
+                teacher.MODEL_NAME
+            ],
+            "error": None,
+        }
+    )
+
+    monkeypatch.setattr(
+        teacher,
+        "build_verified_context",
+        lambda plan: None
+    )
+
+    fake_response = SimpleNamespace(
+        choices=[
+            SimpleNamespace(
+                message=SimpleNamespace(
+                    content=""
+                )
+            )
+        ]
+    )
+
+    monkeypatch.setattr(
+        teacher.client.chat.completions,
+        "create",
+        lambda **kwargs: fake_response
+    )
+
+    with pytest.raises(
+        TeacherError
+    ) as exc_info:
+
+        teacher.ask_teacher(
+            "Limit nedir?"
+        )
+
+    assert (
+        "empty response"
+        in str(exc_info.value)
+    )

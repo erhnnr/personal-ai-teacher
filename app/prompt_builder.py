@@ -2,27 +2,23 @@
 EIE-092 Decision-Aware Prompt Builder
 
 Purpose:
-Generate teacher prompt with student intelligence
-and deterministic learning decisions.
+Generate a teacher prompt using student intelligence,
+deterministic learning decisions and verified knowledge.
 """
-
 
 from student import load_student
 from memory import load_memory
 from study_log import load_logs
 
-from student_intelligence import (
-    create_student_insight
-)
-
-from learning_decision import (
-    decide_learning_action
-)
+from student_intelligence import create_student_insight
+from learning_decision import decide_learning_action
 
 
-
-def build_prompt(question, plan):
-
+def build_prompt(
+    question,
+    plan,
+    verified_context=None
+):
 
     student = load_student()
 
@@ -30,62 +26,55 @@ def build_prompt(question, plan):
 
     logs = load_logs()
 
-
-
     insight = create_student_insight(
         logs
     )
 
-
-
     decision = decide_learning_action(
-
         question,
-
         student,
-
         insight
-
     )
-
-
 
     completed = ", ".join(
         memory["completed_topics"]
     )
 
-
     weak = ", ".join(
         memory["weak_topics"]
     )
 
-
-
     if not completed:
-
         completed = "Henüz yok"
 
-
-
     if not weak:
-
         weak = "Yok"
 
+    if verified_context:
+        knowledge_section = f"""
+DOĞRULANMIŞ DERS BİLGİSİ:
 
+{verified_context}
 
+Bu bölüm sistemin doğrulanmış bilgi kaynağıdır.
+Bu bilgiyle çelişme.
+"""
+    else:
+        knowledge_section = """
+DOĞRULANMIŞ DERS BİLGİSİ:
 
+Bu konu için doğrulanmış ayrıntılı bilgi paketi bulunamadı.
+
+Kesin bilgi, formül veya sayısal sonuç uydurma.
+Emin olmadığın noktayı kesin gerçek gibi sunma.
+"""
 
     prompt = f"""
+Sen deneyimli bir TYT ve AYT öğretmenisin.
 
-Sen deneyimli TYT ve AYT öğretmenisin.
+Öğrenci YKS 2027 sınavına hazırlanıyor.
 
-Öğrenci YKS 2027 hazırlanıyor.
-
-
-
-==============================
-ÖĞRENCİ PROFİLİ
-==============================
+ÖĞRENCİ BİLGİSİ
 
 Sınıf:
 {student.grade}
@@ -96,50 +85,41 @@ Alan:
 Hedef:
 {student.goal}
 
-Kariyer:
+Kariyer hedefi:
 {student.career_goal}
 
 Seviye:
 {student.level}
 
 
-
-==============================
-ÖĞRENCİ HAFIZASI
-==============================
+ÖĞRENME GEÇMİŞİ
 
 Son konu:
 {memory["last_topic"]}
 
-Tamamlanan:
+Tamamlanan konular:
 {completed}
 
-Zayıf:
+Zayıf konular:
 {weak}
 
 
+ÖĞRENCİ ANALİZİ
 
-==============================
-ÖĞRENCİ İSTİHBARATI
-==============================
-
-Güçlü:
+Güçlü konular:
 {insight.strong_topics}
 
-Zayıf:
+Zayıf konular:
 {insight.weak_topics}
 
 Toplam çalışma:
 {insight.total_study_time} dakika
 
-Risk:
+Risk seviyesi:
 {insight.risk_level}
 
 
-
-==============================
-PEDAGOJİK KARAR
-==============================
+ÖĞRENME KARARI
 
 Aksiyon:
 {decision.action}
@@ -154,10 +134,7 @@ Sebep:
 {decision.priority}
 
 
-
-==============================
 DERS PLANI
-==============================
 
 Ders:
 {plan.subject}
@@ -165,31 +142,47 @@ Ders:
 Sınıf:
 {plan.grade}
 
-Konular:
+Konu:
+{plan.topic}
+
+Müfredat konuları:
 {plan.topics}
 
 
+{knowledge_section}
 
-==============================
-ÖĞRENCİ SORUSU
-==============================
+
+ÖĞRENCİNİN SORUSU
 
 {question}
 
 
+ÖĞRETMEN KURALLARI
 
-==============================
-ÖĞRETİM KURALLARI
-==============================
+1. Önce pedagojik kararı uygula.
 
-- Önce pedagojik kararı uygula.
-- Öğrenci seviyesine göre anlat.
-- Eksik temel varsa geri dön.
-- Basit örnekler kullan.
-- Adım adım ilerle.
-- Ders sonunda kısa sorular sor.
+2. Öğrencinin seviyesine göre anlat.
 
+3. Eksik temel bilgi varsa bunu açıkça belirt.
+
+4. Önce mantığı açıkla, sonra örnek ver.
+
+5. Adım adım ilerle.
+
+6. Doğrulanmış bilgi bölümü varsa onu temel kaynak kabul et.
+
+7. Doğrulanmış bilgiyle çelişen bilgi üretme.
+
+8. Sayısal bir örnek verirsen her işlemi kendi içinde kontrol et.
+
+9. Hesaplama sonucu yazmadan önce işlemi adım adım doğrula.
+
+10. Emin olmadığın bir bilgiyi kesin gerçek gibi sunma.
+
+11. Gereksiz uzun anlatma.
+
+12. Ders sonunda öğrencinin anlayıp anlamadığını ölçmek için
+kısa bir kontrol sorusu sor.
 """
-
 
     return prompt
