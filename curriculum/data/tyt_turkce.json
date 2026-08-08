@@ -1,0 +1,278 @@
+[
+  {
+    "subject": "Türkçe",
+    "exam": "TYT",
+    "topic": "Sözcükte Anlam",
+    "subtopics": [
+      "Gerçek anlam",
+      "Mecaz anlam",
+      "Terim anlam",
+      "Çok anlamlılık",
+      "Eş anlamlı sözcükler",
+      "Yakın anlamlı sözcükler",
+      "Karşıt anlamlı sözcükler",
+      "Somut ve soyut anlam",
+      "Deyimler ve söz öbekleri"
+    ],
+    "priority": "critical",
+    "dependencies": [],
+    "next_topics": ["Cümlede Anlam"],
+    "estimated_hours": 7,
+    "difficulty": "easy",
+    "question_weight": "high"
+  },
+  {
+    "subject": "Türkçe",
+    "exam": "TYT",
+    "topic": "Cümlede Anlam",
+    "subtopics": [
+      "Cümlenin anlamı",
+      "Cümlede çıkarım",
+      "Neden-sonuç",
+      "Amaç-sonuç",
+      "Koşul",
+      "Karşılaştırma",
+      "Öznel ve nesnel yargı",
+      "Doğrudan ve dolaylı anlatım",
+      "Cümleler arası anlam ilişkileri"
+    ],
+    "priority": "critical",
+    "dependencies": ["Sözcükte Anlam"],
+    "next_topics": ["Paragrafta Anlam"],
+    "estimated_hours": 8,
+    "difficulty": "medium",
+    "question_weight": "high"
+  },
+  {
+    "subject": "Türkçe",
+    "exam": "TYT",
+    "topic": "Paragrafta Anlam",
+    "subtopics": [
+      "Paragrafın konusu",
+      "Ana düşünce",
+      "Yardımcı düşünce",
+      "Paragrafta yapı",
+      "Paragraf tamamlama",
+      "Paragraf oluşturma",
+      "Akışı bozan cümle",
+      "Anlatım biçimleri",
+      "Düşünceyi geliştirme yolları",
+      "Paragrafta çıkarım",
+      "Metin karşılaştırma"
+    ],
+    "priority": "critical",
+    "dependencies": [
+      "Sözcükte Anlam",
+      "Cümlede Anlam"
+    ],
+    "next_topics": ["Sözel Mantık ve Muhakeme"],
+    "estimated_hours": 30,
+    "difficulty": "hard",
+    "question_weight": "very_high"
+  },
+  {
+    "subject": "Türkçe",
+    "exam": "TYT",
+    "topic": "Sözel Mantık ve Muhakeme",
+    "subtopics": [
+      "Bilgi sıralama",
+      "Koşullu çıkarım",
+      "Tablo oluşturma",
+      "Şema yorumlama",
+      "Metinden mantıksal sonuç çıkarma"
+    ],
+    "priority": "critical",
+    "dependencies": ["Paragrafta Anlam"],
+    "next_topics": [],
+    "estimated_hours": 10,
+    "difficulty": "hard",
+    "question_weight": "high"
+  },
+  {
+    "subject": "Türkçe",
+    "exam": "TYT",
+    "topic": "Ses Bilgisi",
+    "subtopics": [
+      "Ünlü düşmesi",
+      "Ünlü daralması",
+      "Ünsüz yumuşaması",
+      "Ünsüz benzeşmesi",
+      "Ünsüz türemesi",
+      "Kaynaştırma",
+      "Ses olayları"
+    ],
+    "priority": "medium",
+    "dependencies": [],
+    "next_topics": ["Yazım Kuralları"],
+    "estimated_hours": 5,
+    "difficulty": "medium",
+    "question_weight": "low"
+  },
+  {
+    "subject": "Türkçe",
+    "exam": "TYT",
+    "topic": "Yazım Kuralları",
+    "subtopics": [
+      "Büyük harflerin kullanımı",
+      "Birleşik kelimelerin yazımı",
+      "De ve ki yazımı",
+      "Mi soru ekinin yazımı",
+      "Sayıların yazımı",
+      "Kısaltmalar",
+      "Yazım yanlışları"
+    ],
+    "priority": "high",
+    "dependencies": ["Ses Bilgisi"],
+    "next_topics": ["Noktalama İşaretleri"],
+    "estimated_hours": 6,
+    "difficulty": "medium",
+    "question_weight": "medium"
+  },
+  {
+    "subject": "Türkçe",
+    "exam": "TYT",
+    "topic": "Noktalama İşaretleri",
+    "subtopics": [
+      "Nokta",
+      "Virgül",
+      "Noktalı virgül",
+      "İki nokta",
+      "Üç nokta",
+      "Soru işareti",
+      "Ünlem",
+      "Kısa çizgi",
+      "Uzun çizgi",
+      "Tırnak işareti",
+      "Kesme işareti",
+      "Parantez"
+    ],
+    "priority": "high",
+    "dependencies": ["Yazım Kuralları"],
+    "next_topics": [],
+    "estimated_hours": 5,
+    "difficulty": "easy",
+    "question_weight": "medium"
+  },
+  {
+    "subject": "Türkçe",
+    "exam": "TYT",
+    "topic": "Sözcük Türleri",
+    "subtopics": [
+      "İsim",
+      "Sıfat",
+      "Zamir",
+      "Zarf",
+      "Edat",
+      "Bağlaç",
+      "Ünlem",
+      "Fiil"
+    ],
+    "priority": "high",
+    "dependencies": [],
+    "next_topics": ["Fiiller", "Cümlenin Ögeleri"],
+    "estimated_hours": 10,
+    "difficulty": "medium",
+    "question_weight": "medium"
+  },
+  {
+    "subject": "Türkçe",
+    "exam": "TYT",
+    "topic": "Fiiller",
+    "subtopics": [
+      "Fiilde anlam",
+      "Kip",
+      "Kişi",
+      "Fiilde yapı",
+      "Ek fiil",
+      "Fiilimsi"
+    ],
+    "priority": "high",
+    "dependencies": ["Sözcük Türleri"],
+    "next_topics": ["Cümlenin Ögeleri"],
+    "estimated_hours": 8,
+    "difficulty": "medium",
+    "question_weight": "medium"
+  },
+  {
+    "subject": "Türkçe",
+    "exam": "TYT",
+    "topic": "Sözcükte Yapı",
+    "subtopics": [
+      "Kök",
+      "Gövde",
+      "Yapım eki",
+      "Çekim eki",
+      "Basit sözcük",
+      "Türemiş sözcük",
+      "Birleşik sözcük"
+    ],
+    "priority": "medium",
+    "dependencies": [],
+    "next_topics": ["Sözcük Türleri"],
+    "estimated_hours": 6,
+    "difficulty": "medium",
+    "question_weight": "low"
+  },
+  {
+    "subject": "Türkçe",
+    "exam": "TYT",
+    "topic": "Cümlenin Ögeleri",
+    "subtopics": [
+      "Yüklem",
+      "Özne",
+      "Nesne",
+      "Yer tamlayıcısı",
+      "Zarf tümleci",
+      "Ara söz"
+    ],
+    "priority": "high",
+    "dependencies": [
+      "Sözcük Türleri",
+      "Fiiller"
+    ],
+    "next_topics": ["Cümle Türleri"],
+    "estimated_hours": 7,
+    "difficulty": "medium",
+    "question_weight": "medium"
+  },
+  {
+    "subject": "Türkçe",
+    "exam": "TYT",
+    "topic": "Cümle Türleri",
+    "subtopics": [
+      "Yüklemin türüne göre",
+      "Yüklemin yerine göre",
+      "Anlamına göre",
+      "Yapısına göre cümleler"
+    ],
+    "priority": "medium",
+    "dependencies": ["Cümlenin Ögeleri"],
+    "next_topics": ["Anlatım Bozuklukları"],
+    "estimated_hours": 5,
+    "difficulty": "medium",
+    "question_weight": "low"
+  },
+  {
+    "subject": "Türkçe",
+    "exam": "TYT",
+    "topic": "Anlatım Bozuklukları",
+    "subtopics": [
+      "Anlama dayalı anlatım bozuklukları",
+      "Yapıya dayalı anlatım bozuklukları",
+      "Gereksiz sözcük kullanımı",
+      "Anlam belirsizliği",
+      "Özne-yüklem uyumsuzluğu",
+      "Tamlama yanlışları"
+    ],
+    "priority": "high",
+    "dependencies": [
+      "Cümlede Anlam",
+      "Cümlenin Ögeleri",
+      "Cümle Türleri"
+    ],
+    "next_topics": [],
+    "estimated_hours": 7,
+    "difficulty": "hard",
+    "question_weight": "medium"
+  }
+]

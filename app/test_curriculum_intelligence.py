@@ -13,11 +13,8 @@ def test_curriculum_intelligence():
     )
 
     assert topic is not None
-
     assert topic["topic"] == "Limit"
-
     assert "Türev" in topic["next_topics"]
-
     assert topic["priority"] == "critical"
 
 
@@ -44,16 +41,41 @@ def test_tyt_matematik_topic_metadata():
     )
 
     assert topic is not None
-
     assert topic["topic"] == "Problemler"
-
     assert topic["priority"] == "critical"
-
     assert topic["difficulty"] == "hard"
-
     assert "Hareket problemleri" in topic["subtopics"]
-
     assert (
         "Denklemler ve Eşitsizlikler"
         in topic["dependencies"]
     )
+
+
+def test_tyt_turkce_curriculum_loaded():
+
+    curriculum = load_curriculum_data()
+
+    topics = [
+        item
+        for item in curriculum
+        if item.get("exam") == "TYT"
+        and item.get("subject") == "Türkçe"
+    ]
+
+    assert len(topics) == 13
+
+
+def test_tyt_turkce_paragraf_metadata():
+
+    topic = get_topic_info(
+        "TYT",
+        "Türkçe",
+        "Paragrafta Anlam"
+    )
+
+    assert topic is not None
+    assert topic["priority"] == "critical"
+    assert topic["difficulty"] == "hard"
+    assert "Ana düşünce" in topic["subtopics"]
+    assert "Cümlede Anlam" in topic["dependencies"]
+    assert "Sözel Mantık ve Muhakeme" in topic["next_topics"]
