@@ -26,9 +26,12 @@ they pass structural or factual checks.
 import argparse
 import json
 import re
+import shutil
 import sys
 from datetime import datetime
 from pathlib import Path
+
+from jsonschema import Draft202012Validator
 
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
@@ -179,6 +182,36 @@ def get_draft_path(
         / f"grade{grade}"
         / slugify(topic)
     )
+
+
+def prepare_draft_for_overwrite(
+    draft_path,
+    overwrite,
+):
+    """
+    Remove an obsolete generated draft before
+    an explicit overwrite attempt.
+
+    Drafts are unverified temporary artifacts.
+    If regeneration later fails, no stale draft
+    should remain and appear current.
+    """
+
+    draft_path = Path(
+        draft_path
+    )
+
+    if (
+        overwrite
+        and draft_path.exists()
+    ):
+        shutil.rmtree(
+            draft_path
+        )
+
+        return True
+
+    return False
 
 
 def build_prompt(
@@ -609,24 +642,6 @@ def update_draft_metadata(
     )
 
 
-
-
-SUPPORTED_MATH_VALIDATION_TYPES = {
-    "arithmetic",
-    "equation",
-    "inequality",
-    "polynomial_remainder",
-    "function_value",
-    "function_range",
-    "combination",
-    "permutation",
-    "trigonometric_value",
-    "distance_2d",
-    "indefinite_integral",
-    "definite_integral",
-}
-
-
 def validate_generated_math_package(
     package,
     subject,
@@ -635,7 +650,7 @@ def validate_generated_math_package(
     Enforce machine-checkable validation blocks
     before a generated Mathematics draft is saved.
 
-    This is a generation safety gate.
+    This validates the validation contract itself.
 
     It does not establish factual correctness.
     """
@@ -667,6 +682,22 @@ def validate_generated_math_package(
             "Mathematics draft must contain examples."
         )
 
+    schema_path = (
+        PROJECT_ROOT
+        / "data"
+        / "knowledge"
+        / "schemas"
+        / "math_example_validation.schema.json"
+    )
+
+    schema = load_json(
+        schema_path
+    )
+
+    validator = Draft202012Validator(
+        schema
+    )
+
     for index, example in enumerate(
         examples,
         start=1,
@@ -692,18 +723,35 @@ def validate_generated_math_package(
                 f"is missing validation."
             )
 
-        validation_type = validation.get(
-            "type"
+        errors = sorted(
+            validator.iter_errors(
+                validation
+            ),
+            key=lambda error: list(
+                error.path
+            ),
         )
 
-        if validation_type not in (
-            SUPPORTED_MATH_VALIDATION_TYPES
-        ):
+        if errors:
+            first = errors[0]
+
+            location = ".".join(
+                str(item)
+                for item in first.path
+            )
+
+            if location:
+                location = (
+                    f" at '{location}'"
+                )
+
             raise ValueError(
                 f"Mathematics example {index} "
-                f"has unsupported validation type: "
-                f"{validation_type}"
+                f"validation contract failed"
+                f"{location}: "
+                f"{first.message}"
             )
+
 
 def generate_one(
     record,
@@ -1030,6 +1078,18 @@ def main():
 
             skipped_drafts += 1
             continue
+
+        removed_old_draft = (
+            prepare_draft_for_overwrite(
+                draft_path,
+                args.overwrite,
+            )
+        )
+
+        if removed_old_draft:
+            print(
+                f"REMOVE OLD | {topic}"
+            )
 
         print(
             f"GENERATING | {topic}"

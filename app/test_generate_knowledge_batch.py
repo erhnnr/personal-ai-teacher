@@ -334,7 +334,126 @@ def test_math_package_with_unsupported_validation_is_rejected():
 
     except ValueError as exc:
 
+        message = str(exc)
+
         assert (
-            "unsupported validation type"
-            in str(exc)
+            "validation contract failed"
+            in message
         )
+
+        assert (
+            "unknown_math_type"
+            in message
+        )
+
+def test_math_package_with_missing_required_field_is_rejected():
+
+    package = {
+        "examples": {
+            "topic": "Fonksiyonlar",
+            "examples": [
+                {
+                    "id": "E1",
+                    "question": "f(2) değerini bulun.",
+                    "answer": "8",
+                    "learning_point": "Fonksiyon değeri",
+                    "validation": {
+                        "type": "function_value",
+                        "variable": "x",
+                        "input": 2,
+                        "expected": 8
+                    },
+                }
+            ],
+        }
+    }
+
+    try:
+        generate_knowledge_batch.validate_generated_math_package(
+            package,
+            "Matematik",
+        )
+
+        assert False, (
+            "Missing required contract field "
+            "should have been rejected."
+        )
+
+    except ValueError as exc:
+
+        message = str(exc)
+
+        assert (
+            "validation contract failed"
+            in message
+        )
+
+        assert (
+            "'function' is a required property"
+            in message
+        )
+def test_overwrite_removes_stale_draft(
+    tmp_path,
+):
+
+    draft_path = (
+        tmp_path
+        / "integral"
+    )
+
+    draft_path.mkdir()
+
+    stale_file = (
+        draft_path
+        / "examples.json"
+    )
+
+    stale_file.write_text(
+        '{"stale": true}',
+        encoding="utf-8",
+    )
+
+    removed = (
+        generate_knowledge_batch
+        .prepare_draft_for_overwrite(
+            draft_path,
+            True,
+        )
+    )
+
+    assert removed is True
+    assert not draft_path.exists()
+
+
+def test_no_overwrite_preserves_existing_draft(
+    tmp_path,
+):
+
+    draft_path = (
+        tmp_path
+        / "integral"
+    )
+
+    draft_path.mkdir()
+
+    stale_file = (
+        draft_path
+        / "examples.json"
+    )
+
+    stale_file.write_text(
+        '{"stale": true}',
+        encoding="utf-8",
+    )
+
+    removed = (
+        generate_knowledge_batch
+        .prepare_draft_for_overwrite(
+            draft_path,
+            False,
+        )
+    )
+
+    assert removed is False
+    assert draft_path.exists()
+    assert stale_file.exists()        
