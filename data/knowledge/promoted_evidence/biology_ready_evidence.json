@@ -1,0 +1,671 @@
+{
+  "version": "1.0",
+  "kind": "release_safe_ready_evidence",
+  "subject": "Biyoloji",
+  "promotion_policy": "Only independently approved records with intact provenance and exact evidence SHA-256 may become READY.",
+  "input_result_count": 19,
+  "ready_count": 6,
+  "blocked_count": 13,
+  "status_counts": {
+    "BLOCKED": 13,
+    "READY": 6
+  },
+  "records": [
+    {
+      "record_id": "BİY.10.1.1::MEBI-TYT-BIYOLOJI::p10",
+      "outcome_id": "BİY.10.1.1",
+      "grade": 10,
+      "theme_number": 1,
+      "theme_name": "Enerji",
+      "outcome_title": "Canlıların yaşamına devam edebilmesi için enerjinin gerekliliğini sorgulayabilme",
+      "source": {
+        "authority": "MEB",
+        "corpus_family": "MEBI_OFFICIAL_LOCAL_CORPUS",
+        "package_id": "MEBI-TYT-BIYOLOJI",
+        "page": 10,
+        "source_anchor": "tyt-biyoloji/index.html#p=10",
+        "html_path": "local_corpus_extracted\\tyt-biyoloji\\files\\basic-html\\page10.html",
+        "image_path": "local_corpus_extracted\\tyt-biyoloji\\files\\thumb\\10.jpg",
+        "text_sha256": "8b4f794bf6a00b4dd735240a7cf25ff26b19d9ed972b836d9d9f5189c4fb584c"
+      },
+      "verification": {
+        "status": "VERIFIED_SUPPORT_CANDIDATE",
+        "crosswalk_status": "STRONG_CANDIDATE",
+        "crosswalk_score": 136.882609,
+        "matched_title_tokens": [
+          "canlilarin",
+          "devam",
+          "için",
+          "enerjinin"
+        ],
+        "matched_title_bigrams": [],
+        "checks": {
+          "candidate_page_exists": true,
+          "official_biology_package": true,
+          "text_ready": true,
+          "source_anchor_present": true,
+          "html_path_present": true,
+          "image_path_present": true,
+          "package_affinity": true,
+          "distinctive_title_hit_count": 4,
+          "title_bigram_hit_count": 0
+        }
+      },
+      "approval": {
+        "status": "APPROVED_FOR_EVIDENCE_READY",
+        "reviewer_type": "EXTERNAL_LLM",
+        "reviewer_id": "openai-gpt-5.6-sol-external-review-2026-08-10",
+        "factual_support": true,
+        "outcome_support": true,
+        "source_consistency": true,
+        "rationale": "Sayfa canlıların büyüme, onarım ve düzenleyici faaliyetler için besine ve enerjiye ihtiyaç duyduğunu açıkça ilişkilendiriyor. Bu temel biyolojik ilişki bağımsız kaynaklarla da uyumlu."
+      },
+      "promotion_checks": {
+        "approved_status": true,
+        "allowed_reviewer_type": true,
+        "factual_support": true,
+        "outcome_support": true,
+        "source_consistency": true,
+        "source_authority_meb": true,
+        "provenance_complete": true,
+        "source_unchanged": true,
+        "evidence_hash_matches_source": true,
+        "original_evidence_not_student_visible": true
+      },
+      "evidence_text": "CANLILARIN ORTAK ÖZELLİKLERİ\n\n2. Çekirdeğe ve zarlı organellere sahip olan hücrelere ökaryot hücre denir. Öglena, paramesyum, amip, algler, mantarlar,\nbitkiler ve hayvanlar ökaryot hücre yapısına sahip canlılardır.\n\nAmip Mantar Bitkiler Hayvanlar\nCanlıların bazıları tek hücreli bazıları ise çok hücrelidir. Öglena, amip, paramesyum ve bakteri gibi canlılar tek hücreli olup\ngözle görülemez. Şapkalı mantarlar, bitkiler ve hayvanlar ise çok hücreli canlılardır ve gözle görülebilir.\n\nKRİTİK BİLGİ DİKKAT\nÖkaryot hücrelere özgü tek ya da çift katlı zara sahip Her tek hücreli canlı prokaryot değildir. Ökaryot tek hücreli\nhücre birimlerine organel denir. Prokaryot hücrelerde ise canlılar da vardır. Ancak her prokaryort canlı tek hücrelidir.\nzarlı organel bulunmaz.\n\nBeslenme\nCanlılar; büyüyüp gelişmek, yıpranan doku ve organlarını onarmak, enerji elde etmek ve düzenleyici faaliyetlerini devam\nettirebilmek için besin maddelerine ihtiyaç duyar.\nCanlıların bir kısmı yaşadığı ortamdan su, mineral ve karbondioksit gibi inorganik maddeleri alıp güneş enerjisini veya\nkimyasal enerjiyi kullanarak ihtiyaç duyduğu organik besini üretir. Bu canlılara üretici (ototrof) canlılar denir.\nBitkiler (tam parazit bitkiler hariç), algler (su yosunları) ve bazı tek hücreli canlılar üreticidir.\n\nYeşil bitkiler Fotosentetik bakteriler\nCanlıların diğer bir kısmı ise inorganik maddelerden ihtiyaç duyduğu organik besinleri üretemez. Besinlerini yaşadıkları\nortamdan hazır olarak alırlar. Bu canlılara tüketici (heterotrof) canlılar denir. Hayvanlar, mantarlar ve bazı tek hücreli\ncanlılar tüketicidir.\n\nOtla beslenen panda Etle beslenen aslan\n\nDİKKAT\nBesinler, metabolik enerjinin ham maddesidir; hücrelerin yapı malzemesidir.\n\n10 MEBİ KONU ÖZETLERİ BİYOLOJİ - TYT",
+      "evidence_status": "READY",
+      "student_visible": false,
+      "promotion_policy": "RELEASE_SAFE_INDEPENDENT_APPROVAL_GATE"
+    },
+    {
+      "record_id": "BİY.10.2.1::MEBI-TYT-BIYOLOJI::p146",
+      "outcome_id": "BİY.10.2.1",
+      "grade": 10,
+      "theme_number": 2,
+      "theme_name": "Ekoloji",
+      "outcome_title": "Ekosistemin cansız ve canlı bileşenleri arasındaki ilişkileri çözümleyebilme",
+      "source": {
+        "authority": "MEB",
+        "corpus_family": "MEBI_OFFICIAL_LOCAL_CORPUS",
+        "package_id": "MEBI-TYT-BIYOLOJI",
+        "page": 146,
+        "source_anchor": "tyt-biyoloji/index.html#p=146",
+        "html_path": "local_corpus_extracted\\tyt-biyoloji\\files\\basic-html\\page146.html",
+        "image_path": "local_corpus_extracted\\tyt-biyoloji\\files\\thumb\\146.jpg",
+        "text_sha256": "3313f34bf20f5a621760ce92fc676b3913fdaf3fae467a0db47c01d549b821bf"
+      },
+      "verification": {
+        "status": "VERIFIED_SUPPORT_CANDIDATE",
+        "crosswalk_status": "STRONG_CANDIDATE",
+        "crosswalk_score": 308.160315,
+        "matched_title_tokens": [
+          "ekosistemin",
+          "cansiz",
+          "bileşenleri",
+          "ilişkileri"
+        ],
+        "matched_title_bigrams": [
+          "cansiz bileşenleri"
+        ],
+        "checks": {
+          "candidate_page_exists": true,
+          "official_biology_package": true,
+          "text_ready": true,
+          "source_anchor_present": true,
+          "html_path_present": true,
+          "image_path_present": true,
+          "package_affinity": true,
+          "distinctive_title_hit_count": 4,
+          "title_bigram_hit_count": 1
+        }
+      },
+      "approval": {
+        "status": "APPROVED_FOR_EVIDENCE_READY",
+        "reviewer_type": "EXTERNAL_LLM",
+        "reviewer_id": "openai-gpt-5.6-sol-external-review-2026-08-10",
+        "factual_support": true,
+        "outcome_support": true,
+        "source_consistency": true,
+        "rationale": "Sayfa ekosistemi canlı komüniteler ile fiziksel/cansız çevrenin etkileşimi olarak tanımlıyor ve biyotik-abiyotik bileşenler arasındaki ilişkiyi doğrudan destekliyor. Bağımsız ekoloji kaynaklarıyla uyumlu."
+      },
+      "promotion_checks": {
+        "approved_status": true,
+        "allowed_reviewer_type": true,
+        "factual_support": true,
+        "outcome_support": true,
+        "source_consistency": true,
+        "source_authority_meb": true,
+        "provenance_complete": true,
+        "source_unchanged": true,
+        "evidence_hash_matches_source": true,
+        "original_evidence_not_student_visible": true
+      },
+      "evidence_text": "EKOLOJİK KAVRAMLAR, EKOSİSTEMİN CANLI VE CANSIZ BİLEŞENLERİ\n\nEkosistem, belirli bir bölgedeki canlı komüniteleri ve bu canlılarla etkile-\nşim hâlinde olan fiziksel faktörlerden oluşur. Ekosistemler, karasal eko-\nsistemler ve sucul ekosistemler olarak iki grupta incelenir. Çöl, çayır ve\ntropikal yağmur ormanları karasal ekosistemlere örnek oluşturur. Sucul\nekosistemler tatlı su ve tuzlu su ekosistemlerinden oluşur. Göl, akarsu,\nbataklık, yer altı suları, barajlar, göletler, dere, çay ve nehirler tatlı su;\ndenizler ve okyanuslar tuzlu su ekosistemleridir. Mercan resifleri, nehir\nağızları, longozlar ve lagünler de denizlerin kıyılara yakın kısımlarında\nbulunan özel ekosistemlerdir. Bir kıta, bir okyanus ekosistem olarak kabul\nedilebileceği gibi bir orman, çayır, göl hatta akvaryum da birer ekosistem-\ndir. Dünya en büyük ekosistemdir. Ekosistem örneği\n\nBiyosfer (ekosfer, küresel ekosistem), dünya üzerinde canlıların yaşamlarını sürdürdüğü tüm ekosistemlerin toplamıdır.\nKısaca biyosfer dünya üzerinde canlıların yaşadığı alanların tümüdür.\n\nEkolojik organizasyon düzeyleri küçükten büyüğe doğru sıralaması:\n\nBiyosfer\n\nDİKKAT\nEkosistem\nAynı türe ait canlılar popülasyonu, popülasyonlar komüniteyi, ko-\nmüniteler ise cansız çevre ile birlikte ekosistemi meydana getirir.\nKomünite\nBiyosfer, tüm ekosistemleri içine alan dünya üzerinde canlıların\nyaşamını sürdürdüğü alandır.\nPopülasyon\n\nEkolojik organizasyon düzeyleri\n\nBüyük iklim kuşaklarında geniş yaşam alanlarını, karakteristik bitki ve hayvan topluluklarını içine alan büyük coğrafik alan-\nlara biyom denir. Karasal biyomlar, tatlısu biyomları, tropikal yağmur ormanları ve tundralar bu alanlara örnektir. Biyomun\nbüyüklüğü; popülasyonların birey sayısı, çevresel koşullar ve coğrafik özelliklere göre değişir. Örneğin, çöl çok geniş bir\nalan olmasına rağmen barındırdığı tür çeşitliliği azdır. Biyomlar geniş ekosistemlerdir.\nBir organizmanın yaşayıp çoğalabildiği yaşam alanına habitat denir. Örneğin; balinanın habitatı okyanus, kutup ayısının\nhabitatı ise tundralardır.\nHabitat içindeki bireylerin yaşamlarını sürdürürken gerçekleştirdikleri beslenme, üreme, davranış, yaşam biçimi ve diğer\ncanlılarla ilişkileri gibi faaliyetlerin tamamı ekolojik niş olarak tanımlanır. Kraliçe arının ekolojik nişi, yumurta üreterek\nçoğalmayı sağlamaktır.\n\nKutup ayısının habitatı tundralardır. Arılarda niş\n\n146 MEBİ KONU ÖZETLERİ BİYOLOJİ - TYT",
+      "evidence_status": "READY",
+      "student_visible": false,
+      "promotion_policy": "RELEASE_SAFE_INDEPENDENT_APPROVAL_GATE"
+    },
+    {
+      "record_id": "BİY.10.2.7::MEBI-TYT-BIYOLOJI::p166",
+      "outcome_id": "BİY.10.2.7",
+      "grade": 10,
+      "theme_number": 2,
+      "theme_name": "Ekoloji",
+      "outcome_title": "Ekolojik ayak izini küçültebilme yollarını bilimsel olarak sorgulayabilme",
+      "source": {
+        "authority": "MEB",
+        "corpus_family": "MEBI_OFFICIAL_LOCAL_CORPUS",
+        "package_id": "MEBI-TYT-BIYOLOJI",
+        "page": 166,
+        "source_anchor": "tyt-biyoloji/index.html#p=166",
+        "html_path": "local_corpus_extracted\\tyt-biyoloji\\files\\basic-html\\page166.html",
+        "image_path": "local_corpus_extracted\\tyt-biyoloji\\files\\thumb\\166.jpg",
+        "text_sha256": "9185a94ae770e079653353fba3319f8b724b789f22111e923e26f1e823e0418f"
+      },
+      "verification": {
+        "status": "VERIFIED_SUPPORT_CANDIDATE",
+        "crosswalk_status": "STRONG_CANDIDATE",
+        "crosswalk_score": 264.588839,
+        "matched_title_tokens": [
+          "ekolojik",
+          "ayak",
+          "izini"
+        ],
+        "matched_title_bigrams": [
+          "ekolojik ayak",
+          "ayak izini"
+        ],
+        "checks": {
+          "candidate_page_exists": true,
+          "official_biology_package": true,
+          "text_ready": true,
+          "source_anchor_present": true,
+          "html_path_present": true,
+          "image_path_present": true,
+          "package_affinity": true,
+          "distinctive_title_hit_count": 3,
+          "title_bigram_hit_count": 2
+        }
+      },
+      "approval": {
+        "status": "APPROVED_FOR_EVIDENCE_READY",
+        "reviewer_type": "EXTERNAL_LLM",
+        "reviewer_id": "openai-gpt-5.6-sol-external-review-2026-08-10",
+        "factual_support": true,
+        "outcome_support": true,
+        "source_consistency": true,
+        "rationale": "Sayfa ekolojik ayak izini tanımlıyor ve yenilenebilir enerji, israfın azaltılması, su/elektrik/kâğıt tasarrufu gibi küçültme yollarını doğrudan veriyor. Kazanım için yeterli ve kaynakla tutarlı."
+      },
+      "promotion_checks": {
+        "approved_status": true,
+        "allowed_reviewer_type": true,
+        "factual_support": true,
+        "outcome_support": true,
+        "source_consistency": true,
+        "source_authority_meb": true,
+        "provenance_complete": true,
+        "source_unchanged": true,
+        "evidence_hash_matches_source": true,
+        "original_evidence_not_student_visible": true
+      },
+      "evidence_text": "BİYOLOJİ\n\nKONU ÇEVRE SORUNLARININ ORTAYA ÇIKMASINDA\nÖZETİ BİREYLERİN ROLÜ VE ÇÖZÜM ÖNERİLERİ\nTYT TYT TYT TYT TYT TYT TYT TYT TYT TYT TYT TYT\n\nEkolojik Ayak İzi\nİnsanların günlük yaşantıları sırasında tüketilen doğal kaynakla-\nrın yeniden üretimi ve oluşan atıkların geri kazanımı için belirli\nbir miktar verimli toprağa ve suya ihtiyaç vardır. İnsanların üretim\nve tüketim faaliyetleri sonucu kullandığı enerjinin, kaynakların ve\nham maddenin yeniden üretilmesi ve oluşturulan atıkların etkisiz\nhâle getirilmesi için gerekli olan toprak ve su alanı miktarının öl-\nçümüne ekolojik ayak izi denir.\nEkolojik ayak izi, doğal kaynaklar ve ekosistem üzerinde belirli\nbir nüfusun doğaya yükünü hesaplamak amacıyla oluşmuş bir\nyöntemdir.\nDoğal kaynakların tükenmemesi ve sürdürülebilir bir kalkınmanın\nsağlanabilmesi için bireylerin ekolojik ayak izlerinin bilincinde ol-\nması gerekir.\n\nEkolojik ayak izini küçültmek için;\n• Fosil yakıtlar yerine yenilenebilir enerji kaynakları kullanılmalıdır.\n• Enerji ve gıda israfını önlemek gerekir.\n• Daha az elektrik, kâğıt, su kullanmaya özen gösterilmelidir.\n\nKarbon Ayak İzi\nHer birey; ulaşım, barınma, beslenme, elektrik tüketimi gibi faali-\nyetler, satın aldığı ve kullandığı ürünlerle atmosferde karbondiok-\nsit salınımına neden olur. Bu tür etkinlikler sonucu atmosfere sa-\nlınan karbondioksit miktarının tamamı, canlıların karbon ayak\nizini oluşturur. Karbon ayak izi genellikle ton, kg ya da g olarak\nifade edilir ve bir yıllık zaman dilimi için hesaplanır. Karbon ayak\nizi ölçülürken diğer sera gazlarının miktarı da dikkate alınır.\nKarbon ayak izi, birincil ayak izi ve ikincil ayak izi olarak iki ana\nparçadan oluşur. Birincil ayak izi; evsel enerji tüketimi, ulaşım ve\nfosil yakıtların yanmasıyla ortaya çıkan karbondioksit oranının öl-\nçüsüdür. İkincil ayak izi ise kişilerin günlük yaşantısında kullandı-\nğı ürünlerin imalatından bozulmasına kadar olan süreçteki dolaylı\nkarbondioksit oranının ölçüsüdür.\n\nAtmosfere salınan karbondioksit miktarını azaltmak için alınacak bazı önlemler;\n• Plastik poşet ve şişe kullanımını azaltmak.\n• Ambalajlanmış veya uzak mesafelerden gelen yiyecek ve içeceklerin israfını önlemek.\n• Mümkün olduğunca ulaşımda toplu taşıma araçlarını tercih etmek.\n• Fabrika bacalarına filtre takmak.\n\n• Güneş ve rüzgâr enerjisi gibi yenilenebilir enerji kullanmak.\n• Aydınlatmada tasarruflu ampulleri tercih etmek.\n• Binalara yalıtım yapmak.\n• Evsel atıkları ve fabrika atıklarını geri dönüşüme kazandırmak.\n\n• Yeşil alanları korumak ve ağaçlandırma çalışmalarını artırmak.\n166 MEBİ KONU ÖZETLERİ BİYOLOJİ - TYT",
+      "evidence_status": "READY",
+      "student_visible": false,
+      "promotion_policy": "RELEASE_SAFE_INDEPENDENT_APPROVAL_GATE"
+    },
+    {
+      "record_id": "BİY.11.2.3::MEBI-AYT-BIYOLOJI::p127",
+      "outcome_id": "BİY.11.2.3",
+      "grade": 11,
+      "theme_number": 2,
+      "theme_name": "Homeostazi",
+      "outcome_title": "Pozitif ve negatif geri bildirim mekanizmalarını karşılaştırabilme",
+      "source": {
+        "authority": "MEB",
+        "corpus_family": "MEBI_OFFICIAL_LOCAL_CORPUS",
+        "package_id": "MEBI-AYT-BIYOLOJI",
+        "page": 127,
+        "source_anchor": "ayt-biyoloji/index.html#p=127",
+        "html_path": "local_corpus_extracted\\ayt-biyoloji\\files\\basic-html\\page127.html",
+        "image_path": "local_corpus_extracted\\ayt-biyoloji\\files\\thumb\\127.jpg",
+        "text_sha256": "07880a64a934615afcee50ad1ff49cc3883f5b41e314513316aba9608f19f851"
+      },
+      "verification": {
+        "status": "VERIFIED_SUPPORT_CANDIDATE",
+        "crosswalk_status": "STRONG_CANDIDATE",
+        "crosswalk_score": 320.893947,
+        "matched_title_tokens": [
+          "pozitif",
+          "negatif",
+          "geri",
+          "bildirim"
+        ],
+        "matched_title_bigrams": [
+          "negatif geri",
+          "geri bildirim"
+        ],
+        "checks": {
+          "candidate_page_exists": true,
+          "official_biology_package": true,
+          "text_ready": true,
+          "source_anchor_present": true,
+          "html_path_present": true,
+          "image_path_present": true,
+          "package_affinity": true,
+          "distinctive_title_hit_count": 4,
+          "title_bigram_hit_count": 2
+        }
+      },
+      "approval": {
+        "status": "APPROVED_FOR_EVIDENCE_READY",
+        "reviewer_type": "EXTERNAL_LLM",
+        "reviewer_id": "openai-gpt-5.6-sol-external-review-2026-08-10",
+        "factual_support": true,
+        "outcome_support": true,
+        "source_consistency": true,
+        "rationale": "Sayfa menstrual döngü üzerinden pozitif ve negatif geri bildirimi açıkça karşılaştırılabilir biçimde gösteriyor; östrojen/LH pozitif geri bildirimi ve luteal evredeki negatif geri bildirim bağımsız fizyoloji kaynaklarıyla uyumlu."
+      },
+      "promotion_checks": {
+        "approved_status": true,
+        "allowed_reviewer_type": true,
+        "factual_support": true,
+        "outcome_support": true,
+        "source_consistency": true,
+        "source_authority_meb": true,
+        "provenance_complete": true,
+        "source_unchanged": true,
+        "evidence_hash_matches_source": true,
+        "original_evidence_not_student_visible": true
+      },
+      "evidence_text": "MENSTRUAL DÖNGÜ\n\nDişi Üreme Sisteminin Hormonal Kontrolü\n• Hipotalamus, hipofiz bezi ve yumurtalık arasındaki geri bildirim mekanizması ile GnRH, gonadotropinler (FSH, LH) ve\neşey hormonları arasındaki etkileşimlerle dişilerdeki üreme döngüsü kontrol edilir.\n\nFOLİKÜL EVRESİNDE LUTEAL EVREDE\n\n+ –\nHipotalamus Hipotalamus\nGnRH salgısını artırır. + GnRH – GnRH – GnRH salgısını azaltır.\n\nHipofiz bezi ön lobu\nPozitif geri bildirim LH salgısını artırır. Hipofiz bezi ön lobu Negatif geri bildirim Öncelikle FSH salgısını azaltır. Yumurtalık (Ovaryum) FSH ve LH salgısını azaltır. Negatif geri bildirim\n\nFSH + LH\nLH\n\nYumurtalık\n(Ovaryum)\n\nKorpus luteum oluşumu\nKorpus luteum\n\nİnhibin Progesteron\nÖstrojen ve Östrojen\nmiktarında artış\nDişi üreme sisteminin hormonal kontrolü\n\n• Folikül hücrelerinde bulunan FSH ve LH reseptörleri sayesinde östrojen yapımı uyarılır ve salgısı hızlanır. Kanda\nbulunan östrojen miktarının hemen hemen tamamı yumurtalık kaynaklıdır. Östrojen FSH salgısını azaltır. LH salgısı\nüzerine ise bazı durumlarda artırabilen (pozitif geri bildirim) bazı durumlarda da azaltabilen etkiye sahiptir (negatif geri\nbildirim).\n• Folikül evresinin büyük bir kısmında kandaki östrojen hormonu hafif artış gösterir. Düşük miktardaki östrojen hormonu-\nnun hipofiz bezinin FSH ve LH salgısı üzerine engelleyici etkisi vardır. Folikül evresinin sonlarına doğru östrojen mikta-\nrındaki artış pozitif geri bildirimle LH salgısının artmasına neden olur (pozitif geri bildirim). Hipotalamustan salgılanan\nGnRH’nin hipofiz bezi ön lobunu uyarmasıyla FSH miktarında da bir miktar artış gerçekleşir. LH’nin tepe değerine\nulaşmasıyla ovulasyon gerçekleşir.\n• Luteal evrede ise korpus luteumdan salgılanan yüksek miktarlardaki östrojen, progesteron ve inhibin hormonu hipota-\nlamus ve hipofiz bezi üzerine baskılayıcı etki yapar. Yüksek miktarda progesteron LH salgısını engellerken östrojenin\ninhibe edici etkisini güçlendirir. İnhibin hipofiz bezi ön lobundan FSH salgılanmasını azaltır. Korpus luteumun bozulup\nkaybolmaya başlaması ile bu etki ortadan kalkar.\n\n• Östrojen hormonu, dişi üreme organlarının gelişimi ve dişi üreme faaliyetlerini uyarma görevleri yanında dişiye özgü\nikincil cinsiyet karakterlerinin oluşumundan ve korunmasından sorumludur. Meme dokusunun büyümesi, süt kanallarının\ngelişimi ve deri altı, kalça, meme dokusu gibi yapılarda yağ depolanması, kemik gelişimi, boy uzaması gibi görevleri\nvardır.\nBİYOLOJİ - AYT MEBİ KONU ÖZETLERİ 127",
+      "evidence_status": "READY",
+      "student_visible": false,
+      "promotion_policy": "RELEASE_SAFE_INDEPENDENT_APPROVAL_GATE"
+    },
+    {
+      "record_id": "BİY.12.1.3::MEBI-AYT-BIYOLOJI::p157",
+      "outcome_id": "BİY.12.1.3",
+      "grade": 12,
+      "theme_number": 1,
+      "theme_name": "Üreme",
+      "outcome_title": "Hücredeki genetik materyalin organizasyonunu çözümleyebilme",
+      "source": {
+        "authority": "MEB",
+        "corpus_family": "MEBI_OFFICIAL_LOCAL_CORPUS",
+        "package_id": "MEBI-AYT-BIYOLOJI",
+        "page": 157,
+        "source_anchor": "ayt-biyoloji/index.html#p=157",
+        "html_path": "local_corpus_extracted\\ayt-biyoloji\\files\\basic-html\\page157.html",
+        "image_path": "local_corpus_extracted\\ayt-biyoloji\\files\\thumb\\157.jpg",
+        "text_sha256": "0f572adeaa836504246672e3afd50355e4de37d9577c003861ea4dd155aca379"
+      },
+      "verification": {
+        "status": "VERIFIED_SUPPORT_CANDIDATE",
+        "crosswalk_status": "STRONG_CANDIDATE",
+        "crosswalk_score": 222.279249,
+        "matched_title_tokens": [
+          "hücredeki",
+          "genetik",
+          "materyalin"
+        ],
+        "matched_title_bigrams": [
+          "hücredeki genetik",
+          "genetik materyalin"
+        ],
+        "checks": {
+          "candidate_page_exists": true,
+          "official_biology_package": true,
+          "text_ready": true,
+          "source_anchor_present": true,
+          "html_path_present": true,
+          "image_path_present": true,
+          "package_affinity": true,
+          "distinctive_title_hit_count": 3,
+          "title_bigram_hit_count": 2
+        }
+      },
+      "approval": {
+        "status": "APPROVED_FOR_EVIDENCE_READY",
+        "reviewer_type": "EXTERNAL_LLM",
+        "reviewer_id": "openai-gpt-5.6-sol-external-review-2026-08-10",
+        "factual_support": true,
+        "outcome_support": true,
+        "source_consistency": true,
+        "rationale": "Sayfa DNA, gen, histon, nükleozom, kromatin ve kromozom ilişkisini doğrudan açıklıyor. Ökaryotik DNA'nın histonlar etrafında paketlenmesi ve kromatinin kromozoma yoğunlaşması bağımsız hücre biyolojisi kaynaklarıyla uyumlu."
+      },
+      "promotion_checks": {
+        "approved_status": true,
+        "allowed_reviewer_type": true,
+        "factual_support": true,
+        "outcome_support": true,
+        "source_consistency": true,
+        "source_authority_meb": true,
+        "provenance_complete": true,
+        "source_unchanged": true,
+        "evidence_hash_matches_source": true,
+        "original_evidence_not_student_visible": true
+      },
+      "evidence_text": "NÜKLEİK ASİTLERİN ÇEŞİTLERİ VE GÖREVLERİ, GENETİK MATERYALİN ORGANİZASYONU\n\nGENETİK MATERYALİN ORGANİZASYONU\n\nGen\n\nNükleotit DNA\n\nHiston\nNükleozom\n\nKromozom Kromatin iplik\nHücredeki genetik materyalin organizasyonu\n\n• Gen bir polipeptidi ya da bir RNA molekülünü üretmek üzere ifade edilebilen DNA bölgesidir. Genler, birkaç bin nük-\nleotitten oluşabildiği gibi milyonlarca nükleotitten de oluşabilir. Genler bilgi depolayabilir, DNA replikasyonu ile kopya-\nlanabilir ve bu kopyalama sayesinde de yeni hücrelere aktarılabilir.\n• Genler değişikliğe uğrayabilir. Değişikliğe uğramasına gen mutasyonu denir. Bir gendeki mutasyon; replikasyon\nsırasında yanlış baz eşleşmesi, karşılıklı nükleotit çiftinin yer değiştirmesi, yeni bir nükleotit çiftinin eksilmesi ya da\neklenmesi şeklinde gerçekleşebilir.\n• DNA, interfaz safhasında kromatin şeklinde bulunur. Kromatin, ökaryotlarda DNA'dan ve histon proteinlerden meyda-\nna gelmiş yapıdır. Bazı arkeler hariç prokaryotlar, histonlarla veya histon benzeri proteinlerle ilişkili olmayan DNA’ya\nsahiptir. Ökaryotlarda bir DNA ipliği, sekiz histondan oluşan bir kümenin etrafında iki kez dolanarak bir nükleozom\noluşturur. Bu nükleozomlar, bir zincire dizilen boncuklar gibi birbirine bağlanır. Kromozom, hücre döngüsü sürecinde\nkromatinin yoğun bir şekilde paketlenmesiyle oluşan yapıdır. Metafaz safhası, kromozomların en belirgin görüldüğü\nsafhadır.\n• Ökaryotlarda kromozomlar hem doğrusal hem de farklı uzunluk ve biçimde, prokaryotlarda ise halkasaldır. Kromozom\nsayısı türe özgüdür. Ancak farklı türdeki canlıların kromozom sayısı aynı olabilir. Örneğin; insanın kromozom sayısı ile\nmoli balığı, kurtbağrı bitkisi ve samur antilobunun kromozom sayıları aynıdır.\n\nBİYOLOJİ - AYT MEBİ KONU ÖZETLERİ 157",
+      "evidence_status": "READY",
+      "student_visible": false,
+      "promotion_policy": "RELEASE_SAFE_INDEPENDENT_APPROVAL_GATE"
+    },
+    {
+      "record_id": "BİY.12.1.8::MEBI-AYT-BIYOLOJI::p232",
+      "outcome_id": "BİY.12.1.8",
+      "grade": 12,
+      "theme_number": 1,
+      "theme_name": "Üreme",
+      "outcome_title": "Eşeysiz ve eşeyli üreme ile ilgili bilimsel çıkarım yapabilme",
+      "source": {
+        "authority": "MEB",
+        "corpus_family": "MEBI_OFFICIAL_LOCAL_CORPUS",
+        "package_id": "MEBI-AYT-BIYOLOJI",
+        "page": 232,
+        "source_anchor": "ayt-biyoloji/index.html#p=232",
+        "html_path": "local_corpus_extracted\\ayt-biyoloji\\files\\basic-html\\page232.html",
+        "image_path": "local_corpus_extracted\\ayt-biyoloji\\files\\thumb\\232.jpg",
+        "text_sha256": "031fd48a6b2d214321f1031cb69a75562a5025acc2ba0e8080e81e3997e3df36"
+      },
+      "verification": {
+        "status": "VERIFIED_SUPPORT_CANDIDATE",
+        "crosswalk_status": "STRONG_CANDIDATE",
+        "crosswalk_score": 192.270835,
+        "matched_title_tokens": [
+          "eşeysiz",
+          "eşeyli",
+          "üreme"
+        ],
+        "matched_title_bigrams": [
+          "eşeyli üreme"
+        ],
+        "checks": {
+          "candidate_page_exists": true,
+          "official_biology_package": true,
+          "text_ready": true,
+          "source_anchor_present": true,
+          "html_path_present": true,
+          "image_path_present": true,
+          "package_affinity": true,
+          "distinctive_title_hit_count": 3,
+          "title_bigram_hit_count": 1
+        }
+      },
+      "approval": {
+        "status": "APPROVED_FOR_EVIDENCE_READY",
+        "reviewer_type": "EXTERNAL_LLM",
+        "reviewer_id": "openai-gpt-5.6-sol-external-review-2026-08-10",
+        "factual_support": true,
+        "outcome_support": true,
+        "source_consistency": true,
+        "rationale": "Sayfa bitkilerde eşeysiz ve eşeyli üremeyi kalıtsal benzerlik/genetik çeşitlilik açısından doğrudan karşılaştırıyor. Temel çıkarımlar bağımsız biyoloji kaynaklarıyla uyumlu."
+      },
+      "promotion_checks": {
+        "approved_status": true,
+        "allowed_reviewer_type": true,
+        "factual_support": true,
+        "outcome_support": true,
+        "source_consistency": true,
+        "source_authority_meb": true,
+        "provenance_complete": true,
+        "source_unchanged": true,
+        "evidence_hash_matches_source": true,
+        "original_evidence_not_student_visible": true
+      },
+      "evidence_text": "BIYOLOJI\n\nKONU ÇİÇEĞİN KISIMLARI VE GÖREVLERİ\nÖZETİ\nAYT AYT AYT AYT AYT AYT AYT AYT AYT AYT AYT AYT\n\nÇİÇEĞİN KISIMLARI VE GÖREVLERİ\nBitkilerde Eşeyli Üremenin Genel Özellikleri\n• Bitkilerde eşeyli ve eşeysiz olarak iki tip üreme görülür.\n\n• Eşeysiz üreme sonucu kalıtsal yapısı aynı olan bitkilerden çok sayıda üretilebilir ve bitkilerde genetik çeşitlilik olmaz.\n• Eşeyli üreme sonucunda ise kalıtsal yapısı farklı olan bitkiler üretilebilir ve genetik çeşitlilik olur. Bu sayede eşeyli üre-\nme ile çoğalan bitki türünün farklı çevrelere yayılma şansı yüksek ve değişen çevre şartlarına uyum sağlama yeteneği\ndaha fazladır.\n• Tohumlu bitkiler eşeyli üreme ile çoğalır ve tohum durumlarına göre iki grupta incelenir.\n• Açık tohumlu bitkilerde üreme organı kozalaklar, kapalı tohumlu (çiçekli) bitkilerde çiçeklerdir.\nKapalı Tohumlu Bitkilerde Çiçeğin Genel Yapısı\n• Çiçekler, yaprakların değişimi ile meydana gelmiş yapılardır. Çiçek sapı ucunda yer alır.\n\n• Kapalı tohumlu bitkiye ait çiçek genel olarak dıştan içe doğru çanak yaprak, taç yaprak, erkek organ ve dişi organdan\noluşur.\n\nKapalı tohumlu bitkilerde çiçeğin genel yapısı\nDıştan içe doğru çiçeğin kısımları şunlardır:\n• Çiçek sapı (pedisel), çiçeğin taşınmasını sağlar.\n\n• Çiçek tablası (reseptakulum), çiçeğin tüm yapılarının bağlandığı çiçek sapının üstünde olan bölümdür.\n• Çanak yaprak (sepal), genellikle yeşil renkli olan ve fotosentez yapabilme yeteneğine sahip olan yapraklardır. Çiçek\ntomurcukları açmadan önce onları sarıp koruyan çanak yapraklar çiçeğin en dışında bulunur.\n\n• Taç yaprak (petal), birçok çiçekte parlak renkler içerip böceklerin ve diğer tozlaştırıcıların ilgisini çekerek tozlaşmaya\nyardımcı olan yapraklardır.\n• Erkek organ (stamen), sapçık (filament) ve başçık (anter) olmak üzere iki kısımdan oluşur.\n\nSapçık başçığı taşır ve ve onun hareketliliğini sağlar. Başçıkta polen keseleri bulunur. Bu keseler polenlerin üretildiği ve\ndepolandığı kısımdır.\n\nKapalı tohumlu bitkilerde erkek organın genel yapısı Kapalı tohumlu bitkilerde başçığın enine kesiti\n\n232 MEBİ KONU ÖZETLERİ BİYOLOJİ - AYT",
+      "evidence_status": "READY",
+      "student_visible": false,
+      "promotion_policy": "RELEASE_SAFE_INDEPENDENT_APPROVAL_GATE"
+    }
+  ],
+  "blocked": [
+    {
+      "record_id": "BİY.9.2.1::MEBI-TYT-BIYOLOJI::p18",
+      "approval_status": "MANUAL_REVIEW_REQUIRED",
+      "promotion_status": "BLOCKED",
+      "promotion_checks": {
+        "approved_status": false,
+        "allowed_reviewer_type": true,
+        "factual_support": false,
+        "outcome_support": false,
+        "source_consistency": true,
+        "source_authority_meb": true,
+        "provenance_complete": true,
+        "source_unchanged": true,
+        "evidence_hash_matches_source": true,
+        "original_evidence_not_student_visible": true
+      },
+      "evidence_status": "NOT_READY",
+      "student_visible": false
+    },
+    {
+      "record_id": "BİY.9.2.6::MEBI-TYT-BIYOLOJI::p64",
+      "approval_status": "MANUAL_REVIEW_REQUIRED",
+      "promotion_status": "BLOCKED",
+      "promotion_checks": {
+        "approved_status": false,
+        "allowed_reviewer_type": true,
+        "factual_support": false,
+        "outcome_support": true,
+        "source_consistency": true,
+        "source_authority_meb": true,
+        "provenance_complete": true,
+        "source_unchanged": true,
+        "evidence_hash_matches_source": true,
+        "original_evidence_not_student_visible": true
+      },
+      "evidence_status": "NOT_READY",
+      "student_visible": false
+    },
+    {
+      "record_id": "BİY.9.2.7::MEBI-TYT-BIYOLOJI::p64",
+      "approval_status": "REJECTED",
+      "promotion_status": "BLOCKED",
+      "promotion_checks": {
+        "approved_status": false,
+        "allowed_reviewer_type": true,
+        "factual_support": true,
+        "outcome_support": false,
+        "source_consistency": true,
+        "source_authority_meb": true,
+        "provenance_complete": true,
+        "source_unchanged": true,
+        "evidence_hash_matches_source": true,
+        "original_evidence_not_student_visible": true
+      },
+      "evidence_status": "NOT_READY",
+      "student_visible": false
+    },
+    {
+      "record_id": "BİY.10.1.6::MEBI-TYT-BIYOLOJI::p24",
+      "approval_status": "REJECTED",
+      "promotion_status": "BLOCKED",
+      "promotion_checks": {
+        "approved_status": false,
+        "allowed_reviewer_type": true,
+        "factual_support": true,
+        "outcome_support": false,
+        "source_consistency": true,
+        "source_authority_meb": true,
+        "provenance_complete": true,
+        "source_unchanged": true,
+        "evidence_hash_matches_source": true,
+        "original_evidence_not_student_visible": true
+      },
+      "evidence_status": "NOT_READY",
+      "student_visible": false
+    },
+    {
+      "record_id": "BİY.10.2.8::MEBI-TYT-BIYOLOJI::p8",
+      "approval_status": "REJECTED",
+      "promotion_status": "BLOCKED",
+      "promotion_checks": {
+        "approved_status": false,
+        "allowed_reviewer_type": true,
+        "factual_support": true,
+        "outcome_support": false,
+        "source_consistency": true,
+        "source_authority_meb": true,
+        "provenance_complete": true,
+        "source_unchanged": true,
+        "evidence_hash_matches_source": true,
+        "original_evidence_not_student_visible": true
+      },
+      "evidence_status": "NOT_READY",
+      "student_visible": false
+    },
+    {
+      "record_id": "BİY.11.1.2::MEBI-AYT-BIYOLOJI::p8",
+      "approval_status": "REJECTED",
+      "promotion_status": "BLOCKED",
+      "promotion_checks": {
+        "approved_status": false,
+        "allowed_reviewer_type": true,
+        "factual_support": true,
+        "outcome_support": false,
+        "source_consistency": true,
+        "source_authority_meb": true,
+        "provenance_complete": true,
+        "source_unchanged": true,
+        "evidence_hash_matches_source": true,
+        "original_evidence_not_student_visible": true
+      },
+      "evidence_status": "NOT_READY",
+      "student_visible": false
+    },
+    {
+      "record_id": "BİY.11.1.7::MEBI-AYT-BIYOLOJI::p23",
+      "approval_status": "REJECTED",
+      "promotion_status": "BLOCKED",
+      "promotion_checks": {
+        "approved_status": false,
+        "allowed_reviewer_type": true,
+        "factual_support": true,
+        "outcome_support": false,
+        "source_consistency": true,
+        "source_authority_meb": true,
+        "provenance_complete": true,
+        "source_unchanged": true,
+        "evidence_hash_matches_source": true,
+        "original_evidence_not_student_visible": true
+      },
+      "evidence_status": "NOT_READY",
+      "student_visible": false
+    },
+    {
+      "record_id": "BİY.11.1.10::MEBI-AYT-BIYOLOJI::p58",
+      "approval_status": "MANUAL_REVIEW_REQUIRED",
+      "promotion_status": "BLOCKED",
+      "promotion_checks": {
+        "approved_status": false,
+        "allowed_reviewer_type": true,
+        "factual_support": true,
+        "outcome_support": false,
+        "source_consistency": true,
+        "source_authority_meb": true,
+        "provenance_complete": true,
+        "source_unchanged": true,
+        "evidence_hash_matches_source": true,
+        "original_evidence_not_student_visible": true
+      },
+      "evidence_status": "NOT_READY",
+      "student_visible": false
+    },
+    {
+      "record_id": "BİY.11.2.4::MEBI-AYT-BIYOLOJI::p23",
+      "approval_status": "REJECTED",
+      "promotion_status": "BLOCKED",
+      "promotion_checks": {
+        "approved_status": false,
+        "allowed_reviewer_type": true,
+        "factual_support": true,
+        "outcome_support": false,
+        "source_consistency": true,
+        "source_authority_meb": true,
+        "provenance_complete": true,
+        "source_unchanged": true,
+        "evidence_hash_matches_source": true,
+        "original_evidence_not_student_visible": true
+      },
+      "evidence_status": "NOT_READY",
+      "student_visible": false
+    },
+    {
+      "record_id": "BİY.11.2.6::MEBI-AYT-BIYOLOJI::p83",
+      "approval_status": "MANUAL_REVIEW_REQUIRED",
+      "promotion_status": "BLOCKED",
+      "promotion_checks": {
+        "approved_status": false,
+        "allowed_reviewer_type": true,
+        "factual_support": true,
+        "outcome_support": false,
+        "source_consistency": true,
+        "source_authority_meb": true,
+        "provenance_complete": true,
+        "source_unchanged": true,
+        "evidence_hash_matches_source": true,
+        "original_evidence_not_student_visible": true
+      },
+      "evidence_status": "NOT_READY",
+      "student_visible": false
+    },
+    {
+      "record_id": "BİY.12.1.7::MEBI-AYT-BIYOLOJI::p133",
+      "approval_status": "REJECTED",
+      "promotion_status": "BLOCKED",
+      "promotion_checks": {
+        "approved_status": false,
+        "allowed_reviewer_type": true,
+        "factual_support": true,
+        "outcome_support": false,
+        "source_consistency": true,
+        "source_authority_meb": true,
+        "provenance_complete": true,
+        "source_unchanged": true,
+        "evidence_hash_matches_source": true,
+        "original_evidence_not_student_visible": true
+      },
+      "evidence_status": "NOT_READY",
+      "student_visible": false
+    },
+    {
+      "record_id": "BİY.12.1.9::MEBI-AYT-BIYOLOJI::p234",
+      "approval_status": "REJECTED",
+      "promotion_status": "BLOCKED",
+      "promotion_checks": {
+        "approved_status": false,
+        "allowed_reviewer_type": true,
+        "factual_support": true,
+        "outcome_support": false,
+        "source_consistency": true,
+        "source_authority_meb": true,
+        "provenance_complete": true,
+        "source_unchanged": true,
+        "evidence_hash_matches_source": true,
+        "original_evidence_not_student_visible": true
+      },
+      "evidence_status": "NOT_READY",
+      "student_visible": false
+    },
+    {
+      "record_id": "BİY.12.2.1::MEBI-AYT-BIYOLOJI::p151",
+      "approval_status": "MANUAL_REVIEW_REQUIRED",
+      "promotion_status": "BLOCKED",
+      "promotion_checks": {
+        "approved_status": false,
+        "allowed_reviewer_type": true,
+        "factual_support": true,
+        "outcome_support": false,
+        "source_consistency": true,
+        "source_authority_meb": true,
+        "provenance_complete": true,
+        "source_unchanged": true,
+        "evidence_hash_matches_source": true,
+        "original_evidence_not_student_visible": true
+      },
+      "evidence_status": "NOT_READY",
+      "student_visible": false
+    }
+  ],
+  "student_visible": false
+}
