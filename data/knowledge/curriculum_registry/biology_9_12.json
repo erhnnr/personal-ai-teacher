@@ -1,0 +1,886 @@
+{
+  "version": "1.0",
+  "kind": "OFFICIAL_CURRICULUM_REGISTRY",
+  "authority": "Millî Eğitim Bakanlığı",
+  "curriculum_model": "Türkiye Yüzyılı Maarif Modeli 2024",
+  "subject": "Biyoloji",
+  "grades": [
+    9,
+    10,
+    11,
+    12
+  ],
+  "source_document": "2024programbiy9101112Onayli.pdf",
+  "source_page_count": 88,
+  "total_learning_outcomes": 78,
+  "grade_records": [
+    {
+      "grade": 9,
+      "learning_outcome_count": 15,
+      "themes": [
+        {
+          "theme_number": 1,
+          "theme_name": "Yaşam",
+          "content_framework": "Yaşam Bilimi: Biyoloji Sınıflandırma ve Biyoçeşitlilik",
+          "learning_outcome_count": 7,
+          "learning_outcomes": [
+            {
+              "id": "BİY.9.1.1",
+              "grade": 9,
+              "theme_number": 1,
+              "outcome_number": 1,
+              "title": "Biyolojideki dönüm noktalarının insan hayatına katkılarını sorgulayabilme",
+              "content_framework": "Yaşam Bilimi: Biyoloji Sınıflandırma ve Biyoçeşitlilik",
+              "key_concepts": "bilimsel yöntem, bilim etiği, prokaryot ÖĞRENME KANITLARI (Ölçme ve Değerlendirme) Öğrenme çıktıları; öğrenme günlüğü, zihin haritası, araştırma raporu, performans görevi, kontrol noktası, yapılandırılmış grid, açık uçlu soruların yer aldığı çalışma yaprağı, bilgi görseli kullanılarak dereceli puanlama anahtarı ile değerlendirilebilir.",
+              "source_page": 13
+            },
+            {
+              "id": "BİY.9.1.2",
+              "grade": 9,
+              "theme_number": 1,
+              "outcome_number": 2,
+              "title": "Bilimsel araştırma süreçlerinde bilimin doğasını yorumlayabilme",
+              "content_framework": "",
+              "key_concepts": "",
+              "source_page": 15
+            },
+            {
+              "id": "BİY.9.1.3",
+              "grade": 9,
+              "theme_number": 1,
+              "outcome_number": 3,
+              "title": "Bilimsel araştırmaların bilim etiğine uygunluğu ile ilgili bilgi toplayabilme",
+              "content_framework": "",
+              "key_concepts": "",
+              "source_page": 15
+            },
+            {
+              "id": "BİY.9.1.4",
+              "grade": 9,
+              "theme_number": 1,
+              "outcome_number": 4,
+              "title": "Çevresindeki canlıların özelliklerini bilimsel olarak gözlemleyebilme",
+              "content_framework": "",
+              "key_concepts": "",
+              "source_page": 15
+            },
+            {
+              "id": "BİY.9.1.5",
+              "grade": 9,
+              "theme_number": 1,
+              "outcome_number": 5,
+              "title": "Canlıları sınıflandırabilme",
+              "content_framework": "",
+              "key_concepts": "",
+              "source_page": 15
+            },
+            {
+              "id": "BİY.9.1.6",
+              "grade": 9,
+              "theme_number": 1,
+              "outcome_number": 6,
+              "title": "Üç üst âlem (domain) sisteminde yer alan canlıların özellikleri ile ilgili çıkarım yapabilme",
+              "content_framework": "",
+              "key_concepts": "",
+              "source_page": 15
+            },
+            {
+              "id": "BİY.9.1.7",
+              "grade": 9,
+              "theme_number": 1,
+              "outcome_number": 7,
+              "title": "Biyoçeşitliliği oluşturan unsurlarla ilgili bilimsel çıkarım yapabilme",
+              "content_framework": "Yaşam Bilimi: Biyoloji Biyolojinin Önemi, Biyoloji Biliminin Gelişimindeki Dönüm Noktaları, Bilimin Doğası, Bilimsel Araştırma Süreçleri, Bilim Etiği, Canlıların Ortak Özellikleri (Hücresel Yapı, Organizasyon, Beslenme, Enerji Üretimi ve Tüketimi, Boşaltım, Büyüme ve Gelişme, Metabolizma, Uyarılara Tepki, Homeostazi, Üreme, Varyasyon ve Adaptasyon) Sınıflandırma ve Biyoçeşitlilik Sınıflandırmada Temel Yaklaşımlar ve Modern Sınıflandırma (Linne ve İkili Adlandırma, Sınıflandırma Kategorileri), Üç Üst Âlem (Domain) Sisteminde Yer Alan Canlılar ve Genel Özellikleri [Bakteriler, Arkeler, Ökaryotlar (Protistler, Bitkiler, Mantarlar, Hayvanlar)], Biyoçeşitlilik",
+              "key_concepts": "bilimsel yöntem, bilim etiği, prokaryot, ökaryot, beslenme çeşitleri, sınıflandırma kategorileri, ikili adlandırma, domain, tür, arke, bakteri, protista, bitki, mantar, hayvan, endemik tür ÖĞRENME KANITLARI (Ölçme ve Değerlendirme) Öğrenme çıktıları; öğrenme günlüğü, zihin haritası, araştırma raporu, performans görevi, kontrol noktası, yapılandırılmış grid, açık uçlu soruların yer aldığı çalışma yaprağı, bilgi görseli kullanılarak dereceli puanlama anahtarı ile değerlendirilebilir. Öğrencilerin bilimin doğasını incelerken elde edeceği bilgileri kendi ifadeleriyle aktarması için zihin haritası kullanılabilir. Öğrencilerin oluşturacağı zihin haritaları, puanlama anahtarı ile puanlanabilir. Farklı canlıların yapısal özellikleri ile ilgili önerme sunmayı, örüntü oluşturmayı, karşılaştırma ve değerlendirme yapmayı sağlayacak açık uçlu sorular kullanılabilir. Sorulara verilecek cevaplar, puanlama anahtarı ile değerlendirilebilir. Öğrencilere çevrelerinden seçtikleri canlıların özelliklerini gözlem formu kullanarak belirli süre gözlemlemeye, gözlem verisinden hareketle biyoçeşitliliğin niteliklerine ilişkin çıkarımlarda bulunacağı araştırma raporu hazırlamaya yönelik performans görevi verilebilir. Araştırma raporu, analitik dereceli puanlama anahtarı ile değerlendirilebilir.",
+              "source_page": 16
+            }
+          ]
+        },
+        {
+          "theme_number": 2,
+          "theme_name": "Organizasyon",
+          "content_framework": "Temel Bileşenler İnorganik Moleküller Su, Mineraller Organik Moleküller Karbohidratlar: Monosakkaritler (Riboz, Deoksiriboz, Fruktoz, Glikoz, Galaktoz), Disakkaritler (Sükroz, Maltoz, Laktoz), Polisakkaritler (Glikojen, Nişasta, Selüloz, Kitin) Yağlar: Yağ Asitleri, Trigliseritler, Fosfolipitler, Steroitler Proteinler: Amino Asitlerin Yapısı, Enzimler (Basit ve Bileşik Enzimler, Aktivasyon Enerjisi, Enzim-Substrat İlişkisi), Enzimatik Reaksiyonlara Etki Eden Faktörler Nükleik Asitler: DNA ve RNA’ nın Yapısı Vitaminler: Yağda Çözünen Vitaminler, Suda Çözünen Vitaminler Hücrenin Organizasyonu Prokaryot ve Ökaryot Hücre, Hücre Zarı, Sitoplazma, Sitoplazmik Yapılar, Organeller ve Çekirdek, Hücre Zarından Madde Geçişleri (Pasif Taşıma, Difüzyon, Ozmoz, Aktif Taşıma, Endositoz, Ekzositoz), Hücreden Doku, Organ ve Sistemlerin Organizasyonu",
+          "learning_outcome_count": 8,
+          "learning_outcomes": [
+            {
+              "id": "BİY.9.2.1",
+              "grade": 9,
+              "theme_number": 2,
+              "outcome_number": 1,
+              "title": "İnorganik moleküllerin önemi hakkında bilimsel çıkarım yapabilme",
+              "content_framework": "",
+              "key_concepts": "",
+              "source_page": 23
+            },
+            {
+              "id": "BİY.9.2.2",
+              "grade": 9,
+              "theme_number": 2,
+              "outcome_number": 2,
+              "title": "Organik moleküllerin yapısı ve çeşitleriyle ilgili bilgi toplayabilme",
+              "content_framework": "",
+              "key_concepts": "",
+              "source_page": 23
+            },
+            {
+              "id": "BİY.9.2.3",
+              "grade": 9,
+              "theme_number": 2,
+              "outcome_number": 3,
+              "title": "Besinlerin yapısında karbohidrat, yağ ve protein varlığının belirlenmesiyle ilgili deney yapabilme",
+              "content_framework": "",
+              "key_concepts": "",
+              "source_page": 23
+            },
+            {
+              "id": "BİY.9.2.4",
+              "grade": 9,
+              "theme_number": 2,
+              "outcome_number": 4,
+              "title": "pH ve sıcaklığın enzim aktivitesini etkilediğini gösteren deney yapabilme",
+              "content_framework": "",
+              "key_concepts": "",
+              "source_page": 23
+            },
+            {
+              "id": "BİY.9.2.5",
+              "grade": 9,
+              "theme_number": 2,
+              "outcome_number": 5,
+              "title": "Hücre alt birimlerini ve bu birimlerin işlevleri arasındaki ilişkileri çözümleyebilme",
+              "content_framework": "",
+              "key_concepts": "",
+              "source_page": 23
+            },
+            {
+              "id": "BİY.9.2.6",
+              "grade": 9,
+              "theme_number": 2,
+              "outcome_number": 6,
+              "title": "Hücre zarından madde geçişlerini sınıflandırabilme",
+              "content_framework": "",
+              "key_concepts": "",
+              "source_page": 23
+            },
+            {
+              "id": "BİY.9.2.7",
+              "grade": 9,
+              "theme_number": 2,
+              "outcome_number": 7,
+              "title": "Küçük moleküllerin hücre zarından pasif geçişi ile ilgili deney yapabilme",
+              "content_framework": "",
+              "key_concepts": "",
+              "source_page": 23
+            },
+            {
+              "id": "BİY.9.2.8",
+              "grade": 9,
+              "theme_number": 2,
+              "outcome_number": 8,
+              "title": "Hücreden doku, organ ve sistemlerin organizasyonuyla ilgili tümevarımsal akıl yürütebilme",
+              "content_framework": "Temel Bileşenler İnorganik Moleküller Su, Mineraller Organik Moleküller Karbohidratlar: Monosakkaritler (Riboz, Deoksiriboz, Fruktoz, Glikoz, Galaktoz), Disakkaritler (Sükroz, Maltoz, Laktoz), Polisakkaritler (Glikojen, Nişasta, Selüloz, Kitin) Yağlar: Yağ Asitleri, Trigliseritler, Fosfolipitler, Steroitler Proteinler: Amino Asitlerin Yapısı, Enzimler (Basit ve Bileşik Enzimler, Aktivasyon Enerjisi, Enzim-Substrat İlişkisi), Enzimatik Reaksiyonlara Etki Eden Faktörler Nükleik Asitler: DNA ve RNA’ nın Yapısı Vitaminler: Yağda Çözünen Vitaminler, Suda Çözünen Vitaminler Hücrenin Organizasyonu Prokaryot ve Ökaryot Hücre, Hücre Zarı, Sitoplazma, Sitoplazmik Yapılar, Organeller ve Çekirdek, Hücre Zarından Madde Geçişleri (Pasif Taşıma, Difüzyon, Ozmoz, Aktif Taşıma, Endositoz, Ekzositoz), Hücreden Doku, Organ ve Sistemlerin Organizasyonu",
+              "key_concepts": "adezyon, kohezyon, çözücülük, polimerizasyon, dehidrasyon, hidroliz, denatürasyon, indüklenmiş uyum, yüzey gerilimi, endositoz, ekzositoz, aktif taşıma, pasif taşıma, organeller, sitoplazmik yapılar ÖĞRENME KANITLARI (Ölçme ve Değerlendirme) Öğrenme çıktıları; deney, poster, broşür, performans görevi, bilgi görseli, yapılandırılmış grid, kavram haritası kullanılarak puanlama anahtarı, analitik ve bütüncül dereceli puanlama anahtarı, öz değerlendirme formu ve grup değerlendirme formu ile değerlendirilebilir. Öğrencilerden karbohidrat, yağ ve proteinleri tanımlamaya, farklı pH ve sıcaklık koşullarında enzimlerin etkinliğini incelemeye ve küçük moleküllerin hücre zarından pasif geçişine yönelik deney tasarlamaları ve deneylerin raporlarını oluşturmaları istenebilir. Öğrencilerin tasarlayacağı deneylerin raporları, analitik dereceli puanlama anahtarı ile değerlendirilebilir. Dereceli puanlama anahtarında “deney sürecinde karşılaşılacak hatalar, alınacak önlemler ve deney sürecinin aşamaları” gibi ölçütlere yer verilebilir. Öğrencilerin kendilerini değerlendirmeleri için öz değerlendirme formu kullanılabilir. Deneyler, öğrenciler gruplara ayrılarak yaptırılıyorsa öz değerlendirmeye ek olarak grup değerlendirme formları da kullanılabilir. Öğrencilerin raporları portfolyolarına eklenebilir. Öğrencilere inorganik moleküllerin özellikleri ve önemi, suyun genel özellikleri, minerallerin görevleri hakkında toplayacakları bilgileri içeren bir broşür hazırlamaya yönelik performans görevi verilebilir. Performans görevinin değerlendirilmesinde bütüncül dereceli puanlama anahtarı kullanılabilir, öz değerlendirme ile öğrencinin kendini değerlendirmesi sağlanabilir. Öğrencilere hücrenin yapısal bileşenlerini belirleyip bu bileşenler arasındaki ilişkiyi gözeterek hücreyi modelleyecekleri bir poster hazırlamaya yönelik performans görevi verilebilir. Posterin değerlendirilmesinde bütüncül dereceli puanlama anahtarı kullanılabilir, öz değerlendirme yapılabilir. Hücereden doku, organ ve sistemlerin organizasyonuna ilişkin örüntülerin bulunabileceği durumlar çalışma yaprağında verilebilir. Öğrencilerden ilgili örüntüleri bulmaları ve bu örüntülere ilişkin genelleme yaparak kavram haritası oluşturmaları istenebilir. Öğrencilerin oluşturacağı kavram haritaları, puanlama anahtarı ile değerlendirilebilir. 25 BİYOLOJİ DERSİ ÖĞRETİM PROGRAMI",
+              "source_page": 23
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "grade": 10,
+      "learning_outcome_count": 19,
+      "themes": [
+        {
+          "theme_number": 1,
+          "theme_name": "Enerji",
+          "content_framework": "Güneşten Besinlere Canlılık İçin Enerjinin Önemi, ATP’nin Yapısı ve Enerji Aktarımında ATP’nin Rolü, Işık Enerjisi Kullanılarak Besin Sentezi (Fotosentez), Pigmentler, Işığa Bağlı Evre, Işıktan Bağımsız Evre, Fotosentez Hızına Etki Eden Çevresel Faktörler, Işık Enerjisi Kullanılmadan Besin Sentezi (Kemosentez) Besinlerden Enerjiye Sindirim (Hücre İçi Sindirim ve Hücre Dışı Sindirim), Canlılarda Sindirim Yapıları, İnsanda Sindirim, Emilim ve Taşınma, Besinlerden Enerji Elde Etme Yolları, Hücresel Solunum (Glikoliz, Sitrik Asit Döngüsü, Elektron Taşıma Sistemi), Besinlerin Solunuma Katılma Yolları, Fermantasyon (Laktik Asit Fermantasyonu, Etil Alkol Fermantasyonu), Enerji-Metabolizma İlişkisi",
+          "learning_outcome_count": 10,
+          "learning_outcomes": [
+            {
+              "id": "BİY.10.1.1",
+              "grade": 10,
+              "theme_number": 1,
+              "outcome_number": 1,
+              "title": "Canlıların yaşamına devam edebilmesi için enerjinin gerekliliğini sorgulayabilme",
+              "content_framework": "",
+              "key_concepts": "",
+              "source_page": 30
+            },
+            {
+              "id": "BİY.10.1.2",
+              "grade": 10,
+              "theme_number": 1,
+              "outcome_number": 2,
+              "title": "Fotosentez reaksiyonlarıyla ilgili bilimsel model oluşturabilme",
+              "content_framework": "",
+              "key_concepts": "",
+              "source_page": 30
+            },
+            {
+              "id": "BİY.10.1.3",
+              "grade": 10,
+              "theme_number": 1,
+              "outcome_number": 3,
+              "title": "Fotosentezde kullanılan ve üretilen maddelerle ilgili deney yapabilme",
+              "content_framework": "",
+              "key_concepts": "",
+              "source_page": 30
+            },
+            {
+              "id": "BİY.10.1.4",
+              "grade": 10,
+              "theme_number": 1,
+              "outcome_number": 4,
+              "title": "Kemosentez hakkında bilgi toplayabilme",
+              "content_framework": "",
+              "key_concepts": "",
+              "source_page": 30
+            },
+            {
+              "id": "BİY.10.1.5",
+              "grade": 10,
+              "theme_number": 1,
+              "outcome_number": 5,
+              "title": "Canlılarda sindirim çeşitlerini ve yapılarını sınıflandırabilme",
+              "content_framework": "",
+              "key_concepts": "",
+              "source_page": 30
+            },
+            {
+              "id": "BİY.10.1.6",
+              "grade": 10,
+              "theme_number": 1,
+              "outcome_number": 6,
+              "title": "İnsanda enerji eldesi için sindirim, emilim ve taşıma süreçlerinin gerekliliği ile ilgili bilimsel çıkarım yapabilme",
+              "content_framework": "",
+              "key_concepts": "",
+              "source_page": 30
+            },
+            {
+              "id": "BİY.10.1.7",
+              "grade": 10,
+              "theme_number": 1,
+              "outcome_number": 7,
+              "title": "Hücresel solunum reaksiyonlarıyla ilgili bilimsel model oluşturabilme",
+              "content_framework": "",
+              "key_concepts": "",
+              "source_page": 30
+            },
+            {
+              "id": "BİY.10.1.8",
+              "grade": 10,
+              "theme_number": 1,
+              "outcome_number": 8,
+              "title": "Farklı besin gruplarından enerji eldesi süreçlerini karşılaştırabilme",
+              "content_framework": "",
+              "key_concepts": "",
+              "source_page": 31
+            },
+            {
+              "id": "BİY.10.1.9",
+              "grade": 10,
+              "theme_number": 1,
+              "outcome_number": 9,
+              "title": "Fermantasyon ile ilgili deney yapabilme",
+              "content_framework": "",
+              "key_concepts": "",
+              "source_page": 31
+            },
+            {
+              "id": "BİY.10.1.10",
+              "grade": 10,
+              "theme_number": 1,
+              "outcome_number": 10,
+              "title": "Besinlerden elde edilen enerjinin canlının metabolik süreçlerine katkısı ile ilgili bilimsel çıkarım yapabilme",
+              "content_framework": "Güneşten Besinlere Canlılık İçin Enerjinin Önemi, ATP’nin Yapısı ve Enerji Aktarımında ATP’nin Rolü, Işık Enerjisi Kullanılarak Besin Sentezi (Fotosentez), Pigmentler, Işığa Bağlı Evre, Işıktan Bağımsız Evre, Fotosentez Hızına Etki Eden Çevresel Faktörler, Işık Enerjisi Kullanılmadan Besin Sentezi (Kemosentez) Besinlerden Enerjiye Sindirim (Hücre İçi Sindirim ve Hücre Dışı Sindirim), Canlılarda Sindirim Yapıları, İnsanda Sindirim, Emilim ve Taşınma, Besinlerden Enerji Elde Etme Yolları, Hücresel Solunum (Glikoliz, Sitrik Asit Döngüsü, Elektron Taşıma Sistemi), Besinlerin Solunuma Katılma Yolları, Fermantasyon (Laktik Asit Fermantasyonu, Etil Alkol Fermantasyonu), Enerji-Metabolizma İlişkisi",
+              "key_concepts": "ışık enerjisi, kimyasal enerji, fotoliz, Calvin döngüsü, sindirim, sindirim sistemi, emilim, hücresel solunum, fermantasyon, elektron taşıma sistemi, ATP sentezi ÖĞRENME KANITLARI (Ölçme ve Değerlendirme) Öğrenme çıktıları; deney yapma, model oluşturma, broşür, performans görevi, öğrenme günlüğü, yapılandırılmış grid, sunum, araştırma raporu, bilgi görseli kullanılarak puanlama anahtarı, analitik ve bütüncül dereceli puanlama anahtarı ve öz değerlendirme ile değerlendirilebilir. Öğrencilere fotosentez reaksiyonları hakkında bilimsel model oluşturmaya yönelik performans görevi verilebilir. Öğrencilerden oluşturacakları modeli sunmaları istenebilir. Performans görevi, bütüncül dereceli puanlama anahtarı ile puanlanabilir. Öğrencilere fotosentezde kullanılan, üretilen maddeler ve fermantasyonla ilgili deneyler yaparak deney sürecini ve sonucunu raporlaştıracakları performans görevi verilebilir. Öğrencilerin deney süreci ve sonucuna ilişkin hazırlayacakları raporlar, analitik dereceli puanlama anahtarı ile puanlanabilir. Analitik dereceli puanlama anahtarında “deneyde olası hatalar için alınacak önlemler, deney süreci ve sonucu” gibi ölçütlere yer verilebilir. Öğrencinin kendini deney süreci bakımından değerlendirmesi için öz değerlendirme formu kullanılabilir. 32 BİYOLOJİ DERSİ ÖĞRETİM PROGRAMI Öğrencilere insanda enerji eldesi için sindirim, emilim ve taşıma süreçlerine ilişkin varsayımda ve önermede bulunabileceği, örüntü oluşturarak karşılaştırma ve değerlendirme yapabileceği broşür oluşturmaya yönelik performans görevi verilebilir. Oluşturulacak broşür, bütüncül dereceli puanlama anahtarı ile değerlendirilebilir. Öğrencilere hücresel solunum reaksiyonlarının işleyişine ilişkin model oluşturup bu modeli poster veya üç boyutlu model olarak sunmaya yönelik performans görevi verilebilir. Performans görevinin değerlendirilmesinde bütüncül dereceli puanlama anahtarı ve öğrencinin kendisini değerlendirmesi için öz değerlendirme formu kullanılabilir.",
+              "source_page": 31
+            }
+          ]
+        },
+        {
+          "theme_number": 2,
+          "theme_name": "Ekoloji",
+          "content_framework": "Ekosistemler Ekosistemin Bileşenleri (Cansız ve Canlı Bileşenler), Komüniteler, Popülasyonlar, Tür İçi ve Türler Arası Etkileşimler, Süksesyon, Popülasyon Dinamikleri, Ekosistemde Madde ve Enerji Akışı, Besin Zinciri, Besin Ağı, Ekolojik Piramitler, Biyolojik Birikim ve Etkileri, Madde Döngüleri (Su, Karbon, Azot Döngüsü) Ekolojik Sürdürülebilirlik Ekolojik Sürdürülebilirliğin Önemi, Ekolojik Sürdürülebilirliği Kısıtlayan/Engelleyen Durumlar, Habitat Kaybı/Parçalanması, Kirlilik ve Çevre Sorunları, Biyoçeşitlilik Kaybı, Ekolojik Sürdürülebilirliğin Sağlanması, Ekolojik Ayak İzinin Küçültülmesi, Doğal Kaynakların ve Biyoçeşitliliğin Korunması, Atık Yönetimi",
+          "learning_outcome_count": 9,
+          "learning_outcomes": [
+            {
+              "id": "BİY.10.2.1",
+              "grade": 10,
+              "theme_number": 2,
+              "outcome_number": 1,
+              "title": "Ekosistemin cansız ve canlı bileşenleri arasındaki ilişkileri çözümleyebilme",
+              "content_framework": "",
+              "key_concepts": "",
+              "source_page": 39
+            },
+            {
+              "id": "BİY.10.2.2",
+              "grade": 10,
+              "theme_number": 2,
+              "outcome_number": 2,
+              "title": "Komünitelerde ve popülasyonlarda görülen etkileşimleri ve değişimleri sorgulayabilme",
+              "content_framework": "",
+              "key_concepts": "",
+              "source_page": 39
+            },
+            {
+              "id": "BİY.10.2.3",
+              "grade": 10,
+              "theme_number": 2,
+              "outcome_number": 3,
+              "title": "Ekosistemdeki enerji akışıyla ilgili tümevarımsal akıl yürütebilme",
+              "content_framework": "",
+              "key_concepts": "",
+              "source_page": 39
+            },
+            {
+              "id": "BİY.10.2.4",
+              "grade": 10,
+              "theme_number": 2,
+              "outcome_number": 4,
+              "title": "Madde döngüleri ile ilgili bilimsel model oluşturabilme",
+              "content_framework": "",
+              "key_concepts": "",
+              "source_page": 39
+            },
+            {
+              "id": "BİY.10.2.5",
+              "grade": 10,
+              "theme_number": 2,
+              "outcome_number": 5,
+              "title": "Ekolojik sürdürülebilirliğin önemini yorumlayabilme",
+              "content_framework": "",
+              "key_concepts": "",
+              "source_page": 39
+            },
+            {
+              "id": "BİY.10.2.6",
+              "grade": 10,
+              "theme_number": 2,
+              "outcome_number": 6,
+              "title": "Çevresinde sürdürülebilirliği kısıtlayan durumlarla ilgili gözleme dayalı tahmin yapabilme",
+              "content_framework": "",
+              "key_concepts": "",
+              "source_page": 39
+            },
+            {
+              "id": "BİY.10.2.7",
+              "grade": 10,
+              "theme_number": 2,
+              "outcome_number": 7,
+              "title": "Ekolojik ayak izini küçültebilme yollarını bilimsel olarak sorgulayabilme",
+              "content_framework": "",
+              "key_concepts": "",
+              "source_page": 39
+            },
+            {
+              "id": "BİY.10.2.8",
+              "grade": 10,
+              "theme_number": 2,
+              "outcome_number": 8,
+              "title": "Doğal kaynakların ve biyoçeşitliliğin korunması için alınan önlemleri sorgulayabilme",
+              "content_framework": "",
+              "key_concepts": "",
+              "source_page": 40
+            },
+            {
+              "id": "BİY.10.2.9",
+              "grade": 10,
+              "theme_number": 2,
+              "outcome_number": 9,
+              "title": "Çevresinde atık yönetimi konusunda yapılan çalışmalarla ilgili bilgi toplayabilme",
+              "content_framework": "Ekosistemler Ekosistemin Bileşenleri (Cansız ve Canlı Bileşenler), Komüniteler, Popülasyonlar, Tür İçi ve Türler Arası Etkileşimler, Süksesyon, Popülasyon Dinamikleri, Ekosistemde Madde ve Enerji Akışı, Besin Zinciri, Besin Ağı, Ekolojik Piramitler, Biyolojik Birikim ve Etkileri, Madde Döngüleri (Su, Karbon, Azot Döngüsü) Ekolojik Sürdürülebilirlik Ekolojik Sürdürülebilirliğin Önemi, Ekolojik Sürdürülebilirliği Kısıtlayan/Engelleyen Durumlar, Habitat Kaybı/Parçalanması, Kirlilik ve Çevre Sorunları, Biyoçeşitlilik Kaybı, Ekolojik Sürdürülebilirliğin Sağlanması, Ekolojik Ayak İzinin Küçültülmesi, Doğal Kaynakların ve Biyoçeşitliliğin Korunması, Atık Yönetimi",
+              "key_concepts": "rekabet, süksesyon, erozyon, endemik, iklim değişikliği, ötrofikasyon, çevre direnci, taşıma kapasitesi ÖĞRENME KANITLARI (Ölçme ve Değerlendirme) Öğrenme çıktıları; zihin haritası, öğrenme günlüğü, çalışma yaprağı, performans görevi, proje, broşür, araştırma raporu kullanılarak puanlama anahtarı ve dereceli puanlama anahtarı ile değerlendirilebilir. Çalışma yaprağı ile öğrencilere ekosistemdeki madde ve enerji akışıyla ilgili örüntüler içeren durumlar verilerek örüntüleri bulup genelleme yapabilecekleri açık uçlu sorular sorulabilir. Öğrencilerin cevapları, puanlama anahtarı ile puanlanabilir. 41 BİYOLOJİ DERSİ ÖĞRETİM PROGRAMI Öğrencilere madde döngüsü ile ilgili model oluşturmaya yönelik performans görevi verilebilir. Öğrencilerin oluşturacağı model, bütüncül dereceli puanlama anahtarı ile değerlendirilebilir. Öğrencilerin kendilerini performans görevi açısından değerlendirmesi amacıyla öz değerlendirme formu kullanılabilir. Öğrencilere ekolojik sürdürülebilirliğin önemine ve sürdürülebilirliği kısıtlayan durumlara ilişkin çıkarım yapıp yargıda bulunacakları bir araştırma raporu hazırlamaya ve hazırladıkları raporu sınıf içinde sunmaya yönelik performans görevi verilebilir. Hazırlanan raporun ve sunumun değerlendirilmesinde analitik dereceli puanlama anahtarı, öz değerlendirme ve akran değerlendirme kullanılabilir.",
+              "source_page": 40
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "grade": 11,
+      "learning_outcome_count": 22,
+      "themes": [
+        {
+          "theme_number": 1,
+          "theme_name": "Tepki",
+          "content_framework": "Canlılık ve Tepki Bitkilerde Tepki Bitkilerde Hormonlar ve Tepki Tropizma (Yönelim), Nasti (Irganım, İrkilme) Hayvanlarda Tepki Uyartıların (Işık, Sıcaklık, Mekanik Etki, Kimyasallar) Alınması, Nöronlar, Nöronlarda Sinyal İletimi, Nöronların İletişimi, Hayvanlarda Sinir Sistemi Farklılıkları, İnsan Sinir Sisteminin Yapısı (Merkezî ve Çevresel Sinir Sistemi, Refleks Yayı), Yaşam İçin Kaçınılmaz Tepkiler (Refleksler), Kemik, Eklem ve Kasların Hareketteki Rolü (Kasların Kasılma Mekanizması), Kemik ve Kasların Birlikte Çalışma İlişkisi, Kaslarda Kasılmanın Kontrolü, Bağışıklık (Doğal Bağışıklık, Kazanılmış Bağışıklık, Aktif ve Pasif Bağışıklık, Alerji)",
+          "learning_outcome_count": 12,
+          "learning_outcomes": [
+            {
+              "id": "BİY.11.1.1",
+              "grade": 11,
+              "theme_number": 1,
+              "outcome_number": 1,
+              "title": "Farklı canlıların uyaranlara karşı oluşturduğu tepki mekanizmaları ile ilgili tümevarımsal akıl yürütebilme",
+              "content_framework": "",
+              "key_concepts": "",
+              "source_page": 48
+            },
+            {
+              "id": "BİY.11.1.2",
+              "grade": 11,
+              "theme_number": 1,
+              "outcome_number": 2,
+              "title": "Bitkisel hormonların meyve olgunlaşması ve bitki gelişimindeki etkileri hakkında analojik akıl yürütebilme",
+              "content_framework": "",
+              "key_concepts": "",
+              "source_page": 48
+            },
+            {
+              "id": "BİY.11.1.3",
+              "grade": 11,
+              "theme_number": 1,
+              "outcome_number": 3,
+              "title": "Bitkilerdeki tepki mekanizmalarını sınıflandırabilme",
+              "content_framework": "",
+              "key_concepts": "",
+              "source_page": 48
+            },
+            {
+              "id": "BİY.11.1.4",
+              "grade": 11,
+              "theme_number": 1,
+              "outcome_number": 4,
+              "title": "Bitkilerde yönelme hareketlerini gözlemleyebileceği deney yapabilme",
+              "content_framework": "",
+              "key_concepts": "",
+              "source_page": 48
+            },
+            {
+              "id": "BİY.11.1.5",
+              "grade": 11,
+              "theme_number": 1,
+              "outcome_number": 5,
+              "title": "Duyu reseptörlerini ve duyu reseptörlerinin bulunduğu duyu organlarını sınıflandırabilme",
+              "content_framework": "",
+              "key_concepts": "",
+              "source_page": 48
+            },
+            {
+              "id": "BİY.11.1.6",
+              "grade": 11,
+              "theme_number": 1,
+              "outcome_number": 6,
+              "title": "Hayvanlardaki sinir sistemi farklılıkları ile ilgili analojik akıl yürütebilme",
+              "content_framework": "",
+              "key_concepts": "",
+              "source_page": 48
+            },
+            {
+              "id": "BİY.11.1.7",
+              "grade": 11,
+              "theme_number": 1,
+              "outcome_number": 7,
+              "title": "İnsanda sinir sistemi yapısını çözümleyebilme",
+              "content_framework": "",
+              "key_concepts": "",
+              "source_page": 48
+            },
+            {
+              "id": "BİY.11.1.8",
+              "grade": 11,
+              "theme_number": 1,
+              "outcome_number": 8,
+              "title": "Refleks olayını yorumlayabilme",
+              "content_framework": "",
+              "key_concepts": "",
+              "source_page": 49
+            },
+            {
+              "id": "BİY.11.1.9",
+              "grade": 11,
+              "theme_number": 1,
+              "outcome_number": 9,
+              "title": "Harekete dayalı tepkinin oluşmasında iskelet, kas ve eklemlerin eş güdümlü çalışmasıyla ilgili eleştirel düşünebilme",
+              "content_framework": "",
+              "key_concepts": "",
+              "source_page": 49
+            },
+            {
+              "id": "BİY.11.1.10",
+              "grade": 11,
+              "theme_number": 1,
+              "outcome_number": 10,
+              "title": "İskelet kaslarının kasılma ve gevşeme mekanizması ile ilgili bilimsel model oluşturabilme",
+              "content_framework": "",
+              "key_concepts": "",
+              "source_page": 49
+            },
+            {
+              "id": "BİY.11.1.11",
+              "grade": 11,
+              "theme_number": 1,
+              "outcome_number": 11,
+              "title": "Bağışıklığı sınıflandırabilme",
+              "content_framework": "",
+              "key_concepts": "",
+              "source_page": 49
+            },
+            {
+              "id": "BİY.11.1.12",
+              "grade": 11,
+              "theme_number": 1,
+              "outcome_number": 12,
+              "title": "Alerjik tepkilerin oluşumunu sorgulayabilme",
+              "content_framework": "Canlılık ve Tepki Bitkilerde Tepki Bitkilerde Hormonlar ve Tepki Tropizma (Yönelim), Nasti (Irganım, İrkilme) Hayvanlarda Tepki Uyartıların (Işık, Sıcaklık, Mekanik Etki, Kimyasallar) Alınması, Nöronlar, Nöronlarda Sinyal İletimi, Nöronların İletişimi, Hayvanlarda Sinir Sistemi Farklılıkları, İnsan Sinir Sisteminin Yapısı (Merkezî ve Çevresel Sinir Sistemi, Refleks Yayı), Yaşam İçin Kaçınılmaz Tepkiler (Refleksler), Kemik, Eklem ve Kasların Hareketteki Rolü (Kasların Kasılma Mekanizması), Kemik ve Kasların Birlikte Çalışma İlişkisi, Kaslarda Kasılmanın Kontrolü, Bağışıklık (Doğal Bağışıklık, Kazanılmış Bağışıklık, Aktif ve Pasif Bağışıklık, Alerji)",
+              "key_concepts": "yönelme, irkilme, duyu, aksiyon potansiyeli, bütünleştirme, tepki, kasılma, hareket, bağışıklık 50 BİYOLOJİ DERSİ ÖĞRETİM PROGRAMI ÖĞRENME KANITLARI (Ölçme ve Değerlendirme) Öğrenme çıktıları; açık uçlu soruların yer aldığı çalışma yaprağı, deney yapma, kavram haritası, yapılandırılmış grid, öğrenme günlüğü, bilgi görseli, zihin haritası, model oluşturma, broşür, performans görevi kullanılarak dereceli puanlama anahtarı, öz değerlendirme ve akran değerlendirme ile değerlendirilebilir. Çalışma yaprağında tepki mekanizmalarının çeşitleriyle ilgili örnek durum verilip, açık uçlu sorular yöneltilerek öğrencilerden tepki mekanizmasına ilişkin örüntüleri bulmaları ve buldukları örüntüler hakkında akıl yürütmeleri istenebilir. Öğrencilerin sorulara verdiği cevaplar, puanlama anahtarı ile puanlanabilir. Öğrencilere iskelet kaslarının kasılma mekanizmasıyla ilgili üç boyutlu model oluşturmaya yönelik performans görevi verilebilir. Öğrencilerin oluşturacağı model, analitik dereceli puanlama anahtarı ile puanlanabilir; öz değerlendirme formu kullanılabilir. Öğrencilere bilgi toplama, topladığı bilgilerin doğruluğunu değerlendirme, alerjik tepkilerin oluşumuna ilişkin çıkarımda bulunma, alerjiyi tanımlama basamaklarını içeren broşür hazırlayacakları performans ödevi verilebilir. Öğrencilerin oluşturacağı broşür, analitik dereceli puanlama anahtarı ile değerlendirilebilir.",
+              "source_page": 49
+            }
+          ]
+        },
+        {
+          "theme_number": 2,
+          "theme_name": "Homeostazi",
+          "content_framework": "Homeostazi ve Canlılar İçin Önemi Farklı Canlı Türlerinin Homeostazi İçin Geliştirdiği Yapı ve Sistemler, Homeostatik Süreçler, Pozitif ve Negatif Geri Bildirim, Sinir Sistemi ve Homeostazi, Endokrin Sistemi (Hipofiz, Tiroit, Paratiroid Bezi, Pankreas, Böbrek Üstü Bezleri, Mide-Bağırsak Sistemi, Yağ Dokusu) ve Homeostazi, Dolaşım Sistemi ve Homeostazi, Solunum Sistemi ve Homeostazi, Boşaltım Sistemi ve Homeostazi Homeostazinin Sağlanamadığı Durumlarda Oluşabilecek Sağlık Problemleri Diabetes Mellitus (Kan Şekeri Dengesinin Bozukluğu), Diabetes İnsipidus (Osmotik Denge Bozukluğu), Hipertansiyon (Kan Basıncı Dengesinin Bozukluğu), Obezite (Vücut Ağırlığı Dengesinin Bozukluğu)",
+          "learning_outcome_count": 10,
+          "learning_outcomes": [
+            {
+              "id": "BİY.11.2.1",
+              "grade": 11,
+              "theme_number": 2,
+              "outcome_number": 1,
+              "title": "Homeostazinin canlılar için önemiyle ilgili bilimsel çıkarım yapabilme",
+              "content_framework": "",
+              "key_concepts": "",
+              "source_page": 59
+            },
+            {
+              "id": "BİY.11.2.2",
+              "grade": 11,
+              "theme_number": 2,
+              "outcome_number": 2,
+              "title": "Homeostatik süreçleri sorgulayabilme",
+              "content_framework": "",
+              "key_concepts": "",
+              "source_page": 59
+            },
+            {
+              "id": "BİY.11.2.3",
+              "grade": 11,
+              "theme_number": 2,
+              "outcome_number": 3,
+              "title": "Pozitif ve negatif geri bildirim mekanizmalarını karşılaştırabilme",
+              "content_framework": "",
+              "key_concepts": "",
+              "source_page": 59
+            },
+            {
+              "id": "BİY.11.2.4",
+              "grade": 11,
+              "theme_number": 2,
+              "outcome_number": 4,
+              "title": "Homeostazinin sağlanmasında sinir sisteminin etkilerini çözümleyebilme",
+              "content_framework": "",
+              "key_concepts": "",
+              "source_page": 59
+            },
+            {
+              "id": "BİY.11.2.5",
+              "grade": 11,
+              "theme_number": 2,
+              "outcome_number": 5,
+              "title": "Endokrin sisteminin homeostazi işlevine yönelik bilimsel çıkarım yapabilme",
+              "content_framework": "",
+              "key_concepts": "",
+              "source_page": 59
+            },
+            {
+              "id": "BİY.11.2.6",
+              "grade": 11,
+              "theme_number": 2,
+              "outcome_number": 6,
+              "title": "Dolaşım sistemi ve homeostazi arasındaki ilişki ile ilgili bilimsel model oluşturabilme",
+              "content_framework": "",
+              "key_concepts": "",
+              "source_page": 59
+            },
+            {
+              "id": "BİY.11.2.7",
+              "grade": 11,
+              "theme_number": 2,
+              "outcome_number": 7,
+              "title": "Solunum sisteminin homeostazinin sağlanmasındaki rolünü kanıtlarla ortaya koyabilme",
+              "content_framework": "",
+              "key_concepts": "",
+              "source_page": 59
+            },
+            {
+              "id": "BİY.11.2.8",
+              "grade": 11,
+              "theme_number": 2,
+              "outcome_number": 8,
+              "title": "Boşaltım sisteminin homeostazi işlevine yönelik bilimsel çıkarım yapabilme",
+              "content_framework": "",
+              "key_concepts": "",
+              "source_page": 60
+            },
+            {
+              "id": "BİY.11.2.9",
+              "grade": 11,
+              "theme_number": 2,
+              "outcome_number": 9,
+              "title": "Homeostazinin sağlanmasında sistemlerin eş güdümlü çalışmasıyla ilgili eleştirel düşünebilme",
+              "content_framework": "",
+              "key_concepts": "",
+              "source_page": 60
+            },
+            {
+              "id": "BİY.11.2.10",
+              "grade": 11,
+              "theme_number": 2,
+              "outcome_number": 10,
+              "title": "Homeostazinin sağlanamadığı durumlarda oluşabilecek sağlık problemleri hakkında hipotez oluşturabilme",
+              "content_framework": "Homeostazi ve Canlılar İçin Önemi Farklı Canlı Türlerinin Homeostazi İçin Geliştirdiği Yapı ve Sistemler, Homeostatik Süreçler, Pozitif ve Negatif Geri Bildirim, Sinir Sistemi ve Homeostazi, Endokrin Sistemi (Hipofiz, Tiroit, Paratiroid Bezi, Pankreas, Böbrek Üstü Bezleri, Mide-Bağırsak Sistemi, Yağ Dokusu) ve Homeostazi, Dolaşım Sistemi ve Homeostazi, Solunum Sistemi ve Homeostazi, Boşaltım Sistemi ve Homeostazi Homeostazinin Sağlanamadığı Durumlarda Oluşabilecek Sağlık Problemleri Diabetes Mellitus (Kan Şekeri Dengesinin Bozukluğu), Diabetes İnsipidus (Osmotik Denge Bozukluğu), Hipertansiyon (Kan Basıncı Dengesinin Bozukluğu), Obezite (Vücut Ağırlığı Dengesinin Bozukluğu)",
+              "key_concepts": "elektrolit dengesi, geri bildirim, enerji dengesi, ısı dengesi, kan basıncı dengesi, pH dengesi, su dengesi ÖĞRENME KANITLARI (Ölçme ve Değerlendirme) Öğrenme çıktıları; belgesel, zihin haritası, balık kılçığı, kavram haritası, performans görevi, sunum, poster, araştırma raporu, öğrenme günlüğü, açık uçlu soruların yer aldığı çalışma yaprağı kullanılarak puanlama anahtarı, analitik ve dereceli puanlama anahtarı ile değerlendirilebilir. 61 BİYOLOJİ DERSİ ÖĞRETİM PROGRAMI Homeostazinin canlılar için önemiyle ilgili bilimsel çıkarım yapabilmeleri için öğrencilere gruplara ayrılarak belgesel hazırlayacakları bir performans görevi verilebilir. Öğrencilerin hazırlayacağı belgesel, analitik dereceli puanlama anahtarı ile puanlanabilir; öz değerlendirme ve grup değerlendirme formu kullanılabilir. Öğrencilerin pozitif ve negatif geri bildirim olayının özelliklerini, benzerliklerini ve farklılıklarını listelemeleri amacıyla balık kılçığı kullanılabilir. Balık kılçığı, puanlama anahtarı ile puanlanabilir. Öğrencilere homeostazinin kurulmasında endokrin sisteminin yapı ve görevlerini belirleme, bu yapı ve görevler hakkında veri toplama, topladığı verilerin homeostazi ile ilişkisini yorumlama basamaklarını içeren poster oluşturacakları performans görevi verilebilir. Performans görevi, analitik dereceli puanlama anahtarı ile puanlanabilir. Öğrencilere dolaşım sistemi ve homeostazi ilişkisi hakkında bilimsel bir model oluşturup oluşturduğu bu modeli poster ile sunmaya yönelik performans görevi verilebilir. Öğrencilerin oluşturacağı poster, bütüncül dereceli puanlama anahtarı ile puanlanabilir ve öğrencilerin portfolyosuna eklenebilir. Öğrencilerin sistemlerin eş güdümlü çalışmasının önemi konusunda sorgulama ve akıl yürütmeyle ulaştıkları çıkarımları ortaya koymalarını sağlayacak açık uçlu soruların yer aldığı çalışma yaprağı kullanılabilir. Öğrencilerin cevapları, analitik puanlama anahtarı ile puanlanabilir.",
+              "source_page": 60
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "grade": 12,
+      "learning_outcome_count": 22,
+      "themes": [
+        {
+          "theme_number": 1,
+          "theme_name": "Üreme",
+          "content_framework": "Üreme ve Canlılar İçin Önemi Hücre Bölünmeleri, Kromozom Yapısı ve Özellikleri, Hücre Döngüsü (İnterfaz, Mitoz ve Sitokinez, Mayoz), Mitoz ve Mayoz Arasındaki Farklar, Kromozomlarda Ayrılmama, Eşeysiz Üreme (İkiye Bölünme, Tomurcuklanma, Sporla Üreme, Rejenerasyon, Partenogenez, Vejetatif Üreme), Eşeyli Üreme (Gametogenez, Döllenme), Eşeysiz ve Eşeyli Üreme Arasındaki Farklar Üreme ve Gelişme İnsanda Üreme ve Gelişme (Dişi ve Erkek Üreme Sistemlerinin Yapısı, Menstrual Döngü, Döllenme, Kısırlık ve Tedavi Teknikleri, Embriyonik Gelişim), Bitkilerde Eşeyli Üreme ve Gelişme (Çiçeğin Kısımları ve Görevleri, Çiçekli Bitkilerde Tozlaşma, Döllenme, Tohum ve Meyvenin Oluşumu, Çimlenme)",
+          "learning_outcome_count": 12,
+          "learning_outcomes": [
+            {
+              "id": "BİY.12.1.1",
+              "grade": 12,
+              "theme_number": 1,
+              "outcome_number": 1,
+              "title": "Canlılarda üremenin önemini sorgulayabilme",
+              "content_framework": "",
+              "key_concepts": "",
+              "source_page": 69
+            },
+            {
+              "id": "BİY.12.1.2",
+              "grade": 12,
+              "theme_number": 1,
+              "outcome_number": 2,
+              "title": "Hücre bölünmesinin canlılar için önemini yorumlayabilme",
+              "content_framework": "",
+              "key_concepts": "",
+              "source_page": 69
+            },
+            {
+              "id": "BİY.12.1.3",
+              "grade": 12,
+              "theme_number": 1,
+              "outcome_number": 3,
+              "title": "Hücredeki genetik materyalin organizasyonunu çözümleyebilme",
+              "content_framework": "",
+              "key_concepts": "",
+              "source_page": 69
+            },
+            {
+              "id": "BİY.12.1.4",
+              "grade": 12,
+              "theme_number": 1,
+              "outcome_number": 4,
+              "title": "Canlılarda hücre döngüsü ve hücre bölünmesini sorgulayabilme",
+              "content_framework": "",
+              "key_concepts": "",
+              "source_page": 69
+            },
+            {
+              "id": "BİY.12.1.5",
+              "grade": 12,
+              "theme_number": 1,
+              "outcome_number": 5,
+              "title": "Kromozomlarda ayrılmamanın sonuçlarıyla ilgili bilimsel çıkarım yapabilme",
+              "content_framework": "",
+              "key_concepts": "",
+              "source_page": 69
+            },
+            {
+              "id": "BİY.12.1.6",
+              "grade": 12,
+              "theme_number": 1,
+              "outcome_number": 6,
+              "title": "Eşeysiz üreme çeşitleriyle ilgili deney yapabilme",
+              "content_framework": "",
+              "key_concepts": "",
+              "source_page": 69
+            },
+            {
+              "id": "BİY.12.1.7",
+              "grade": 12,
+              "theme_number": 1,
+              "outcome_number": 7,
+              "title": "Üreme hücrelerinin oluşum süreci ve yapılarını karşılaştırabilme",
+              "content_framework": "",
+              "key_concepts": "",
+              "source_page": 69
+            },
+            {
+              "id": "BİY.12.1.8",
+              "grade": 12,
+              "theme_number": 1,
+              "outcome_number": 8,
+              "title": "Eşeysiz ve eşeyli üreme ile ilgili bilimsel çıkarım yapabilme",
+              "content_framework": "",
+              "key_concepts": "",
+              "source_page": 69
+            },
+            {
+              "id": "BİY.12.1.9",
+              "grade": 12,
+              "theme_number": 1,
+              "outcome_number": 9,
+              "title": "Erkek ve dişi üreme sistemlerinin yapısı ve işleyişiyle ilgili bilgi toplayabilme",
+              "content_framework": "",
+              "key_concepts": "",
+              "source_page": 70
+            },
+            {
+              "id": "BİY.12.1.10",
+              "grade": 12,
+              "theme_number": 1,
+              "outcome_number": 10,
+              "title": "Embriyonik gelişimle ilgili bilgi toplayabilme",
+              "content_framework": "",
+              "key_concepts": "",
+              "source_page": 70
+            },
+            {
+              "id": "BİY.12.1.11",
+              "grade": 12,
+              "theme_number": 1,
+              "outcome_number": 11,
+              "title": "Çiçeğin kısımları ve görevleriyle ilgili bilimsel gözlem yapabilme",
+              "content_framework": "",
+              "key_concepts": "",
+              "source_page": 70
+            },
+            {
+              "id": "BİY.12.1.12",
+              "grade": 12,
+              "theme_number": 1,
+              "outcome_number": 12,
+              "title": "Çimlenmeyi etkileyen faktörleri gözlemleyebileceği deney yapabilme",
+              "content_framework": "Üreme ve Canlılar İçin Önemi Hücre Bölünmeleri, Kromozom Yapısı ve Özellikleri, Hücre Döngüsü (İnterfaz, Mitoz ve Sitokinez, Mayoz), Mitoz ve Mayoz Arasındaki Farklar, Kromozomlarda Ayrılmama, Eşeysiz Üreme (İkiye Bölünme, Tomurcuklanma, Sporla Üreme, Rejenerasyon, Partenogenez, Vejetatif Üreme), Eşeyli Üreme (Gametogenez, Döllenme), Eşeysiz ve Eşeyli Üreme Arasındaki Farklar Üreme ve Gelişme İnsanda Üreme ve Gelişme (Dişi ve Erkek Üreme Sistemlerinin Yapısı, Menstrual Döngü, Döllenme, Kısırlık ve Tedavi Teknikleri, Embriyonik Gelişim), Bitkilerde Eşeyli Üreme ve Gelişme (Çiçeğin Kısımları ve Görevleri, Çiçekli Bitkilerde Tozlaşma, Döllenme, Tohum ve Meyvenin Oluşumu, Çimlenme)",
+              "key_concepts": "eşeysiz üreme, eşeyli üreme, gametogenez, oogenez, spermatogenez, döllenme, çimlenme, dormansi ÖĞRENME KANITLARI (Ölçme ve Değerlendirme) Öğrenme çıktıları; öğrenme günlüğü, zihin haritası, organizasyon şeması, balık kılçığı, performans görevi, araştırma raporu, sunum, poster, animasyon, deney yapma, bilgi görseli kullanılarak dereceli puanlama anahtarı, grup değerlendirme ve öz değerlendirme formu ile değerlendirilebilir. 71 BİYOLOJİ DERSİ ÖĞRETİM PROGRAMI Öğrencilere hücre döngüsü sürecini, mitoz ve mayoz ile yeni hücre oluşumunu ve tür içi kalıtsal çeşitliliğin önemini ortaya koyacakları poster hazırlamaya yönelik performans görevi verilebilir. Öğrencinin hazırlayacağı poster, analitik dereceli puanlama anahtarı ile puanlanabilir. Öz değerlendirme formu ile öğrencinin kendisini değerlendirmesi sağlanabilir. Kromozomlarda ayrılmama konusunu araştırmak için gruplara ayrılan öğrencilerden araştırma yaparak elde ettikleri bilgileri raporlaştırmaları, raporlarını sınıfta sunmaları istenebilir. Öğrencilerin sunumları, akran değerlendirme formu ile değerlendirilebilir. Grupların kendi çalışmalarını değerlendirmeleri için grup değerlendirme formu, öğrencilerin kendilerini değerlendirmeleri için öz değerlendirme formu kullanılabilir. Öğrencilerin araştırma raporları ise analitik dereceli puanlama anahtarı ile değerlendirilebilir. Öğrencilere eşeyli ve eşeysiz üremenin benzer ve farklı özellikleriyle ilgili yaptıkları araştırmalara yönelik poster hazırlayacakları performans görevi verilebilir. Öğrencilerin hazırlayacağı poster, analitik dereceli puanlama anahtarı ile puanlanabilir. Öğrencilere gruplara ayrılarak bir bitkinin yaşam döngüsünü gösteren animasyon hazırlayacakları performans görevi verilebilir. Öğrencilerin hazırlayacağı animasyon, bütüncül dereceli puanlama anahtarı ile puanlanabilir; grup değerlendirme formu kullanılabilir.",
+              "source_page": 70
+            }
+          ]
+        },
+        {
+          "theme_number": 2,
+          "theme_name": "Gen",
+          "content_framework": "Nükleik Asitler ve Gen İfadesi Nükleik Asitlerin Canlılıktaki Rolü, DNA ve RNA’nın Moleküler Yapısı, DNA Replikasyonu, Gen İfadesi (Gen, Genetik Kod, Transkripsiyon, Translasyon), Genetik Yapıdaki Değişiklikler Kalıtım Kalıtımın Temel İlkeleri, Monohibrit Çaprazlama, Dihibrit Çaprazlama, Kontrol (Geri) Çaprazlama, Mendel Kalıtımından Farklılıklar (Eş Baskınlık, Çok Alellilik), Eşeye Bağlı Kalıtım (Eşeyin Kromozomal Temeli, X Bağlı Kalıtım, Y Bağlı Kalıtım), Soyağacı Analizi, Genetik Testler ve Genetik Danışmanlık, Akraba Evlilikleri Biyoteknoloji Geleneksel Biyoteknoloji, Modern Biyoteknoloji, Biyoteknolojinin Tıp Alanındaki Uygulamaları (İlaç Üretimi, Hücre Kültürü, Kök Hücre, Rekombinant Aşılar, Protein ve Hormon Üretimi), Biyoteknolojinin Tarım Alanındaki Uygulamaları, Bitki Doku Kültürü, Ökaryotik Hücrelere Gen Aktarımı, Biyoteknolojinin Endüstri, Çevre ve Adli Tıp Alanlarındaki Uygulamaları, Biyoteknoloji ve Etik",
+          "learning_outcome_count": 10,
+          "learning_outcomes": [
+            {
+              "id": "BİY.12.2.1",
+              "grade": 12,
+              "theme_number": 2,
+              "outcome_number": 1,
+              "title": "Nükleik asitlerin yapısını ve canlılıktaki rolünü sorgulayabilme",
+              "content_framework": "",
+              "key_concepts": "",
+              "source_page": 79
+            },
+            {
+              "id": "BİY.12.2.2",
+              "grade": 12,
+              "theme_number": 2,
+              "outcome_number": 2,
+              "title": "DNA replikasyonunun bilimsel modelini oluşturabilme",
+              "content_framework": "",
+              "key_concepts": "",
+              "source_page": 79
+            },
+            {
+              "id": "BİY.12.2.3",
+              "grade": 12,
+              "theme_number": 2,
+              "outcome_number": 3,
+              "title": "Genetik bilginin ürüne dönüşüm sürecini çözümleyebilme",
+              "content_framework": "",
+              "key_concepts": "",
+              "source_page": 79
+            },
+            {
+              "id": "BİY.12.2.4",
+              "grade": 12,
+              "theme_number": 2,
+              "outcome_number": 4,
+              "title": "Genetik yapıdaki değişikliklerin canlı yaşamına etkileri hakkında eleştirel düşünebilme",
+              "content_framework": "",
+              "key_concepts": "",
+              "source_page": 79
+            },
+            {
+              "id": "BİY.12.2.5",
+              "grade": 12,
+              "theme_number": 2,
+              "outcome_number": 5,
+              "title": "Mendel kalıtım ilkelerinin geçerli olduğu genetik problemleri çözebilme",
+              "content_framework": "",
+              "key_concepts": "",
+              "source_page": 79
+            },
+            {
+              "id": "BİY.12.2.6",
+              "grade": 12,
+              "theme_number": 2,
+              "outcome_number": 6,
+              "title": "Eş baskınlık ve çok alellilikle ilgili deney yapabilme",
+              "content_framework": "",
+              "key_concepts": "",
+              "source_page": 79
+            },
+            {
+              "id": "BİY.12.2.7",
+              "grade": 12,
+              "theme_number": 2,
+              "outcome_number": 7,
+              "title": "Eşeye bağlı kalıtıma ilişkin tümevarımsal akıl yürütebilme",
+              "content_framework": "",
+              "key_concepts": "",
+              "source_page": 79
+            },
+            {
+              "id": "BİY.12.2.8",
+              "grade": 12,
+              "theme_number": 2,
+              "outcome_number": 8,
+              "title": "Genetik testlerin ve genetik danışmanlığın önemini sorgulayabilme",
+              "content_framework": "",
+              "key_concepts": "",
+              "source_page": 80
+            },
+            {
+              "id": "BİY.12.2.9",
+              "grade": 12,
+              "theme_number": 2,
+              "outcome_number": 9,
+              "title": "Biyoteknolojinin uygulama alanları ile ilgili bilgi toplayabilme",
+              "content_framework": "",
+              "key_concepts": "",
+              "source_page": 80
+            },
+            {
+              "id": "BİY.12.2.10",
+              "grade": 12,
+              "theme_number": 2,
+              "outcome_number": 10,
+              "title": "Biyoteknolojik uygulamaların etik boyutunu eleştirel düşünebilme",
+              "content_framework": "Nükleik Asitler ve Gen İfadesi Nükleik Asitlerin Canlılıktaki Rolü, DNA ve RNA’nın Moleküler Yapısı, DNA Replikasyonu, Gen İfadesi (Gen, Genetik Kod, Transkripsiyon, Translasyon), Genetik Yapıdaki Değişiklikler Kalıtım Kalıtımın Temel İlkeleri, Monohibrit Çaprazlama, Dihibrit Çaprazlama, Kontrol (Geri) Çaprazlama, Mendel Kalıtımından Farklılıklar (Eş Baskınlık, Çok Alellilik), Eşeye Bağlı Kalıtım (Eşeyin Kromozomal Temeli, X Bağlı Kalıtım, Y Bağlı Kalıtım), Soyağacı Analizi, Genetik Testler ve Genetik Danışmanlık, Akraba Evlilikleri Biyoteknoloji Geleneksel Biyoteknoloji, Modern Biyoteknoloji, Biyoteknolojinin Tıp Alanındaki Uygulamaları (İlaç Üretimi, Hücre Kültürü, Kök Hücre, Rekombinant Aşılar, Protein ve Hormon Üretimi), Biyoteknolojinin Tarım Alanındaki Uygulamaları, Bitki Doku Kültürü, Ökaryotik Hücrelere Gen Aktarımı, Biyoteknolojinin Endüstri, Çevre ve Adli Tıp Alanlarındaki Uygulamaları, Biyoteknoloji ve Etik",
+              "key_concepts": "DNA replikasyonu, gen ifadesi, fenotip, genotip, rekombinant DNA teknolojisi ÖĞRENME KANITLARI (Ölçme ve Değerlendirme) Öğrenme çıktıları; öğrenme günlüğü, animasyon, poster, araştırma yazısı, üç boyutlu model oluşturma, performans görevi, balık kılçığı, açık uçlu soruların yer aldığı çalışma yaprağı, deney yapma, kavram haritası kullanılarak dereceli puanlama anahtarı, puanlama anahtarı, öz değerlendirme ve akran değerlendirme formu ile değerlendirilebilir. Öğrencilere DNA replikasyonuna ilişkin animasyon veya üç boyutlu model hazırlayacakları performans görevi verilebilir. Performansın değerlendirilmesinde analitik dereceli puanlama anahtarı kullanılabilir. 81 BİYOLOJİ DERSİ ÖĞRETİM PROGRAMI Öğrencilerden gen, genetik kod, transkripsiyon, translasyon arasındaki ilişkileri ortaya koyacakları örümcek ağı oluşturmaları istenebilir. Örümcek ağı, puanlama anahtarı ile değerlendirilebilir. Öğrencilerden gruplara ayrılarak eş baskınlık ve çok alellilikle ilgili deney yapmaları, deney sürecini ve sonucunu raporlaştırmaları istenebilir. Deney süreci ve sonucuna ilişkin hazırlanan raporlar, analitik dereceli puanlama anahtarı ile puanlanabilir. Dereceli puanlama anahtarında “deneyde olası hatalar için alınacak önlemler, deney süreci ve sonucu” gibi ölçütlere yer verilebilir. Öğrencilerin kendilerini deney süreci açısından değerlendirmesi için öz değerlendirme ve grup değerlendirme formu kullanılabilir. Öğrencilere eşeye bağlı kalıtımı soyağacı modelinde gösterecekleri poster hazırlamaya yönelik performans görevi verilebilir. Performans görevi, bütüncül dereceli puanlama anahtarı ile puanlanabilir.",
+              "source_page": 80
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

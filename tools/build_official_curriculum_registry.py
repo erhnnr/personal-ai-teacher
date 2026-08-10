@@ -132,7 +132,7 @@ def normalize_pdf_text(text):
 
 def read_pdf_text(pdf_path):
     try:
-        import fitz
+        import pymupdf as fitz
     except ImportError as exc:
         raise RuntimeError(
             "PyMuPDF is required. Install with: "
@@ -333,6 +333,42 @@ def extract_content_framework(block):
     )
 
 
+def extract_theme_content_framework(full_text, grade, theme_number):
+    """Extract theme-scoped MEB content framework."""
+    theme_outcome_pattern = re.compile(
+        rf"BİY\.\s*{grade}\.\s*{theme_number}\.\s*\d+\.",
+        flags=re.IGNORECASE,
+    )
+    matches = list(theme_outcome_pattern.finditer(full_text))
+    if not matches:
+        return ""
+
+    start = matches[0].start()
+
+    if theme_number == 1:
+        next_theme_pattern = re.compile(
+            rf"BİY\.\s*{grade}\.\s*2\.\s*1\.",
+            flags=re.IGNORECASE,
+        )
+    else:
+        if grade >= 12:
+            next_theme_pattern = None
+        else:
+            next_theme_pattern = re.compile(
+                rf"BİY\.\s*{grade + 1}\.\s*1\.\s*1\.",
+                flags=re.IGNORECASE,
+            )
+
+    next_match = (
+        next_theme_pattern.search(full_text, pos=matches[-1].end())
+        if next_theme_pattern
+        else None
+    )
+    end = next_match.start() if next_match else len(full_text)
+    theme_block = full_text[start:end]
+    return extract_content_framework(theme_block)
+
+
 def extract_key_concepts(block):
     return extract_named_section(
         block,
@@ -526,6 +562,12 @@ def build_registry(
                 ] == theme_number
             ]
 
+            theme_framework = extract_theme_content_framework(
+                full_text,
+                grade,
+                theme_number,
+            )
+
             themes.append(
                 {
                     "theme_number": theme_number,
@@ -534,6 +576,7 @@ def build_registry(
                     ][
                         theme_number
                     ],
+                    "content_framework": theme_framework,
                     "learning_outcome_count": len(
                         theme_outcomes
                     ),
@@ -649,6 +692,15 @@ def validate_registry(
             "themes",
             []
         ):
+            if not theme.get(
+                "content_framework"
+            ):
+                errors.append(
+                    f"grade {grade} theme "
+                    f"{theme['theme_number']}: "
+                    "missing content framework"
+                )
+
             for outcome in theme.get(
                 "learning_outcomes",
                 []
@@ -658,13 +710,6 @@ def validate_registry(
                 ):
                     errors.append(
                         f"{outcome['id']}: missing title"
-                    )
-
-                if not outcome.get(
-                    "content_framework"
-                ):
-                    errors.append(
-                        f"{outcome['id']}: missing content framework"
                     )
 
                 if outcome.get(
