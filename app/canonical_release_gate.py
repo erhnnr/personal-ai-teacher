@@ -275,16 +275,7 @@ def match_released_unit(subject, grade, topic):
     return best[0][2]
 
 
-def build_teacher_context(plan):
-    unit = match_released_unit(
-        plan.subject,
-        plan.grade,
-        plan.topic,
-    )
-
-    if not unit:
-        return None
-
+def _context_json(unit):
     return json.dumps(
         {
             "source": "KNOWLEDGE_FACTORY_V2_RELEASED_CANONICAL",
@@ -306,3 +297,116 @@ def build_teacher_context(plan):
         ensure_ascii=False,
         indent=2,
     )
+
+
+def build_teacher_context(plan):
+    unit = match_released_unit(
+        plan.subject,
+        plan.grade,
+        plan.topic,
+    )
+
+    if not unit:
+        return None
+
+    return _context_json(unit)
+
+
+def match_released_unit_from_question(question):
+    """
+    Resolve a released canonical unit directly from the raw student
+    question.
+
+    This is intentionally conservative:
+    - exact canonical outcome text contained in the question wins;
+    - otherwise at least 4 significant canonical topic tokens and
+      >= 60% topic-token coverage are required;
+    - ties at the best score are blocked.
+
+    The legacy planner is therefore not allowed to misclassify a
+    released canonical Biology outcome as another subject.
+    """
+
+    question_n = _normalize(question)
+    question_tokens = _tokens(question)
+    candidates = []
+
+    for unit in released_units():
+        topic = unit.get("topic", "")
+        topic_n = _normalize(topic)
+
+        if topic_n and topic_n in question_n:
+            candidates.append(
+                (
+                    10_000,
+                    unit.get("id"),
+                    unit,
+                )
+            )
+            continue
+
+        topic_tokens = _tokens(topic)
+        if not topic_tokens:
+            continue
+
+        overlap = len(
+            question_tokens & topic_tokens
+        )
+        coverage = overlap / len(topic_tokens)
+
+        if overlap >= 4 and coverage >= 0.60:
+            score = (
+                overlap * 100
+                + int(coverage * 100)
+            )
+            candidates.append(
+                (
+                    score,
+                    unit.get("id"),
+                    unit,
+                )
+            )
+
+    if not candidates:
+        return None
+
+    candidates.sort(
+        key=lambda item: (-item[0], item[1])
+    )
+
+    best_score = candidates[0][0]
+    best = [
+        item
+        for item in candidates
+        if item[0] == best_score
+    ]
+
+    if len(best) != 1:
+        return None
+
+    return best[0][2]
+
+
+def build_teacher_context_for_question(
+    question,
+    plan=None,
+):
+    """
+    Canonical-first release resolution.
+
+    Raw question resolution is authoritative for released canonical
+    units. Planner-based resolution remains a conservative secondary
+    path for compatibility.
+    """
+
+    unit = match_released_unit_from_question(
+        question
+    )
+
+    if unit:
+        return _context_json(unit)
+
+    if plan is None:
+        return None
+
+    return build_teacher_context(plan)

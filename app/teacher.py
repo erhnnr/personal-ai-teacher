@@ -34,7 +34,10 @@ from llm import (
 from planner import create_plan
 from prompt_builder import build_prompt
 from teacher_pipeline import run_lesson
-from canonical_release_gate import build_teacher_context
+from canonical_release_gate import (
+    build_teacher_context,
+    build_teacher_context_for_question,
+)
 
 
 STRICT_TEACHING_POLICY = """
@@ -191,7 +194,9 @@ def build_verified_context(plan):
     """
 
     try:
-        canonical_context = build_teacher_context(plan)
+        canonical_context = build_teacher_context(
+            plan
+        )
     except Exception:
         canonical_context = None
 
@@ -235,6 +240,34 @@ def build_verified_context(plan):
         indent=2,
     )
 
+
+def build_verified_context_for_question(
+    plan,
+    question,
+):
+    """
+    Backward-compatible canonical-first resolver.
+
+    build_verified_context(plan) remains unchanged for existing callers
+    and tests. Raw-question canonical resolution is attempted first.
+    """
+
+    try:
+        canonical_context = (
+            build_teacher_context_for_question(
+                question,
+                plan,
+            )
+        )
+    except Exception:
+        canonical_context = None
+
+    if canonical_context is not None:
+        return canonical_context
+
+    return build_verified_context(
+        plan
+    )
 
 def build_system_prompt(
     question,
@@ -283,8 +316,9 @@ def ask_teacher(question):
         question
     )
 
-    verified_context = build_verified_context(
-        plan
+    verified_context = build_verified_context_for_question(
+        plan,
+        question,
     )
 
     if verified_context is None:
