@@ -1,0 +1,119 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "source_record.schema.json",
+  "title": "Knowledge Factory V2 Source Record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "publisher",
+    "title",
+    "source_type",
+    "authority_tier",
+    "exam_scope",
+    "subject_scope",
+    "grade_scope",
+    "topic_scope"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9._-]+$"
+    },
+    "publisher": {
+      "type": "string",
+      "minLength": 1
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_type": {
+      "type": "string",
+      "enum": [
+        "curriculum",
+        "textbook",
+        "activity_book",
+        "question_bank",
+        "exam",
+        "guide",
+        "other"
+      ]
+    },
+    "authority_tier": {
+      "type": "string",
+      "enum": [
+        "primary_official",
+        "official_support",
+        "supplementary"
+      ]
+    },
+    "url": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^https://"
+    },
+    "local_path": {
+      "type": "string",
+      "minLength": 1
+    },
+    "sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "exam_scope": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "TYT",
+          "AYT"
+        ]
+      },
+      "uniqueItems": true
+    },
+    "subject_scope": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "grade_scope": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "topic_scope": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "notes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "anyOf": [
+    {
+      "required": [
+        "url"
+      ]
+    },
+    {
+      "required": [
+        "local_path"
+      ]
+    }
+  ]
+}

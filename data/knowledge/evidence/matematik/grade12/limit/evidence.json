@@ -1,0 +1,53 @@
+{
+  "id": "matematik.grade12.limit",
+  "exam": "AYT",
+  "subject": "Matematik",
+  "grade": "12",
+  "topic": "Limit",
+  "status": "EVIDENCE_READY",
+  "sources": [
+    {
+      "source_id": "MEB-OGM-MAT12-LIMIT-001",
+      "locations": [
+        {
+          "locator": "Page 62, Kazanım 12.5.1.1",
+          "note": "Bir fonksiyonun bir noktadaki limiti, soldan limit ve sağdan limit kavramları."
+        },
+        {
+          "locator": "Page 62, KUTU YAPALIM etkinliği",
+          "note": "Gerçek hayat probleminde sağdan ve soldan limit kullanımına yönelik etkinlik."
+        }
+      ]
+    }
+  ],
+  "claims": [
+    {
+      "id": "C1",
+      "text": "Bir fonksiyonun bir noktadaki limiti, soldan limit ve sağdan limit kavramları 12. sınıf matematik kazanımı kapsamındadır.",
+      "source_refs": [
+        {
+          "source_id": "MEB-OGM-MAT12-LIMIT-001",
+          "locator": "Page 62, Kazanım 12.5.1.1"
+        }
+      ]
+    },
+    {
+      "id": "C2",
+      "text": "Sağdan ve soldan limit kavramları gerçek hayat problemlerinin çözümünde kullanılabilir.",
+      "source_refs": [
+        {
+          "source_id": "MEB-OGM-MAT12-LIMIT-001",
+          "locator": "Page 62, KUTU YAPALIM etkinliği"
+        }
+      ]
+    }
+  ],
+  "coverage": {
+    "curriculum_objectives": [
+      "12.5.1.1. Bir fonksiyonun bir noktadaki limiti, soldan limit ve sağdan limit kavramlarını açıklar."
+    ],
+    "notes": [
+      "İlk Knowledge Factory V2 source-grounded pilot paketi."
+    ]
+  }
+}

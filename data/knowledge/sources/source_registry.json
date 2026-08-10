@@ -10,5 +10,29 @@
     ],
     "student_visible_content_requires_evidence_package": true
   },
-  "sources": []
+  "sources": [
+    {
+      "id": "MEB-OGM-MAT12-LIMIT-001",
+      "publisher": "MEB OGM",
+      "title": "12. Sınıf Matematik Beceri Temelli Etkinlik Kitabı - Limit ve Süreklilik",
+      "source_type": "activity_book",
+      "authority_tier": "primary_official",
+      "exam_scope": [
+        "AYT"
+      ],
+      "subject_scope": [
+        "Matematik"
+      ],
+      "grade_scope": [
+        "12"
+      ],
+      "topic_scope": [
+        "Limit"
+      ],
+      "notes": [
+        "Knowledge Factory V2 first source-grounding pilot."
+      ],
+      "url": "https://ogmmateryal.eba.gov.tr/panel/upload/etkilesimli/kitap/beceri_temelli/12/matematik/files/basic-html/page62.html"
+    }
+  ]
 }
