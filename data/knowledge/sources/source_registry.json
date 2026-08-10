@@ -33,6 +33,52 @@
         "Knowledge Factory V2 first source-grounding pilot."
       ],
       "url": "https://ogmmateryal.eba.gov.tr/panel/upload/etkilesimli/kitap/beceri_temelli/12/matematik/files/basic-html/page62.html"
+    },
+    {
+      "id": "MEB-OGM-MAT12-INTEGRAL-001",
+      "publisher": "MEB OGM",
+      "title": "12. Sınıf Matematik Beceri Temelli Etkinlik Kitabı - İntegral",
+      "source_type": "activity_book",
+      "authority_tier": "primary_official",
+      "exam_scope": [
+        "AYT"
+      ],
+      "subject_scope": [
+        "Matematik"
+      ],
+      "grade_scope": [
+        "12"
+      ],
+      "topic_scope": [
+        "İntegral"
+      ],
+      "notes": [
+        "Knowledge Factory V2 evidence-grounded generation pilot."
+      ],
+      "url": "https://ogmmateryal.eba.gov.tr/panel/upload/etkilesimli/kitap/beceri_temelli/12/matematik/files/basic-html/page106.html"
+    },
+    {
+      "id": "MEB-MEBI-AYT-MAT-INTEGRAL-001",
+      "publisher": "MEB",
+      "title": "MEBİ AYT Matematik Konu Özeti - Belirsiz İntegral",
+      "source_type": "guide",
+      "authority_tier": "primary_official",
+      "exam_scope": [
+        "AYT"
+      ],
+      "subject_scope": [
+        "Matematik"
+      ],
+      "grade_scope": [
+        "12"
+      ],
+      "topic_scope": [
+        "İntegral"
+      ],
+      "notes": [
+        "Belirsiz integral tanımları ve temel integral alma kuralları."
+      ],
+      "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/ayt-matematik/files/basic-html/page89.html"
     }
   ]
 }

@@ -125,6 +125,20 @@
                 }
               }
             }
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "objective",
+              "core_concept",
+              "definition",
+              "rule",
+              "teaching_note"
+            ]
+          },
+          "term": {
+            "type": "string",
+            "minLength": 1
           }
         }
       }
@@ -146,6 +160,14 @@
           "type": "array",
           "items": {
             "type": "string"
+          }
+        },
+        "excluded_terms": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
           }
         }
       }

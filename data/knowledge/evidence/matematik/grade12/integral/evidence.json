@@ -1,0 +1,136 @@
+{
+  "id": "matematik.grade12.integral",
+  "exam": "AYT",
+  "subject": "Matematik",
+  "grade": "12",
+  "topic": "İntegral",
+  "status": "EVIDENCE_READY",
+  "sources": [
+    {
+      "source_id": "MEB-OGM-MAT12-INTEGRAL-001",
+      "locations": [
+        {
+          "locator": "Page 106, Kazanım 12.6.1.1",
+          "note": "Belirsiz integral ve integral alma kuralları kazanımı."
+        },
+        {
+          "locator": "Page 106, SU TÜKETİMİ etkinliği",
+          "note": "Gerçek hayat durumlarında belirsiz integral kullanımı."
+        }
+      ]
+    },
+    {
+      "source_id": "MEB-MEBI-AYT-MAT-INTEGRAL-001",
+      "locations": [
+        {
+          "locator": "Page 89, Belirsiz İntegral konu özeti",
+          "note": "Ters türev, belirsiz integral, integral sabiti ve temel integral alma kuralları."
+        }
+      ]
+    }
+  ],
+  "claims": [
+    {
+      "id": "C1",
+      "text": "12.6.1.1 kazanımı, bir fonksiyonun belirsiz integralini açıklamayı ve integral alma kurallarını oluşturmayı kapsar.",
+      "source_refs": [
+        {
+          "source_id": "MEB-OGM-MAT12-INTEGRAL-001",
+          "locator": "Page 106, Kazanım 12.6.1.1"
+        }
+      ],
+      "kind": "objective"
+    },
+    {
+      "id": "C2",
+      "text": "F'(x)=f(x) ise F(x), f(x) fonksiyonunun ters türevi veya belirsiz integrali olarak ele alınır.",
+      "source_refs": [
+        {
+          "source_id": "MEB-MEBI-AYT-MAT-INTEGRAL-001",
+          "locator": "Page 89, Belirsiz İntegral konu özeti"
+        }
+      ],
+      "kind": "definition",
+      "term": "Belirsiz integral"
+    },
+    {
+      "id": "C3",
+      "text": "Bir fonksiyonun ters türevini bulma işlemine integral alma işlemi denir.",
+      "source_refs": [
+        {
+          "source_id": "MEB-MEBI-AYT-MAT-INTEGRAL-001",
+          "locator": "Page 89, Belirsiz İntegral konu özeti"
+        }
+      ],
+      "kind": "core_concept"
+    },
+    {
+      "id": "C4",
+      "text": "F'(x)=f(x) olmak üzere f(x) fonksiyonunun belirsiz integrali F(x)+c biçimindedir ve c sabit sayısına integral sabiti denir.",
+      "source_refs": [
+        {
+          "source_id": "MEB-MEBI-AYT-MAT-INTEGRAL-001",
+          "locator": "Page 89, Belirsiz İntegral konu özeti"
+        }
+      ],
+      "kind": "core_concept"
+    },
+    {
+      "id": "C5",
+      "text": "n ≠ -1 ve n rasyonel olmak üzere x^n fonksiyonunun belirsiz integrali x^(n+1)/(n+1)+c biçimindedir.",
+      "source_refs": [
+        {
+          "source_id": "MEB-MEBI-AYT-MAT-INTEGRAL-001",
+          "locator": "Page 89, kuvvet kuralı"
+        }
+      ],
+      "kind": "rule"
+    },
+    {
+      "id": "C6",
+      "text": "a gerçek sayı olmak üzere sabit çarpan integralin dışına alınabilir: ∫a f(x) dx = a∫f(x) dx.",
+      "source_refs": [
+        {
+          "source_id": "MEB-MEBI-AYT-MAT-INTEGRAL-001",
+          "locator": "Page 89, sabit çarpan kuralı"
+        }
+      ],
+      "kind": "rule"
+    },
+    {
+      "id": "C7",
+      "text": "f ve g sürekli fonksiyonlar olmak üzere toplamın ve farkın integrali, integrallerin toplamı veya farkı olarak alınabilir.",
+      "source_refs": [
+        {
+          "source_id": "MEB-MEBI-AYT-MAT-INTEGRAL-001",
+          "locator": "Page 89, toplam ve fark kuralları"
+        }
+      ],
+      "kind": "rule"
+    },
+    {
+      "id": "C8",
+      "text": "Belirsiz integral, gerçek hayat durumlarında değişim oranından miktar fonksiyonuna ulaşmak için kullanılabilir.",
+      "source_refs": [
+        {
+          "source_id": "MEB-OGM-MAT12-INTEGRAL-001",
+          "locator": "Page 106, SU TÜKETİMİ etkinliği"
+        }
+      ],
+      "kind": "core_concept"
+    }
+  ],
+  "coverage": {
+    "curriculum_objectives": [
+      "12.6.1.1. Bir fonksiyonun belirsiz integralini açıklayarak integral alma kurallarını oluşturur."
+    ],
+    "notes": [
+      "Knowledge Factory V2 evidence-grounded generation pilot.",
+      "Bu paket belirsiz integral, ters türev, integral sabiti ve temel integral alma kurallarını kapsar.",
+      "Bu pilot evidence paketi belirli integral konusunu kapsamamaktadır."
+    ],
+    "excluded_terms": [
+      "belirli integral"
+    ]
+  }
+}

@@ -8,7 +8,10 @@ TYT/AYT curriculum using the local LM Studio model.
 Pipeline:
 Curriculum
 -> EVIDENCE_READY gate
--> Evidence-grounded Local LLM Draft
+-> Claim-level provenance annotated LLM Draft
+-> Claim reference validation
+-> Claim-anchor + explicit evidence scope guard
+-> Canonical knowledge draft
 -> Structural Validation
 -> Deterministic Math Factual Review
 -> DRAFT status report
@@ -34,6 +37,7 @@ import json
 import re
 import shutil
 import sys
+import unicodedata
 from datetime import datetime
 from pathlib import Path
 
@@ -86,6 +90,15 @@ EVIDENCE_ROOT = (
     / "data"
     / "knowledge"
     / "evidence"
+)
+
+
+GROUNDING_SCHEMA_PATH = (
+    PROJECT_ROOT
+    / "data"
+    / "knowledge"
+    / "schemas"
+    / "grounded_generation.schema.json"
 )
 
 
@@ -366,10 +379,1014 @@ def build_grounding_context(
         indent=2,
     )
 
+
+GENERIC_GROUNDING_ROOTS = {
+    "acikla",
+    "anla",
+    "uygula",
+    "ogren",
+    "ogrenci",
+    "ogret",
+    "konu",
+    "kavram",
+    "kural",
+    "temel",
+    "ornek",
+    "soru",
+    "cevap",
+    "coz",
+    "cozum",
+    "dogru",
+    "yanlis",
+    "hata",
+    "dikkat",
+    "goster",
+    "kullan",
+    "bul",
+    "hesapla",
+    "ifade",
+    "islem",
+    "yontem",
+    "adim",
+    "bilgi",
+    "amac",
+    "hedef",
+    "iliski",
+    "ilgili",
+    "gereken",
+    "gerek",
+    "durum",
+    "sekil",
+    "bicim",
+    "deger",
+    "sonuc",
+    "fark",
+    "toplam",
+    "sabit",
+    "fonksiyon",
+    "matematik",
+    "yks",
+    "sinif",
+    "gercek",
+    "hayat",
+    "olarak",
+    "ol",
+    "kabul",
+    "edil",
+    "et",
+    "yaz",
+    "yazil",
+    "burada",
+    "say",
+    "sayi",
+    "denir",
+    "adlandir",
+    "ele",
+    "alin",
+    "veril",
+    "gerektir",
+    "aciklan",
+    "kapsa",
+    "biçim",
+}
+
+
+TURKISH_SUFFIXES = (
+    "larindan",
+    "lerinden",
+    "larinin",
+    "lerinin",
+    "larina",
+    "lerine",
+    "larini",
+    "lerini",
+    "larin",
+    "lerin",
+    "lar",
+    "ler",
+    "inin",
+    "ının",
+    "unun",
+    "ünün",
+    "nın",
+    "nin",
+    "nun",
+    "nün",
+    "dan",
+    "den",
+    "tan",
+    "ten",
+    "dır",
+    "dir",
+    "dur",
+    "dür",
+    "tır",
+    "tir",
+    "tur",
+    "tür",
+    "lık",
+    "lik",
+    "luk",
+    "lük",
+    "lı",
+    "li",
+    "lu",
+    "lü",
+    "ını",
+    "ini",
+    "unu",
+    "ünü",
+    "yla",
+    "yle",
+    "ya",
+    "ye",
+    "da",
+    "de",
+    "ta",
+    "te",
+    "dan",
+    "den",
+    "ın",
+    "in",
+    "un",
+    "ün",
+    "ı",
+    "i",
+    "u",
+    "ü",
+    "ma",
+    "me",
+    "mak",
+    "mek",    "sina",
+    "sine",
+    "suna",
+    "sune",
+    "inda",
+    "inde",
+    "unda",
+    "unde",
+    "indan",
+    "inden",
+    "undan",
+    "unden",
+    "idir",
+    "udur",
+    "ilir",
+    "ulur",
+    "lanir",
+    "lenir",
+
+)
+
+
+def validate_grounded_generation_schema(
+    package,
+):
+    """
+    Validate the annotated model output before canonicalization.
+
+    The canonical knowledge-unit schema intentionally remains
+    unchanged. Provenance is a generation-time contract.
+    """
+
+    schema = load_json(
+        GROUNDING_SCHEMA_PATH
+    )
+
+    validator = Draft202012Validator(
+        schema
+    )
+
+    errors = sorted(
+        validator.iter_errors(
+            package
+        ),
+        key=lambda error: list(
+            error.path
+        ),
+    )
+
+    if errors:
+        first = errors[0]
+
+        location = ".".join(
+            str(item)
+            for item in first.path
+        )
+
+        if location:
+            location = f" at '{location}'"
+
+        raise ValueError(
+            "Grounded generation schema failed"
+            f"{location}: {first.message}"
+        )
+
+    return True
+
+
+def claim_lookup(
+    evidence,
+):
+    return {
+        claim["id"]: claim
+        for claim in evidence.get(
+            "claims",
+            []
+        )
+    }
+
+
+def iter_grounded_items(
+    package,
+):
+    """
+    Yield:
+        path
+        textual payload
+        evidence_refs
+        vocabulary_guard_enabled
+    """
+
+    concept = package["concept"]
+
+    factual_concept_fields = {
+        "learning_objectives",
+        "prerequisites",
+        "core_concepts",
+        "rules",
+    }
+
+    for field in (
+        "learning_objectives",
+        "prerequisites",
+        "core_concepts",
+        "rules",
+        "common_confusions",
+        "teaching_notes",
+    ):
+        for index, item in enumerate(
+            concept.get(field, [])
+        ):
+            yield (
+                f"concept.{field}[{index}]",
+                item["text"],
+                item["evidence_refs"],
+                field in factual_concept_fields,
+            )
+
+    for index, item in enumerate(
+        concept.get(
+            "definitions",
+            []
+        )
+    ):
+        yield (
+            f"concept.definitions[{index}]",
+            (
+                f"{item['term']} "
+                f"{item['definition']}"
+            ),
+            item["evidence_refs"],
+            True,
+        )
+
+    for index, item in enumerate(
+        package["examples"].get(
+            "examples",
+            []
+        )
+    ):
+        yield (
+            f"examples.examples[{index}]",
+            " ".join(
+                [
+                    item.get(
+                        "question",
+                        "",
+                    ),
+                    item.get(
+                        "answer",
+                        "",
+                    ),
+                    item.get(
+                        "learning_point",
+                        "",
+                    ),
+                ]
+            ),
+            item["evidence_refs"],
+            False,
+        )
+
+    for index, item in enumerate(
+        package["mistakes"].get(
+            "mistakes",
+            []
+        )
+    ):
+        yield (
+            f"mistakes.mistakes[{index}]",
+            " ".join(
+                [
+                    item.get(
+                        "error",
+                        "",
+                    ),
+                    item.get(
+                        "explanation",
+                        "",
+                    ),
+                    item.get(
+                        "teacher_action",
+                        "",
+                    ),
+                ]
+            ),
+            item["evidence_refs"],
+            False,
+        )
+
+    relations = package["relations"]
+
+    for field in (
+        "prerequisites",
+        "next_topics",
+        "related_topics",
+    ):
+        for index, item in enumerate(
+            relations.get(field, [])
+        ):
+            text_parts = [
+                item.get(
+                    "topic",
+                    "",
+                )
+            ]
+
+            if field == "related_topics":
+                text_parts.append(
+                    item.get(
+                        "relation",
+                        "",
+                    )
+                )
+            else:
+                text_parts.append(
+                    item.get(
+                        "reason",
+                        "",
+                    )
+                )
+
+            yield (
+                f"relations.{field}[{index}]",
+                " ".join(
+                    text_parts
+                ),
+                item["evidence_refs"],
+                True,
+            )
+
+
+def validate_claim_level_provenance(
+    package,
+    evidence,
+):
+    """
+    Every generated factual item must cite at least one
+    claim ID that actually exists in the EVIDENCE_READY package.
+
+    A fabricated/missing claim ID is a hard generation failure.
+    """
+
+    claims = claim_lookup(
+        evidence
+    )
+
+    if not claims:
+        raise ValueError(
+            "Evidence package has no claims."
+        )
+
+    for (
+        path,
+        _text,
+        refs,
+        _guard,
+    ) in iter_grounded_items(
+        package
+    ):
+        if not refs:
+            raise ValueError(
+                f"Missing evidence_refs at {path}."
+            )
+
+        unknown = sorted(
+            {
+                ref
+                for ref in refs
+                if ref not in claims
+            }
+        )
+
+        if unknown:
+            raise ValueError(
+                f"Unknown evidence claim at {path}: "
+                + ", ".join(
+                    unknown
+                )
+            )
+
+    return True
+
+
+def normalize_grounding_text(
+    value,
+):
+    """
+    Normalize Turkish text for deterministic vocabulary checks.
+
+    Important:
+    Unicode casefold can turn capital Turkish İ into
+    "i" + COMBINING DOT ABOVE. If that combining mark is left
+    in place, tokenization can split "İntegral" into "i" and
+    "ntegral". Normalize and remove combining marks first.
+    """
+
+    value = str(
+        value
+    )
+
+    replacements = {
+        "İ": "I",
+        "I": "I",
+        "ı": "i",
+        "Ç": "C",
+        "ç": "c",
+        "Ğ": "G",
+        "ğ": "g",
+        "Ö": "O",
+        "ö": "o",
+        "Ş": "S",
+        "ş": "s",
+        "Ü": "U",
+        "ü": "u",
+    }
+
+    for old, new in replacements.items():
+        value = value.replace(
+            old,
+            new,
+        )
+
+    value = unicodedata.normalize(
+        "NFKD",
+        value,
+    )
+
+    value = "".join(
+        char
+        for char in value
+        if not unicodedata.combining(
+            char
+        )
+    )
+
+    return value.casefold()
+
+
+def grounding_tokens(
+    value,
+):
+    return re.findall(
+        r"[a-z0-9]+",
+        normalize_grounding_text(
+            value
+        ),
+    )
+
+
+def grounding_root(
+    token,
+):
+    token = str(
+        token
+    ).strip()
+
+    if len(token) < 5:
+        return token
+
+    for suffix in sorted(
+        TURKISH_SUFFIXES,
+        key=len,
+        reverse=True,
+    ):
+        if (
+            token.endswith(
+                suffix
+            )
+            and len(token) - len(
+                suffix
+            ) >= 4
+        ):
+            return token[
+                :-len(suffix)
+            ]
+
+    return token
+
+
+
+def is_generic_grounding_token(
+    token,
+    root,
+):
+    """
+    Match ordinary Turkish teaching-language forms without
+    weakening the factual vocabulary guard.
+
+    The previous exact-root check produced false positives for
+    conjugated verbs such as "açıklar" -> "acik" while the
+    generic lexicon contains "acikla".
+
+    Prefix matching is allowed only when both sides have at least
+    four characters, so short accidental matches are avoided.
+    """
+
+    token = str(
+        token
+    ).strip()
+
+    root = str(
+        root
+    ).strip()
+
+    for generic in (
+        GENERIC_GROUNDING_ROOTS
+    ):
+        if (
+            token == generic
+            or root == generic
+        ):
+            return True
+
+        if (
+            len(token) >= 4
+            and len(generic) >= 4
+            and (
+                token.startswith(
+                    generic
+                )
+                or generic.startswith(
+                    token
+                )
+            )
+        ):
+            return True
+
+        if (
+            len(root) >= 4
+            and len(generic) >= 4
+            and (
+                root.startswith(
+                    generic
+                )
+                or generic.startswith(
+                    root
+                )
+            )
+        ):
+            return True
+
+    return False
+
+def evidence_excluded_terms(
+    evidence,
+):
+    """
+    Return explicit topic-scope exclusions from the evidence package.
+
+    These are deterministic hard blocks, not model instructions.
+    """
+
+    coverage = evidence.get(
+        "coverage",
+        {},
+    )
+
+    return [
+        str(term).strip()
+        for term in coverage.get(
+            "excluded_terms",
+            [],
+        )
+        if str(term).strip()
+    ]
+
+
+def normalized_phrase(
+    value,
+):
+    return " ".join(
+        grounding_tokens(
+            value
+        )
+    )
+
+
+def meaningful_grounding_roots(
+    value,
+):
+    roots = set()
+
+    for token in grounding_tokens(
+        value
+    ):
+        if len(token) < 4:
+            continue
+
+        root = grounding_root(
+            token
+        )
+
+        if is_generic_grounding_token(
+            token,
+            root,
+        ):
+            continue
+
+        roots.add(
+            root
+        )
+
+    return roots
+
+
+def grounding_roots_overlap(
+    left,
+    right,
+):
+    for left_root in left:
+        for right_root in right:
+            if left_root == right_root:
+                return True
+
+            if (
+                len(left_root) >= 4
+                and len(right_root) >= 4
+                and (
+                    left_root.startswith(
+                        right_root
+                    )
+                    or right_root.startswith(
+                        left_root
+                    )
+                )
+            ):
+                return True
+
+    return False
+
+
+def validate_validation_type_scope(
+    package,
+    evidence,
+):
+    """
+    Prevent machine-validation type names from bypassing evidence scope.
+    """
+
+    excluded = {
+        normalized_phrase(term)
+        for term in evidence_excluded_terms(
+            evidence
+        )
+    }
+
+    validation_scope_terms = {
+        "indefinite_integral": normalized_phrase(
+            "belirsiz integral"
+        ),
+        "definite_integral": normalized_phrase(
+            "belirli integral"
+        ),
+    }
+
+    for index, item in enumerate(
+        package.get(
+            "examples",
+            {},
+        ).get(
+            "examples",
+            [],
+        )
+    ):
+        validation = item.get(
+            "validation",
+            {},
+        )
+
+        validation_type = validation.get(
+            "type"
+        )
+
+        scoped_term = validation_scope_terms.get(
+            validation_type
+        )
+
+        if (
+            scoped_term
+            and scoped_term in excluded
+        ):
+            raise ValueError(
+                "Evidence scope exclusion failed "
+                f"at examples.examples[{index}].validation.type: "
+                f"{validation_type}"
+            )
+
+    return True
+
+
+def validate_claim_vocabulary_scope(
+    package,
+    evidence,
+):
+    """
+    Phase 3.4 semantic scope contract.
+
+    The old word-by-word allowlist was intentionally removed because
+    natural Turkish paraphrases caused false positives. The guard now:
+
+    1. blocks explicit evidence exclusions everywhere;
+    2. requires core factual/domain-bearing fields to share at least
+       one meaningful anchor with their cited evidence claim(s);
+    3. does NOT reject harmless extra pedagogical wording.
+
+    Claim IDs are still validated separately by
+    validate_claim_level_provenance().
+    """
+
+    claims = claim_lookup(
+        evidence
+    )
+
+    excluded_terms = [
+        (
+            term,
+            normalized_phrase(
+                term
+            ),
+        )
+        for term in evidence_excluded_terms(
+            evidence
+        )
+    ]
+
+    for (
+        path,
+        text,
+        refs,
+        use_guard,
+    ) in iter_grounded_items(
+        package
+    ):
+        generated_phrase = normalized_phrase(
+            text
+        )
+
+        for (
+            original_term,
+            excluded_phrase,
+        ) in excluded_terms:
+            if (
+                excluded_phrase
+                and excluded_phrase
+                in generated_phrase
+            ):
+                raise ValueError(
+                    "Evidence scope exclusion failed "
+                    f"at {path}. Excluded term: "
+                    f"{original_term}"
+                )
+
+        if not use_guard:
+            continue
+
+        claim_text = " ".join(
+            claims[ref]["text"]
+            for ref in refs
+        )
+
+        claim_roots = meaningful_grounding_roots(
+            claim_text
+        )
+
+        generated_roots = meaningful_grounding_roots(
+            text
+        )
+
+        # If a claim contains no stable lexical anchor, provenance is
+        # still valid but this deterministic lexical check cannot add
+        # information; do not invent a rejection criterion.
+        if not claim_roots:
+            continue
+
+        if not grounding_roots_overlap(
+            generated_roots,
+            claim_roots,
+        ):
+            raise ValueError(
+                "Evidence claim-anchor failed "
+                f"at {path}. Generated text has no "
+                "meaningful overlap with cited claim(s)."
+            )
+
+    validate_validation_type_scope(
+        package,
+        evidence,
+    )
+
+    return True
+
+
+def canonicalize_grounded_package(
+    package,
+    evidence,
+):
+    """
+    Strip generation-only evidence_refs from the canonical
+    knowledge files while preserving a complete provenance map.
+
+    This keeps existing knowledge_unit.schema.json compatible.
+    """
+
+    concept = package["concept"]
+
+    canonical_concept = {
+        "id": concept["id"],
+        "subject": concept["subject"],
+        "grade": concept["grade"],
+        "topic": concept["topic"],
+    }
+
+    for field in (
+        "learning_objectives",
+        "prerequisites",
+        "core_concepts",
+        "rules",
+        "common_confusions",
+        "teaching_notes",
+    ):
+        canonical_concept[
+            field
+        ] = [
+            item["text"]
+            for item in concept.get(
+                field,
+                []
+            )
+        ]
+
+    canonical_concept[
+        "definitions"
+    ] = [
+        {
+            "term": item[
+                "term"
+            ],
+            "definition": item[
+                "definition"
+            ],
+        }
+        for item in concept.get(
+            "definitions",
+            []
+        )
+    ]
+
+    canonical_examples = {
+        "topic": package[
+            "examples"
+        ]["topic"],
+        "examples": [],
+    }
+
+    for item in package[
+        "examples"
+    ].get(
+        "examples",
+        []
+    ):
+        canonical_item = {
+            key: value
+            for key, value in item.items()
+            if key != "evidence_refs"
+        }
+
+        canonical_examples[
+            "examples"
+        ].append(
+            canonical_item
+        )
+
+    canonical_mistakes = {
+        "topic": package[
+            "mistakes"
+        ]["topic"],
+        "mistakes": [],
+    }
+
+    for item in package[
+        "mistakes"
+    ].get(
+        "mistakes",
+        []
+    ):
+        canonical_item = {
+            key: value
+            for key, value in item.items()
+            if key != "evidence_refs"
+        }
+
+        canonical_mistakes[
+            "mistakes"
+        ].append(
+            canonical_item
+        )
+
+    canonical_relations = {
+        "topic": package[
+            "relations"
+        ]["topic"],
+    }
+
+    for field in (
+        "prerequisites",
+        "next_topics",
+        "related_topics",
+    ):
+        canonical_relations[
+            field
+        ] = []
+
+        for item in package[
+            "relations"
+        ].get(
+            field,
+            []
+        ):
+            canonical_item = {
+                key: value
+                for key, value in item.items()
+                if key != "evidence_refs"
+            }
+
+            canonical_relations[
+                field
+            ].append(
+                canonical_item
+            )
+
+    provenance_items = []
+
+    for (
+        path,
+        _text,
+        refs,
+        _guard,
+    ) in iter_grounded_items(
+        package
+    ):
+        provenance_items.append(
+            {
+                "path": path,
+                "evidence_refs": refs,
+            }
+        )
+
+    provenance = {
+        "version": "1.0",
+        "status": "PASS",
+        "evidence_id": evidence[
+            "id"
+        ],
+        "items": provenance_items,
+    }
+
+    return {
+        "concept": canonical_concept,
+        "examples": canonical_examples,
+        "mistakes": canonical_mistakes,
+        "relations": canonical_relations,
+        "_provenance": provenance,
+    }
+
 def build_prompt(
     record,
     grade,
     evidence=None,
+    generation_feedback=None,
 ):
     """
     Build strict JSON-generation instructions.
@@ -393,76 +1410,38 @@ def build_prompt(
             evidence
         )
 
+    retry_instruction = ""
+
+    if generation_feedback:
+        retry_instruction = f"""
+ÖNCEKİ DENEME REDDEDİLDİ.
+
+HATA:
+{generation_feedback}
+
+Aynı hatayı tekrar etme.
+Özellikle:
+- Geçerli JSON üret.
+- Zorunlu alanları boş bırakma.
+- Her factual öğede geçerli evidence_refs kullan.
+- Evidence kapsamı dışına çıkma.
+""".strip()
+
     math_validation_instruction = ""
 
     if normalize(record["subject"]) == normalize("Matematik"):
         math_validation_instruction = """
-MATEMATİK İÇİN ZORUNLU KURAL:
+MATEMATİK ÜRETİM SINIRI:
 
-Her examples öğesinde "validation" alanı bulunmalıdır.
+Bu evidence-grounded factual draft aşamasında
+examples.examples TAM OLARAK boş dizi [] olmalıdır.
 
-Validation, sorudaki matematiği makinenin bağımsız
-olarak kontrol edebileceği biçimde tanımlamalıdır.
+Matematik örnekleri bu aşamada LLM tarafından üretilmez.
+Örnekler ayrı bir machine-checkable example pipeline içinde
+üretilip doğrulanacaktır.
 
-Desteklenen validation type değerleri:
-
-- arithmetic
-- equation
-- inequality
-- polynomial_remainder
-- function_value
-- function_range
-- combination
-- permutation
-- trigonometric_value
-- distance_2d
-- indefinite_integral
-- definite_integral
-
-Matematiksel ifadelerde:
-- çarpma için *
-- üs için **
-- pi için pi
-- karekök için sqrt(...)
-kullan.
-
-Doğal dildeki question, answer ve validation
-aynı matematiksel problemi temsil etmelidir.
-
-Soruyu desteklenen validation tiplerinden biriyle
-güvenilir biçimde ifade edemiyorsan o örneği üretme.
-
-ÖRNEK — DENKLEM:
-
-"validation": {
-  "type": "equation",
-  "expression": "3*x + 5",
-  "variable": "x",
-  "relation": "=",
-  "rhs": 14,
-  "expected": 3
-}
-
-ÖRNEK — POLİNOM KALANI:
-
-"validation": {
-  "type": "polynomial_remainder",
-  "polynomial": "3*x**2 + 5*x - 2",
-  "variable": "x",
-  "divisor_root": 1,
-  "expected": 6
-}
-
-ÖRNEK — BELİRLİ İNTEGRAL:
-
-"validation": {
-  "type": "definite_integral",
-  "expression": "2*x",
-  "variable": "x",
-  "lower": 0,
-  "upper": 3,
-  "expected": 9
-}
+Bu ayrımın amacı factual knowledge üretimi ile matematiksel
+örnek üretimi/doğrulamasını birbirine karıştırmamaktır.
 """.strip()
 
     return f"""
@@ -479,6 +1458,10 @@ KURALLAR:
 - Model hafızasından yeni tanım, kural, tarih, formül veya factual ayrıntı ekleme.
 - Evidence tarafından desteklenmeyen factual içeriği üretme.
 - Evidence bir alanı desteklemiyorsa o alanı uydurarak doldurma.
+- Evidence bir alanı desteklemiyorsa ilgili diziyi boş bırak; sırf şemayı doldurmak için bilgi üretme.
+- coverage.excluded_terms içinde yer alan kavramları hiçbir öğrenci-görünür alanda üretme.
+- relations.prerequisites, relations.next_topics ve relations.related_topics bu aşamada TAM OLARAK [] olmalıdır.
+- Konu ilişkileri LLM tarafından üretilmez; curriculum/graph katmanından deterministik olarak yönetilir.
 - Müfredat kaydını kapsam/kimlik için kullan; factual kaynak olarak kullanma.
 - Tartışmalı veya evidence içinde olmayan bilgiyi ekleme.
 - Açık, temel ve YKS seviyesinde kal.
@@ -486,12 +1469,12 @@ KURALLAR:
 - Matematiksel hesaplamaları dikkatlice kontrol et.
 - Öğrenciye öğretilebilir, kısa ve net içerik üret.
 - Sayısal örneklerde sonucu iki kez kontrol et.
-- Belirsiz integralde +C sabitini unutma.
-- Belirli integral hesaplarında alt ve üst sınırı doğru uygula.
 - Matematiksel bir sonuç evidence ile desteklenmiyorsa üretme.
 - Çıktının her factual parçası evidence claim'leriyle izlenebilir olmalıdır.
 
 {math_validation_instruction}
+
+{retry_instruction}
 
 EVIDENCE PACKAGE:
 
@@ -513,40 +1496,69 @@ JSON dışında hiçbir açıklama yazma.
 
 JSON üst yapısı:
 
+ÖNEMLİ PROVENANCE KURALI:
+
+- Aşağıdaki factual öğelerin HER BİRİ "evidence_refs" taşımalıdır.
+- "evidence_refs" sadece EVIDENCE PACKAGE içindeki claim id değerlerini içerebilir.
+- Bir claim desteklemiyorsa o bilgiyi üretme.
+- Claim'de olmayan yeni alan terimleri ekleme.
+- Sırf adet tamamlamak için içerik uydurma.
+- Aynı claim farklı pedagogik alanlarda kullanılabilir.
+- coverage.notes claim değildir; evidence_refs içinde kullanılamaz.
+
 {{
   "concept": {{
     "id": "string",
     "subject": "{record['subject']}",
     "grade": "{grade}",
     "topic": "{record['topic']}",
-    "learning_objectives": ["string"],
-    "prerequisites": ["string"],
-    "core_concepts": ["string"],
+    "learning_objectives": [
+      {{
+        "text": "string",
+        "evidence_refs": ["C1"]
+      }}
+    ],
+    "prerequisites": [
+      {{
+        "text": "string",
+        "evidence_refs": ["C1"]
+      }}
+    ],
+    "core_concepts": [
+      {{
+        "text": "string",
+        "evidence_refs": ["C1"]
+      }}
+    ],
     "definitions": [
       {{
         "term": "string",
-        "definition": "string"
+        "definition": "string",
+        "evidence_refs": ["C1"]
       }}
     ],
-    "rules": ["string"],
-    "common_confusions": ["string"],
-    "teaching_notes": ["string"]
+    "rules": [
+      {{
+        "text": "string",
+        "evidence_refs": ["C1"]
+      }}
+    ],
+    "common_confusions": [
+      {{
+        "text": "string",
+        "evidence_refs": ["C1"]
+      }}
+    ],
+    "teaching_notes": [
+      {{
+        "text": "string",
+        "evidence_refs": ["C1"]
+      }}
+    ]
   }},
   "examples": {{
     "topic": "{record['topic']}",
-    "examples": [
-      {{
-        "id": "string",
-        "level": "basic",
-        "type": "concept",
-        "question": "string",
-        "answer": "string",
-        "learning_point": "string",
-        "validation": {{
-          "type": "supported_validation_type"
-        }}
-      }}
-    ]
+    "examples": []
   }},
   "mistakes": {{
     "topic": "{record['topic']}",
@@ -555,55 +1567,27 @@ JSON üst yapısı:
         "id": "string",
         "error": "string",
         "explanation": "string",
-        "teacher_action": "string"
+        "teacher_action": "string",
+        "evidence_refs": ["C1"]
       }}
     ]
   }},
   "relations": {{
     "topic": "{record['topic']}",
-    "prerequisites": [
-      {{
-        "topic": "string",
-        "reason": "string"
-      }}
-    ],
-    "next_topics": [
-      {{
-        "topic": "string",
-        "reason": "string"
-      }}
-    ],
-    "related_topics": [
-      {{
-        "topic": "string",
-        "relation": "string"
-      }}
-    ]
+    "prerequisites": [],
+    "next_topics": [],
+    "related_topics": []
   }}
 }}
 
-EN AZ:
+İÇERİK MİKTARI:
 
-- 3 learning objective
-- 3 core concept
-- 2 definition
-- 3 rule
-- 2 common confusion
-- 2 teaching note
-- 2 example
-- 2 mistake
-
-üret.
-
-Example level yalnızca:
-
-basic
-intermediate
-advanced
-
-değerlerinden biri olabilir.
-
-Konu Matematik ise her örnekte "validation" ZORUNLUDUR.
+- learning_objectives, core_concepts, definitions ve rules için evidence desteklediği kadar üret.
+- prerequisites, common_confusions ve teaching_notes evidence desteklemiyorsa boş dizi olabilir.
+- relations içindeki üç dizi bu aşamada her zaman [] olmalıdır.
+- Matematik konusuysa examples.examples bu aşamada her zaman [] olmalıdır.
+- mistake yalnızca evidence ile gerçekten destekleniyorsa üret; desteklenmiyorsa [] bırak.
+- Evidence desteklemediği halde sayıyı artırmak YASAKTIR.
 """.strip()
 
 
@@ -748,6 +1732,16 @@ def save_draft(
         package["relations"],
     )
 
+    provenance = package.get(
+        "_provenance"
+    )
+
+    if provenance:
+        write_json(
+            draft_path / "provenance.json",
+            provenance,
+        )
+
     metadata = {
         "status": "DRAFT",
         "verified": False,
@@ -781,8 +1775,18 @@ def save_draft(
             if evidence
             else []
         ),
+        "claim_provenance_status": (
+            provenance.get("status")
+            if provenance
+            else "NOT_RECORDED"
+        ),
+        "provenance_file": (
+            "provenance.json"
+            if provenance
+            else None
+        ),
         "warning": (
-            "Structural or deterministic validation "
+            "Claim provenance, structural, or deterministic validation "
             "does not constitute full factual verification."
         ),
     }
@@ -866,10 +1870,17 @@ def validate_generated_math_package(
     if not isinstance(
         examples,
         list,
-    ) or not examples:
+    ):
         raise ValueError(
-            "Mathematics draft must contain examples."
+            "Mathematics examples must be a list."
         )
+
+    # Phase 3.4.2 boundary:
+    # evidence-grounded factual generation is allowed to contain
+    # zero Mathematics examples. Math examples are produced in a
+    # separate machine-checkable pipeline.
+    if not examples:
+        return True
 
     schema_path = (
         PROJECT_ROOT
@@ -942,10 +1953,113 @@ def validate_generated_math_package(
             )
 
 
+
+def build_structured_response_format(
+    record=None,
+):
+    """
+    LM Studio/OpenAI-compatible structured output contract.
+
+    Phase 3.4.2 generation boundaries:
+    - topic relations are not generated by the LLM;
+    - Mathematics examples are not generated in the factual pass.
+
+    The static schema remains reusable, while these dynamic maxItems=0
+    constraints make the boundary enforceable at generation time.
+    """
+
+    schema = load_json(
+        GROUNDING_SCHEMA_PATH
+    )
+
+    # Deep copy because nested generation constraints are modified below.
+    schema = json.loads(
+        json.dumps(
+            schema,
+            ensure_ascii=False,
+        )
+    )
+
+    relations_properties = (
+        schema
+        .get("properties", {})
+        .get("relations", {})
+        .get("properties", {})
+    )
+
+    for field in (
+        "prerequisites",
+        "next_topics",
+        "related_topics",
+    ):
+        relation_array = (
+            relations_properties.get(
+                field
+            )
+        )
+
+        if isinstance(
+            relation_array,
+            dict,
+        ):
+            relation_array[
+                "maxItems"
+            ] = 0
+
+    if (
+        record
+        and normalize(
+            record.get(
+                "subject"
+            )
+        )
+        == normalize(
+            "Matematik"
+        )
+    ):
+        examples_array = (
+            schema
+            .get("properties", {})
+            .get("examples", {})
+            .get("properties", {})
+            .get("examples")
+        )
+
+        if isinstance(
+            examples_array,
+            dict,
+        ):
+            examples_array[
+                "maxItems"
+            ] = 0
+
+    schema.pop(
+        "$schema",
+        None,
+    )
+    schema.pop(
+        "$id",
+        None,
+    )
+    schema.pop(
+        "title",
+        None,
+    )
+
+    return {
+        "type": "json_schema",
+        "json_schema": {
+            "name": "knowledge_draft",
+            "strict": True,
+            "schema": schema,
+        },
+    }
+
 def generate_one(
     record,
     grade,
     evidence=None,
+    generation_feedback=None,
 ):
     if evidence is None:
         evidence = load_ready_evidence(
@@ -957,6 +2071,7 @@ def generate_one(
         record,
         grade,
         evidence=evidence,
+        generation_feedback=generation_feedback,
     )
 
     response = (
@@ -979,6 +2094,11 @@ def generate_one(
                 },
             ],
             temperature=0.2,
+            response_format=(
+                build_structured_response_format(
+                    record
+                )
+            ),
         )
     )
 
@@ -1002,6 +2122,25 @@ def generate_one(
         package,
         record,
         grade,
+    )
+
+    validate_grounded_generation_schema(
+        package
+    )
+
+    validate_claim_level_provenance(
+        package,
+        evidence,
+    )
+
+    validate_claim_vocabulary_scope(
+        package,
+        evidence,
+    )
+
+    package = canonicalize_grounded_package(
+        package,
+        evidence,
     )
 
     validate_generated_math_package(
@@ -1042,6 +2181,8 @@ def generate_with_retry(
         "UNKNOWN",
     )
 
+    previous_error = None
+
     for attempt in range(
         1,
         max_attempts + 1,
@@ -1051,23 +2192,33 @@ def generate_with_retry(
                 package = generate_one(
                     record,
                     grade,
+                    generation_feedback=previous_error,
                 )
             else:
                 package = generate_one(
                     record,
                     grade,
                     evidence=evidence,
+                    generation_feedback=previous_error,
                 )
 
             return package, attempt
 
         except RETRYABLE_GENERATION_ERRORS as exc:
+            previous_error = str(
+                exc
+            )
+
             if attempt >= max_attempts:
-                raise RuntimeError(
+                error = RuntimeError(
                     f"Generation failed after {max_attempts} "
                     f"attempt(s) for '{topic}'. "
                     f"Last error: {exc}"
-                ) from exc
+                )
+
+                error.attempts_used = attempt
+
+                raise error from exc
 
             print(
                 f"RETRY      | {topic} "
@@ -1468,6 +2619,17 @@ def main():
             generated += 1
 
         except Exception as exc:
+
+            attempts_used = getattr(
+                exc,
+                "attempts_used",
+                1,
+            )
+
+            retries_used += max(
+                0,
+                attempts_used - 1,
+            )
 
             print(
                 f"FAILED     | {topic} "
