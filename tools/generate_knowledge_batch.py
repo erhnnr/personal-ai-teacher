@@ -7,13 +7,19 @@ TYT/AYT curriculum using the local LM Studio model.
 
 Pipeline:
 Curriculum
--> Local LLM Draft
+-> EVIDENCE_READY gate
+-> Evidence-grounded Local LLM Draft
 -> Structural Validation
 -> Deterministic Math Factual Review
 -> DRAFT status report
 
 IMPORTANT:
 Generated content is NOT verified knowledge.
+
+Knowledge Factory V2 rule:
+New generation requires a valid EVIDENCE_READY package.
+The LLM may transform supplied evidence into pedagogical
+structure, but it must not invent unsupported factual claims.
 
 Outputs are written to:
 
@@ -50,6 +56,7 @@ from curriculum_engine import load_curriculum_data
 from llm import client, check_llm_connection
 from validate_knowledge import validate_topic
 from review_math_draft import review_draft
+from evidence_factory import validate_evidence_package
 
 
 RETRYABLE_GENERATION_ERRORS = (
@@ -71,6 +78,14 @@ UNIT_ROOT = (
     / "data"
     / "knowledge"
     / "units"
+)
+
+
+EVIDENCE_ROOT = (
+    PROJECT_ROOT
+    / "data"
+    / "knowledge"
+    / "evidence"
 )
 
 
@@ -221,9 +236,140 @@ def prepare_draft_for_overwrite(
     return False
 
 
+
+def get_evidence_path(
+    subject,
+    grade,
+    topic,
+):
+    """
+    Return the canonical Knowledge Factory V2
+    evidence.json path for one curriculum topic.
+    """
+
+    return (
+        EVIDENCE_ROOT
+        / slugify(subject)
+        / f"grade{grade}"
+        / slugify(topic)
+        / "evidence.json"
+    )
+
+
+def load_ready_evidence(
+    record,
+    grade,
+):
+    """
+    Load and validate the source-grounding package.
+
+    Generation is forbidden when:
+    - evidence.json is missing,
+    - the package is structurally invalid,
+    - source references are not registered,
+    - identity does not match the curriculum record,
+    - status is not EVIDENCE_READY.
+
+    This is the Knowledge Factory V2 hard gate.
+    """
+
+    evidence_path = get_evidence_path(
+        record["subject"],
+        grade,
+        record["topic"],
+    )
+
+    if not evidence_path.exists():
+        raise ValueError(
+            "EVIDENCE_READY required but evidence file "
+            f"is missing: {evidence_path}"
+        )
+
+    evidence = load_json(
+        evidence_path
+    )
+
+    validate_evidence_package(
+        evidence
+    )
+
+    expected_exam = normalize(
+        record.get("exam")
+    )
+
+    expected_subject = normalize(
+        record.get("subject")
+    )
+
+    expected_topic = normalize(
+        record.get("topic")
+    )
+
+    expected_grade = normalize(
+        grade
+    )
+
+    if normalize(
+        evidence.get("exam")
+    ) != expected_exam:
+        raise ValueError(
+            "Evidence exam does not match curriculum record."
+        )
+
+    if normalize(
+        evidence.get("subject")
+    ) != expected_subject:
+        raise ValueError(
+            "Evidence subject does not match curriculum record."
+        )
+
+    if normalize(
+        evidence.get("topic")
+    ) != expected_topic:
+        raise ValueError(
+            "Evidence topic does not match curriculum record."
+        )
+
+    if normalize(
+        evidence.get("grade")
+    ) != expected_grade:
+        raise ValueError(
+            "Evidence grade does not match requested grade."
+        )
+
+    if evidence.get(
+        "status"
+    ) != "EVIDENCE_READY":
+        raise ValueError(
+            "Evidence package is not EVIDENCE_READY."
+        )
+
+    return evidence
+
+
+def build_grounding_context(
+    evidence,
+):
+    """
+    Convert a validated evidence package into the only
+    factual context available to the generation prompt.
+    """
+
+    return json.dumps(
+        {
+            "evidence_id": evidence["id"],
+            "sources": evidence["sources"],
+            "claims": evidence["claims"],
+            "coverage": evidence["coverage"],
+        },
+        ensure_ascii=False,
+        indent=2,
+    )
+
 def build_prompt(
     record,
     grade,
+    evidence=None,
 ):
     """
     Build strict JSON-generation instructions.
@@ -237,6 +383,15 @@ def build_prompt(
         ensure_ascii=False,
         indent=2,
     )
+
+    if evidence is None:
+        grounding_json = (
+            "EVIDENCE NOT SUPPLIED TO PROMPT BUILDER"
+        )
+    else:
+        grounding_json = build_grounding_context(
+            evidence
+        )
 
     math_validation_instruction = ""
 
@@ -320,8 +475,12 @@ Bu içerik otomatik olarak doğrulanmış kabul edilmeyecek.
 
 KURALLAR:
 
-- Bilmediğin ayrıntıyı uydurma.
-- Tartışmalı veya emin olmadığın bilgiyi ekleme.
+- Aşağıdaki EVIDENCE PACKAGE tek güvenilir factual kaynaktır.
+- Model hafızasından yeni tanım, kural, tarih, formül veya factual ayrıntı ekleme.
+- Evidence tarafından desteklenmeyen factual içeriği üretme.
+- Evidence bir alanı desteklemiyorsa o alanı uydurarak doldurma.
+- Müfredat kaydını kapsam/kimlik için kullan; factual kaynak olarak kullanma.
+- Tartışmalı veya evidence içinde olmayan bilgiyi ekleme.
 - Açık, temel ve YKS seviyesinde kal.
 - Yalnızca Türkçe kullan.
 - Matematiksel hesaplamaları dikkatlice kontrol et.
@@ -329,9 +488,14 @@ KURALLAR:
 - Sayısal örneklerde sonucu iki kez kontrol et.
 - Belirsiz integralde +C sabitini unutma.
 - Belirli integral hesaplarında alt ve üst sınırı doğru uygula.
-- Matematiksel bir sonuçtan emin değilsen o örneği üretme.
+- Matematiksel bir sonuç evidence ile desteklenmiyorsa üretme.
+- Çıktının her factual parçası evidence claim'leriyle izlenebilir olmalıdır.
 
 {math_validation_instruction}
+
+EVIDENCE PACKAGE:
+
+{grounding_json}
 
 MÜFREDAT KAYDI:
 
@@ -547,6 +711,7 @@ def save_draft(
     record,
     grade,
     package,
+    evidence=None,
 ):
     """
     Save generated package as DRAFT.
@@ -599,6 +764,23 @@ def save_draft(
         "priority": record.get("priority"),
         "structure_status": None,
         "factual_review_status": None,
+        "source_grounded": evidence is not None,
+        "evidence_id": (
+            evidence.get("id")
+            if evidence
+            else None
+        ),
+        "evidence_sources": (
+            [
+                item.get("source_id")
+                for item in evidence.get(
+                    "sources",
+                    []
+                )
+            ]
+            if evidence
+            else []
+        ),
         "warning": (
             "Structural or deterministic validation "
             "does not constitute full factual verification."
@@ -763,10 +945,18 @@ def validate_generated_math_package(
 def generate_one(
     record,
     grade,
+    evidence=None,
 ):
+    if evidence is None:
+        evidence = load_ready_evidence(
+            record,
+            grade,
+        )
+
     prompt = build_prompt(
         record,
         grade,
+        evidence=evidence,
     )
 
     response = (
@@ -826,6 +1016,7 @@ def generate_with_retry(
     record,
     grade,
     max_attempts=3,
+    evidence=None,
 ):
     """
     Generate one package with bounded retries.
@@ -856,10 +1047,17 @@ def generate_with_retry(
         max_attempts + 1,
     ):
         try:
-            package = generate_one(
-                record,
-                grade,
-            )
+            if evidence is None:
+                package = generate_one(
+                    record,
+                    grade,
+                )
+            else:
+                package = generate_one(
+                    record,
+                    grade,
+                    evidence=evidence,
+                )
 
             return package, attempt
 
@@ -975,7 +1173,7 @@ def run_automated_reviews(
 def main():
     parser = argparse.ArgumentParser(
         description=(
-            "Generate local-LLM knowledge drafts "
+            "Generate evidence-grounded local-LLM knowledge drafts "
             "from curriculum records."
         )
     )
@@ -1074,6 +1272,7 @@ def main():
     generated = 0
     skipped_units = 0
     skipped_drafts = 0
+    skipped_evidence = 0
     failed = 0
     retries_used = 0
 
@@ -1145,6 +1344,21 @@ def main():
             skipped_units += 1
             continue
 
+        try:
+            evidence = load_ready_evidence(
+                record,
+                args.grade,
+            )
+
+        except Exception as exc:
+            print(
+                f"SKIP EVID  | {topic} "
+                f"| {exc}"
+            )
+
+            skipped_evidence += 1
+            continue
+
         draft_path = get_draft_path(
             record["subject"],
             args.grade,
@@ -1188,6 +1402,7 @@ def main():
                 record,
                 args.grade,
                 max_attempts=args.max_attempts,
+                evidence=evidence,
             )
 
             retries_used += (
@@ -1198,6 +1413,7 @@ def main():
                 record,
                 args.grade,
                 package,
+                evidence=evidence,
             )
 
             (
@@ -1284,6 +1500,10 @@ def main():
 
     print(
         f"Existing drafts        : {skipped_drafts}"
+    )
+
+    print(
+        f"Missing/not-ready evidence: {skipped_evidence}"
     )
 
     print(
