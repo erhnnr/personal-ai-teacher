@@ -1,0 +1,14 @@
+{
+  "version": "2.0",
+  "purpose": "Knowledge Factory V2 authoritative source registry",
+  "policy": {
+    "factual_grounding_requires_registered_source": true,
+    "preferred_publishers": [
+      "MEB",
+      "OGM Materyal",
+      "ÖSYM"
+    ],
+    "student_visible_content_requires_evidence_package": true
+  },
+  "sources": []
+}
