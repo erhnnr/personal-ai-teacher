@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Official Curriculum Registry",
+  "type": "object",
+  "required": [
+    "version",
+    "kind",
+    "authority",
+    "curriculum_model",
+    "subject",
+    "grades",
+    "source_document",
+    "source_page_count",
+    "total_learning_outcomes",
+    "grade_records"
+  ],
+  "properties": {
+    "version": {
+      "type": "string"
+    },
+    "kind": {
+      "const": "OFFICIAL_CURRICULUM_REGISTRY"
+    },
+    "authority": {
+      "type": "string"
+    },
+    "curriculum_model": {
+      "type": "string"
+    },
+    "subject": {
+      "type": "string"
+    },
+    "grades": {
+      "type": "array",
+      "items": {
+        "type": "integer"
+      }
+    },
+    "source_document": {
+      "type": "string"
+    },
+    "source_page_count": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "total_learning_outcomes": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "grade_records": {
+      "type": "array"
+    }
+  }
+}

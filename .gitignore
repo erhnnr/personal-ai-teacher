@@ -17,3 +17,7 @@ data/knowledge/drafts/
 *.zip
 data/knowledge/corpus/official_corpus_lexical_index.json
 data/knowledge/corpus/local_official_manifest.json
+data/knowledge/corpus/local_page_bundle_index.json
+local_corpus_extracted/
+2024program*Onayli.pdf
+din-kulturu-ve-ahlak-bilgisi-9.pdf
