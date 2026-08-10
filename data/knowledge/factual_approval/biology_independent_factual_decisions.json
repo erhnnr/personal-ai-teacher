@@ -1,0 +1,198 @@
+{
+  "version": "1.0",
+  "kind": "independent_factual_decision_manifest",
+  "subject": "Biyoloji",
+  "review_method": "External LLM review of the supplied official-MEB evidence packet, with conservative scope checking and independent cross-checks for approved scientific claims.",
+  "decisions": [
+    {
+      "record_id": "BİY.9.2.1::MEBI-TYT-BIYOLOJI::p18",
+      "status": "MANUAL_REVIEW_REQUIRED",
+      "reviewer_type": "EXTERNAL_LLM",
+      "reviewer_id": "openai-gpt-5.6-sol-external-review-2026-08-10",
+      "factual_support": false,
+      "outcome_support": false,
+      "source_consistency": true,
+      "rationale": "Kaynak sayfası inorganik bileşiklerden özellikle tuzlar ve mineralleri destekliyor; ancak kazanımın geniş 'inorganik moleküllerin önemi' kapsamını tek başına yeterince karşılamıyor. Ayrıca sayfadaki bazı sağlık etkisi ifadeleri bağımsız uzman kontrolü gerektiriyor."
+    },
+    {
+      "record_id": "BİY.9.2.6::MEBI-TYT-BIYOLOJI::p64",
+      "status": "MANUAL_REVIEW_REQUIRED",
+      "reviewer_type": "EXTERNAL_LLM",
+      "reviewer_id": "openai-gpt-5.6-sol-external-review-2026-08-10",
+      "factual_support": false,
+      "outcome_support": true,
+      "source_consistency": true,
+      "rationale": "Sayfa hücre zarından madde geçişlerini pasif/aktif taşıma ve endositoz/ekzositoz olarak açıkça sınıflandırıyor ve kazanımı destekliyor. Ancak yük işaretine göre zar geçirgenliği gibi genellenmiş ifadeler bağımsız biyoloji uzmanı kontrolü gerektirdiğinden factual_support tam onaylanmadı."
+    },
+    {
+      "record_id": "BİY.9.2.7::MEBI-TYT-BIYOLOJI::p64",
+      "status": "REJECTED",
+      "reviewer_type": "EXTERNAL_LLM",
+      "reviewer_id": "openai-gpt-5.6-sol-external-review-2026-08-10",
+      "factual_support": true,
+      "outcome_support": false,
+      "source_consistency": true,
+      "rationale": "Sayfa pasif taşımanın kuramsal açıklamasını veriyor; fakat deney tasarımı, değişkenler, yöntem veya gözlem/sonuç yapısı içermediği için 'deney yapabilme' kazanımını yeterince desteklemiyor."
+    },
+    {
+      "record_id": "BİY.10.1.1::MEBI-TYT-BIYOLOJI::p10",
+      "status": "APPROVED_FOR_EVIDENCE_READY",
+      "reviewer_type": "EXTERNAL_LLM",
+      "reviewer_id": "openai-gpt-5.6-sol-external-review-2026-08-10",
+      "factual_support": true,
+      "outcome_support": true,
+      "source_consistency": true,
+      "rationale": "Sayfa canlıların büyüme, onarım ve düzenleyici faaliyetler için besine ve enerjiye ihtiyaç duyduğunu açıkça ilişkilendiriyor. Bu temel biyolojik ilişki bağımsız kaynaklarla da uyumlu."
+    },
+    {
+      "record_id": "BİY.10.1.6::MEBI-TYT-BIYOLOJI::p24",
+      "status": "REJECTED",
+      "reviewer_type": "EXTERNAL_LLM",
+      "reviewer_id": "openai-gpt-5.6-sol-external-review-2026-08-10",
+      "factual_support": true,
+      "outcome_support": false,
+      "source_consistency": true,
+      "rationale": "Sayfa karbonhidratların enerji kaynağı olarak önemini açıklıyor; ancak sindirim, emilim ve taşıma süreçlerinin birlikte gerekliliğini açıklamıyor. Kazanım için kaynak kapsamı yetersiz."
+    },
+    {
+      "record_id": "BİY.10.2.1::MEBI-TYT-BIYOLOJI::p146",
+      "status": "APPROVED_FOR_EVIDENCE_READY",
+      "reviewer_type": "EXTERNAL_LLM",
+      "reviewer_id": "openai-gpt-5.6-sol-external-review-2026-08-10",
+      "factual_support": true,
+      "outcome_support": true,
+      "source_consistency": true,
+      "rationale": "Sayfa ekosistemi canlı komüniteler ile fiziksel/cansız çevrenin etkileşimi olarak tanımlıyor ve biyotik-abiyotik bileşenler arasındaki ilişkiyi doğrudan destekliyor. Bağımsız ekoloji kaynaklarıyla uyumlu."
+    },
+    {
+      "record_id": "BİY.10.2.7::MEBI-TYT-BIYOLOJI::p166",
+      "status": "APPROVED_FOR_EVIDENCE_READY",
+      "reviewer_type": "EXTERNAL_LLM",
+      "reviewer_id": "openai-gpt-5.6-sol-external-review-2026-08-10",
+      "factual_support": true,
+      "outcome_support": true,
+      "source_consistency": true,
+      "rationale": "Sayfa ekolojik ayak izini tanımlıyor ve yenilenebilir enerji, israfın azaltılması, su/elektrik/kâğıt tasarrufu gibi küçültme yollarını doğrudan veriyor. Kazanım için yeterli ve kaynakla tutarlı."
+    },
+    {
+      "record_id": "BİY.10.2.8::MEBI-TYT-BIYOLOJI::p8",
+      "status": "REJECTED",
+      "reviewer_type": "EXTERNAL_LLM",
+      "reviewer_id": "openai-gpt-5.6-sol-external-review-2026-08-10",
+      "factual_support": true,
+      "outcome_support": false,
+      "source_consistency": true,
+      "rationale": "Evidence text esas olarak içindekiler/kapsam listesidir; doğal kaynakların ve biyoçeşitliliğin korunması için alınan önlemleri açıklayan içerik sunmuyor. Yalnız ilgili sayfalara işaret ediyor."
+    },
+    {
+      "record_id": "BİY.11.1.2::MEBI-AYT-BIYOLOJI::p8",
+      "status": "REJECTED",
+      "reviewer_type": "EXTERNAL_LLM",
+      "reviewer_id": "openai-gpt-5.6-sol-external-review-2026-08-10",
+      "factual_support": true,
+      "outcome_support": false,
+      "source_consistency": true,
+      "rationale": "Evidence text içindekiler sayfasıdır ve bitki hormonları konusunun sayfa numarasını gösterir; hormonların meyve olgunlaşması ve gelişim üzerindeki etkilerini açıklamaz. Kazanım desteği yok."
+    },
+    {
+      "record_id": "BİY.11.1.7::MEBI-AYT-BIYOLOJI::p23",
+      "status": "REJECTED",
+      "reviewer_type": "EXTERNAL_LLM",
+      "reviewer_id": "openai-gpt-5.6-sol-external-review-2026-08-10",
+      "factual_support": true,
+      "outcome_support": false,
+      "source_consistency": true,
+      "rationale": "Sayfanın ana konusu endokrin bezler ve hormonlardır. Sinir sisteminin yalnızca endokrin sistemle birlikte görev yaptığı belirtiliyor; sinir sisteminin yapısını çözümlemeye yetecek anatomik/işlevsel içerik yok."
+    },
+    {
+      "record_id": "BİY.11.1.10::MEBI-AYT-BIYOLOJI::p58",
+      "status": "MANUAL_REVIEW_REQUIRED",
+      "reviewer_type": "EXTERNAL_LLM",
+      "reviewer_id": "openai-gpt-5.6-sol-external-review-2026-08-10",
+      "factual_support": true,
+      "outcome_support": false,
+      "source_consistency": true,
+      "rationale": "Sayfa kas seğirmesinin gizli, kasılma ve gevşeme evrelerini ve uyarı sıklığının etkisini destekliyor; ancak kazanımdaki kasılma-gevşeme mekanizmasının tam bilimsel modeli için aktin-miyozin, Ca2+ ve çapraz-köprü mekanizması bu sayfada yeterince açıklanmıyor."
+    },
+    {
+      "record_id": "BİY.11.2.3::MEBI-AYT-BIYOLOJI::p127",
+      "status": "APPROVED_FOR_EVIDENCE_READY",
+      "reviewer_type": "EXTERNAL_LLM",
+      "reviewer_id": "openai-gpt-5.6-sol-external-review-2026-08-10",
+      "factual_support": true,
+      "outcome_support": true,
+      "source_consistency": true,
+      "rationale": "Sayfa menstrual döngü üzerinden pozitif ve negatif geri bildirimi açıkça karşılaştırılabilir biçimde gösteriyor; östrojen/LH pozitif geri bildirimi ve luteal evredeki negatif geri bildirim bağımsız fizyoloji kaynaklarıyla uyumlu."
+    },
+    {
+      "record_id": "BİY.11.2.4::MEBI-AYT-BIYOLOJI::p23",
+      "status": "REJECTED",
+      "reviewer_type": "EXTERNAL_LLM",
+      "reviewer_id": "openai-gpt-5.6-sol-external-review-2026-08-10",
+      "factual_support": true,
+      "outcome_support": false,
+      "source_consistency": true,
+      "rationale": "Sayfa homeostazide sinir ve endokrin sistemin birlikte görev yaptığını belirtse de sinir sisteminin homeostazi üzerindeki etkilerini çözümlemek için gerekli sinirsel kontrol mekanizmalarını açıklamıyor."
+    },
+    {
+      "record_id": "BİY.11.2.6::MEBI-AYT-BIYOLOJI::p83",
+      "status": "MANUAL_REVIEW_REQUIRED",
+      "reviewer_type": "EXTERNAL_LLM",
+      "reviewer_id": "openai-gpt-5.6-sol-external-review-2026-08-10",
+      "factual_support": true,
+      "outcome_support": false,
+      "source_consistency": true,
+      "rationale": "Sayfa damar yapısı, kan akışı ve kılcal-doku sıvısı alışverişi hakkında doğru ve ilgili temel bilgiler veriyor; fakat dolaşım sistemi-homeostazi ilişkisini bütüncül bir model olarak doğrudan kurmuyor. Ek/komşu sayfa desteği gerekli."
+    },
+    {
+      "record_id": "BİY.12.1.3::MEBI-AYT-BIYOLOJI::p157",
+      "status": "APPROVED_FOR_EVIDENCE_READY",
+      "reviewer_type": "EXTERNAL_LLM",
+      "reviewer_id": "openai-gpt-5.6-sol-external-review-2026-08-10",
+      "factual_support": true,
+      "outcome_support": true,
+      "source_consistency": true,
+      "rationale": "Sayfa DNA, gen, histon, nükleozom, kromatin ve kromozom ilişkisini doğrudan açıklıyor. Ökaryotik DNA'nın histonlar etrafında paketlenmesi ve kromatinin kromozoma yoğunlaşması bağımsız hücre biyolojisi kaynaklarıyla uyumlu."
+    },
+    {
+      "record_id": "BİY.12.1.7::MEBI-AYT-BIYOLOJI::p133",
+      "status": "REJECTED",
+      "reviewer_type": "EXTERNAL_LLM",
+      "reviewer_id": "openai-gpt-5.6-sol-external-review-2026-08-10",
+      "factual_support": true,
+      "outcome_support": false,
+      "source_consistency": true,
+      "rationale": "Evidence text embriyonik/fetal gelişim, göbek kordonu ve doğum sürecini anlatıyor; üreme hücrelerinin oluşum süreçlerini ve yapılarını karşılaştırmıyor. Kazanımla kaynak eşleşmesi yanlış."
+    },
+    {
+      "record_id": "BİY.12.1.8::MEBI-AYT-BIYOLOJI::p232",
+      "status": "APPROVED_FOR_EVIDENCE_READY",
+      "reviewer_type": "EXTERNAL_LLM",
+      "reviewer_id": "openai-gpt-5.6-sol-external-review-2026-08-10",
+      "factual_support": true,
+      "outcome_support": true,
+      "source_consistency": true,
+      "rationale": "Sayfa bitkilerde eşeysiz ve eşeyli üremeyi kalıtsal benzerlik/genetik çeşitlilik açısından doğrudan karşılaştırıyor. Temel çıkarımlar bağımsız biyoloji kaynaklarıyla uyumlu."
+    },
+    {
+      "record_id": "BİY.12.1.9::MEBI-AYT-BIYOLOJI::p234",
+      "status": "REJECTED",
+      "reviewer_type": "EXTERNAL_LLM",
+      "reviewer_id": "openai-gpt-5.6-sol-external-review-2026-08-10",
+      "factual_support": true,
+      "outcome_support": false,
+      "source_consistency": true,
+      "rationale": "Sayfa çiçekli bitkilerde erkek ve dişi üreme hücrelerinin oluşumunu açıklıyor; ancak kazanımın istediği erkek ve dişi üreme sistemlerinin yapı ve işleyişini bütüncül olarak ele almıyor. Gamet oluşumu ile üreme sistemi yapısı aynı kapsam değildir."
+    },
+    {
+      "record_id": "BİY.12.2.1::MEBI-AYT-BIYOLOJI::p151",
+      "status": "MANUAL_REVIEW_REQUIRED",
+      "reviewer_type": "EXTERNAL_LLM",
+      "reviewer_id": "openai-gpt-5.6-sol-external-review-2026-08-10",
+      "factual_support": true,
+      "outcome_support": false,
+      "source_consistency": true,
+      "rationale": "Sayfa DNA'nın kalıtsal materyal olduğuna ilişkin Hershey-Chase deneyini ve DNA modelinin tarihsel gelişimini destekliyor; ancak nükleik asitlerin yapısı ve canlılıktaki rolünü birlikte ve yeterli kapsamda açıklamıyor. Yapı için ek sayfa desteği gerekiyor."
+    }
+  ]
+}

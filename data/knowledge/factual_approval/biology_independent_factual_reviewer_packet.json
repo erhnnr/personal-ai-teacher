@@ -1,0 +1,647 @@
+{
+  "version": "1.0",
+  "kind": "independent_factual_reviewer_packet",
+  "subject": "Biyoloji",
+  "packet_count": 19,
+  "instructions": "Review each item independently. Do not approve solely because a prior deterministic gate passed. APPROVED_FOR_EVIDENCE_READY requires factual_support=true, outcome_support=true, and source_consistency=true.",
+  "items": [
+    {
+      "record_id": "BİY.9.2.1::MEBI-TYT-BIYOLOJI::p18",
+      "outcome_id": "BİY.9.2.1",
+      "grade": 9,
+      "theme_name": "Organizasyon",
+      "outcome_title": "İnorganik moleküllerin önemi hakkında bilimsel çıkarım yapabilme",
+      "source_package": "MEBI-TYT-BIYOLOJI",
+      "source_page": 18,
+      "source_anchor": "tyt-biyoloji/index.html#p=18",
+      "text_sha256": "c16def1c3f94da8ce9876fd8df0a4b3ba4e23788c74b0f22a9da7d39425ef1e1",
+      "matched_title_tokens": [
+        "inorganik",
+        "moleküllerin",
+        "önemi"
+      ],
+      "evidence_text": "İNORGANİK BİLEŞİKLERİN GENEL ÖZELLİKLERİ VE CANLILAR İÇİN ÖNEMİ\n\nTuzlar ve Mineraller\n\nTuzlar\nAsitlerin ve bazların nötrleşme tepkimesi ile birleşmesi sonucunda tuz ve su oluşur.\nÖrn: Hidroklorik asit (HCl) ve sodyum hidroksitin (NaOH) birleşmesi sonucu sofra tuzu olarak bilinen sodyum klorür (NaCl)\nve su (H O) meydana gelir.\n2\n\nHCI + NaOH NaCI + H O\n2\n\nTuzun canlı vücuduna az ya da çok alınması sağlık sorunlarına neden olabilir. Tuzun gereğinden az alınması yorgunluk ve\nkan şekerinin yükselmesi, fazla alınması durumunda ise yüksek tansiyon, kalp-damar hastalıkları, böbrek rahatsızlıkları ve\nbağırsak iltihaplanmaları gibi sağlık sorunlarına yol açabilir.\n\nMineraller\nCanlılarda organik moleküllerin yapısına katılan ve bazı bileşik enzimleri aktive eden inorganik maddelerdir. Canlılar yaşa-\ndığı ortamdan su ve besinler aracılığıyla mineralleri hazır olarak alır. Her mineralin kendine özgü görevi vardır. Bu sebeple\nvücuttaki bir mineralin eksikliği başka bir mineral ile giderilemez. Mineraller idrar, ter ve dışkı ile vücut dışına atıldığından\nmineral içeren besinler düzenli olarak vücuda alınmalıdır. Mineraller, hücre içinde ve hücreler arası boşluklarda tuz hâlinde\nde bulunabilir.\nİnsan Vücudunun Gereksinim Duyduğu Bazı Mineraller ve Görevleri\n\nKlor\n• Hücre içi ve hücreler arası sıvıda su dengesinin ve suyun pH değerinin ayarlanmasında görev alır.\n• Mide hücrelerinden salgılanarak, midede görev alan sindirim enzimlerini H ile birleştirerek aktifleştirir.\n+\n• Yetersiz alınması, sindirim sistemi ve büyüme bozukluklarına neden olur.\nKaynak Besinler: Sofra tuzu, et, süt, süt ürünleri, taze sebzelerdir.\n\nKükürt\n• Amino asitlerin yapısına katılır.\n• Saç, tırnak ve cilt sağlığı için gereklidir.\n• Eksikliğinde büyüme bozuklukları, saçta dökülme, deri renginde solma görülür.\nKaynak Besinler: Süt, et, balık, yumurta, fasulye, fındık, fıstık, bademdir.\nİyot\n• Tiroit bezinden salgılanan tiroksin hormonunun yapısında bulunur.\n• Büyüme çağında yeterince iyot alınmazsa tiroksin eksikliği sonucu cücelik, çarpık bacaklılık, zekâ geriliği gibi\nhastalıklar görülebilir.\n• İyot eksikliği sonucunda tiroit bezi büyüyüp guatr hastalığına neden olabilir.\nKaynak Besinler: Deniz ürünleri, iyotlu tuzdur.\n\nMagnezyum\n• Kemik ve dişlerin yapısına katılır.\n• Kasların çalışmasında, ATP üretiminde, karbonhidrat ve protein metabolizmasında görev alır.\n• Yetersiz alınması kaslarda kramplara, büyümenin yavaşlamasına, saç dökülmesine, yorgunluk hissine neden olur.\n• Bitkilerde klorofil pigmentinin yapısında vardır.\nKaynak Besinler: Kuru yemişler, baklagiller, soya fasulyesi, kabuklu deniz ürünleri, kakao, peynirdir.\n\n18 MEBİ KONU ÖZETLERİ BİYOLOJİ - TYT",
+      "review_questions": {
+        "factual_support": "Is the factual content in the evidence text correct within the official source context?",
+        "outcome_support": "Does this evidence text directly and sufficiently support the stated curriculum outcome?",
+        "source_consistency": "Is the evidence text consistent with the cited official source page and provenance?"
+      },
+      "required_decision_fields": {
+        "status": "APPROVED_FOR_EVIDENCE_READY | MANUAL_REVIEW_REQUIRED | REJECTED",
+        "reviewer_type": "HUMAN | EXTERNAL_LLM",
+        "reviewer_id": "required",
+        "factual_support": "boolean",
+        "outcome_support": "boolean",
+        "source_consistency": "boolean",
+        "rationale": "required"
+      },
+      "evidence_status": "NOT_READY",
+      "student_visible": false
+    },
+    {
+      "record_id": "BİY.9.2.6::MEBI-TYT-BIYOLOJI::p64",
+      "outcome_id": "BİY.9.2.6",
+      "grade": 9,
+      "theme_name": "Organizasyon",
+      "outcome_title": "Hücre zarından madde geçişlerini sınıflandırabilme",
+      "source_package": "MEBI-TYT-BIYOLOJI",
+      "source_page": 64,
+      "source_anchor": "tyt-biyoloji/index.html#p=64",
+      "text_sha256": "28d3dda4ff0f5d23e22cbac3265fc6d4b00b957a865b1b7136a23b4d44094b49",
+      "matched_title_tokens": [
+        "hücre",
+        "zarindan",
+        "madde"
+      ],
+      "evidence_text": "BİYOLOJİ\n\nKONU HÜCRE ZARINDAN MADDE GEÇİŞLERİ, BASİT DİFÜZYON,\nÖZETİ KOLAYLAŞTIRILMIŞ DİFÜZYON\nTYT TYT TYT TYT TYT TYT TYT TYT TYT TYT TYT TYT\n\nHÜCRE ZARINDAN MADDE GEÇİŞLERİ\nHücre zarı canlı, seçici geçirgen özellikte bir yapıdır.\nHücre zarının en önemli görevlerinden biri de hücreye madde giriş ve çıkışını kontrol etmektir. Hücre zarından madde\ngeçişlerinde maddenin; büyüklüğü, elektrik yükü, yağda veya suda çözünebilme özelliği ve konsantrasyonu maddenin\ntaşınma şeklini belirler.\n\nHücre Zarından Madde Geçişleri\n\nKüçük Moleküllerin Taşınması Büyük Moleküllerin Taşınması\n\n• Pasif Taşıma • Endositoz\n\n– Difüzyon – Fagositoz\n\n– Osmoz – Pinositoz\n\n• Aktif Taşıma • Ekzositoz\n\nKRİTİK BİLGİ\n\n• Glikoz, fruktoz, galaktoz, amino asit, yağ asiti, gliserol gibi küçük organik moleküller ile su, mineral, iyonlar gibi\ninorganik moleküller büyük moleküllere göre hücre zarından daha kolay geçer.\n• Nötr atomlar negatif iyonlara, negatif iyonlar da pozitif iyonlara göre hücre zarından daha kolay geçer.\n• Yağı çözen ve yağda çözünen maddeler, suda çözünenlerden daha hızlı geçer.\n\nDİKKAT\n\nHücre zarında uyarıları algılayan, reseptör olarak görev yapan, hücrelerin birbirini tanımasını sağlayan ve hücre zarının\nseçici geçirgenliğini denetleyen moleküller glikoproteinler ve glikolipitlerdir.\n\nKÜÇÜK MOLEKÜLLERİN TAŞINMASI\n\nPASİF TAŞIMA\n• Küçük moleküllerin çok yoğun ortamdan az yoğun ortama doğru seçici geçirgen zardan difüzyonudur.\n• Canlı ve cansız ortamlarda gerçekleşebilir.\n• ATP harcanmaz.\n\n• Gerekli enerji moleküllerin kinetik enerjisinden sağlanır.\n• Moleküller, zarda bulunan fosfolipit tabakadan ya da protein kanallarından yoğunluk farkı her iki tarafta eşitlenin-\nceye kadar geçiş yapar.\n\n64 MEBİ KONU ÖZETLERİ BİYOLOJİ - TYT",
+      "review_questions": {
+        "factual_support": "Is the factual content in the evidence text correct within the official source context?",
+        "outcome_support": "Does this evidence text directly and sufficiently support the stated curriculum outcome?",
+        "source_consistency": "Is the evidence text consistent with the cited official source page and provenance?"
+      },
+      "required_decision_fields": {
+        "status": "APPROVED_FOR_EVIDENCE_READY | MANUAL_REVIEW_REQUIRED | REJECTED",
+        "reviewer_type": "HUMAN | EXTERNAL_LLM",
+        "reviewer_id": "required",
+        "factual_support": "boolean",
+        "outcome_support": "boolean",
+        "source_consistency": "boolean",
+        "rationale": "required"
+      },
+      "evidence_status": "NOT_READY",
+      "student_visible": false
+    },
+    {
+      "record_id": "BİY.9.2.7::MEBI-TYT-BIYOLOJI::p64",
+      "outcome_id": "BİY.9.2.7",
+      "grade": 9,
+      "theme_name": "Organizasyon",
+      "outcome_title": "Küçük moleküllerin hücre zarından pasif geçişi ile ilgili deney yapabilme",
+      "source_package": "MEBI-TYT-BIYOLOJI",
+      "source_page": 64,
+      "source_anchor": "tyt-biyoloji/index.html#p=64",
+      "text_sha256": "28d3dda4ff0f5d23e22cbac3265fc6d4b00b957a865b1b7136a23b4d44094b49",
+      "matched_title_tokens": [
+        "küçük",
+        "moleküllerin",
+        "hücre",
+        "zarindan",
+        "pasif"
+      ],
+      "evidence_text": "BİYOLOJİ\n\nKONU HÜCRE ZARINDAN MADDE GEÇİŞLERİ, BASİT DİFÜZYON,\nÖZETİ KOLAYLAŞTIRILMIŞ DİFÜZYON\nTYT TYT TYT TYT TYT TYT TYT TYT TYT TYT TYT TYT\n\nHÜCRE ZARINDAN MADDE GEÇİŞLERİ\nHücre zarı canlı, seçici geçirgen özellikte bir yapıdır.\nHücre zarının en önemli görevlerinden biri de hücreye madde giriş ve çıkışını kontrol etmektir. Hücre zarından madde\ngeçişlerinde maddenin; büyüklüğü, elektrik yükü, yağda veya suda çözünebilme özelliği ve konsantrasyonu maddenin\ntaşınma şeklini belirler.\n\nHücre Zarından Madde Geçişleri\n\nKüçük Moleküllerin Taşınması Büyük Moleküllerin Taşınması\n\n• Pasif Taşıma • Endositoz\n\n– Difüzyon – Fagositoz\n\n– Osmoz – Pinositoz\n\n• Aktif Taşıma • Ekzositoz\n\nKRİTİK BİLGİ\n\n• Glikoz, fruktoz, galaktoz, amino asit, yağ asiti, gliserol gibi küçük organik moleküller ile su, mineral, iyonlar gibi\ninorganik moleküller büyük moleküllere göre hücre zarından daha kolay geçer.\n• Nötr atomlar negatif iyonlara, negatif iyonlar da pozitif iyonlara göre hücre zarından daha kolay geçer.\n• Yağı çözen ve yağda çözünen maddeler, suda çözünenlerden daha hızlı geçer.\n\nDİKKAT\n\nHücre zarında uyarıları algılayan, reseptör olarak görev yapan, hücrelerin birbirini tanımasını sağlayan ve hücre zarının\nseçici geçirgenliğini denetleyen moleküller glikoproteinler ve glikolipitlerdir.\n\nKÜÇÜK MOLEKÜLLERİN TAŞINMASI\n\nPASİF TAŞIMA\n• Küçük moleküllerin çok yoğun ortamdan az yoğun ortama doğru seçici geçirgen zardan difüzyonudur.\n• Canlı ve cansız ortamlarda gerçekleşebilir.\n• ATP harcanmaz.\n\n• Gerekli enerji moleküllerin kinetik enerjisinden sağlanır.\n• Moleküller, zarda bulunan fosfolipit tabakadan ya da protein kanallarından yoğunluk farkı her iki tarafta eşitlenin-\nceye kadar geçiş yapar.\n\n64 MEBİ KONU ÖZETLERİ BİYOLOJİ - TYT",
+      "review_questions": {
+        "factual_support": "Is the factual content in the evidence text correct within the official source context?",
+        "outcome_support": "Does this evidence text directly and sufficiently support the stated curriculum outcome?",
+        "source_consistency": "Is the evidence text consistent with the cited official source page and provenance?"
+      },
+      "required_decision_fields": {
+        "status": "APPROVED_FOR_EVIDENCE_READY | MANUAL_REVIEW_REQUIRED | REJECTED",
+        "reviewer_type": "HUMAN | EXTERNAL_LLM",
+        "reviewer_id": "required",
+        "factual_support": "boolean",
+        "outcome_support": "boolean",
+        "source_consistency": "boolean",
+        "rationale": "required"
+      },
+      "evidence_status": "NOT_READY",
+      "student_visible": false
+    },
+    {
+      "record_id": "BİY.10.1.1::MEBI-TYT-BIYOLOJI::p10",
+      "outcome_id": "BİY.10.1.1",
+      "grade": 10,
+      "theme_name": "Enerji",
+      "outcome_title": "Canlıların yaşamına devam edebilmesi için enerjinin gerekliliğini sorgulayabilme",
+      "source_package": "MEBI-TYT-BIYOLOJI",
+      "source_page": 10,
+      "source_anchor": "tyt-biyoloji/index.html#p=10",
+      "text_sha256": "8b4f794bf6a00b4dd735240a7cf25ff26b19d9ed972b836d9d9f5189c4fb584c",
+      "matched_title_tokens": [
+        "canlilarin",
+        "devam",
+        "için",
+        "enerjinin"
+      ],
+      "evidence_text": "CANLILARIN ORTAK ÖZELLİKLERİ\n\n2. Çekirdeğe ve zarlı organellere sahip olan hücrelere ökaryot hücre denir. Öglena, paramesyum, amip, algler, mantarlar,\nbitkiler ve hayvanlar ökaryot hücre yapısına sahip canlılardır.\n\nAmip Mantar Bitkiler Hayvanlar\nCanlıların bazıları tek hücreli bazıları ise çok hücrelidir. Öglena, amip, paramesyum ve bakteri gibi canlılar tek hücreli olup\ngözle görülemez. Şapkalı mantarlar, bitkiler ve hayvanlar ise çok hücreli canlılardır ve gözle görülebilir.\n\nKRİTİK BİLGİ DİKKAT\nÖkaryot hücrelere özgü tek ya da çift katlı zara sahip Her tek hücreli canlı prokaryot değildir. Ökaryot tek hücreli\nhücre birimlerine organel denir. Prokaryot hücrelerde ise canlılar da vardır. Ancak her prokaryort canlı tek hücrelidir.\nzarlı organel bulunmaz.\n\nBeslenme\nCanlılar; büyüyüp gelişmek, yıpranan doku ve organlarını onarmak, enerji elde etmek ve düzenleyici faaliyetlerini devam\nettirebilmek için besin maddelerine ihtiyaç duyar.\nCanlıların bir kısmı yaşadığı ortamdan su, mineral ve karbondioksit gibi inorganik maddeleri alıp güneş enerjisini veya\nkimyasal enerjiyi kullanarak ihtiyaç duyduğu organik besini üretir. Bu canlılara üretici (ototrof) canlılar denir.\nBitkiler (tam parazit bitkiler hariç), algler (su yosunları) ve bazı tek hücreli canlılar üreticidir.\n\nYeşil bitkiler Fotosentetik bakteriler\nCanlıların diğer bir kısmı ise inorganik maddelerden ihtiyaç duyduğu organik besinleri üretemez. Besinlerini yaşadıkları\nortamdan hazır olarak alırlar. Bu canlılara tüketici (heterotrof) canlılar denir. Hayvanlar, mantarlar ve bazı tek hücreli\ncanlılar tüketicidir.\n\nOtla beslenen panda Etle beslenen aslan\n\nDİKKAT\nBesinler, metabolik enerjinin ham maddesidir; hücrelerin yapı malzemesidir.\n\n10 MEBİ KONU ÖZETLERİ BİYOLOJİ - TYT",
+      "review_questions": {
+        "factual_support": "Is the factual content in the evidence text correct within the official source context?",
+        "outcome_support": "Does this evidence text directly and sufficiently support the stated curriculum outcome?",
+        "source_consistency": "Is the evidence text consistent with the cited official source page and provenance?"
+      },
+      "required_decision_fields": {
+        "status": "APPROVED_FOR_EVIDENCE_READY | MANUAL_REVIEW_REQUIRED | REJECTED",
+        "reviewer_type": "HUMAN | EXTERNAL_LLM",
+        "reviewer_id": "required",
+        "factual_support": "boolean",
+        "outcome_support": "boolean",
+        "source_consistency": "boolean",
+        "rationale": "required"
+      },
+      "evidence_status": "NOT_READY",
+      "student_visible": false
+    },
+    {
+      "record_id": "BİY.10.1.6::MEBI-TYT-BIYOLOJI::p24",
+      "outcome_id": "BİY.10.1.6",
+      "grade": 10,
+      "theme_name": "Enerji",
+      "outcome_title": "İnsanda enerji eldesi için sindirim, emilim ve taşıma süreçlerinin gerekliliği ile ilgili bilimsel çıkarım yapabilme",
+      "source_package": "MEBI-TYT-BIYOLOJI",
+      "source_page": 24,
+      "source_anchor": "tyt-biyoloji/index.html#p=24",
+      "text_sha256": "096ce096d0292be6d75294e725081f0dceef0983569d048e8c2d507beb32c18c",
+      "matched_title_tokens": [
+        "insanda",
+        "enerji",
+        "eldesi",
+        "için",
+        "sindirim"
+      ],
+      "evidence_text": "ORGANİK BİLEŞİKLERİN GENEL ÖZELLİKLERİ, KARBONHİDRATLAR\n\nKarbohidratların Canlılar İçin Önemi\n• Üretici canlılar, atmosferdeki karbondioksiti fotosentez ve kemosentez yoluyla karbonhidratların yapısına katar. Hay-\nvanlar da karbonhidratlı bileşikleri yiyerek karbonu almış olur.\n• Glikoz, sinir hücrelerinin normal şartlar altında enerji elde etmek için kullandığı öncelikli organik bileşiktir.\n• Parçalanmaları için gerekli oksijen miktarı, lipit ve proteinlere göre daha az olduğundan karbonhidratlar enerji kaynağı\nolarak ilk sırada kullanılır. Besinlerle yeterli karbohidrat alınmazsa enerji eldesi için ikinci sırada yağlar, daha sonra da\nproteinler kullanılır.\n• Karbonhidratlar, yağlar ve proteinlerle bileşikler oluşturarak hücre yapısına katılır. Bazı karbonhidrat çeşitleri; DNA,\nRNA, ATP ve hücre zarı gibi önemli molekül ve bileşiklerin yapısına katılır.\n• İnsanlar selülozdan doğrudan yararlanamaz ancak selüloz, sindirim kanalı yüzeyinden mukus salgılayarak besinlerin\nkolay hareket etmesini ve bunun sonucunda mide ve bağırsakların düzgün çalışmasını sağlaması açısından önemlidir.\n• Gereğinden fazla karbonhidrat alındığında karbohidratların bir kısmı kullanılır. Ancak kandaki glikozun fazlası karaci-\nğer ve kaslarda glikojen şeklinde depolanır. Gerektiğinde tekrar glikoza dönüştürülerek kullanılır.\n• Selüloz; kâğıt, sentetik ipek ve plastik yapımında kullanılır.\n\nKRİTİK BİLGİ\n\nKanserli hücreler sağlıklı hücrelere göre daha fazla şeker kullandığından şeker tüketimini dengelemek önemlidir.\nKarbonhidratların fazlası insanda yağa dönüştürülerek depolanır. Bu nedenle çok tüketilmesi şişmanlığa ve insülin\ndirencine sebep olarak diyabetin (şeker hastalığı) gelişmesine de zemin hazırlar.\nEnerji ihtiyacı ilk sırada karbonhidratlardan karşılandığından az karbonhidrat tüketildiğinde hâlsizlik, yorgunluk ve baş\ndönmesi meydana gelir.\n\nEnerji ihtiyacı için karbonhidrat içeren besinler yeterince tüketilmelidir.\n\n24 MEBİ KONU ÖZETLERİ BİYOLOJİ - TYT",
+      "review_questions": {
+        "factual_support": "Is the factual content in the evidence text correct within the official source context?",
+        "outcome_support": "Does this evidence text directly and sufficiently support the stated curriculum outcome?",
+        "source_consistency": "Is the evidence text consistent with the cited official source page and provenance?"
+      },
+      "required_decision_fields": {
+        "status": "APPROVED_FOR_EVIDENCE_READY | MANUAL_REVIEW_REQUIRED | REJECTED",
+        "reviewer_type": "HUMAN | EXTERNAL_LLM",
+        "reviewer_id": "required",
+        "factual_support": "boolean",
+        "outcome_support": "boolean",
+        "source_consistency": "boolean",
+        "rationale": "required"
+      },
+      "evidence_status": "NOT_READY",
+      "student_visible": false
+    },
+    {
+      "record_id": "BİY.10.2.1::MEBI-TYT-BIYOLOJI::p146",
+      "outcome_id": "BİY.10.2.1",
+      "grade": 10,
+      "theme_name": "Ekoloji",
+      "outcome_title": "Ekosistemin cansız ve canlı bileşenleri arasındaki ilişkileri çözümleyebilme",
+      "source_package": "MEBI-TYT-BIYOLOJI",
+      "source_page": 146,
+      "source_anchor": "tyt-biyoloji/index.html#p=146",
+      "text_sha256": "3313f34bf20f5a621760ce92fc676b3913fdaf3fae467a0db47c01d549b821bf",
+      "matched_title_tokens": [
+        "ekosistemin",
+        "cansiz",
+        "bileşenleri",
+        "ilişkileri"
+      ],
+      "evidence_text": "EKOLOJİK KAVRAMLAR, EKOSİSTEMİN CANLI VE CANSIZ BİLEŞENLERİ\n\nEkosistem, belirli bir bölgedeki canlı komüniteleri ve bu canlılarla etkile-\nşim hâlinde olan fiziksel faktörlerden oluşur. Ekosistemler, karasal eko-\nsistemler ve sucul ekosistemler olarak iki grupta incelenir. Çöl, çayır ve\ntropikal yağmur ormanları karasal ekosistemlere örnek oluşturur. Sucul\nekosistemler tatlı su ve tuzlu su ekosistemlerinden oluşur. Göl, akarsu,\nbataklık, yer altı suları, barajlar, göletler, dere, çay ve nehirler tatlı su;\ndenizler ve okyanuslar tuzlu su ekosistemleridir. Mercan resifleri, nehir\nağızları, longozlar ve lagünler de denizlerin kıyılara yakın kısımlarında\nbulunan özel ekosistemlerdir. Bir kıta, bir okyanus ekosistem olarak kabul\nedilebileceği gibi bir orman, çayır, göl hatta akvaryum da birer ekosistem-\ndir. Dünya en büyük ekosistemdir. Ekosistem örneği\n\nBiyosfer (ekosfer, küresel ekosistem), dünya üzerinde canlıların yaşamlarını sürdürdüğü tüm ekosistemlerin toplamıdır.\nKısaca biyosfer dünya üzerinde canlıların yaşadığı alanların tümüdür.\n\nEkolojik organizasyon düzeyleri küçükten büyüğe doğru sıralaması:\n\nBiyosfer\n\nDİKKAT\nEkosistem\nAynı türe ait canlılar popülasyonu, popülasyonlar komüniteyi, ko-\nmüniteler ise cansız çevre ile birlikte ekosistemi meydana getirir.\nKomünite\nBiyosfer, tüm ekosistemleri içine alan dünya üzerinde canlıların\nyaşamını sürdürdüğü alandır.\nPopülasyon\n\nEkolojik organizasyon düzeyleri\n\nBüyük iklim kuşaklarında geniş yaşam alanlarını, karakteristik bitki ve hayvan topluluklarını içine alan büyük coğrafik alan-\nlara biyom denir. Karasal biyomlar, tatlısu biyomları, tropikal yağmur ormanları ve tundralar bu alanlara örnektir. Biyomun\nbüyüklüğü; popülasyonların birey sayısı, çevresel koşullar ve coğrafik özelliklere göre değişir. Örneğin, çöl çok geniş bir\nalan olmasına rağmen barındırdığı tür çeşitliliği azdır. Biyomlar geniş ekosistemlerdir.\nBir organizmanın yaşayıp çoğalabildiği yaşam alanına habitat denir. Örneğin; balinanın habitatı okyanus, kutup ayısının\nhabitatı ise tundralardır.\nHabitat içindeki bireylerin yaşamlarını sürdürürken gerçekleştirdikleri beslenme, üreme, davranış, yaşam biçimi ve diğer\ncanlılarla ilişkileri gibi faaliyetlerin tamamı ekolojik niş olarak tanımlanır. Kraliçe arının ekolojik nişi, yumurta üreterek\nçoğalmayı sağlamaktır.\n\nKutup ayısının habitatı tundralardır. Arılarda niş\n\n146 MEBİ KONU ÖZETLERİ BİYOLOJİ - TYT",
+      "review_questions": {
+        "factual_support": "Is the factual content in the evidence text correct within the official source context?",
+        "outcome_support": "Does this evidence text directly and sufficiently support the stated curriculum outcome?",
+        "source_consistency": "Is the evidence text consistent with the cited official source page and provenance?"
+      },
+      "required_decision_fields": {
+        "status": "APPROVED_FOR_EVIDENCE_READY | MANUAL_REVIEW_REQUIRED | REJECTED",
+        "reviewer_type": "HUMAN | EXTERNAL_LLM",
+        "reviewer_id": "required",
+        "factual_support": "boolean",
+        "outcome_support": "boolean",
+        "source_consistency": "boolean",
+        "rationale": "required"
+      },
+      "evidence_status": "NOT_READY",
+      "student_visible": false
+    },
+    {
+      "record_id": "BİY.10.2.7::MEBI-TYT-BIYOLOJI::p166",
+      "outcome_id": "BİY.10.2.7",
+      "grade": 10,
+      "theme_name": "Ekoloji",
+      "outcome_title": "Ekolojik ayak izini küçültebilme yollarını bilimsel olarak sorgulayabilme",
+      "source_package": "MEBI-TYT-BIYOLOJI",
+      "source_page": 166,
+      "source_anchor": "tyt-biyoloji/index.html#p=166",
+      "text_sha256": "9185a94ae770e079653353fba3319f8b724b789f22111e923e26f1e823e0418f",
+      "matched_title_tokens": [
+        "ekolojik",
+        "ayak",
+        "izini"
+      ],
+      "evidence_text": "BİYOLOJİ\n\nKONU ÇEVRE SORUNLARININ ORTAYA ÇIKMASINDA\nÖZETİ BİREYLERİN ROLÜ VE ÇÖZÜM ÖNERİLERİ\nTYT TYT TYT TYT TYT TYT TYT TYT TYT TYT TYT TYT\n\nEkolojik Ayak İzi\nİnsanların günlük yaşantıları sırasında tüketilen doğal kaynakla-\nrın yeniden üretimi ve oluşan atıkların geri kazanımı için belirli\nbir miktar verimli toprağa ve suya ihtiyaç vardır. İnsanların üretim\nve tüketim faaliyetleri sonucu kullandığı enerjinin, kaynakların ve\nham maddenin yeniden üretilmesi ve oluşturulan atıkların etkisiz\nhâle getirilmesi için gerekli olan toprak ve su alanı miktarının öl-\nçümüne ekolojik ayak izi denir.\nEkolojik ayak izi, doğal kaynaklar ve ekosistem üzerinde belirli\nbir nüfusun doğaya yükünü hesaplamak amacıyla oluşmuş bir\nyöntemdir.\nDoğal kaynakların tükenmemesi ve sürdürülebilir bir kalkınmanın\nsağlanabilmesi için bireylerin ekolojik ayak izlerinin bilincinde ol-\nması gerekir.\n\nEkolojik ayak izini küçültmek için;\n• Fosil yakıtlar yerine yenilenebilir enerji kaynakları kullanılmalıdır.\n• Enerji ve gıda israfını önlemek gerekir.\n• Daha az elektrik, kâğıt, su kullanmaya özen gösterilmelidir.\n\nKarbon Ayak İzi\nHer birey; ulaşım, barınma, beslenme, elektrik tüketimi gibi faali-\nyetler, satın aldığı ve kullandığı ürünlerle atmosferde karbondiok-\nsit salınımına neden olur. Bu tür etkinlikler sonucu atmosfere sa-\nlınan karbondioksit miktarının tamamı, canlıların karbon ayak\nizini oluşturur. Karbon ayak izi genellikle ton, kg ya da g olarak\nifade edilir ve bir yıllık zaman dilimi için hesaplanır. Karbon ayak\nizi ölçülürken diğer sera gazlarının miktarı da dikkate alınır.\nKarbon ayak izi, birincil ayak izi ve ikincil ayak izi olarak iki ana\nparçadan oluşur. Birincil ayak izi; evsel enerji tüketimi, ulaşım ve\nfosil yakıtların yanmasıyla ortaya çıkan karbondioksit oranının öl-\nçüsüdür. İkincil ayak izi ise kişilerin günlük yaşantısında kullandı-\nğı ürünlerin imalatından bozulmasına kadar olan süreçteki dolaylı\nkarbondioksit oranının ölçüsüdür.\n\nAtmosfere salınan karbondioksit miktarını azaltmak için alınacak bazı önlemler;\n• Plastik poşet ve şişe kullanımını azaltmak.\n• Ambalajlanmış veya uzak mesafelerden gelen yiyecek ve içeceklerin israfını önlemek.\n• Mümkün olduğunca ulaşımda toplu taşıma araçlarını tercih etmek.\n• Fabrika bacalarına filtre takmak.\n\n• Güneş ve rüzgâr enerjisi gibi yenilenebilir enerji kullanmak.\n• Aydınlatmada tasarruflu ampulleri tercih etmek.\n• Binalara yalıtım yapmak.\n• Evsel atıkları ve fabrika atıklarını geri dönüşüme kazandırmak.\n\n• Yeşil alanları korumak ve ağaçlandırma çalışmalarını artırmak.\n166 MEBİ KONU ÖZETLERİ BİYOLOJİ - TYT",
+      "review_questions": {
+        "factual_support": "Is the factual content in the evidence text correct within the official source context?",
+        "outcome_support": "Does this evidence text directly and sufficiently support the stated curriculum outcome?",
+        "source_consistency": "Is the evidence text consistent with the cited official source page and provenance?"
+      },
+      "required_decision_fields": {
+        "status": "APPROVED_FOR_EVIDENCE_READY | MANUAL_REVIEW_REQUIRED | REJECTED",
+        "reviewer_type": "HUMAN | EXTERNAL_LLM",
+        "reviewer_id": "required",
+        "factual_support": "boolean",
+        "outcome_support": "boolean",
+        "source_consistency": "boolean",
+        "rationale": "required"
+      },
+      "evidence_status": "NOT_READY",
+      "student_visible": false
+    },
+    {
+      "record_id": "BİY.10.2.8::MEBI-TYT-BIYOLOJI::p8",
+      "outcome_id": "BİY.10.2.8",
+      "grade": 10,
+      "theme_name": "Ekoloji",
+      "outcome_title": "Doğal kaynakların ve biyoçeşitliliğin korunması için alınan önlemleri sorgulayabilme",
+      "source_package": "MEBI-TYT-BIYOLOJI",
+      "source_page": 8,
+      "source_anchor": "tyt-biyoloji/index.html#p=8",
+      "text_sha256": "d9dc6470e79b558c65f180269c5e5886bf104b724af1be5d51bd65de1c48a1ea",
+      "matched_title_tokens": [
+        "doğal",
+        "kaynaklarin",
+        "korunmasi",
+        "için"
+      ],
+      "evidence_text": "Hücre Döngüsü ve Mitoz\nHücre Bölünmesinin Gerekliliği, Hücre Döngüsü ve İnterfaz ............................................................................... 101\nMitozun Genel Özellikleri ve Evreleri ................................................................................................................... 104\n\nHücre Döngüsünün Kontrolü ............................................................................................................................... 107\n\nEşeysiz Üreme\nEşeysiz Üremenin Genel Özellikleri ve Çeşitleri .................................................................................................. 109\n\nMayoz\nMayozun Genel Özellikleri ve Evreleri ................................................................................................................. 114\n\nEşeyli Üreme\nEşeyli Üremenin Genel Özellikleri ve Örnekleri ................................................................................................... 121\n\nKalıtım\nKalıtımla İlgili Kavramlar, Olasılık İlkeleri ve Gamet Çeşitlerinin Bulunması ........................................................ 123\nMendel İlkeleri ve Çaprazlamalar ......................................................................................................................... 127\n\nEş Baskınlık, Çok Alellilik, Kan Gruplarının Kalıtımı ............................................................................................ 132\nEşeye Bağlı Kalıtım, Akraba Evliliği ..................................................................................................................... 135\nSoyağacı Analizi ve Örnekleri .............................................................................................................................. 140\n\nGenetik Varyasyonlar\nGenetik Varyasyonların Kaynakları ve Biyolojik Çeşitlilik .................................................................................... 143\n\nEkosistem Ekolojisi\nEkolojik Kavramlar, Ekosistemin Canlı ve Cansız Bileşenleri .............................................................................. 145\nCanlılardaki Beslenme Şekilleri ........................................................................................................................... 149\n\nEkosistemde Madde ve Enerji Akışı .................................................................................................................... 152\nMadde Döngüleri ................................................................................................................................................. 156\n\nGüncel Çevre Sorunları\nGüncel Çevre Sorunlarının Sebepleri , Hava Kirliliği, Asit Yağmurları, Küresel İklim Değişikliği ......................... 159\nSu Kirliliği, Toprak Kirliliği, Radyoaktif Kirlilik, Ses Kirliliği .................................................................................... 161\nErozyon, Doğal Hayat Alanlarının Tahribi ve Orman Yangınları, Biyolojik Çeşitliliğin Azalması ......................... 164\nÇevre Sorunlarının Ortaya Çıkmasında Bireylerin Rolü ve Çözüm Önerileri ....................................................... 166\n\nDoğal Kaynakların Sürdürülebilirliği\nDoğal Kaynakların Sürdürülebilirliğinin Önemi ..................................................................................................... 168\n\nBiyolojik Çeşitliliğin Korunması\nBiyolojik Çeşitliliğin Yaşam İçin Önemi ve Korunması .......................................................................................... 170",
+      "review_questions": {
+        "factual_support": "Is the factual content in the evidence text correct within the official source context?",
+        "outcome_support": "Does this evidence text directly and sufficiently support the stated curriculum outcome?",
+        "source_consistency": "Is the evidence text consistent with the cited official source page and provenance?"
+      },
+      "required_decision_fields": {
+        "status": "APPROVED_FOR_EVIDENCE_READY | MANUAL_REVIEW_REQUIRED | REJECTED",
+        "reviewer_type": "HUMAN | EXTERNAL_LLM",
+        "reviewer_id": "required",
+        "factual_support": "boolean",
+        "outcome_support": "boolean",
+        "source_consistency": "boolean",
+        "rationale": "required"
+      },
+      "evidence_status": "NOT_READY",
+      "student_visible": false
+    },
+    {
+      "record_id": "BİY.11.1.2::MEBI-AYT-BIYOLOJI::p8",
+      "outcome_id": "BİY.11.1.2",
+      "grade": 11,
+      "theme_name": "Tepki",
+      "outcome_title": "Bitkisel hormonların meyve olgunlaşması ve bitki gelişimindeki etkileri hakkında analojik akıl yürütebilme",
+      "source_package": "MEBI-AYT-BIYOLOJI",
+      "source_page": 8,
+      "source_anchor": "ayt-biyoloji/index.html#p=8",
+      "text_sha256": "67a515ebe4f9bc699944bb96db2c0dd01bc1d30246850ba1e785c13d4bc56a42",
+      "matched_title_tokens": [
+        "bitkisel",
+        "hormonlarin",
+        "meyve",
+        "bitki"
+      ],
+      "evidence_text": "Nükleik Asitlerin Çeşitleri ve Görevleri, Genetik Mater- Bitkilerde Hareket\nyalin Organizasyonu ........................................... 154\nBitki Hareketleri ve Fotoperiyodizm ..................... 218\nDNA’ nın Kendini Eşlemesi ................................. 158\nBitkilerde Madde Taşınması\nGenetik Şifre ve Protein Sentezi\nKöklerde Su ve Mineral Emilimi ........................... 223\nGenetik Şifre ve Protein Sentezinde Genetik Bilgi Ksilemde Su ve Minerallerin Taşınması .............. 225\nAkışı .................................................................... 161\nSuyun Taşınmasında Stomaların Rolü ................ 227\nProtein Sentezinin Mekanizması ......................... 162\nFloemde Fotosentez Ürünlerinin Taşınması ........ 230\nGenetik Mühendisliği ve Biyoteknoloji\nBitkilerde Eşeyli Üreme\nGenetik Mühendisliği-Biyoteknoloji Kavramları ve Uy-\ngulamaları ............................................................ 165 Çiçeğin Kısımları ve Görevleri .............................. 232\nGenetik Mühendisliği ve Biyoteknoloji Uygulamaları- Tozlaşma, Döllenme, Tohum ve Meyve Oluşumu 235\nnın İnsan Hayatına Etkisi ..................................... 169\nTohum Çimlenmesi, Dormansi ve Çimlenme Arasın-\ndaki İlişki .............................................................. 237\nCanlılık ve Enerji\nATP Molekülü ve Fosforilasyon Çeşitleri ............. 172 Canlılar ve Çevre\nCanlılar ve Çevre ................................................. 239\nFotosentez\n\nFotosentezin Canlılar Açısından Önemi, Fotosentezde\nRol Oynayan Ögeler ............................................ 175\nFotosentez Reaksiyonları .................................... 179\nFotosentez Hızını Etkileyen Faktörler .................. 182\n\nKemosentez\nKemosentez ........................................................ 184\n\nHücresel Solunum\n\nHücresel Solunumun Önemi, Oksijenli Solunumun\nGenel Özellikleri ve Mitokondri ............................ 186\nOksijenli Solunumun Evreleri ............................... 187\n\nOksijensiz Solunum, Fotosentez ve Solunum İlişkisi 191\nFermantasyon\n\nFermantasyon ...................................................... 194\nBitkisel Dokular\n\nMeristem Doku .................................................... 197\nTemel Doku .......................................................... 201\nİletim Doku ........................................................... 204\nÖrtü Doku ............................................................ 206\n\nBitkisel Organlar\n\nKök ...................................................................... 209\nGövde .................................................................. 211\nYaprak ................................................................. 213\n\nBitki Hormonları\nBitki Gelişiminde Hormonların Etkisi .................... 215",
+      "review_questions": {
+        "factual_support": "Is the factual content in the evidence text correct within the official source context?",
+        "outcome_support": "Does this evidence text directly and sufficiently support the stated curriculum outcome?",
+        "source_consistency": "Is the evidence text consistent with the cited official source page and provenance?"
+      },
+      "required_decision_fields": {
+        "status": "APPROVED_FOR_EVIDENCE_READY | MANUAL_REVIEW_REQUIRED | REJECTED",
+        "reviewer_type": "HUMAN | EXTERNAL_LLM",
+        "reviewer_id": "required",
+        "factual_support": "boolean",
+        "outcome_support": "boolean",
+        "source_consistency": "boolean",
+        "rationale": "required"
+      },
+      "evidence_status": "NOT_READY",
+      "student_visible": false
+    },
+    {
+      "record_id": "BİY.11.1.7::MEBI-AYT-BIYOLOJI::p23",
+      "outcome_id": "BİY.11.1.7",
+      "grade": 11,
+      "theme_name": "Tepki",
+      "outcome_title": "İnsanda sinir sistemi yapısını çözümleyebilme",
+      "source_package": "MEBI-AYT-BIYOLOJI",
+      "source_page": 23,
+      "source_anchor": "ayt-biyoloji/index.html#p=23",
+      "text_sha256": "3180fd290f0ec75a4e10cd46aa7d243aca40c2bd8b24b2eb4b3a5d1be2e0208c",
+      "matched_title_tokens": [
+        "insanda",
+        "sinir",
+        "sistemi"
+      ],
+      "evidence_text": "BIYOLOJI\n\nKONU SALGI BEZLERİ, HORMONLARIN GENEL ÖZELLİKLERİ VE\nÖZETİ ETKİLERİ, EPİFİZ BEZİ, HİPOFİZ BEZİ\nAYT AYT AYT AYT AYT AYT AYT AYT AYT AYT AYT AYT\n\nSALGI BEZLERİ\nTüm doku ve organların uyumlu çalışmasında, kararlı bir iç dengenin (homeostasi) sağlanmasında sinir sistemi ve endok-\nrin sistem birlikte görev yapar. Endokrin sistem, hormon adı verilen kimyasalları salgılayan endokrin bezlerden meydana\ngelir. Endokrin bezler, kanalsız bezler olup salgıladıkları hormonları doğrudan kana verdikleri için bu bezlere iç salgı bezleri\nde denir. Hipofiz bezi, tiroit bezi, paratiroit bezi, adrenal bezler vb. endokrin bezlere örnektir.\n\nHORMONLARIN GENEL ÖZELLİKLERİ VE ETKİLERİ\nHormonlar, iç ve dış çevreden gelen uyarılara göre sentezlenen kimyasal maddelerdir. Kandaki glikoz, mineral, su gibi iç\netkenler ile ışık, basınç vb. dış etkenlerin miktarındaki değişiklikler hormon sentezlenmesini uyarır. Ayrıca kandaki hormon\nmiktarı ve sinir sisteminin endokrin bezlerini uyarması hormon sentezi üzerinde etkilidir.\nHormonlar, endokrin bezlerden ve sinir hücrelerinin akson ucundan; mide, ince bağırsak, böbrek, karaciğer ve pankreas\ngibi organlardaki endokrin hücrelerinden salgılanır. Genellikle salgılandıkları yerlerde etkili olmayıp kanla hedef hücreleri-\nne taşınır. Bazı hormonların hedefi bir veya birkaç doku olabilirken bazı hormonların hedefi bütün vücut hücreleridir.\nEndokrin hücreler tarafından salgılanan hormonlar; büyüme, gelişme, üreme, davranış, enerji metabolizması, kandaki\nmadde miktarının belirli yoğunluklarda tutulması gibi olayları düzenler. Hormonlar kanda çok az miktarda bulunur. Kanda\nbelirli bir miktara ulaşınca etkili olmaya başlar.\nHormonun hedef hücresinin zarında veya hücrenin içinde ona özgü reseptörü bulunur. Hormonun reseptöre bağlanması\nile hedef hücrede tepki oluşur. Hedef hücrenin hormona verdiği tepki, nöronlarla verilen tepkiden daha yavaş ve geç olma-\nsına karşın etkisi uzun sürelidir. Görevini tamamlayan hormonlar, etkiledikleri hedef hücrede ya da karaciğerde parçalanır.\n\nİnsanda Bulunan Başlıca Endokrin Bezler\n• Epifiz bezi • Timüs bezi\n• Hipofiz bezi • Pankreas\n• Tiroit bezi • Böbrek üstü bezleri (adrenal bezler)\n• Paratiroit bezi • Eşeysel bezler (yumurtalık ve testis)\n\nBaşlıca endokrin bezler\n\nBİYOLOJİ - AYT MEBİ KONU ÖZETLERİ 23",
+      "review_questions": {
+        "factual_support": "Is the factual content in the evidence text correct within the official source context?",
+        "outcome_support": "Does this evidence text directly and sufficiently support the stated curriculum outcome?",
+        "source_consistency": "Is the evidence text consistent with the cited official source page and provenance?"
+      },
+      "required_decision_fields": {
+        "status": "APPROVED_FOR_EVIDENCE_READY | MANUAL_REVIEW_REQUIRED | REJECTED",
+        "reviewer_type": "HUMAN | EXTERNAL_LLM",
+        "reviewer_id": "required",
+        "factual_support": "boolean",
+        "outcome_support": "boolean",
+        "source_consistency": "boolean",
+        "rationale": "required"
+      },
+      "evidence_status": "NOT_READY",
+      "student_visible": false
+    },
+    {
+      "record_id": "BİY.11.1.10::MEBI-AYT-BIYOLOJI::p58",
+      "outcome_id": "BİY.11.1.10",
+      "grade": 11,
+      "theme_name": "Tepki",
+      "outcome_title": "İskelet kaslarının kasılma ve gevşeme mekanizması ile ilgili bilimsel model oluşturabilme",
+      "source_package": "MEBI-AYT-BIYOLOJI",
+      "source_page": 58,
+      "source_anchor": "ayt-biyoloji/index.html#p=58",
+      "text_sha256": "0b602228f0b1b044ea49c0474fbf6ef2bd8e6e55f9d2322a9cae646876e62b11",
+      "matched_title_tokens": [
+        "iskelet",
+        "kasilma",
+        "gevşeme",
+        "mekanizmasi"
+      ],
+      "evidence_text": "İSKELET KASININ KASILMA MEKANİZMASI, KASILMANIN KONTROLÜ, ENERJİ METABOLİZMASI\n\nKASLARDA KASILMANIN KONTROLÜ\nKaslarda Kasılmanın Kontrolü ve Kasılma Evreleri\nÇizgili kasların dinlenme durumunda hafif kasılı ve gergin kalma durumuna kas tonusu denir. Bu durum vücut duruşunda\nönemli bir etkiye sahiptir. Kas aksiyon potansiyeli ile kasılı olmasa da sinir hücrelerinden gelen düşük hızdaki impulslarla\nbir miktar kasılı tutulur. Kas tonusu bilincin açık olduğu zamanlarda vardır. Bir kas, uyarı aldıktan sonra kasılması ve gev-\nşemesi üç evrede gerçekleşir. Bu evreler sırasıyla gizli evre, kasılma evresi ve gevşeme evresidir.\n\nKasılma evresi: Kasların kasılmaya\nbaşladığı andan gevşemeye başladığı\nana kadar geçen süreyi içerir.\nGizli evre: Kasların\nKasılma Mİktarı kasılmaya başladığı Gevşeme evresi: Kasların gevşeyerek\nuyartıyı aldığı andan\ntekrar eski hâline dönmesi için geçen\nana kadar geçen\nsüreyi içerir.\nsüreyi içerir.\n\nUYARTI\nZaman (ms)\n0 10 20 30 40 50\nİskelet kasının kasılma ve gevşeme mekanizması\n\nAksiyon potansiyelinin etkilediği motor birimlerin sayısının çok olması ya da uyarının sıklığı, daha çok kas telinin uyarıl-\nmasını ve kuvvetli kasılmayı sağlar. Bir kas telindeki tek bir aksiyon potansiyeli tek bir kasılmayı (seğirmeyi) tetikler. Kas\nlifi dinlenmeye geçemeden yeni uyarılarla kas teli tetiklenirse kasılmalar birbirine eklenir ve kas teli tarafından oluşturulan\nkasılma kuvveti artar. Uyarıların hızlı bir şekilde tekrarlanmasıyla kasın gevşeme evresine giremeden tekrar ve sürekli\nkasılması durumuna fizyolojik tetanus denir. Kramp ve spazmlar fizyolojik tetanusa örnek verilebilir.\n\nFizyolojik tetanus\n\nKasılma Kuvveti Tek bir Birbirine eklenmiş Uyarılma\nkasılma\nkasılmalar\n\ndurduğunda\nAksiyon\npotansiyeli gevşeme\n\nZaman (ms)\nFizyolojik tetanus\n\n58 MEBİ KONU ÖZETLERİ BİYOLOJİ - AYT",
+      "review_questions": {
+        "factual_support": "Is the factual content in the evidence text correct within the official source context?",
+        "outcome_support": "Does this evidence text directly and sufficiently support the stated curriculum outcome?",
+        "source_consistency": "Is the evidence text consistent with the cited official source page and provenance?"
+      },
+      "required_decision_fields": {
+        "status": "APPROVED_FOR_EVIDENCE_READY | MANUAL_REVIEW_REQUIRED | REJECTED",
+        "reviewer_type": "HUMAN | EXTERNAL_LLM",
+        "reviewer_id": "required",
+        "factual_support": "boolean",
+        "outcome_support": "boolean",
+        "source_consistency": "boolean",
+        "rationale": "required"
+      },
+      "evidence_status": "NOT_READY",
+      "student_visible": false
+    },
+    {
+      "record_id": "BİY.11.2.3::MEBI-AYT-BIYOLOJI::p127",
+      "outcome_id": "BİY.11.2.3",
+      "grade": 11,
+      "theme_name": "Homeostazi",
+      "outcome_title": "Pozitif ve negatif geri bildirim mekanizmalarını karşılaştırabilme",
+      "source_package": "MEBI-AYT-BIYOLOJI",
+      "source_page": 127,
+      "source_anchor": "ayt-biyoloji/index.html#p=127",
+      "text_sha256": "07880a64a934615afcee50ad1ff49cc3883f5b41e314513316aba9608f19f851",
+      "matched_title_tokens": [
+        "pozitif",
+        "negatif",
+        "geri",
+        "bildirim"
+      ],
+      "evidence_text": "MENSTRUAL DÖNGÜ\n\nDişi Üreme Sisteminin Hormonal Kontrolü\n• Hipotalamus, hipofiz bezi ve yumurtalık arasındaki geri bildirim mekanizması ile GnRH, gonadotropinler (FSH, LH) ve\neşey hormonları arasındaki etkileşimlerle dişilerdeki üreme döngüsü kontrol edilir.\n\nFOLİKÜL EVRESİNDE LUTEAL EVREDE\n\n+ –\nHipotalamus Hipotalamus\nGnRH salgısını artırır. + GnRH – GnRH – GnRH salgısını azaltır.\n\nHipofiz bezi ön lobu\nPozitif geri bildirim LH salgısını artırır. Hipofiz bezi ön lobu Negatif geri bildirim Öncelikle FSH salgısını azaltır. Yumurtalık (Ovaryum) FSH ve LH salgısını azaltır. Negatif geri bildirim\n\nFSH + LH\nLH\n\nYumurtalık\n(Ovaryum)\n\nKorpus luteum oluşumu\nKorpus luteum\n\nİnhibin Progesteron\nÖstrojen ve Östrojen\nmiktarında artış\nDişi üreme sisteminin hormonal kontrolü\n\n• Folikül hücrelerinde bulunan FSH ve LH reseptörleri sayesinde östrojen yapımı uyarılır ve salgısı hızlanır. Kanda\nbulunan östrojen miktarının hemen hemen tamamı yumurtalık kaynaklıdır. Östrojen FSH salgısını azaltır. LH salgısı\nüzerine ise bazı durumlarda artırabilen (pozitif geri bildirim) bazı durumlarda da azaltabilen etkiye sahiptir (negatif geri\nbildirim).\n• Folikül evresinin büyük bir kısmında kandaki östrojen hormonu hafif artış gösterir. Düşük miktardaki östrojen hormonu-\nnun hipofiz bezinin FSH ve LH salgısı üzerine engelleyici etkisi vardır. Folikül evresinin sonlarına doğru östrojen mikta-\nrındaki artış pozitif geri bildirimle LH salgısının artmasına neden olur (pozitif geri bildirim). Hipotalamustan salgılanan\nGnRH’nin hipofiz bezi ön lobunu uyarmasıyla FSH miktarında da bir miktar artış gerçekleşir. LH’nin tepe değerine\nulaşmasıyla ovulasyon gerçekleşir.\n• Luteal evrede ise korpus luteumdan salgılanan yüksek miktarlardaki östrojen, progesteron ve inhibin hormonu hipota-\nlamus ve hipofiz bezi üzerine baskılayıcı etki yapar. Yüksek miktarda progesteron LH salgısını engellerken östrojenin\ninhibe edici etkisini güçlendirir. İnhibin hipofiz bezi ön lobundan FSH salgılanmasını azaltır. Korpus luteumun bozulup\nkaybolmaya başlaması ile bu etki ortadan kalkar.\n\n• Östrojen hormonu, dişi üreme organlarının gelişimi ve dişi üreme faaliyetlerini uyarma görevleri yanında dişiye özgü\nikincil cinsiyet karakterlerinin oluşumundan ve korunmasından sorumludur. Meme dokusunun büyümesi, süt kanallarının\ngelişimi ve deri altı, kalça, meme dokusu gibi yapılarda yağ depolanması, kemik gelişimi, boy uzaması gibi görevleri\nvardır.\nBİYOLOJİ - AYT MEBİ KONU ÖZETLERİ 127",
+      "review_questions": {
+        "factual_support": "Is the factual content in the evidence text correct within the official source context?",
+        "outcome_support": "Does this evidence text directly and sufficiently support the stated curriculum outcome?",
+        "source_consistency": "Is the evidence text consistent with the cited official source page and provenance?"
+      },
+      "required_decision_fields": {
+        "status": "APPROVED_FOR_EVIDENCE_READY | MANUAL_REVIEW_REQUIRED | REJECTED",
+        "reviewer_type": "HUMAN | EXTERNAL_LLM",
+        "reviewer_id": "required",
+        "factual_support": "boolean",
+        "outcome_support": "boolean",
+        "source_consistency": "boolean",
+        "rationale": "required"
+      },
+      "evidence_status": "NOT_READY",
+      "student_visible": false
+    },
+    {
+      "record_id": "BİY.11.2.4::MEBI-AYT-BIYOLOJI::p23",
+      "outcome_id": "BİY.11.2.4",
+      "grade": 11,
+      "theme_name": "Homeostazi",
+      "outcome_title": "Homeostazinin sağlanmasında sinir sisteminin etkilerini çözümleyebilme",
+      "source_package": "MEBI-AYT-BIYOLOJI",
+      "source_page": 23,
+      "source_anchor": "ayt-biyoloji/index.html#p=23",
+      "text_sha256": "3180fd290f0ec75a4e10cd46aa7d243aca40c2bd8b24b2eb4b3a5d1be2e0208c",
+      "matched_title_tokens": [
+        "sağlanmasinda",
+        "sinir",
+        "sisteminin"
+      ],
+      "evidence_text": "BIYOLOJI\n\nKONU SALGI BEZLERİ, HORMONLARIN GENEL ÖZELLİKLERİ VE\nÖZETİ ETKİLERİ, EPİFİZ BEZİ, HİPOFİZ BEZİ\nAYT AYT AYT AYT AYT AYT AYT AYT AYT AYT AYT AYT\n\nSALGI BEZLERİ\nTüm doku ve organların uyumlu çalışmasında, kararlı bir iç dengenin (homeostasi) sağlanmasında sinir sistemi ve endok-\nrin sistem birlikte görev yapar. Endokrin sistem, hormon adı verilen kimyasalları salgılayan endokrin bezlerden meydana\ngelir. Endokrin bezler, kanalsız bezler olup salgıladıkları hormonları doğrudan kana verdikleri için bu bezlere iç salgı bezleri\nde denir. Hipofiz bezi, tiroit bezi, paratiroit bezi, adrenal bezler vb. endokrin bezlere örnektir.\n\nHORMONLARIN GENEL ÖZELLİKLERİ VE ETKİLERİ\nHormonlar, iç ve dış çevreden gelen uyarılara göre sentezlenen kimyasal maddelerdir. Kandaki glikoz, mineral, su gibi iç\netkenler ile ışık, basınç vb. dış etkenlerin miktarındaki değişiklikler hormon sentezlenmesini uyarır. Ayrıca kandaki hormon\nmiktarı ve sinir sisteminin endokrin bezlerini uyarması hormon sentezi üzerinde etkilidir.\nHormonlar, endokrin bezlerden ve sinir hücrelerinin akson ucundan; mide, ince bağırsak, böbrek, karaciğer ve pankreas\ngibi organlardaki endokrin hücrelerinden salgılanır. Genellikle salgılandıkları yerlerde etkili olmayıp kanla hedef hücreleri-\nne taşınır. Bazı hormonların hedefi bir veya birkaç doku olabilirken bazı hormonların hedefi bütün vücut hücreleridir.\nEndokrin hücreler tarafından salgılanan hormonlar; büyüme, gelişme, üreme, davranış, enerji metabolizması, kandaki\nmadde miktarının belirli yoğunluklarda tutulması gibi olayları düzenler. Hormonlar kanda çok az miktarda bulunur. Kanda\nbelirli bir miktara ulaşınca etkili olmaya başlar.\nHormonun hedef hücresinin zarında veya hücrenin içinde ona özgü reseptörü bulunur. Hormonun reseptöre bağlanması\nile hedef hücrede tepki oluşur. Hedef hücrenin hormona verdiği tepki, nöronlarla verilen tepkiden daha yavaş ve geç olma-\nsına karşın etkisi uzun sürelidir. Görevini tamamlayan hormonlar, etkiledikleri hedef hücrede ya da karaciğerde parçalanır.\n\nİnsanda Bulunan Başlıca Endokrin Bezler\n• Epifiz bezi • Timüs bezi\n• Hipofiz bezi • Pankreas\n• Tiroit bezi • Böbrek üstü bezleri (adrenal bezler)\n• Paratiroit bezi • Eşeysel bezler (yumurtalık ve testis)\n\nBaşlıca endokrin bezler\n\nBİYOLOJİ - AYT MEBİ KONU ÖZETLERİ 23",
+      "review_questions": {
+        "factual_support": "Is the factual content in the evidence text correct within the official source context?",
+        "outcome_support": "Does this evidence text directly and sufficiently support the stated curriculum outcome?",
+        "source_consistency": "Is the evidence text consistent with the cited official source page and provenance?"
+      },
+      "required_decision_fields": {
+        "status": "APPROVED_FOR_EVIDENCE_READY | MANUAL_REVIEW_REQUIRED | REJECTED",
+        "reviewer_type": "HUMAN | EXTERNAL_LLM",
+        "reviewer_id": "required",
+        "factual_support": "boolean",
+        "outcome_support": "boolean",
+        "source_consistency": "boolean",
+        "rationale": "required"
+      },
+      "evidence_status": "NOT_READY",
+      "student_visible": false
+    },
+    {
+      "record_id": "BİY.11.2.6::MEBI-AYT-BIYOLOJI::p83",
+      "outcome_id": "BİY.11.2.6",
+      "grade": 11,
+      "theme_name": "Homeostazi",
+      "outcome_title": "Dolaşım sistemi ve homeostazi arasındaki ilişki ile ilgili bilimsel model oluşturabilme",
+      "source_package": "MEBI-AYT-BIYOLOJI",
+      "source_page": 83,
+      "source_anchor": "ayt-biyoloji/index.html#p=83",
+      "text_sha256": "ba75a667a27e41e31a69c8bd7ac6ee8906d63fba2a005b4d01e2b74ef4440e56",
+      "matched_title_tokens": [
+        "dolaşim",
+        "sistemi",
+        "arasindaki"
+      ],
+      "evidence_text": "BIYOLOJI\n\nKONU KAN DAMARLARI, KILCAL DAMARLAR VE\nÖZETİ DOKU SIVISI ARASINDAKİ MADDE ALIŞVERİŞİ\nAYT AYT AYT AYT AYT AYT AYT AYT AYT AYT AYT AYT\n\nKAN DAMARLARI\nKan, vücutta damarlardan oluşmuş kapalı bir sistem içerisinde hareket eder. Bu sayede kan içerisinde bulunan maddeler\nhücrelere ulaşabilirken aynı şekilde hücrelerden atılan maddeler de kanla ortamdan uzaklaştırılabilir. Dolaşım sisteminde\natardamar, kılcal damar ve toplardamar olmak üzere üç çeşit damar bulunur.\n\nKılcal damarlar\n\nToplardamar\nAtardamar\nKan damarları\n\nAtardamarlar\n• Atardamarlar, kalbin karıncıklarında bulunan kanı ilgili organlara taşıyan damarlardır.\n\n• Akciğer atardamarı hariç diğer atardamarlarda oksijen bakımından zengin olan kan bulunur.\n• Atardamarlarda endotel tabakasının üzerinde en dışta elastik lifler içeren bağ doku tabakası vardır.\n• Ortada düz kaslar ve elastik lif içeren tabaka bulunur.\n• Atardamarların duvarları, kanın yüksek basıncına dayanacak şekilde kalın ve güçlüdür.\n• Karıncıkların kasılmasıyla atardamarlarda oluşan basınç, atardamarların düz kaslarının kasılıp gevşemesi ve elastik\nliflerle esneyip eski hâllerine gelmeleri sayesinde kılcallara kadar korunmaktadır.\n• Sinir sistemi ve hormonlar sayesinde atardamarların düz kaslarının kasılıp gevşemesi düzenlenerek kan akışı kontrol\naltında tutulur.\nKılcal Damarlar\n• Kılcal damarlar, atardamarlar ve toplardamarlar arasında bulunur.\n• Kılcal damarlarda tek katlı yassı epitel hücrelerinden oluşmuş endotel tabaka bulunur.\n• Kılcal damarlar endotel tabaka tarafından oluşturulmuş çok ince bir duvara sahiptir.\n\n• Kılcal damar duvarları atardamarlar ve toplardamarların duvarlarına göre daha incedir.\n• Kan ile doku sıvısı arasındaki madde alışverişleri kılcal damarlar sayesinde olur.\nToplardamarlar\n• Toplardamarlar kanı kalbe getiren damarlardır.\n\n• Akciğer toplardamarı hariç toplardamarlarda ise karbondioksit bakımından zengin kan bulunur.\n• Endotel tabakasının üzeri ortada düz kas ve dışta bağ doku ile kaplıdır.\n• Toplardamarlar düşük basınçlı kanın kalbe geri getirilmesinden sorumlu oldukları için duvarları atardamarlara göre üç\nkat daha incedir.\n\n• Toplardamarların çapı atardamarların çaplarından daha büyüktür ve toplardamarların duvarları atardamarlardan daha\nfazla genişleyebilir. Bu yüzden toplardamarlarda daha fazla oranda kan bulunur.\n\nBİYOLOJİ - AYT MEBİ KONU ÖZETLERİ 83",
+      "review_questions": {
+        "factual_support": "Is the factual content in the evidence text correct within the official source context?",
+        "outcome_support": "Does this evidence text directly and sufficiently support the stated curriculum outcome?",
+        "source_consistency": "Is the evidence text consistent with the cited official source page and provenance?"
+      },
+      "required_decision_fields": {
+        "status": "APPROVED_FOR_EVIDENCE_READY | MANUAL_REVIEW_REQUIRED | REJECTED",
+        "reviewer_type": "HUMAN | EXTERNAL_LLM",
+        "reviewer_id": "required",
+        "factual_support": "boolean",
+        "outcome_support": "boolean",
+        "source_consistency": "boolean",
+        "rationale": "required"
+      },
+      "evidence_status": "NOT_READY",
+      "student_visible": false
+    },
+    {
+      "record_id": "BİY.12.1.3::MEBI-AYT-BIYOLOJI::p157",
+      "outcome_id": "BİY.12.1.3",
+      "grade": 12,
+      "theme_name": "Üreme",
+      "outcome_title": "Hücredeki genetik materyalin organizasyonunu çözümleyebilme",
+      "source_package": "MEBI-AYT-BIYOLOJI",
+      "source_page": 157,
+      "source_anchor": "ayt-biyoloji/index.html#p=157",
+      "text_sha256": "0f572adeaa836504246672e3afd50355e4de37d9577c003861ea4dd155aca379",
+      "matched_title_tokens": [
+        "hücredeki",
+        "genetik",
+        "materyalin"
+      ],
+      "evidence_text": "NÜKLEİK ASİTLERİN ÇEŞİTLERİ VE GÖREVLERİ, GENETİK MATERYALİN ORGANİZASYONU\n\nGENETİK MATERYALİN ORGANİZASYONU\n\nGen\n\nNükleotit DNA\n\nHiston\nNükleozom\n\nKromozom Kromatin iplik\nHücredeki genetik materyalin organizasyonu\n\n• Gen bir polipeptidi ya da bir RNA molekülünü üretmek üzere ifade edilebilen DNA bölgesidir. Genler, birkaç bin nük-\nleotitten oluşabildiği gibi milyonlarca nükleotitten de oluşabilir. Genler bilgi depolayabilir, DNA replikasyonu ile kopya-\nlanabilir ve bu kopyalama sayesinde de yeni hücrelere aktarılabilir.\n• Genler değişikliğe uğrayabilir. Değişikliğe uğramasına gen mutasyonu denir. Bir gendeki mutasyon; replikasyon\nsırasında yanlış baz eşleşmesi, karşılıklı nükleotit çiftinin yer değiştirmesi, yeni bir nükleotit çiftinin eksilmesi ya da\neklenmesi şeklinde gerçekleşebilir.\n• DNA, interfaz safhasında kromatin şeklinde bulunur. Kromatin, ökaryotlarda DNA'dan ve histon proteinlerden meyda-\nna gelmiş yapıdır. Bazı arkeler hariç prokaryotlar, histonlarla veya histon benzeri proteinlerle ilişkili olmayan DNA’ya\nsahiptir. Ökaryotlarda bir DNA ipliği, sekiz histondan oluşan bir kümenin etrafında iki kez dolanarak bir nükleozom\noluşturur. Bu nükleozomlar, bir zincire dizilen boncuklar gibi birbirine bağlanır. Kromozom, hücre döngüsü sürecinde\nkromatinin yoğun bir şekilde paketlenmesiyle oluşan yapıdır. Metafaz safhası, kromozomların en belirgin görüldüğü\nsafhadır.\n• Ökaryotlarda kromozomlar hem doğrusal hem de farklı uzunluk ve biçimde, prokaryotlarda ise halkasaldır. Kromozom\nsayısı türe özgüdür. Ancak farklı türdeki canlıların kromozom sayısı aynı olabilir. Örneğin; insanın kromozom sayısı ile\nmoli balığı, kurtbağrı bitkisi ve samur antilobunun kromozom sayıları aynıdır.\n\nBİYOLOJİ - AYT MEBİ KONU ÖZETLERİ 157",
+      "review_questions": {
+        "factual_support": "Is the factual content in the evidence text correct within the official source context?",
+        "outcome_support": "Does this evidence text directly and sufficiently support the stated curriculum outcome?",
+        "source_consistency": "Is the evidence text consistent with the cited official source page and provenance?"
+      },
+      "required_decision_fields": {
+        "status": "APPROVED_FOR_EVIDENCE_READY | MANUAL_REVIEW_REQUIRED | REJECTED",
+        "reviewer_type": "HUMAN | EXTERNAL_LLM",
+        "reviewer_id": "required",
+        "factual_support": "boolean",
+        "outcome_support": "boolean",
+        "source_consistency": "boolean",
+        "rationale": "required"
+      },
+      "evidence_status": "NOT_READY",
+      "student_visible": false
+    },
+    {
+      "record_id": "BİY.12.1.7::MEBI-AYT-BIYOLOJI::p133",
+      "outcome_id": "BİY.12.1.7",
+      "grade": 12,
+      "theme_name": "Üreme",
+      "outcome_title": "Üreme hücrelerinin oluşum süreci ve yapılarını karşılaştırabilme",
+      "source_package": "MEBI-AYT-BIYOLOJI",
+      "source_page": 133,
+      "source_anchor": "ayt-biyoloji/index.html#p=133",
+      "text_sha256": "e6a62046e991e9db950d649f5f86386cfec7188053848f2ff4ec6eedbcfc02de",
+      "matched_title_tokens": [
+        "üreme",
+        "hücrelerinin",
+        "süreci"
+      ],
+      "evidence_text": "EMBRİYONİK GELİŞİM SÜRECİ\n\n• Göbek kordonu embriyonun plasenta ile bağlantısını sağlarken plasenta ile embriyo arasındaki madde alışverişini\nsağlayan damarları korur. Göbek kordonu içinde embriyoya ait olan iki atardamar ve bir toplardamar bulunur. Göbek\nkordonundaki atardamarlar embriyoda üretilen metabolik atıkları ve oksijen bakımından fakir kanı anneye getirirken\ntoplardamar anneden alınan oksijen bakımından zengin kanı ve besin maddelerini embriyoya iletir.\n\nKRİTİK BİLGİ\nDoğum sırasında göbek kordonu içinde kalan kana kordon kanı denir. Kordon kanında kök hücre elde edilebilecek en\ngenç hücreler bulunur. Bunlar, saklanmak için dondurulduklarında yaşlanma ve yıpranma süreçleri de durdurulmuş\nolur. Kordon kanı kök hücrelerinin kemik iliği kök hücrelerine göre üreme hızı daha fazladır. Kordon kanı; lösemi, len-\nfoma, orak hücreli anemi gibi pek çok hastalığın tedavisinde kullanılmaktadır. Ülkemizde “kordon kanı” bankası olarak\nhizmet veren kuruluşlar bulunmaktadır.\n\nEmbriyonik Dönem\n• Gebelik süresi yumurtanın döllenmesinden itibaren yaklaşık 266 gündür (38 hafta). Gebeliğin sekizinci haftasından\nsonra embriyo fetüs olarak adlandırılır.\n• Döllenmenin 4. haftasında kalp, dakikada yaklaşık 65 atımla çalışmaya başlar.\nFetal Dönem\n\nGebeliğin 8. haftasının sonunda embriyo, fetüs olarak adlandırılır. Bu döneme fetal evre denir.\nFetal evrede organlar artık daha belirgin bir hâl alır. Ancak doğuma kadar hatta doğumda bile\nfetüsün sinir sistemi, böbrekler ve karaciğer gelişimi tam anlamıyla tamamlanmamıştır.\n\n2. ay\n\nDördüncü aydan sonra fetüsün organları, yeni doğanınkiyle neredeyse aynıdır. Ancak organlar-\n\ndaki hücresel değişim devam eder. Fetüs, özellikle gebeliğin son 3 ayında ağırlaşır ve boyca uzar.\nAmniyotik boşlukta hava bulunmadığından fetal yaşam sürecinde solunum işlevi oluşamaz.\nGebeliğin 3 ve 4. aylarında omurilik ve beyin sapı ile ilgili refleksler oluşmasına rağmen merkezî\nsinir sisteminin beyin kabuğunu ilgilendiren işlevleri doğumda bile tam gelişmemiştir.\n\n4.ay/ 23-190 g\n\nFetüs böbrekleri idrar yapımına gebeliğin yaklaşık 6. ayında başlar ve amniyon sıvısının yakla-\nşık %70-80’i fetüs idrarından oluşur. Bu idrar, kandaki atıklar göbek kordonu ile atıldığından tam\nbir idrar değildir. Fetüste böbrek gelişimindeki bozukluklar amniyon sıvısı oluşumunu azaltır ve\nfetüsün ölümüne yol açabilir.\n\n6. ay/ 500-1000 g\n• Genellikle hamileliğin tamamlanma süresi olan yaklaşık 270 gün sonra çocuk doğar. Bu süreden önce doğan çocuklar\nprematüre olarak adlandırılır.\n• Doğum başladığında uterustaki kasılmalar sayesinde serviks genişler. Serviksin genişlemesi, oksitosin salgısını ar-\ntıran sinirlerin uyarılmasını sağlar. Salgılanan oksitosin, uterusun kasılmalarını artırır ve doğum gerçekleşir. Ayrıca\noksitosin salgısı, süt kanallarına sütün dolmasını sağlayarak doğan bebeğin beslenmesini ve annenin bu duruma hazır\nolmasını sağlar.\n\nBİYOLOJİ - AYT MEBİ KONU ÖZETLERİ 133",
+      "review_questions": {
+        "factual_support": "Is the factual content in the evidence text correct within the official source context?",
+        "outcome_support": "Does this evidence text directly and sufficiently support the stated curriculum outcome?",
+        "source_consistency": "Is the evidence text consistent with the cited official source page and provenance?"
+      },
+      "required_decision_fields": {
+        "status": "APPROVED_FOR_EVIDENCE_READY | MANUAL_REVIEW_REQUIRED | REJECTED",
+        "reviewer_type": "HUMAN | EXTERNAL_LLM",
+        "reviewer_id": "required",
+        "factual_support": "boolean",
+        "outcome_support": "boolean",
+        "source_consistency": "boolean",
+        "rationale": "required"
+      },
+      "evidence_status": "NOT_READY",
+      "student_visible": false
+    },
+    {
+      "record_id": "BİY.12.1.8::MEBI-AYT-BIYOLOJI::p232",
+      "outcome_id": "BİY.12.1.8",
+      "grade": 12,
+      "theme_name": "Üreme",
+      "outcome_title": "Eşeysiz ve eşeyli üreme ile ilgili bilimsel çıkarım yapabilme",
+      "source_package": "MEBI-AYT-BIYOLOJI",
+      "source_page": 232,
+      "source_anchor": "ayt-biyoloji/index.html#p=232",
+      "text_sha256": "031fd48a6b2d214321f1031cb69a75562a5025acc2ba0e8080e81e3997e3df36",
+      "matched_title_tokens": [
+        "eşeysiz",
+        "eşeyli",
+        "üreme"
+      ],
+      "evidence_text": "BIYOLOJI\n\nKONU ÇİÇEĞİN KISIMLARI VE GÖREVLERİ\nÖZETİ\nAYT AYT AYT AYT AYT AYT AYT AYT AYT AYT AYT AYT\n\nÇİÇEĞİN KISIMLARI VE GÖREVLERİ\nBitkilerde Eşeyli Üremenin Genel Özellikleri\n• Bitkilerde eşeyli ve eşeysiz olarak iki tip üreme görülür.\n\n• Eşeysiz üreme sonucu kalıtsal yapısı aynı olan bitkilerden çok sayıda üretilebilir ve bitkilerde genetik çeşitlilik olmaz.\n• Eşeyli üreme sonucunda ise kalıtsal yapısı farklı olan bitkiler üretilebilir ve genetik çeşitlilik olur. Bu sayede eşeyli üre-\nme ile çoğalan bitki türünün farklı çevrelere yayılma şansı yüksek ve değişen çevre şartlarına uyum sağlama yeteneği\ndaha fazladır.\n• Tohumlu bitkiler eşeyli üreme ile çoğalır ve tohum durumlarına göre iki grupta incelenir.\n• Açık tohumlu bitkilerde üreme organı kozalaklar, kapalı tohumlu (çiçekli) bitkilerde çiçeklerdir.\nKapalı Tohumlu Bitkilerde Çiçeğin Genel Yapısı\n• Çiçekler, yaprakların değişimi ile meydana gelmiş yapılardır. Çiçek sapı ucunda yer alır.\n\n• Kapalı tohumlu bitkiye ait çiçek genel olarak dıştan içe doğru çanak yaprak, taç yaprak, erkek organ ve dişi organdan\noluşur.\n\nKapalı tohumlu bitkilerde çiçeğin genel yapısı\nDıştan içe doğru çiçeğin kısımları şunlardır:\n• Çiçek sapı (pedisel), çiçeğin taşınmasını sağlar.\n\n• Çiçek tablası (reseptakulum), çiçeğin tüm yapılarının bağlandığı çiçek sapının üstünde olan bölümdür.\n• Çanak yaprak (sepal), genellikle yeşil renkli olan ve fotosentez yapabilme yeteneğine sahip olan yapraklardır. Çiçek\ntomurcukları açmadan önce onları sarıp koruyan çanak yapraklar çiçeğin en dışında bulunur.\n\n• Taç yaprak (petal), birçok çiçekte parlak renkler içerip böceklerin ve diğer tozlaştırıcıların ilgisini çekerek tozlaşmaya\nyardımcı olan yapraklardır.\n• Erkek organ (stamen), sapçık (filament) ve başçık (anter) olmak üzere iki kısımdan oluşur.\n\nSapçık başçığı taşır ve ve onun hareketliliğini sağlar. Başçıkta polen keseleri bulunur. Bu keseler polenlerin üretildiği ve\ndepolandığı kısımdır.\n\nKapalı tohumlu bitkilerde erkek organın genel yapısı Kapalı tohumlu bitkilerde başçığın enine kesiti\n\n232 MEBİ KONU ÖZETLERİ BİYOLOJİ - AYT",
+      "review_questions": {
+        "factual_support": "Is the factual content in the evidence text correct within the official source context?",
+        "outcome_support": "Does this evidence text directly and sufficiently support the stated curriculum outcome?",
+        "source_consistency": "Is the evidence text consistent with the cited official source page and provenance?"
+      },
+      "required_decision_fields": {
+        "status": "APPROVED_FOR_EVIDENCE_READY | MANUAL_REVIEW_REQUIRED | REJECTED",
+        "reviewer_type": "HUMAN | EXTERNAL_LLM",
+        "reviewer_id": "required",
+        "factual_support": "boolean",
+        "outcome_support": "boolean",
+        "source_consistency": "boolean",
+        "rationale": "required"
+      },
+      "evidence_status": "NOT_READY",
+      "student_visible": false
+    },
+    {
+      "record_id": "BİY.12.1.9::MEBI-AYT-BIYOLOJI::p234",
+      "outcome_id": "BİY.12.1.9",
+      "grade": 12,
+      "theme_name": "Üreme",
+      "outcome_title": "Erkek ve dişi üreme sistemlerinin yapısı ve işleyişiyle ilgili bilgi toplayabilme",
+      "source_package": "MEBI-AYT-BIYOLOJI",
+      "source_page": 234,
+      "source_anchor": "ayt-biyoloji/index.html#p=234",
+      "text_sha256": "37707be3b7a9b3590c6bedb067c8fd162066ae43dac81bd5c4e6047945224529",
+      "matched_title_tokens": [
+        "erkek",
+        "dişi",
+        "üreme",
+        "yapisi"
+      ],
+      "evidence_text": "ÇİÇEĞİN KISIMLARI VE GÖREVLERİ\n\nErkek Üreme Hücrelerinin Oluşumu\n• Erkek üreme hücrelerinin üretimi başçıkta gerçekleşir. Başçıkta, dört polen kesesi ve bu keselerin içinde çok sayıda\npolen ana hücresi bulunur.\n• Polen ana hücreleri diploit (2n) kromozomludur. Polen ana hücresine mikrospor ana hücresi denir. Her mikrospor\nana hücresi mayoz bölünme ile mikrospor adı verilen haploit (n) kromozomlu dört tane hücre meydana getirir. Her\nmikrospor mitoz bölünme geçirir. Bu mitoz bölünmede bir tanesi vejetatif (tüp) hücre diğeri ise generatif (üretken)\nhücre olarak adlandırılan iki hücre oluşur.\n\n• Polenin olgunlaşması sırasında generatif hücre vegetatif hücrenin içine girer.\n• Polenler farklı yapısal özelliklere sahiptir. Rüzgârla tozlaşan bitkilerin polenleri, genellikle hafif ve düz yüzeyli; böcek,\nkuş vb. canlılarla tozlaşan bitkilerin polenleri ise daha ağır, desenli ya da çıkıntılı bir yapıya sahiptir.\n\n• Bitkilerde polen yapısı türe özgüdür. Bu nedenle bitkilerin sınıflandırılmasında polenlerin şekil, renk ve yapısal özellik-\nlerine de bakılır.\n\nKapalı tohumlu bitkilerde embriyo kesesinin oluşumu\n\nDişi Üreme Hücrelerinin Oluşumu\n• Dişi üreme hücresi, yumurtalıkta üretilir. Yumurtalığın içinde bir ya da daha fazla tohum taslağı bulunur.\n\n• Tohum taslağı içinde diploit kromozomlu megaspor ana hücresi vardır. Bu hücre, mayoz bölünme geçirerek dört\ntane haploid kromozomlu megasporu oluşturur. Genellikle bu dört megaspor hücresinin üçü eriyerek yok olur. Geri\nkalan megaspor çekirdeği sitokinez olmadan üç kez mitozla bölünür böylece sekiz haploit çekirdeğe sahip büyük\nbir hücre meydana gelir. Çok çekirdekli bu hücre, daha sonra embriyo kesesini oluşturmak için zarlarla bölünür.\n• Bunlardan üçü bir kutba yerleşir, bunlara antipot hücreler denir. Diğer üçü ise ovaryum açıklığının olduğu taraftaki\nzıt kutba yerleşir. Bu üç hücreden ortadakine yumurta hücresi, yumurta hücresinin iki yanında bulunan hücrelere de\nsinerjit hücreler denir. Zarla çevrili olmayan iki çekirdek ise ortaya gelir ve bu çekirdekler polar çekirdekler (n+n)\nolarak adlandırılır.\n• Polar çekirdeklerin etrafında zar oluşmaz. Sonuçta tohum taslağının döllenmeye hazır hâle geldiği altı hücre ve sekiz\nçekirdekten oluşan bu yapısına embriyo kesesi denir.\n\nKapalı tohumlu bitkilerde embriyo kesesinin oluşumu\n\n234 MEBİ KONU ÖZETLERİ BİYOLOJİ - AYT",
+      "review_questions": {
+        "factual_support": "Is the factual content in the evidence text correct within the official source context?",
+        "outcome_support": "Does this evidence text directly and sufficiently support the stated curriculum outcome?",
+        "source_consistency": "Is the evidence text consistent with the cited official source page and provenance?"
+      },
+      "required_decision_fields": {
+        "status": "APPROVED_FOR_EVIDENCE_READY | MANUAL_REVIEW_REQUIRED | REJECTED",
+        "reviewer_type": "HUMAN | EXTERNAL_LLM",
+        "reviewer_id": "required",
+        "factual_support": "boolean",
+        "outcome_support": "boolean",
+        "source_consistency": "boolean",
+        "rationale": "required"
+      },
+      "evidence_status": "NOT_READY",
+      "student_visible": false
+    },
+    {
+      "record_id": "BİY.12.2.1::MEBI-AYT-BIYOLOJI::p151",
+      "outcome_id": "BİY.12.2.1",
+      "grade": 12,
+      "theme_name": "Gen",
+      "outcome_title": "Nükleik asitlerin yapısını ve canlılıktaki rolünü sorgulayabilme",
+      "source_package": "MEBI-AYT-BIYOLOJI",
+      "source_page": 151,
+      "source_anchor": "ayt-biyoloji/index.html#p=151",
+      "text_sha256": "ef954000cb08fabe672c14d647f5caed62e632821f2e9d96681861ff1dafffc9",
+      "matched_title_tokens": [
+        "nükleik",
+        "asitlerin",
+        "yapisini"
+      ],
+      "evidence_text": "NÜKLEİK ASİTLERİN KEŞİF SÜRECİ, NÜKLEOTİTLERİN YAPISI\n\n• Martha Chase (Marta Çeys) ve Alfred Hershey (Alfırıd Hörsi) kalıtsal maddenin protein olduğunu savunuyorlardı. Bunu\nkanıtlayabilmek için yeni deneyler yapmaya karar verdiler. Deneylerinde Escherichia coli (Eşerişa koli) bakterisi ve bu\nbakterinin içinde çoğalan T2 virüsünü kullandılar. Bakteriyofajın protein kılıf ve DNA’dan oluştuğu bilgisine sahiplerdi.\nBakterinin içine virüs tarafından bir madde gönderildiğini bilmelerine rağmen bu maddenin DNA mı yoksa protein mi\nolduğunu bilmiyorlardı. Bunu aydınlatmak için bir seri deney yaptılar.\nHershey ve Chase yaptıkları deneyde\n• Chase ve Hershey; deneylerinde DNA’nın fosfor içerip kükürt içermemesinin, proteinlerin ise kükürt içerip fosfor\niçermemesinin avantajını kullanmışlardır. Araştırmacılar deneyi iki faj grubu ile gerçekleştirmişlerdir. İlk gruptaki\nvirüslerin DNA’sını işaretleyebilmek için fosforun radyoaktif izotopunu (32P), ikinci gruptaki virüslerin protein kılıfını\nişaretleyebilmek için de kükürdün radyoaktif izotopunu (35S) kullanmışlardır.\n• İşaretlenmiş bakteriyofajları ayrı ayrı E. coli bakterileriyle aynı ortama koymuşlar ve bir süre bakteriyofajların bak-\nteri içinde çoğalmasını beklemişlerdir.\n\n• Son aşamada ise tüpleri santrifüjleyerek konsantre hücre içeren çökelti elde etmişler, tüplerin dibindeki çökeltinin\nve üstte kalan sıvının radyoaktivitesini ölçmüşlerdir.\n• Hershey ve Chase radyoaktif işaretli fajın protein kılıfının bakterinin dışında, radyoaktif olarak işaretlenmiş fajın\nDNA’sının ise bakterinin içinde olduğunu saptamışlardır. Faj DNA’sı bakteri hücrelerine girmiştir fakat faj proteinleri\ngirmemiştir. Fajın kalıtsal maddesi olarak proteinin değil DNA’nın işlev gördüğü sonucuna varmışlardır.\n\nRadyoaktif DNA\n\nsantrifüjleme\n\n32 P ile işaretli\nÜretim 1: Fajlar rad- DNAsı P Virüsün E.coli bakterisini DNA parçaları\n32\n32\nyoaktif P varlıgında (izotop fosfor) enfekte etmesi\n32\nüretilir, P DNA’nın ile işaretlenmis\nyapısına katılır. virüs Çökelti (bakteri hücresi ve içerigi) Çökeltide radyoaktif faj\nDNA’sı\n\nRadyoaktif\nprotein Sıvıda\nsantrifüjleme\nradyoaktif\nfaj proteini\nÜretim 2: Fajlar rad- 35 S ile işaretli\n35\n35\nyoaktif S varlıgında Protein kılıfı S Virüsün E.coli bakterisini protein parçaları\n35\nüretilir, S protein (izotop kükürt) ile enfekte etmesi\nkılıfın yapısına katılır. işaretlenmis virüs Çökelti\nMartha Chase ve Alfred Hershey’in yaptığı deney\n• DNA’nın kalıtım materyali oluşunun ispatı, yapısının da araştırılması ihtiyacını doğurmuştur. James Watson (Ceymis\nVatsın), Maurice Wilkins’ı (Moris Vilkins’i) ziyaret etmiş ve Wilkins’in çalışma arkadaşı Rosalind Franklin’in (Rozalin\nFranklin) çekmiş olduğu DNA fotoğrafını görmüş, böylece DNA bilmecesinin çözülmesine katkı sağlamıştır. DNA’ya ait\nX ışını kırınımını gösteren bu fotoğraf sayesinde Watson, Francis Crick (Fransis Kırik) ile yaptığı çalışmalarla DNA’nın\nyapısı hakkında günümüzde hâlâ geçerliliğini koruyan Watson-Crick modelini ortaya koymuştur.\n• DNA’nın kalıtsal bilgiyi nasıl taşıdığı ve kendini nasıl eşlediği yine bu model ile açıklanabilmiştir. Watson ve Crick, ça-\nlışmalarının sonuçlarını 1953 yılında yayımladıkları bir makale ile bilim dünyasına açıklamışlardır. DNA’nın yapısı ile\nilgili bu açıklama hâlâ geçerlidir. Bu çalışmalarından dolayı Watson ve Crick, Maurice Wilkins ile birlikte 1962 yılında\nNobel Fizyoloji veya Tıp Ödülünü almışlardır.\n• Erwin Chargaff (Ervin Çargaf), kalıtım materyalinin moleküler yapısını araştıran bilim insanlarından biridir. Chargaff,\nbir nükleik asit bazı olan sitozinin hücre içindeki miktarının başka bir nükleik asit bazı olan guaninin hücredeki miktarı-\nna eşit olduğunu kanıtlamıştır. Yine timin miktarının adenin miktarına eşit olduğunu da göstermiştir.\nBİYOLOJİ - AYT MEBİ KONU ÖZETLERİ 151",
+      "review_questions": {
+        "factual_support": "Is the factual content in the evidence text correct within the official source context?",
+        "outcome_support": "Does this evidence text directly and sufficiently support the stated curriculum outcome?",
+        "source_consistency": "Is the evidence text consistent with the cited official source page and provenance?"
+      },
+      "required_decision_fields": {
+        "status": "APPROVED_FOR_EVIDENCE_READY | MANUAL_REVIEW_REQUIRED | REJECTED",
+        "reviewer_type": "HUMAN | EXTERNAL_LLM",
+        "reviewer_id": "required",
+        "factual_support": "boolean",
+        "outcome_support": "boolean",
+        "source_consistency": "boolean",
+        "rationale": "required"
+      },
+      "evidence_status": "NOT_READY",
+      "student_visible": false
+    }
+  ]
+}
