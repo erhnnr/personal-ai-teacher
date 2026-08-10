@@ -52,6 +52,13 @@ from validate_knowledge import validate_topic
 from review_math_draft import review_draft
 
 
+RETRYABLE_GENERATION_ERRORS = (
+    json.JSONDecodeError,
+    ValueError,
+    RuntimeError,
+)
+
+
 DRAFT_ROOT = (
     PROJECT_ROOT
     / "data"
@@ -815,6 +822,62 @@ def generate_one(
     return package
 
 
+def generate_with_retry(
+    record,
+    grade,
+    max_attempts=3,
+):
+    """
+    Generate one package with bounded retries.
+
+    Retries are limited to generation/contract failures
+    such as malformed JSON, missing required validation
+    fields, unsupported validation contracts, or an empty
+    model result. Deterministic factual-review failures are
+    intentionally NOT retried here because review happens
+    only after a draft has been generated and saved.
+
+    Returns:
+        (package, attempts_used)
+    """
+
+    if max_attempts < 1:
+        raise ValueError(
+            "max_attempts must be at least 1."
+        )
+
+    topic = record.get(
+        "topic",
+        "UNKNOWN",
+    )
+
+    for attempt in range(
+        1,
+        max_attempts + 1,
+    ):
+        try:
+            package = generate_one(
+                record,
+                grade,
+            )
+
+            return package, attempt
+
+        except RETRYABLE_GENERATION_ERRORS as exc:
+            if attempt >= max_attempts:
+                raise RuntimeError(
+                    f"Generation failed after {max_attempts} "
+                    f"attempt(s) for '{topic}'. "
+                    f"Last error: {exc}"
+                ) from exc
+
+            print(
+                f"RETRY      | {topic} "
+                f"| attempt {attempt + 1}/{max_attempts} "
+                f"| previous error: {exc}"
+            )
+
+
 def select_records(
     exam,
     subject,
@@ -954,7 +1017,22 @@ def main():
         help="Overwrite an existing draft",
     )
 
+    parser.add_argument(
+        "--max-attempts",
+        type=int,
+        default=3,
+        help=(
+            "Maximum generation attempts per topic. "
+            "Default: 3"
+        ),
+    )
+
     args = parser.parse_args()
+
+    if args.max_attempts < 1:
+        parser.error(
+            "--max-attempts must be at least 1"
+        )
 
     connection = check_llm_connection()
 
@@ -997,6 +1075,7 @@ def main():
     skipped_units = 0
     skipped_drafts = 0
     failed = 0
+    retries_used = 0
 
     structure_pass = 0
     structure_fail = 0
@@ -1028,6 +1107,11 @@ def main():
 
     print(
         f"Model: {MODEL_NAME}"
+    )
+
+    print(
+        f"Max attempts per topic: "
+        f"{args.max_attempts}"
     )
 
     print(
@@ -1097,9 +1181,17 @@ def main():
 
         try:
 
-            package = generate_one(
+            (
+                package,
+                attempts_used,
+            ) = generate_with_retry(
                 record,
                 args.grade,
+                max_attempts=args.max_attempts,
+            )
+
+            retries_used += (
+                attempts_used - 1
             )
 
             draft_path = save_draft(
@@ -1196,6 +1288,10 @@ def main():
 
     print(
         f"Generation failures    : {failed}"
+    )
+
+    print(
+        f"Retries used           : {retries_used}"
     )
 
     print()

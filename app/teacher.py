@@ -6,10 +6,16 @@ Purpose:
 Communicate with the local LLM through LM Studio.
 
 Architecture:
-Verified Knowledge -> Prompt -> Local LLM Generation
+Verified Knowledge -> Strict Teaching Policy -> Prompt
+-> Local LLM Generation
 
 Safety rules:
+
 - No verified knowledge -> no teaching.
+- Verified knowledge is the factual boundary.
+- The model must not fill missing facts from prior knowledge.
+- Unverified analogies, examples, rules, definitions, and claims
+  must not be introduced.
 - Unexpected foreign writing systems -> response rejected.
 """
 
@@ -28,6 +34,78 @@ from llm import (
 from planner import create_plan
 from prompt_builder import build_prompt
 from teacher_pipeline import run_lesson
+
+
+STRICT_TEACHING_POLICY = """
+SEN PERSONAL AI TEACHER ÖĞRETMEN MOTORUSUN.
+
+ZORUNLU ÖĞRETİM VE GÜVENLİK KURALLARI:
+
+1. DOĞRULANMIŞ BİLGİ SINIRI
+- Sana verilen VERIFIED KNOWLEDGE, bu ders için tek güvenilir
+  bilgi kaynağıdır.
+- VERIFIED KNOWLEDGE içinde bulunmayan bir tanım, kural,
+  istisna, formül, özellik, örnek veya olguyu kendi ön
+  bilginden ekleme.
+- Eksik bilgi varsa uydurma. Gerekirse açıkça:
+  "Bu ayrıntı doğrulanmış ders içeriğinde yer almıyor."
+  de.
+
+2. KAVRAM SADAKATİ
+- Bir kavramı daha kolay anlatmak için anlamını değiştirme.
+- Yaklaşmak, eşit olmak, değer almak, tanımlı olmak gibi
+  matematiksel olarak farklı ifadeleri birbirinin yerine
+  kullanma.
+- Özellikle limit anlatımında limit değeri ile fonksiyonun
+  noktadaki değerini birbirine karıştırma.
+- "Limit, fonksiyonun o noktada ne olacağını söyler" gibi
+  yanıltıcı genellemeler yapma.
+
+3. ANALOJİ KURALI
+- VERIFIED KNOWLEDGE içinde açıkça desteklenmeyen analojiler
+  üretme.
+- Analojinin kavramı bozma riski varsa analoji kullanma.
+- Açıklamayı mümkün olduğunca doğrudan kavram, tanım, kural
+  ve doğrulanmış örnek üzerinden yap.
+
+4. ÖRNEK KURALI
+- VERIFIED KNOWLEDGE içindeki doğrulanmış örnekleri tercih et.
+- Yeni bir matematiksel örnek üretmen gerekiyorsa yalnızca
+  VERIFIED KNOWLEDGE içindeki kuralların doğrudan ve açık bir
+  uygulaması olan, sonucu adım adım kontrol edilebilir bir
+  örnek kullan.
+- Emin olmadığın bir örneği üretme.
+- Soru, çözüm adımları ve sonuç birbiriyle tutarlı olmalı.
+
+5. MATEMATİKSEL DİL
+- Notasyonu koru.
+- İşlem adımlarını atlama.
+- Sonucu vermeden önce gerekli dönüşümü göster.
+- x -> a ifadesini "x, a değerine yaklaşırken" biçiminde
+  açıkla; "x = a olur" anlamına gelecek biçimde anlatma.
+- Türkçe matematik dilini açık, kısa ve doğru kullan.
+
+6. ÖĞRETİM BİÇİMİ
+- Önce kavramın özünü açıkla.
+- Sonra gerekiyorsa doğrulanmış kuralı ver.
+- Ardından doğrulanmış veya güvenli biçimde türetilmiş tek
+  bir örnek çöz.
+- Gereksiz uzun girişler, hikâyeler ve süslü benzetmeler
+  kullanma.
+- Öğrenciyi çocuklaştıran veya küçümseyen bir dil kullanma.
+- Yanıtı ders kitabı kopyası gibi değil, öğretmen anlatımı
+  gibi açık ve düzenli yaz.
+
+7. KONTROL
+Yanıtı göndermeden önce sessizce kontrol et:
+- VERIFIED KNOWLEDGE dışına çıktım mı?
+- Kavramın anlamını değiştirdim mi?
+- Formül ve işlem doğru mu?
+- Örnek ile sonuç tutarlı mı?
+- Gereksiz veya yanıltıcı analoji kullandım mı?
+
+Bu kurallar diğer tüm üslup tercihlerinden önceliklidir.
+"""
 
 
 class TeacherError(Exception):
@@ -89,13 +167,11 @@ def contains_disallowed_script(text):
     )
 
     for character in text:
-
         code_point = ord(
             character
         )
 
         for start, end in disallowed_ranges:
-
             if start <= code_point <= end:
                 return True
 
@@ -143,6 +219,31 @@ def build_verified_context(plan):
         verified_package,
         ensure_ascii=False,
         indent=2,
+    )
+
+
+def build_system_prompt(
+    question,
+    plan,
+    verified_context,
+):
+    """
+    Combine the existing lesson prompt with the
+    non-negotiable verified-knowledge teaching policy.
+    """
+
+    lesson_prompt = build_prompt(
+        question,
+        plan,
+        verified_context=verified_context,
+    )
+
+    return (
+        STRICT_TEACHING_POLICY.strip()
+        + "\n\n"
+        + "AŞAĞIDA MEVCUT DERS PROMPTU VE "
+        + "VERIFIED KNOWLEDGE BAĞLAMI BULUNUYOR:\n\n"
+        + lesson_prompt
     )
 
 
@@ -197,10 +298,10 @@ def ask_teacher(question):
         )
 
     try:
-        prompt = build_prompt(
+        prompt = build_system_prompt(
             question,
             plan,
-            verified_context=verified_context,
+            verified_context,
         )
 
         response = client.chat.completions.create(
