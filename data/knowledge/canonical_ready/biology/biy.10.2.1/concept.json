@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0",
+  "id": "BİY.10.2.1",
+  "subject": "Biyoloji",
+  "grade": 10,
+  "theme_number": 2,
+  "theme_name": "Ekoloji",
+  "topic": "Ekosistemin cansız ve canlı bileşenleri arasındaki ilişkileri çözümleyebilme",
+  "learning_objectives": [
+    "Ekosistemin cansız ve canlı bileşenleri arasındaki ilişkileri çözümleyebilme"
+  ],
+  "prerequisites": [],
+  "core_concepts": [],
+  "definitions": [],
+  "rules": [],
+  "common_confusions": [],
+  "teaching_notes": [],
+  "source_grounded_content": {
+    "mode": "VERBATIM_OFFICIAL_EVIDENCE",
+    "text": "EKOLOJİK KAVRAMLAR, EKOSİSTEMİN CANLI VE CANSIZ BİLEŞENLERİ\n\nEkosistem, belirli bir bölgedeki canlı komüniteleri ve bu canlılarla etkile-\nşim hâlinde olan fiziksel faktörlerden oluşur. Ekosistemler, karasal eko-\nsistemler ve sucul ekosistemler olarak iki grupta incelenir. Çöl, çayır ve\ntropikal yağmur ormanları karasal ekosistemlere örnek oluşturur. Sucul\nekosistemler tatlı su ve tuzlu su ekosistemlerinden oluşur. Göl, akarsu,\nbataklık, yer altı suları, barajlar, göletler, dere, çay ve nehirler tatlı su;\ndenizler ve okyanuslar tuzlu su ekosistemleridir. Mercan resifleri, nehir\nağızları, longozlar ve lagünler de denizlerin kıyılara yakın kısımlarında\nbulunan özel ekosistemlerdir. Bir kıta, bir okyanus ekosistem olarak kabul\nedilebileceği gibi bir orman, çayır, göl hatta akvaryum da birer ekosistem-\ndir. Dünya en büyük ekosistemdir. Ekosistem örneği\n\nBiyosfer (ekosfer, küresel ekosistem), dünya üzerinde canlıların yaşamlarını sürdürdüğü tüm ekosistemlerin toplamıdır.\nKısaca biyosfer dünya üzerinde canlıların yaşadığı alanların tümüdür.\n\nEkolojik organizasyon düzeyleri küçükten büyüğe doğru sıralaması:\n\nBiyosfer\n\nDİKKAT\nEkosistem\nAynı türe ait canlılar popülasyonu, popülasyonlar komüniteyi, ko-\nmüniteler ise cansız çevre ile birlikte ekosistemi meydana getirir.\nKomünite\nBiyosfer, tüm ekosistemleri içine alan dünya üzerinde canlıların\nyaşamını sürdürdüğü alandır.\nPopülasyon\n\nEkolojik organizasyon düzeyleri\n\nBüyük iklim kuşaklarında geniş yaşam alanlarını, karakteristik bitki ve hayvan topluluklarını içine alan büyük coğrafik alan-\nlara biyom denir. Karasal biyomlar, tatlısu biyomları, tropikal yağmur ormanları ve tundralar bu alanlara örnektir. Biyomun\nbüyüklüğü; popülasyonların birey sayısı, çevresel koşullar ve coğrafik özelliklere göre değişir. Örneğin, çöl çok geniş bir\nalan olmasına rağmen barındırdığı tür çeşitliliği azdır. Biyomlar geniş ekosistemlerdir.\nBir organizmanın yaşayıp çoğalabildiği yaşam alanına habitat denir. Örneğin; balinanın habitatı okyanus, kutup ayısının\nhabitatı ise tundralardır.\nHabitat içindeki bireylerin yaşamlarını sürdürürken gerçekleştirdikleri beslenme, üreme, davranış, yaşam biçimi ve diğer\ncanlılarla ilişkileri gibi faaliyetlerin tamamı ekolojik niş olarak tanımlanır. Kraliçe arının ekolojik nişi, yumurta üreterek\nçoğalmayı sağlamaktır.\n\nKutup ayısının habitatı tundralardır. Arılarda niş\n\n146 MEBİ KONU ÖZETLERİ BİYOLOJİ - TYT",
+    "text_sha256": "3313f34bf20f5a621760ce92fc676b3913fdaf3fae467a0db47c01d549b821bf"
+  },
+  "provenance": {
+    "authority": "MEB",
+    "corpus_family": "MEBI_OFFICIAL_LOCAL_CORPUS",
+    "package_id": "MEBI-TYT-BIYOLOJI",
+    "page": 146,
+    "source_anchor": "tyt-biyoloji/index.html#p=146",
+    "html_path": "local_corpus_extracted\\tyt-biyoloji\\files\\basic-html\\page146.html",
+    "image_path": "local_corpus_extracted\\tyt-biyoloji\\files\\thumb\\146.jpg",
+    "source_text_sha256": "3313f34bf20f5a621760ce92fc676b3913fdaf3fae467a0db47c01d549b821bf",
+    "evidence_record_id": "BİY.10.2.1::MEBI-TYT-BIYOLOJI::p146",
+    "promotion_policy": "RELEASE_SAFE_INDEPENDENT_APPROVAL_GATE"
+  },
+  "verification": {
+    "evidence_status": "READY",
+    "approval_status": "APPROVED_FOR_EVIDENCE_READY",
+    "reviewer_type": "EXTERNAL_LLM",
+    "reviewer_id": "openai-gpt-5.6-sol-external-review-2026-08-10",
+    "factual_support": true,
+    "outcome_support": true,
+    "source_consistency": true
+  },
+  "compiler": {
+    "name": "KNOWLEDGE_FACTORY_V2_CANONICAL_VERBATIM_COMPILER",
+    "deterministic": true,
+    "paraphrase_allowed": false,
+    "invented_facts_allowed": false
+  },
+  "verified": true,
+  "student_ready": false,
+  "student_visible": false
+}

@@ -1,0 +1,65 @@
+{
+  "version": "1.0",
+  "kind": "canonical_ready_knowledge_manifest",
+  "subject": "Biyoloji",
+  "input_ready_count": 6,
+  "compiled_count": 6,
+  "units": [
+    {
+      "id": "BİY.10.1.1",
+      "record_id": "BİY.10.1.1::MEBI-TYT-BIYOLOJI::p10",
+      "path": "data/knowledge/canonical_ready/biology/biy.10.1.1/concept.json",
+      "text_sha256": "8b4f794bf6a00b4dd735240a7cf25ff26b19d9ed972b836d9d9f5189c4fb584c",
+      "verified": true,
+      "student_ready": false,
+      "student_visible": false
+    },
+    {
+      "id": "BİY.10.2.1",
+      "record_id": "BİY.10.2.1::MEBI-TYT-BIYOLOJI::p146",
+      "path": "data/knowledge/canonical_ready/biology/biy.10.2.1/concept.json",
+      "text_sha256": "3313f34bf20f5a621760ce92fc676b3913fdaf3fae467a0db47c01d549b821bf",
+      "verified": true,
+      "student_ready": false,
+      "student_visible": false
+    },
+    {
+      "id": "BİY.10.2.7",
+      "record_id": "BİY.10.2.7::MEBI-TYT-BIYOLOJI::p166",
+      "path": "data/knowledge/canonical_ready/biology/biy.10.2.7/concept.json",
+      "text_sha256": "9185a94ae770e079653353fba3319f8b724b789f22111e923e26f1e823e0418f",
+      "verified": true,
+      "student_ready": false,
+      "student_visible": false
+    },
+    {
+      "id": "BİY.11.2.3",
+      "record_id": "BİY.11.2.3::MEBI-AYT-BIYOLOJI::p127",
+      "path": "data/knowledge/canonical_ready/biology/biy.11.2.3/concept.json",
+      "text_sha256": "07880a64a934615afcee50ad1ff49cc3883f5b41e314513316aba9608f19f851",
+      "verified": true,
+      "student_ready": false,
+      "student_visible": false
+    },
+    {
+      "id": "BİY.12.1.3",
+      "record_id": "BİY.12.1.3::MEBI-AYT-BIYOLOJI::p157",
+      "path": "data/knowledge/canonical_ready/biology/biy.12.1.3/concept.json",
+      "text_sha256": "0f572adeaa836504246672e3afd50355e4de37d9577c003861ea4dd155aca379",
+      "verified": true,
+      "student_ready": false,
+      "student_visible": false
+    },
+    {
+      "id": "BİY.12.1.8",
+      "record_id": "BİY.12.1.8::MEBI-AYT-BIYOLOJI::p232",
+      "path": "data/knowledge/canonical_ready/biology/biy.12.1.8/concept.json",
+      "text_sha256": "031fd48a6b2d214321f1031cb69a75562a5025acc2ba0e8080e81e3997e3df36",
+      "verified": true,
+      "student_ready": false,
+      "student_visible": false
+    }
+  ],
+  "student_ready": false,
+  "student_visible": false
+}

@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0",
+  "id": "BİY.10.2.7",
+  "subject": "Biyoloji",
+  "grade": 10,
+  "theme_number": 2,
+  "theme_name": "Ekoloji",
+  "topic": "Ekolojik ayak izini küçültebilme yollarını bilimsel olarak sorgulayabilme",
+  "learning_objectives": [
+    "Ekolojik ayak izini küçültebilme yollarını bilimsel olarak sorgulayabilme"
+  ],
+  "prerequisites": [],
+  "core_concepts": [],
+  "definitions": [],
+  "rules": [],
+  "common_confusions": [],
+  "teaching_notes": [],
+  "source_grounded_content": {
+    "mode": "VERBATIM_OFFICIAL_EVIDENCE",
+    "text": "BİYOLOJİ\n\nKONU ÇEVRE SORUNLARININ ORTAYA ÇIKMASINDA\nÖZETİ BİREYLERİN ROLÜ VE ÇÖZÜM ÖNERİLERİ\nTYT TYT TYT TYT TYT TYT TYT TYT TYT TYT TYT TYT\n\nEkolojik Ayak İzi\nİnsanların günlük yaşantıları sırasında tüketilen doğal kaynakla-\nrın yeniden üretimi ve oluşan atıkların geri kazanımı için belirli\nbir miktar verimli toprağa ve suya ihtiyaç vardır. İnsanların üretim\nve tüketim faaliyetleri sonucu kullandığı enerjinin, kaynakların ve\nham maddenin yeniden üretilmesi ve oluşturulan atıkların etkisiz\nhâle getirilmesi için gerekli olan toprak ve su alanı miktarının öl-\nçümüne ekolojik ayak izi denir.\nEkolojik ayak izi, doğal kaynaklar ve ekosistem üzerinde belirli\nbir nüfusun doğaya yükünü hesaplamak amacıyla oluşmuş bir\nyöntemdir.\nDoğal kaynakların tükenmemesi ve sürdürülebilir bir kalkınmanın\nsağlanabilmesi için bireylerin ekolojik ayak izlerinin bilincinde ol-\nması gerekir.\n\nEkolojik ayak izini küçültmek için;\n• Fosil yakıtlar yerine yenilenebilir enerji kaynakları kullanılmalıdır.\n• Enerji ve gıda israfını önlemek gerekir.\n• Daha az elektrik, kâğıt, su kullanmaya özen gösterilmelidir.\n\nKarbon Ayak İzi\nHer birey; ulaşım, barınma, beslenme, elektrik tüketimi gibi faali-\nyetler, satın aldığı ve kullandığı ürünlerle atmosferde karbondiok-\nsit salınımına neden olur. Bu tür etkinlikler sonucu atmosfere sa-\nlınan karbondioksit miktarının tamamı, canlıların karbon ayak\nizini oluşturur. Karbon ayak izi genellikle ton, kg ya da g olarak\nifade edilir ve bir yıllık zaman dilimi için hesaplanır. Karbon ayak\nizi ölçülürken diğer sera gazlarının miktarı da dikkate alınır.\nKarbon ayak izi, birincil ayak izi ve ikincil ayak izi olarak iki ana\nparçadan oluşur. Birincil ayak izi; evsel enerji tüketimi, ulaşım ve\nfosil yakıtların yanmasıyla ortaya çıkan karbondioksit oranının öl-\nçüsüdür. İkincil ayak izi ise kişilerin günlük yaşantısında kullandı-\nğı ürünlerin imalatından bozulmasına kadar olan süreçteki dolaylı\nkarbondioksit oranının ölçüsüdür.\n\nAtmosfere salınan karbondioksit miktarını azaltmak için alınacak bazı önlemler;\n• Plastik poşet ve şişe kullanımını azaltmak.\n• Ambalajlanmış veya uzak mesafelerden gelen yiyecek ve içeceklerin israfını önlemek.\n• Mümkün olduğunca ulaşımda toplu taşıma araçlarını tercih etmek.\n• Fabrika bacalarına filtre takmak.\n\n• Güneş ve rüzgâr enerjisi gibi yenilenebilir enerji kullanmak.\n• Aydınlatmada tasarruflu ampulleri tercih etmek.\n• Binalara yalıtım yapmak.\n• Evsel atıkları ve fabrika atıklarını geri dönüşüme kazandırmak.\n\n• Yeşil alanları korumak ve ağaçlandırma çalışmalarını artırmak.\n166 MEBİ KONU ÖZETLERİ BİYOLOJİ - TYT",
+    "text_sha256": "9185a94ae770e079653353fba3319f8b724b789f22111e923e26f1e823e0418f"
+  },
+  "provenance": {
+    "authority": "MEB",
+    "corpus_family": "MEBI_OFFICIAL_LOCAL_CORPUS",
+    "package_id": "MEBI-TYT-BIYOLOJI",
+    "page": 166,
+    "source_anchor": "tyt-biyoloji/index.html#p=166",
+    "html_path": "local_corpus_extracted\\tyt-biyoloji\\files\\basic-html\\page166.html",
+    "image_path": "local_corpus_extracted\\tyt-biyoloji\\files\\thumb\\166.jpg",
+    "source_text_sha256": "9185a94ae770e079653353fba3319f8b724b789f22111e923e26f1e823e0418f",
+    "evidence_record_id": "BİY.10.2.7::MEBI-TYT-BIYOLOJI::p166",
+    "promotion_policy": "RELEASE_SAFE_INDEPENDENT_APPROVAL_GATE"
+  },
+  "verification": {
+    "evidence_status": "READY",
+    "approval_status": "APPROVED_FOR_EVIDENCE_READY",
+    "reviewer_type": "EXTERNAL_LLM",
+    "reviewer_id": "openai-gpt-5.6-sol-external-review-2026-08-10",
+    "factual_support": true,
+    "outcome_support": true,
+    "source_consistency": true
+  },
+  "compiler": {
+    "name": "KNOWLEDGE_FACTORY_V2_CANONICAL_VERBATIM_COMPILER",
+    "deterministic": true,
+    "paraphrase_allowed": false,
+    "invented_facts_allowed": false
+  },
+  "verified": true,
+  "student_ready": false,
+  "student_visible": false
+}

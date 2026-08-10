@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0",
+  "id": "BİY.12.1.8",
+  "subject": "Biyoloji",
+  "grade": 12,
+  "theme_number": 1,
+  "theme_name": "Üreme",
+  "topic": "Eşeysiz ve eşeyli üreme ile ilgili bilimsel çıkarım yapabilme",
+  "learning_objectives": [
+    "Eşeysiz ve eşeyli üreme ile ilgili bilimsel çıkarım yapabilme"
+  ],
+  "prerequisites": [],
+  "core_concepts": [],
+  "definitions": [],
+  "rules": [],
+  "common_confusions": [],
+  "teaching_notes": [],
+  "source_grounded_content": {
+    "mode": "VERBATIM_OFFICIAL_EVIDENCE",
+    "text": "BIYOLOJI\n\nKONU ÇİÇEĞİN KISIMLARI VE GÖREVLERİ\nÖZETİ\nAYT AYT AYT AYT AYT AYT AYT AYT AYT AYT AYT AYT\n\nÇİÇEĞİN KISIMLARI VE GÖREVLERİ\nBitkilerde Eşeyli Üremenin Genel Özellikleri\n• Bitkilerde eşeyli ve eşeysiz olarak iki tip üreme görülür.\n\n• Eşeysiz üreme sonucu kalıtsal yapısı aynı olan bitkilerden çok sayıda üretilebilir ve bitkilerde genetik çeşitlilik olmaz.\n• Eşeyli üreme sonucunda ise kalıtsal yapısı farklı olan bitkiler üretilebilir ve genetik çeşitlilik olur. Bu sayede eşeyli üre-\nme ile çoğalan bitki türünün farklı çevrelere yayılma şansı yüksek ve değişen çevre şartlarına uyum sağlama yeteneği\ndaha fazladır.\n• Tohumlu bitkiler eşeyli üreme ile çoğalır ve tohum durumlarına göre iki grupta incelenir.\n• Açık tohumlu bitkilerde üreme organı kozalaklar, kapalı tohumlu (çiçekli) bitkilerde çiçeklerdir.\nKapalı Tohumlu Bitkilerde Çiçeğin Genel Yapısı\n• Çiçekler, yaprakların değişimi ile meydana gelmiş yapılardır. Çiçek sapı ucunda yer alır.\n\n• Kapalı tohumlu bitkiye ait çiçek genel olarak dıştan içe doğru çanak yaprak, taç yaprak, erkek organ ve dişi organdan\noluşur.\n\nKapalı tohumlu bitkilerde çiçeğin genel yapısı\nDıştan içe doğru çiçeğin kısımları şunlardır:\n• Çiçek sapı (pedisel), çiçeğin taşınmasını sağlar.\n\n• Çiçek tablası (reseptakulum), çiçeğin tüm yapılarının bağlandığı çiçek sapının üstünde olan bölümdür.\n• Çanak yaprak (sepal), genellikle yeşil renkli olan ve fotosentez yapabilme yeteneğine sahip olan yapraklardır. Çiçek\ntomurcukları açmadan önce onları sarıp koruyan çanak yapraklar çiçeğin en dışında bulunur.\n\n• Taç yaprak (petal), birçok çiçekte parlak renkler içerip böceklerin ve diğer tozlaştırıcıların ilgisini çekerek tozlaşmaya\nyardımcı olan yapraklardır.\n• Erkek organ (stamen), sapçık (filament) ve başçık (anter) olmak üzere iki kısımdan oluşur.\n\nSapçık başçığı taşır ve ve onun hareketliliğini sağlar. Başçıkta polen keseleri bulunur. Bu keseler polenlerin üretildiği ve\ndepolandığı kısımdır.\n\nKapalı tohumlu bitkilerde erkek organın genel yapısı Kapalı tohumlu bitkilerde başçığın enine kesiti\n\n232 MEBİ KONU ÖZETLERİ BİYOLOJİ - AYT",
+    "text_sha256": "031fd48a6b2d214321f1031cb69a75562a5025acc2ba0e8080e81e3997e3df36"
+  },
+  "provenance": {
+    "authority": "MEB",
+    "corpus_family": "MEBI_OFFICIAL_LOCAL_CORPUS",
+    "package_id": "MEBI-AYT-BIYOLOJI",
+    "page": 232,
+    "source_anchor": "ayt-biyoloji/index.html#p=232",
+    "html_path": "local_corpus_extracted\\ayt-biyoloji\\files\\basic-html\\page232.html",
+    "image_path": "local_corpus_extracted\\ayt-biyoloji\\files\\thumb\\232.jpg",
+    "source_text_sha256": "031fd48a6b2d214321f1031cb69a75562a5025acc2ba0e8080e81e3997e3df36",
+    "evidence_record_id": "BİY.12.1.8::MEBI-AYT-BIYOLOJI::p232",
+    "promotion_policy": "RELEASE_SAFE_INDEPENDENT_APPROVAL_GATE"
+  },
+  "verification": {
+    "evidence_status": "READY",
+    "approval_status": "APPROVED_FOR_EVIDENCE_READY",
+    "reviewer_type": "EXTERNAL_LLM",
+    "reviewer_id": "openai-gpt-5.6-sol-external-review-2026-08-10",
+    "factual_support": true,
+    "outcome_support": true,
+    "source_consistency": true
+  },
+  "compiler": {
+    "name": "KNOWLEDGE_FACTORY_V2_CANONICAL_VERBATIM_COMPILER",
+    "deterministic": true,
+    "paraphrase_allowed": false,
+    "invented_facts_allowed": false
+  },
+  "verified": true,
+  "student_ready": false,
+  "student_visible": false
+}

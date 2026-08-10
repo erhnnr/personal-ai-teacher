@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0",
+  "id": "BİY.10.1.1",
+  "subject": "Biyoloji",
+  "grade": 10,
+  "theme_number": 1,
+  "theme_name": "Enerji",
+  "topic": "Canlıların yaşamına devam edebilmesi için enerjinin gerekliliğini sorgulayabilme",
+  "learning_objectives": [
+    "Canlıların yaşamına devam edebilmesi için enerjinin gerekliliğini sorgulayabilme"
+  ],
+  "prerequisites": [],
+  "core_concepts": [],
+  "definitions": [],
+  "rules": [],
+  "common_confusions": [],
+  "teaching_notes": [],
+  "source_grounded_content": {
+    "mode": "VERBATIM_OFFICIAL_EVIDENCE",
+    "text": "CANLILARIN ORTAK ÖZELLİKLERİ\n\n2. Çekirdeğe ve zarlı organellere sahip olan hücrelere ökaryot hücre denir. Öglena, paramesyum, amip, algler, mantarlar,\nbitkiler ve hayvanlar ökaryot hücre yapısına sahip canlılardır.\n\nAmip Mantar Bitkiler Hayvanlar\nCanlıların bazıları tek hücreli bazıları ise çok hücrelidir. Öglena, amip, paramesyum ve bakteri gibi canlılar tek hücreli olup\ngözle görülemez. Şapkalı mantarlar, bitkiler ve hayvanlar ise çok hücreli canlılardır ve gözle görülebilir.\n\nKRİTİK BİLGİ DİKKAT\nÖkaryot hücrelere özgü tek ya da çift katlı zara sahip Her tek hücreli canlı prokaryot değildir. Ökaryot tek hücreli\nhücre birimlerine organel denir. Prokaryot hücrelerde ise canlılar da vardır. Ancak her prokaryort canlı tek hücrelidir.\nzarlı organel bulunmaz.\n\nBeslenme\nCanlılar; büyüyüp gelişmek, yıpranan doku ve organlarını onarmak, enerji elde etmek ve düzenleyici faaliyetlerini devam\nettirebilmek için besin maddelerine ihtiyaç duyar.\nCanlıların bir kısmı yaşadığı ortamdan su, mineral ve karbondioksit gibi inorganik maddeleri alıp güneş enerjisini veya\nkimyasal enerjiyi kullanarak ihtiyaç duyduğu organik besini üretir. Bu canlılara üretici (ototrof) canlılar denir.\nBitkiler (tam parazit bitkiler hariç), algler (su yosunları) ve bazı tek hücreli canlılar üreticidir.\n\nYeşil bitkiler Fotosentetik bakteriler\nCanlıların diğer bir kısmı ise inorganik maddelerden ihtiyaç duyduğu organik besinleri üretemez. Besinlerini yaşadıkları\nortamdan hazır olarak alırlar. Bu canlılara tüketici (heterotrof) canlılar denir. Hayvanlar, mantarlar ve bazı tek hücreli\ncanlılar tüketicidir.\n\nOtla beslenen panda Etle beslenen aslan\n\nDİKKAT\nBesinler, metabolik enerjinin ham maddesidir; hücrelerin yapı malzemesidir.\n\n10 MEBİ KONU ÖZETLERİ BİYOLOJİ - TYT",
+    "text_sha256": "8b4f794bf6a00b4dd735240a7cf25ff26b19d9ed972b836d9d9f5189c4fb584c"
+  },
+  "provenance": {
+    "authority": "MEB",
+    "corpus_family": "MEBI_OFFICIAL_LOCAL_CORPUS",
+    "package_id": "MEBI-TYT-BIYOLOJI",
+    "page": 10,
+    "source_anchor": "tyt-biyoloji/index.html#p=10",
+    "html_path": "local_corpus_extracted\\tyt-biyoloji\\files\\basic-html\\page10.html",
+    "image_path": "local_corpus_extracted\\tyt-biyoloji\\files\\thumb\\10.jpg",
+    "source_text_sha256": "8b4f794bf6a00b4dd735240a7cf25ff26b19d9ed972b836d9d9f5189c4fb584c",
+    "evidence_record_id": "BİY.10.1.1::MEBI-TYT-BIYOLOJI::p10",
+    "promotion_policy": "RELEASE_SAFE_INDEPENDENT_APPROVAL_GATE"
+  },
+  "verification": {
+    "evidence_status": "READY",
+    "approval_status": "APPROVED_FOR_EVIDENCE_READY",
+    "reviewer_type": "EXTERNAL_LLM",
+    "reviewer_id": "openai-gpt-5.6-sol-external-review-2026-08-10",
+    "factual_support": true,
+    "outcome_support": true,
+    "source_consistency": true
+  },
+  "compiler": {
+    "name": "KNOWLEDGE_FACTORY_V2_CANONICAL_VERBATIM_COMPILER",
+    "deterministic": true,
+    "paraphrase_allowed": false,
+    "invented_facts_allowed": false
+  },
+  "verified": true,
+  "student_ready": false,
+  "student_visible": false
+}

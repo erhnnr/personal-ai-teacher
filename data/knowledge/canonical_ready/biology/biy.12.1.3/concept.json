@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0",
+  "id": "BİY.12.1.3",
+  "subject": "Biyoloji",
+  "grade": 12,
+  "theme_number": 1,
+  "theme_name": "Üreme",
+  "topic": "Hücredeki genetik materyalin organizasyonunu çözümleyebilme",
+  "learning_objectives": [
+    "Hücredeki genetik materyalin organizasyonunu çözümleyebilme"
+  ],
+  "prerequisites": [],
+  "core_concepts": [],
+  "definitions": [],
+  "rules": [],
+  "common_confusions": [],
+  "teaching_notes": [],
+  "source_grounded_content": {
+    "mode": "VERBATIM_OFFICIAL_EVIDENCE",
+    "text": "NÜKLEİK ASİTLERİN ÇEŞİTLERİ VE GÖREVLERİ, GENETİK MATERYALİN ORGANİZASYONU\n\nGENETİK MATERYALİN ORGANİZASYONU\n\nGen\n\nNükleotit DNA\n\nHiston\nNükleozom\n\nKromozom Kromatin iplik\nHücredeki genetik materyalin organizasyonu\n\n• Gen bir polipeptidi ya da bir RNA molekülünü üretmek üzere ifade edilebilen DNA bölgesidir. Genler, birkaç bin nük-\nleotitten oluşabildiği gibi milyonlarca nükleotitten de oluşabilir. Genler bilgi depolayabilir, DNA replikasyonu ile kopya-\nlanabilir ve bu kopyalama sayesinde de yeni hücrelere aktarılabilir.\n• Genler değişikliğe uğrayabilir. Değişikliğe uğramasına gen mutasyonu denir. Bir gendeki mutasyon; replikasyon\nsırasında yanlış baz eşleşmesi, karşılıklı nükleotit çiftinin yer değiştirmesi, yeni bir nükleotit çiftinin eksilmesi ya da\neklenmesi şeklinde gerçekleşebilir.\n• DNA, interfaz safhasında kromatin şeklinde bulunur. Kromatin, ökaryotlarda DNA'dan ve histon proteinlerden meyda-\nna gelmiş yapıdır. Bazı arkeler hariç prokaryotlar, histonlarla veya histon benzeri proteinlerle ilişkili olmayan DNA’ya\nsahiptir. Ökaryotlarda bir DNA ipliği, sekiz histondan oluşan bir kümenin etrafında iki kez dolanarak bir nükleozom\noluşturur. Bu nükleozomlar, bir zincire dizilen boncuklar gibi birbirine bağlanır. Kromozom, hücre döngüsü sürecinde\nkromatinin yoğun bir şekilde paketlenmesiyle oluşan yapıdır. Metafaz safhası, kromozomların en belirgin görüldüğü\nsafhadır.\n• Ökaryotlarda kromozomlar hem doğrusal hem de farklı uzunluk ve biçimde, prokaryotlarda ise halkasaldır. Kromozom\nsayısı türe özgüdür. Ancak farklı türdeki canlıların kromozom sayısı aynı olabilir. Örneğin; insanın kromozom sayısı ile\nmoli balığı, kurtbağrı bitkisi ve samur antilobunun kromozom sayıları aynıdır.\n\nBİYOLOJİ - AYT MEBİ KONU ÖZETLERİ 157",
+    "text_sha256": "0f572adeaa836504246672e3afd50355e4de37d9577c003861ea4dd155aca379"
+  },
+  "provenance": {
+    "authority": "MEB",
+    "corpus_family": "MEBI_OFFICIAL_LOCAL_CORPUS",
+    "package_id": "MEBI-AYT-BIYOLOJI",
+    "page": 157,
+    "source_anchor": "ayt-biyoloji/index.html#p=157",
+    "html_path": "local_corpus_extracted\\ayt-biyoloji\\files\\basic-html\\page157.html",
+    "image_path": "local_corpus_extracted\\ayt-biyoloji\\files\\thumb\\157.jpg",
+    "source_text_sha256": "0f572adeaa836504246672e3afd50355e4de37d9577c003861ea4dd155aca379",
+    "evidence_record_id": "BİY.12.1.3::MEBI-AYT-BIYOLOJI::p157",
+    "promotion_policy": "RELEASE_SAFE_INDEPENDENT_APPROVAL_GATE"
+  },
+  "verification": {
+    "evidence_status": "READY",
+    "approval_status": "APPROVED_FOR_EVIDENCE_READY",
+    "reviewer_type": "EXTERNAL_LLM",
+    "reviewer_id": "openai-gpt-5.6-sol-external-review-2026-08-10",
+    "factual_support": true,
+    "outcome_support": true,
+    "source_consistency": true
+  },
+  "compiler": {
+    "name": "KNOWLEDGE_FACTORY_V2_CANONICAL_VERBATIM_COMPILER",
+    "deterministic": true,
+    "paraphrase_allowed": false,
+    "invented_facts_allowed": false
+  },
+  "verified": true,
+  "student_ready": false,
+  "student_visible": false
+}

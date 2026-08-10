@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0",
+  "id": "BİY.11.2.3",
+  "subject": "Biyoloji",
+  "grade": 11,
+  "theme_number": 2,
+  "theme_name": "Homeostazi",
+  "topic": "Pozitif ve negatif geri bildirim mekanizmalarını karşılaştırabilme",
+  "learning_objectives": [
+    "Pozitif ve negatif geri bildirim mekanizmalarını karşılaştırabilme"
+  ],
+  "prerequisites": [],
+  "core_concepts": [],
+  "definitions": [],
+  "rules": [],
+  "common_confusions": [],
+  "teaching_notes": [],
+  "source_grounded_content": {
+    "mode": "VERBATIM_OFFICIAL_EVIDENCE",
+    "text": "MENSTRUAL DÖNGÜ\n\nDişi Üreme Sisteminin Hormonal Kontrolü\n• Hipotalamus, hipofiz bezi ve yumurtalık arasındaki geri bildirim mekanizması ile GnRH, gonadotropinler (FSH, LH) ve\neşey hormonları arasındaki etkileşimlerle dişilerdeki üreme döngüsü kontrol edilir.\n\nFOLİKÜL EVRESİNDE LUTEAL EVREDE\n\n+ –\nHipotalamus Hipotalamus\nGnRH salgısını artırır. + GnRH – GnRH – GnRH salgısını azaltır.\n\nHipofiz bezi ön lobu\nPozitif geri bildirim LH salgısını artırır. Hipofiz bezi ön lobu Negatif geri bildirim Öncelikle FSH salgısını azaltır. Yumurtalık (Ovaryum) FSH ve LH salgısını azaltır. Negatif geri bildirim\n\nFSH + LH\nLH\n\nYumurtalık\n(Ovaryum)\n\nKorpus luteum oluşumu\nKorpus luteum\n\nİnhibin Progesteron\nÖstrojen ve Östrojen\nmiktarında artış\nDişi üreme sisteminin hormonal kontrolü\n\n• Folikül hücrelerinde bulunan FSH ve LH reseptörleri sayesinde östrojen yapımı uyarılır ve salgısı hızlanır. Kanda\nbulunan östrojen miktarının hemen hemen tamamı yumurtalık kaynaklıdır. Östrojen FSH salgısını azaltır. LH salgısı\nüzerine ise bazı durumlarda artırabilen (pozitif geri bildirim) bazı durumlarda da azaltabilen etkiye sahiptir (negatif geri\nbildirim).\n• Folikül evresinin büyük bir kısmında kandaki östrojen hormonu hafif artış gösterir. Düşük miktardaki östrojen hormonu-\nnun hipofiz bezinin FSH ve LH salgısı üzerine engelleyici etkisi vardır. Folikül evresinin sonlarına doğru östrojen mikta-\nrındaki artış pozitif geri bildirimle LH salgısının artmasına neden olur (pozitif geri bildirim). Hipotalamustan salgılanan\nGnRH’nin hipofiz bezi ön lobunu uyarmasıyla FSH miktarında da bir miktar artış gerçekleşir. LH’nin tepe değerine\nulaşmasıyla ovulasyon gerçekleşir.\n• Luteal evrede ise korpus luteumdan salgılanan yüksek miktarlardaki östrojen, progesteron ve inhibin hormonu hipota-\nlamus ve hipofiz bezi üzerine baskılayıcı etki yapar. Yüksek miktarda progesteron LH salgısını engellerken östrojenin\ninhibe edici etkisini güçlendirir. İnhibin hipofiz bezi ön lobundan FSH salgılanmasını azaltır. Korpus luteumun bozulup\nkaybolmaya başlaması ile bu etki ortadan kalkar.\n\n• Östrojen hormonu, dişi üreme organlarının gelişimi ve dişi üreme faaliyetlerini uyarma görevleri yanında dişiye özgü\nikincil cinsiyet karakterlerinin oluşumundan ve korunmasından sorumludur. Meme dokusunun büyümesi, süt kanallarının\ngelişimi ve deri altı, kalça, meme dokusu gibi yapılarda yağ depolanması, kemik gelişimi, boy uzaması gibi görevleri\nvardır.\nBİYOLOJİ - AYT MEBİ KONU ÖZETLERİ 127",
+    "text_sha256": "07880a64a934615afcee50ad1ff49cc3883f5b41e314513316aba9608f19f851"
+  },
+  "provenance": {
+    "authority": "MEB",
+    "corpus_family": "MEBI_OFFICIAL_LOCAL_CORPUS",
+    "package_id": "MEBI-AYT-BIYOLOJI",
+    "page": 127,
+    "source_anchor": "ayt-biyoloji/index.html#p=127",
+    "html_path": "local_corpus_extracted\\ayt-biyoloji\\files\\basic-html\\page127.html",
+    "image_path": "local_corpus_extracted\\ayt-biyoloji\\files\\thumb\\127.jpg",
+    "source_text_sha256": "07880a64a934615afcee50ad1ff49cc3883f5b41e314513316aba9608f19f851",
+    "evidence_record_id": "BİY.11.2.3::MEBI-AYT-BIYOLOJI::p127",
+    "promotion_policy": "RELEASE_SAFE_INDEPENDENT_APPROVAL_GATE"
+  },
+  "verification": {
+    "evidence_status": "READY",
+    "approval_status": "APPROVED_FOR_EVIDENCE_READY",
+    "reviewer_type": "EXTERNAL_LLM",
+    "reviewer_id": "openai-gpt-5.6-sol-external-review-2026-08-10",
+    "factual_support": true,
+    "outcome_support": true,
+    "source_consistency": true
+  },
+  "compiler": {
+    "name": "KNOWLEDGE_FACTORY_V2_CANONICAL_VERBATIM_COMPILER",
+    "deterministic": true,
+    "paraphrase_allowed": false,
+    "invented_facts_allowed": false
+  },
+  "verified": true,
+  "student_ready": false,
+  "student_visible": false
+}
