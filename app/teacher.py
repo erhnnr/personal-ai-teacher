@@ -34,6 +34,7 @@ from llm import (
 from planner import create_plan
 from prompt_builder import build_prompt
 from teacher_pipeline import run_lesson
+from canonical_release_gate import build_teacher_context
 
 
 STRICT_TEACHING_POLICY = """
@@ -180,13 +181,25 @@ def contains_disallowed_script(text):
 
 def build_verified_context(plan):
     """
-    Load the verified knowledge package for
-    the planned lesson topic.
+    Load safe teaching knowledge for the planned lesson.
 
-    Returns:
-        JSON string when verified knowledge exists.
-        None when verified knowledge is unavailable.
+    Biology uses Knowledge Factory V2's hash-bound canonical release
+    gate and MUST NOT fall back to legacy knowledge.
+
+    Other subjects keep the existing verified legacy pipeline until
+    migrated to the same canonical release mechanism.
     """
+
+    try:
+        canonical_context = build_teacher_context(plan)
+    except Exception:
+        canonical_context = None
+
+    if canonical_context is not None:
+        return canonical_context
+
+    if str(plan.subject).strip().casefold() == "biyoloji":
+        return None
 
     try:
         lesson = run_lesson(
@@ -209,6 +222,7 @@ def build_verified_context(plan):
         return None
 
     verified_package = {
+        "source": "LEGACY_VERIFIED_KNOWLEDGE",
         "subject": lesson.get("subject"),
         "grade": lesson.get("grade"),
         "topic": lesson.get("topic"),
