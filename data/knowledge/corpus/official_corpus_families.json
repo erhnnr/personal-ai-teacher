@@ -1,0 +1,98 @@
+{
+  "version": "1.0",
+  "kind": "OFFICIAL_CORPUS_FAMILIES",
+  "domain": "ogmmateryal.eba.gov.tr",
+  "families": [
+    {
+      "exam": "TYT",
+      "subject": "Matematik",
+      "family_id": "MEBI-TYT-MATEMATIK",
+      "base_url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-matematik/files/basic-html/",
+      "index_url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-matematik/files/basic-html/index.html"
+    },
+    {
+      "exam": "TYT",
+      "subject": "Türkçe",
+      "family_id": "MEBI-TYT-TURKCE",
+      "base_url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-turkce/files/basic-html/",
+      "index_url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-turkce/files/basic-html/index.html"
+    },
+    {
+      "exam": "TYT",
+      "subject": "Fizik",
+      "family_id": "MEBI-TYT-FIZIK",
+      "base_url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-fizik/files/basic-html/",
+      "index_url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-fizik/files/basic-html/index.html"
+    },
+    {
+      "exam": "TYT",
+      "subject": "Kimya",
+      "family_id": "MEBI-TYT-KIMYA",
+      "base_url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-kimya/files/basic-html/",
+      "index_url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-kimya/files/basic-html/index.html"
+    },
+    {
+      "exam": "TYT",
+      "subject": "Biyoloji",
+      "family_id": "MEBI-TYT-BIYOLOJI",
+      "base_url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-biyoloji/files/basic-html/",
+      "index_url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-biyoloji/files/basic-html/index.html"
+    },
+    {
+      "exam": "TYT",
+      "subject": "Tarih",
+      "family_id": "MEBI-TYT-TARIH",
+      "base_url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-tarih/files/basic-html/",
+      "index_url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-tarih/files/basic-html/index.html"
+    },
+    {
+      "exam": "TYT",
+      "subject": "Coğrafya",
+      "family_id": "MEBI-TYT-COGRAFYA",
+      "base_url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-cografya/files/basic-html/",
+      "index_url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-cografya/files/basic-html/index.html"
+    },
+    {
+      "exam": "TYT",
+      "subject": "Felsefe",
+      "family_id": "MEBI-TYT-AYT-FELSEFE",
+      "base_url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-ayt-felsefe/files/basic-html/",
+      "index_url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-ayt-felsefe/files/basic-html/index.html"
+    },
+    {
+      "exam": "AYT",
+      "subject": "Matematik",
+      "family_id": "MEBI-AYT-MATEMATIK",
+      "base_url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/ayt-matematik/files/basic-html/",
+      "index_url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/ayt-matematik/files/basic-html/index.html"
+    },
+    {
+      "exam": "AYT",
+      "subject": "Fizik",
+      "family_id": "MEBI-AYT-FIZIK",
+      "base_url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/ayt-fizik/files/basic-html/",
+      "index_url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/ayt-fizik/files/basic-html/index.html"
+    },
+    {
+      "exam": "AYT",
+      "subject": "Kimya",
+      "family_id": "MEBI-AYT-KIMYA",
+      "base_url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/ayt-kimya/files/basic-html/",
+      "index_url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/ayt-kimya/files/basic-html/index.html"
+    },
+    {
+      "exam": "AYT",
+      "subject": "Biyoloji",
+      "family_id": "MEBI-AYT-BIYOLOJI",
+      "base_url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/ayt-biyoloji/files/basic-html/",
+      "index_url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/ayt-biyoloji/files/basic-html/index.html"
+    }
+  ],
+  "unresolved_subjects": [
+    {
+      "exam": "TYT",
+      "subject": "Din Kültürü",
+      "reason": "No single MEBİ YKS konu-özeti family was verified for this subject; use OGM/Din Öğretimi official materials in the next mapping step."
+    }
+  ]
+}

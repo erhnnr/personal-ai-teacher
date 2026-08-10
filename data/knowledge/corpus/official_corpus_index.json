@@ -1,0 +1,859 @@
+{
+  "version": "1.0",
+  "kind": "OFFICIAL_CORPUS_INDEX",
+  "authority": "Millî Eğitim Bakanlığı / OGM Materyal / MEBİ",
+  "host": "ogmmateryal.eba.gov.tr",
+  "family_count": 12,
+  "indexed_family_count": 12,
+  "failed_family_count": 0,
+  "total_pages": 120,
+  "families": [
+    {
+      "family_id": "MEBI-TYT-MATEMATIK",
+      "exam": "TYT",
+      "subject": "Matematik",
+      "status": "INDEXED",
+      "index_url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-matematik/files/basic-html/index.html",
+      "page_count": 10,
+      "pages": [
+        {
+          "page": 1,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-matematik/files/basic-html/page1.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 2,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-matematik/files/basic-html/page2.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 3,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-matematik/files/basic-html/page3.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 4,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-matematik/files/basic-html/page4.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 5,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-matematik/files/basic-html/page5.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 6,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-matematik/files/basic-html/page6.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 7,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-matematik/files/basic-html/page7.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 8,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-matematik/files/basic-html/page8.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 9,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-matematik/files/basic-html/page9.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 10,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-matematik/files/basic-html/page10.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        }
+      ]
+    },
+    {
+      "family_id": "MEBI-TYT-TURKCE",
+      "exam": "TYT",
+      "subject": "Türkçe",
+      "status": "INDEXED",
+      "index_url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-turkce/files/basic-html/index.html",
+      "page_count": 10,
+      "pages": [
+        {
+          "page": 1,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-turkce/files/basic-html/page1.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 2,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-turkce/files/basic-html/page2.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 3,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-turkce/files/basic-html/page3.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 4,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-turkce/files/basic-html/page4.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 5,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-turkce/files/basic-html/page5.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 6,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-turkce/files/basic-html/page6.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 7,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-turkce/files/basic-html/page7.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 8,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-turkce/files/basic-html/page8.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 9,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-turkce/files/basic-html/page9.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 10,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-turkce/files/basic-html/page10.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        }
+      ]
+    },
+    {
+      "family_id": "MEBI-TYT-FIZIK",
+      "exam": "TYT",
+      "subject": "Fizik",
+      "status": "INDEXED",
+      "index_url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-fizik/files/basic-html/index.html",
+      "page_count": 10,
+      "pages": [
+        {
+          "page": 1,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-fizik/files/basic-html/page1.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 2,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-fizik/files/basic-html/page2.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 3,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-fizik/files/basic-html/page3.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 4,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-fizik/files/basic-html/page4.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 5,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-fizik/files/basic-html/page5.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 6,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-fizik/files/basic-html/page6.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 7,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-fizik/files/basic-html/page7.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 8,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-fizik/files/basic-html/page8.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 9,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-fizik/files/basic-html/page9.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 10,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-fizik/files/basic-html/page10.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        }
+      ]
+    },
+    {
+      "family_id": "MEBI-TYT-KIMYA",
+      "exam": "TYT",
+      "subject": "Kimya",
+      "status": "INDEXED",
+      "index_url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-kimya/files/basic-html/index.html",
+      "page_count": 10,
+      "pages": [
+        {
+          "page": 1,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-kimya/files/basic-html/page1.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 2,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-kimya/files/basic-html/page2.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 3,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-kimya/files/basic-html/page3.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 4,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-kimya/files/basic-html/page4.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 5,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-kimya/files/basic-html/page5.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 6,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-kimya/files/basic-html/page6.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 7,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-kimya/files/basic-html/page7.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 8,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-kimya/files/basic-html/page8.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 9,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-kimya/files/basic-html/page9.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 10,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-kimya/files/basic-html/page10.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        }
+      ]
+    },
+    {
+      "family_id": "MEBI-TYT-BIYOLOJI",
+      "exam": "TYT",
+      "subject": "Biyoloji",
+      "status": "INDEXED",
+      "index_url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-biyoloji/files/basic-html/index.html",
+      "page_count": 10,
+      "pages": [
+        {
+          "page": 1,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-biyoloji/files/basic-html/page1.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 2,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-biyoloji/files/basic-html/page2.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 3,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-biyoloji/files/basic-html/page3.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 4,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-biyoloji/files/basic-html/page4.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 5,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-biyoloji/files/basic-html/page5.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 6,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-biyoloji/files/basic-html/page6.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 7,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-biyoloji/files/basic-html/page7.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 8,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-biyoloji/files/basic-html/page8.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 9,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-biyoloji/files/basic-html/page9.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 10,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-biyoloji/files/basic-html/page10.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        }
+      ]
+    },
+    {
+      "family_id": "MEBI-TYT-TARIH",
+      "exam": "TYT",
+      "subject": "Tarih",
+      "status": "INDEXED",
+      "index_url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-tarih/files/basic-html/index.html",
+      "page_count": 10,
+      "pages": [
+        {
+          "page": 1,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-tarih/files/basic-html/page1.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 2,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-tarih/files/basic-html/page2.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 3,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-tarih/files/basic-html/page3.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 4,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-tarih/files/basic-html/page4.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 5,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-tarih/files/basic-html/page5.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 6,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-tarih/files/basic-html/page6.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 7,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-tarih/files/basic-html/page7.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 8,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-tarih/files/basic-html/page8.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 9,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-tarih/files/basic-html/page9.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 10,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-tarih/files/basic-html/page10.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        }
+      ]
+    },
+    {
+      "family_id": "MEBI-TYT-COGRAFYA",
+      "exam": "TYT",
+      "subject": "Coğrafya",
+      "status": "INDEXED",
+      "index_url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-cografya/files/basic-html/index.html",
+      "page_count": 10,
+      "pages": [
+        {
+          "page": 1,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-cografya/files/basic-html/page1.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 2,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-cografya/files/basic-html/page2.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 3,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-cografya/files/basic-html/page3.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 4,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-cografya/files/basic-html/page4.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 5,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-cografya/files/basic-html/page5.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 6,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-cografya/files/basic-html/page6.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 7,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-cografya/files/basic-html/page7.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 8,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-cografya/files/basic-html/page8.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 9,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-cografya/files/basic-html/page9.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 10,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-cografya/files/basic-html/page10.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        }
+      ]
+    },
+    {
+      "family_id": "MEBI-TYT-AYT-FELSEFE",
+      "exam": "TYT",
+      "subject": "Felsefe",
+      "status": "INDEXED",
+      "index_url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-ayt-felsefe/files/basic-html/index.html",
+      "page_count": 10,
+      "pages": [
+        {
+          "page": 1,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-ayt-felsefe/files/basic-html/page1.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 2,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-ayt-felsefe/files/basic-html/page2.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 3,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-ayt-felsefe/files/basic-html/page3.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 4,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-ayt-felsefe/files/basic-html/page4.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 5,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-ayt-felsefe/files/basic-html/page5.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 6,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-ayt-felsefe/files/basic-html/page6.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 7,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-ayt-felsefe/files/basic-html/page7.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 8,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-ayt-felsefe/files/basic-html/page8.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 9,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-ayt-felsefe/files/basic-html/page9.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 10,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/tyt-ayt-felsefe/files/basic-html/page10.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        }
+      ]
+    },
+    {
+      "family_id": "MEBI-AYT-MATEMATIK",
+      "exam": "AYT",
+      "subject": "Matematik",
+      "status": "INDEXED",
+      "index_url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/ayt-matematik/files/basic-html/index.html",
+      "page_count": 10,
+      "pages": [
+        {
+          "page": 1,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/ayt-matematik/files/basic-html/page1.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 2,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/ayt-matematik/files/basic-html/page2.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 3,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/ayt-matematik/files/basic-html/page3.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 4,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/ayt-matematik/files/basic-html/page4.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 5,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/ayt-matematik/files/basic-html/page5.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 6,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/ayt-matematik/files/basic-html/page6.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 7,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/ayt-matematik/files/basic-html/page7.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 8,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/ayt-matematik/files/basic-html/page8.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 9,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/ayt-matematik/files/basic-html/page9.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 10,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/ayt-matematik/files/basic-html/page10.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        }
+      ]
+    },
+    {
+      "family_id": "MEBI-AYT-FIZIK",
+      "exam": "AYT",
+      "subject": "Fizik",
+      "status": "INDEXED",
+      "index_url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/ayt-fizik/files/basic-html/index.html",
+      "page_count": 10,
+      "pages": [
+        {
+          "page": 1,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/ayt-fizik/files/basic-html/page1.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 2,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/ayt-fizik/files/basic-html/page2.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 3,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/ayt-fizik/files/basic-html/page3.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 4,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/ayt-fizik/files/basic-html/page4.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 5,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/ayt-fizik/files/basic-html/page5.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 6,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/ayt-fizik/files/basic-html/page6.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 7,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/ayt-fizik/files/basic-html/page7.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 8,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/ayt-fizik/files/basic-html/page8.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 9,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/ayt-fizik/files/basic-html/page9.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 10,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/ayt-fizik/files/basic-html/page10.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        }
+      ]
+    },
+    {
+      "family_id": "MEBI-AYT-KIMYA",
+      "exam": "AYT",
+      "subject": "Kimya",
+      "status": "INDEXED",
+      "index_url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/ayt-kimya/files/basic-html/index.html",
+      "page_count": 10,
+      "pages": [
+        {
+          "page": 1,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/ayt-kimya/files/basic-html/page1.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 2,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/ayt-kimya/files/basic-html/page2.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 3,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/ayt-kimya/files/basic-html/page3.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 4,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/ayt-kimya/files/basic-html/page4.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 5,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/ayt-kimya/files/basic-html/page5.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 6,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/ayt-kimya/files/basic-html/page6.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 7,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/ayt-kimya/files/basic-html/page7.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 8,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/ayt-kimya/files/basic-html/page8.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 9,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/ayt-kimya/files/basic-html/page9.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 10,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/ayt-kimya/files/basic-html/page10.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        }
+      ]
+    },
+    {
+      "family_id": "MEBI-AYT-BIYOLOJI",
+      "exam": "AYT",
+      "subject": "Biyoloji",
+      "status": "INDEXED",
+      "index_url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/ayt-biyoloji/files/basic-html/index.html",
+      "page_count": 10,
+      "pages": [
+        {
+          "page": 1,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/ayt-biyoloji/files/basic-html/page1.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 2,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/ayt-biyoloji/files/basic-html/page2.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 3,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/ayt-biyoloji/files/basic-html/page3.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 4,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/ayt-biyoloji/files/basic-html/page4.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 5,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/ayt-biyoloji/files/basic-html/page5.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 6,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/ayt-biyoloji/files/basic-html/page6.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 7,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/ayt-biyoloji/files/basic-html/page7.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 8,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/ayt-biyoloji/files/basic-html/page8.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 9,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/ayt-biyoloji/files/basic-html/page9.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        },
+        {
+          "page": 10,
+          "url": "https://ogmmateryal.eba.gov.tr/kitap/mebi-konu-ozetleri/ayt-biyoloji/files/basic-html/page10.html",
+          "source_kind": "MEBI_KONU_OZETI_PAGE",
+          "official": true
+        }
+      ]
+    }
+  ],
+  "unresolved_subjects": [
+    {
+      "exam": "TYT",
+      "subject": "Din Kültürü",
+      "reason": "No single MEBİ YKS konu-özeti family was verified for this subject; use OGM/Din Öğretimi official materials in the next mapping step."
+    }
+  ]
+}
