@@ -12,3 +12,8 @@ __pycache__/
 models/
 
 data/knowledge/drafts/
+# Local official MEB corpus
+.local_official_corpus/
+*.zip
+data/knowledge/corpus/official_corpus_lexical_index.json
+data/knowledge/corpus/local_official_manifest.json

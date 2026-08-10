@@ -1,17 +1,12 @@
 """
-Knowledge Factory V2 — Phase 5C Topic -> Official Source Mapping
+Knowledge Factory V2 — Topic -> Official Source Mapping
 
-Purpose:
-Map curriculum topics in the evidence work queue to candidate pages from the
-official MEB/OGM corpus index.
+Backward-compatible mapper for both:
+- pre-enrichment corpus pages with title/text metadata
+- Phase 5D lexical fingerprint pages with terms/title_terms/heading_terms
 
-This phase is deterministic and conservative:
-- it does not create claims,
-- it does not mark evidence READY,
-- it does not guess when confidence is weak,
-- it ranks candidate pages only within the same exam+subject corpus family.
-
-The mapping result is a review artifact used by later source ingestion.
+This stage only produces source candidates.
+It never creates claims and never marks evidence READY.
 """
 
 import argparse
@@ -33,7 +28,15 @@ QUEUE_PATH = (
     / "evidence_queue.json"
 )
 
-CORPUS_INDEX_PATH = (
+LEXICAL_CORPUS_PATH = (
+    PROJECT_ROOT
+    / "data"
+    / "knowledge"
+    / "corpus"
+    / "official_corpus_lexical_index.json"
+)
+
+PLAIN_CORPUS_PATH = (
     PROJECT_ROOT
     / "data"
     / "knowledge"
@@ -48,7 +51,6 @@ DEFAULT_OUTPUT_PATH = (
     / "work_queue"
     / "topic_source_mapping.json"
 )
-
 
 STOPWORDS = {
     "ve",
@@ -136,18 +138,50 @@ def tokens(value):
     ]
 
 
+def normalize_page_terms(value):
+    """
+    Backward compatibility:
+    - str -> tokenize text
+    - list/tuple/set -> normalize tokens
+    - everything else -> empty set
+    """
+
+    if isinstance(
+        value,
+        str,
+    ):
+        return set(
+            tokens(
+                value
+            )
+        )
+
+    if isinstance(
+        value,
+        (
+            list,
+            tuple,
+            set,
+        ),
+    ):
+        normalized = set()
+
+        for item in value:
+            normalized.update(
+                tokens(
+                    item
+                )
+            )
+
+        return normalized
+
+    return set()
+
+
 def token_overlap_score(
     topic,
-    page_text,
+    page_terms_value,
 ):
-    """
-    Conservative lexical score.
-
-    1.0 means every meaningful topic token appears in the page text.
-    Partial overlap scales proportionally. Extra page terms are not penalized
-    because official pages are expected to contain more context than a topic name.
-    """
-
     topic_tokens = set(
         tokens(
             topic
@@ -157,10 +191,8 @@ def token_overlap_score(
     if not topic_tokens:
         return 0.0
 
-    page_tokens = set(
-        tokens(
-            page_text
-        )
+    page_tokens = normalize_page_terms(
+        page_terms_value
     )
 
     if not page_tokens:
@@ -178,7 +210,9 @@ def token_overlap_score(
     )
 
 
-def confidence_label(score):
+def confidence_label(
+    score,
+):
     if score >= 0.99:
         return "HIGH"
     if score >= 0.67:
@@ -197,26 +231,59 @@ def family_lookup(
         "families",
         [],
     ):
-        key = (
-            family.get("exam"),
-            family.get("subject"),
-        )
-
         lookup[
-            key
+            (
+                family.get(
+                    "exam"
+                ),
+                family.get(
+                    "subject"
+                ),
+            )
         ] = family
 
     return lookup
 
 
-def page_search_text(page):
+def page_terms(
+    page,
+):
     """
-    Phase 5C currently has URL/page-number metadata only.
-    Search text therefore uses URL metadata and any future optional title/text
-    fields when present. Later phases may enrich pages with extracted text.
+    Prefer Phase 5D structured lexical fields.
+    Fall back to legacy title/text metadata so old unit tests and
+    pre-enrichment corpora remain valid.
     """
 
-    parts = [
+    combined = []
+
+    structured_present = False
+
+    for field in (
+        "title_terms",
+        "heading_terms",
+        "terms",
+    ):
+        values = page.get(
+            field
+        )
+
+        if isinstance(
+            values,
+            list,
+        ):
+            structured_present = True
+
+            for value in values:
+                combined.extend(
+                    tokens(
+                        value
+                    )
+                )
+
+    if combined:
+        return combined
+
+    legacy_parts = [
         page.get(
             "title",
             ""
@@ -225,23 +292,41 @@ def page_search_text(page):
             "text",
             ""
         ),
-        page.get(
-            "url",
-            ""
-        ),
-        str(
-            page.get(
-                "page",
-                ""
-            )
-        ),
     ]
 
-    return " ".join(
+    legacy_text = " ".join(
         str(part)
-        for part in parts
-        if part is not None
+        for part in legacy_parts
+        if part
     )
+
+    if legacy_text:
+        return tokens(
+            legacy_text
+        )
+
+    return []
+
+
+def family_has_lexical_enrichment(
+    family,
+):
+    for page in family.get(
+        "pages",
+        [],
+    ):
+        if any(
+            field in page
+            for field in (
+                "terms",
+                "title_terms",
+                "heading_terms",
+                "lexical_status",
+            )
+        ):
+            return True
+
+    return False
 
 
 def rank_candidates(
@@ -257,7 +342,7 @@ def rank_candidates(
     ):
         score = token_overlap_score(
             topic,
-            page_search_text(
+            page_terms(
                 page
             ),
         )
@@ -279,10 +364,16 @@ def rank_candidates(
 
     scored.sort(
         key=lambda item: (
-            -item["score"],
-            item["page"]
+            -item[
+                "score"
+            ],
+            item[
+                "page"
+            ]
             if isinstance(
-                item["page"],
+                item[
+                    "page"
+                ],
                 int,
             )
             else math.inf,
@@ -295,7 +386,6 @@ def rank_candidates(
 
 
 def classify_mapping(
-    item,
     family,
     candidates,
 ):
@@ -308,10 +398,18 @@ def classify_mapping(
     if not candidates:
         return (
             "UNRESOLVED",
-            "REVIEW_CORPUS",
+            (
+                "REVIEW_CORPUS"
+                if family_has_lexical_enrichment(
+                    family
+                )
+                else "ENRICH_CORPUS_TEXT"
+            ),
         )
 
-    best = candidates[0]
+    best = candidates[
+        0
+    ]
 
     if best[
         "confidence"
@@ -334,7 +432,13 @@ def classify_mapping(
 
     return (
         "UNRESOLVED",
-        "ENRICH_CORPUS_TEXT",
+        (
+            "REVIEW_CORPUS"
+            if family_has_lexical_enrichment(
+                family
+            )
+            else "ENRICH_CORPUS_TEXT"
+        ),
     )
 
 
@@ -352,13 +456,15 @@ def build_mapping(
         "items",
         [],
     ):
-        key = (
-            item.get("exam"),
-            item.get("subject"),
-        )
-
         family = families.get(
-            key
+            (
+                item.get(
+                    "exam"
+                ),
+                item.get(
+                    "subject"
+                ),
+            )
         )
 
         if (
@@ -411,7 +517,6 @@ def build_mapping(
             mapping_status,
             next_action,
         ) = classify_mapping(
-            item,
             family,
             candidates,
         )
@@ -454,8 +559,11 @@ def build_mapping(
     )
 
     return {
-        "version": "1.0",
+        "version": "1.2",
         "kind": "TOPIC_OFFICIAL_SOURCE_MAPPING",
+        "corpus_kind": corpus_index.get(
+            "kind"
+        ),
         "total_topics": len(
             mappings
         ),
@@ -468,14 +576,19 @@ def build_mapping(
     }
 
 
-def print_summary(mapping):
+def print_summary(
+    mapping,
+):
     print("=" * 70)
     print(
-        "KNOWLEDGE FACTORY V2 — PHASE 5C TOPIC SOURCE MAPPING"
+        "KNOWLEDGE FACTORY V2 — "
+        "TOPIC SOURCE MAPPING"
     )
     print("=" * 70)
+
     print(
-        f"Total topics       : {mapping['total_topics']}"
+        f"Total topics       : "
+        f"{mapping['total_topics']}"
     )
 
     for key, value in mapping.get(
@@ -485,6 +598,13 @@ def print_summary(mapping):
         print(
             f"{key:<18}: {value}"
         )
+
+
+def resolve_default_corpus_path():
+    if LEXICAL_CORPUS_PATH.exists():
+        return LEXICAL_CORPUS_PATH
+
+    return PLAIN_CORPUS_PATH
 
 
 def main():
@@ -500,7 +620,7 @@ def main():
     parser.add_argument(
         "--corpus",
         default=str(
-            CORPUS_INDEX_PATH
+            resolve_default_corpus_path()
         ),
     )
 
