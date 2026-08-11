@@ -38,6 +38,9 @@ from canonical_release_gate import (
     build_teacher_context,
     build_teacher_context_for_question,
 )
+from model1_official_source_context import (
+    build_model1_official_context,
+)
 
 
 STRICT_TEACHING_POLICY = """
@@ -111,6 +114,61 @@ Yanıtı göndermeden önce sessizce kontrol et:
 Bu kurallar diğer tüm üslup tercihlerinden önceliklidir.
 """
 
+
+MODEL1_OFFICIAL_SOURCE_POLICY = """
+MODEL-1 RESMÎ KAYNAK MODU:
+- VERIFIED KNOWLEDGE içindeki source alanı
+  MODEL1_OFFICIAL_SOURCE_GROUNDED ise bu, canonical/human-reviewed
+  release anlamına gelmez.
+- Bu modda yalnızca sources[].excerpt alanlarındaki resmî MEB/MEBİ/TYMM
+  metinleri olgusal bilgi sınırıdır.
+- topic ve subtopics alanları yalnızca gezinme/konu belirleme bilgisidir;
+  tek başına olgusal kanıt değildir.
+- Resmî kaynak alıntısı öğrencinin sorduğu ayrıntıyı desteklemiyorsa
+  kendi bilginden tamamlama; mevcut resmî kaynak bağlamının yetersiz
+  olduğunu açıkça söyle.
+- Askıya alınmış canonical artifactleri bu mod üzerinden yeniden
+  yayımlama veya canonical release olmuş gibi sunma.
+"""
+
+
+MODEL1_OFFICIAL_OUTPUT_HARDENING = """
+MODEL-1 RESMÎ KAYNAK ÇIKTI KURALI — FAIL-CLOSED ÖĞRETİM:
+
+1. YALNIZCA VERİLEN RESMÎ KAYNAĞI KULLAN
+- sources[].excerpt dışında yeni olgusal bilgi ekleme.
+- Kendi ön bilginden tanım, örnek, analoji, neden-sonuç, istisna,
+  genelleme veya ayrıntı üretme.
+- topic/subtopics alanlarını olgusal kanıt gibi kullanma.
+
+2. YENİ ÖRNEK ÜRETME
+- Kaynakta açıkça bulunmayan kişi, nesne, şehir, yiyecek, sayı,
+  deney, günlük yaşam örneği veya senaryo uydurma.
+- Kaynaktaki örnekleri koru; nesne veya terimleri başka kelimelerle
+  değiştirme.
+- "Örneğin" diye başlayan yeni bir cümle ancak aynı örnek excerpt
+  içinde açıkça varsa yazılabilir.
+
+3. TERİM VE ANLAM SADAKATİ
+- Kaynaktaki teknik terimleri başka terimlerle değiştirme.
+- Verilen bir koşullu önermenin öncülünü veya sonucunu değiştirerek
+  yeniden yazma.
+- Teknik alanlarda kaynak terminolojisini koru.
+
+4. DERS BİÇİMİ
+- Kaynaktaki bilgiyi kısa başlıklar altında sadeleştirerek açıkla.
+- Kaynak kapsamı yetersizse:
+  "Bu ayrıntı mevcut resmî kaynak bağlamında yer almıyor."
+  de ve orada dur.
+- Kaynak dışı boşlukları akıcı görünmek için doldurma.
+
+5. SESSİZ SON KONTROL
+Her olgusal cümle için:
+"Bu cümlenin dayanağını sources[].excerpt içinde gösterebilir miyim?"
+Cevap hayırsa o cümleyi çıkar.
+
+ÖNCELİK: doğruluk > akıcılık > kapsam.
+"""
 
 class TeacherError(Exception):
     """
@@ -246,10 +304,13 @@ def build_verified_context_for_question(
     question,
 ):
     """
-    Backward-compatible canonical-first resolver.
+    MODEL-1 source priority:
+    1. Canonical released context.
+    2. Existing verified legacy context.
+    3. Official-source-grounded MODEL-1 fallback.
 
-    build_verified_context(plan) remains unchanged for existing callers
-    and tests. Raw-question canonical resolution is attempted first.
+    The third path never re-releases canonical artifacts; it uses the
+    official source excerpts directly as the factual boundary.
     """
 
     try:
@@ -265,9 +326,372 @@ def build_verified_context_for_question(
     if canonical_context is not None:
         return canonical_context
 
-    return build_verified_context(
+    legacy_context = build_verified_context(
         plan
     )
+
+    if legacy_context is not None:
+        return legacy_context
+
+    try:
+        return build_model1_official_context(
+            question,
+            plan,
+        )
+    except Exception:
+        return None
+
+
+def _is_model1_official_context(verified_context):
+    if not isinstance(verified_context, str):
+        return False
+
+    try:
+        payload = json.loads(verified_context)
+    except (TypeError, json.JSONDecodeError):
+        return False
+
+    return (
+        payload.get("source")
+        == "MODEL1_OFFICIAL_SOURCE_GROUNDED"
+    )
+
+def _official_source_payload(verified_context):
+    if not _is_model1_official_context(
+        verified_context
+    ):
+        return None
+
+    try:
+        payload = json.loads(verified_context)
+    except (TypeError, json.JSONDecodeError):
+        return None
+
+    return payload
+
+
+def _grounding_tokens(value):
+    import re
+    import unicodedata
+
+    text = str(value or "").casefold()
+
+    replacements = {
+        "ı": "i",
+        "ç": "c",
+        "ğ": "g",
+        "ö": "o",
+        "ş": "s",
+        "ü": "u",
+    }
+
+    for old, new in replacements.items():
+        text = text.replace(old, new)
+
+    text = unicodedata.normalize(
+        "NFKD",
+        text,
+    )
+
+    text = "".join(
+        ch
+        for ch in text
+        if not unicodedata.combining(ch)
+    )
+
+    words = re.findall(
+        r"[a-z0-9]+",
+        text,
+    )
+
+    stopwords = {
+        "anlat",
+        "nedir",
+        "nasil",
+        "konu",
+        "konusu",
+        "icin",
+        "olan",
+        "olarak",
+        "ve",
+        "ile",
+        "bir",
+        "bu",
+    }
+
+    return {
+        word
+        for word in words
+        if len(word) >= 3
+        and word not in stopwords
+    }
+
+
+def _official_excerpt_chunks(excerpt):
+    import re
+
+    text = str(excerpt or "").replace(
+        "\r\n",
+        "\n",
+    )
+
+    chunks = []
+
+    for raw_line in text.split("\n"):
+        line = " ".join(
+            raw_line.strip().split()
+        )
+
+        if len(line) < 20:
+            continue
+
+        if line.startswith(
+            ("http://", "https://")
+        ):
+            continue
+
+        pieces = re.split(
+            r"(?<=[.!?])\s+",
+            line,
+        )
+
+        for piece in pieces:
+            piece = piece.strip()
+
+            if len(piece) < 20:
+                continue
+
+            if (
+                len(piece.split()) >= 8
+                and not piece.endswith(
+                    (
+                        ".",
+                        "!",
+                        "?",
+                        ":",
+                        ";",
+                        ")",
+                        "]",
+                        "}",
+                    )
+                )
+                and "=" not in piece
+            ):
+                continue
+
+            chunks.append(piece)
+
+    return chunks
+
+
+def _build_model1_official_extractive_answer(
+    question,
+    verified_context,
+):
+    payload = _official_source_payload(
+        verified_context
+    )
+
+    if not payload:
+        return None
+
+    sources = payload.get(
+        "sources",
+        [],
+    )
+
+    if not isinstance(sources, list):
+        return None
+
+    query_tokens = _grounding_tokens(
+        question
+    )
+
+    navigation_tokens = set(
+        _grounding_tokens(
+            payload.get("topic", "")
+        )
+    )
+
+    for subtopic in payload.get(
+        "subtopics",
+        [],
+    ):
+        navigation_tokens.update(
+            _grounding_tokens(
+                subtopic
+            )
+        )
+
+    candidates = []
+    seen = set()
+
+    for source_index, source in enumerate(
+        sources
+    ):
+        excerpt = source.get(
+            "excerpt",
+            "",
+        )
+
+        for chunk_index, chunk in enumerate(
+            _official_excerpt_chunks(
+                excerpt
+            )
+        ):
+            normalized = " ".join(
+                chunk.casefold().split()
+            )
+
+            if normalized in seen:
+                continue
+
+            seen.add(normalized)
+
+            chunk_tokens = _grounding_tokens(
+                chunk
+            )
+
+            query_overlap = len(
+                query_tokens
+                & chunk_tokens
+            )
+
+            navigation_overlap = len(
+                navigation_tokens
+                & chunk_tokens
+            )
+
+            score = (
+                query_overlap * 6
+                + navigation_overlap * 2
+            )
+
+            candidates.append(
+                (
+                    score,
+                    source_index,
+                    chunk_index,
+                    chunk,
+                    source,
+                )
+            )
+
+    if not candidates:
+        return (
+            "Bu ayrıntı mevcut resmî kaynak "
+            "bağlamında yer almıyor."
+        )
+
+    candidates.sort(
+        key=lambda item: (
+            -item[0],
+            item[1],
+            item[2],
+        )
+    )
+
+    selected = []
+    total_chars = 0
+
+    for candidate in candidates:
+        _, _, _, chunk, _ = candidate
+
+        if selected and (
+            total_chars + len(chunk) > 5200
+        ):
+            continue
+
+        selected.append(
+            candidate
+        )
+        total_chars += len(chunk)
+
+        if len(selected) >= 14:
+            break
+
+    selected.sort(
+        key=lambda item: (
+            item[1],
+            item[2],
+        )
+    )
+
+    topic = str(
+        payload.get(
+            "topic",
+            "Resmî Kaynak Dersi",
+        )
+    ).strip()
+
+    lines = [
+        f"### {topic}",
+        "",
+        (
+            "Bu ders MODEL-1'de resmî MEB/MEBİ/TYMM "
+            "kaynak metninden doğrudan sunulmaktadır."
+        ),
+        (
+            "Aşağıdaki olgusal ifadeler yerel AI tarafından "
+            "yeniden yazılmamıştır."
+        ),
+        "",
+    ]
+
+    current_source = None
+
+    for _, source_index, _, chunk, source in selected:
+        if source_index != current_source:
+            current_source = source_index
+
+            authority = str(
+                source.get(
+                    "authority",
+                    "T.C. Millî Eğitim Bakanlığı",
+                )
+            ).strip()
+
+            page = source.get("page")
+
+            if page is not None:
+                label = (
+                    f"#### Resmî Kaynak — {authority} "
+                    f"(sayfa {page})"
+                )
+            else:
+                label = (
+                    f"#### Resmî Kaynak — {authority}"
+                )
+
+            lines.extend(
+                [
+                    label,
+                    "",
+                ]
+            )
+
+        lines.extend(
+            [
+                chunk,
+                "",
+            ]
+        )
+
+    lines.extend(
+        [
+            "### Kontrol Sorusu",
+            "",
+            (
+                "Yukarıdaki resmî kaynak metnine göre "
+                "konunun temel noktalarından birini "
+                "kendi cümlelerinle açıklar mısın?"
+            ),
+        ]
+    )
+
+    return "\n".join(
+        lines
+    ).strip()
 
 def build_system_prompt(
     question,
@@ -285,14 +709,25 @@ def build_system_prompt(
         verified_context=verified_context,
     )
 
+    policies = [
+        STRICT_TEACHING_POLICY.strip(),
+        MODEL1_OFFICIAL_SOURCE_POLICY.strip(),
+    ]
+
+    if _is_model1_official_context(
+        verified_context
+    ):
+        policies.append(
+            MODEL1_OFFICIAL_OUTPUT_HARDENING.strip()
+        )
+
     return (
-        STRICT_TEACHING_POLICY.strip()
+        "\n\n".join(policies)
         + "\n\n"
         + "AŞAĞIDA MEVCUT DERS PROMPTU VE "
         + "VERIFIED KNOWLEDGE BAĞLAMI BULUNUYOR:\n\n"
         + lesson_prompt
     )
-
 
 def ask_teacher(question):
     """
@@ -323,10 +758,29 @@ def ask_teacher(question):
 
     if verified_context is None:
         raise KnowledgeNotReadyError(
-            f"'{plan.topic}' konusu için doğrulanmış "
-            "ders içeriği henüz hazır değil. "
+            f"'{plan.topic}' konusu için doğrulanmış veya "
+            "resmî kaynak-temelli ders bağlamı bulunamadı. "
             "Bu nedenle yerel AI modeli bu konuyu "
             "kendi bilgisinden anlatmayacak."
+        )
+
+    if _is_model1_official_context(
+        verified_context
+    ):
+        extractive_answer = (
+            _build_model1_official_extractive_answer(
+                question,
+                verified_context,
+            )
+        )
+
+        if extractive_answer:
+            return extractive_answer
+
+        raise KnowledgeNotReadyError(
+            f"'{plan.topic}' konusu için resmî kaynak "
+            "bulundu ancak öğrenciye güvenle sunulabilir "
+            "tam bir kaynak parçası çıkarılamadı."
         )
 
     connection = check_llm_connection()
@@ -364,7 +818,13 @@ def ask_teacher(question):
                     "content": question,
                 },
             ],
-            temperature=LLM_TEMPERATURE,
+            temperature=(
+                0.0
+                if _is_model1_official_context(
+                    verified_context
+                )
+                else LLM_TEMPERATURE
+            ),
         )
 
         if not response.choices:

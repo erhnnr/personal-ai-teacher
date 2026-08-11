@@ -53,6 +53,12 @@ def test_teacher_blocks_unverified_knowledge(
         lambda plan: None
     )
 
+    monkeypatch.setattr(
+        teacher,
+        "build_model1_official_context",
+        lambda question, plan: None
+    )
+
     with pytest.raises(
         KnowledgeNotReadyError
     ) as exc_info:
@@ -62,9 +68,9 @@ def test_teacher_blocks_unverified_knowledge(
         )
 
     assert (
-        "doğrulanmış ders içeriği henüz hazır değil"
-        in str(exc_info.value)
-    )
+    "doğrulanmış veya resmî kaynak-temelli ders bağlamı bulunamadı"
+    in str(exc_info.value)
+)
 
 
 def test_teacher_handles_offline_llm(
