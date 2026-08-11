@@ -1,9 +1,15 @@
 """
-KNOWLEDGE FACTORY V2 — PHASE 6K
+KNOWLEDGE FACTORY V2 — PHASE 6N
 Student Release Gate
 
 Final safety boundary between canonical knowledge packages and the
 student-facing teacher.
+
+Phase 6N adds a second, independent release requirement:
+Biology canonical knowledge is student-visible only when the exact
+evidence text is hash-bound to a HUMAN factual review decision.
+
+EXTERNAL_LLM approval alone is not sufficient for child release.
 """
 
 from __future__ import annotations
@@ -32,6 +38,14 @@ RELEASE_MANIFEST = (
     / "biology_release_manifest.json"
 )
 
+HASH_BOUND_REVIEW_RESULTS = (
+    PROJECT_ROOT
+    / "data"
+    / "knowledge"
+    / "factual_approval"
+    / "biology_hash_bound_review_results.json"
+)
+
 
 def _load_json(path: Path):
     return json.loads(path.read_text(encoding="utf-8"))
@@ -43,10 +57,10 @@ def _sha256_text(text: str) -> str:
 
 def _normalize(text: str) -> str:
     text = str(text or "").strip().casefold()
-    text = text.replace("ı", "i")
     text = unicodedata.normalize("NFKD", text)
     return "".join(
-        ch for ch in text
+        ch
+        for ch in text
         if not unicodedata.combining(ch)
     )
 
@@ -92,6 +106,12 @@ def load_release_manifest():
     return _load_json(RELEASE_MANIFEST)
 
 
+def load_hash_bound_review_results():
+    if not HASH_BOUND_REVIEW_RESULTS.exists():
+        return None
+    return _load_json(HASH_BOUND_REVIEW_RESULTS)
+
+
 def validate_canonical_unit(unit):
     errors = []
 
@@ -99,12 +119,19 @@ def validate_canonical_unit(unit):
         errors.append("canonical unit is not verified")
 
     if unit.get("student_ready") is not False:
-        errors.append("canonical source artifact was mutated: student_ready")
+        errors.append(
+            "canonical source artifact was mutated: student_ready"
+        )
 
     if unit.get("student_visible") is not False:
-        errors.append("canonical source artifact was mutated: student_visible")
+        errors.append(
+            "canonical source artifact was mutated: student_visible"
+        )
 
-    grounded = unit.get("source_grounded_content", {})
+    grounded = unit.get(
+        "source_grounded_content",
+        {},
+    )
     text = grounded.get("text", "")
     text_hash = grounded.get("text_sha256")
 
@@ -112,7 +139,9 @@ def validate_canonical_unit(unit):
         errors.append("canonical grounded text missing")
 
     if _sha256_text(text) != text_hash:
-        errors.append("canonical grounded text hash mismatch")
+        errors.append(
+            "canonical grounded text hash mismatch"
+        )
 
     provenance_hash = unit.get(
         "provenance",
@@ -120,18 +149,29 @@ def validate_canonical_unit(unit):
     ).get("source_text_sha256")
 
     if text_hash != provenance_hash:
-        errors.append("canonical provenance hash mismatch")
+        errors.append(
+            "canonical provenance hash mismatch"
+        )
 
-    verification = unit.get("verification", {})
+    verification = unit.get(
+        "verification",
+        {},
+    )
 
-    if verification.get("evidence_status") != "READY":
-        errors.append("canonical evidence is not READY")
+    if verification.get(
+        "evidence_status"
+    ) != "READY":
+        errors.append(
+            "canonical evidence is not READY"
+        )
 
     if (
         verification.get("approval_status")
         != "APPROVED_FOR_EVIDENCE_READY"
     ):
-        errors.append("canonical approval is not release eligible")
+        errors.append(
+            "canonical approval is not release eligible"
+        )
 
     for field in (
         "factual_support",
@@ -139,7 +179,9 @@ def validate_canonical_unit(unit):
         "source_consistency",
     ):
         if verification.get(field) is not True:
-            errors.append(f"canonical verification failed: {field}")
+            errors.append(
+                f"canonical verification failed: {field}"
+            )
 
     return errors
 
@@ -148,24 +190,171 @@ def validate_release_entry(entry, unit):
     errors = []
 
     if entry.get("status") != "RELEASED":
-        errors.append("release entry status is not RELEASED")
+        errors.append(
+            "release entry status is not RELEASED"
+        )
 
     if entry.get("student_ready") is not True:
-        errors.append("release entry student_ready is not true")
+        errors.append(
+            "release entry student_ready is not true"
+        )
 
     if entry.get("student_visible") is not True:
-        errors.append("release entry student_visible is not true")
+        errors.append(
+            "release entry student_visible is not true"
+        )
 
     unit_hash = unit.get(
         "source_grounded_content",
         {},
     ).get("text_sha256")
 
-    if entry.get("canonical_text_sha256") != unit_hash:
-        errors.append("release hash does not match canonical unit")
+    if entry.get(
+        "canonical_text_sha256"
+    ) != unit_hash:
+        errors.append(
+            "release hash does not match canonical unit"
+        )
 
     if entry.get("unit_id") != unit.get("id"):
-        errors.append("release unit id mismatch")
+        errors.append(
+            "release unit id mismatch"
+        )
+
+    return errors
+
+
+def _review_result_index():
+    document = load_hash_bound_review_results()
+    if not document:
+        return {}
+
+    if (
+        document.get("schema_version")
+        != "2.0-hash-bound"
+    ):
+        return {}
+
+    if document.get("student_ready") is not False:
+        return {}
+
+    if document.get("student_visible") is not False:
+        return {}
+
+    results = document.get("results")
+    if not isinstance(results, list):
+        return {}
+
+    index = {}
+
+    for result in results:
+        record_id = result.get("record_id")
+        if not record_id:
+            continue
+
+        if record_id in index:
+            # Duplicate factual decisions are ambiguous: fail closed.
+            return {}
+
+        index[record_id] = result
+
+    return index
+
+
+def validate_human_hash_bound_release(entry, unit):
+    """
+    Phase 6N child-release requirement.
+
+    A canonical Biology unit is eligible only if:
+    - the release entry identifies its source record,
+    - a hash-bound review result exists for that exact record,
+    - the reviewed text hash equals the canonical grounded text hash,
+    - the decision is APPROVED_FOR_EVIDENCE_READY,
+    - reviewer_type is HUMAN,
+    - all factual/outcome/source checks are true,
+    - the result itself does not self-declare student visibility.
+
+    This deliberately rejects EXTERNAL_LLM-only approval.
+    """
+    errors = []
+
+    record_id = entry.get("record_id")
+    if not record_id:
+        errors.append(
+            "release entry record_id missing"
+        )
+        return errors
+
+    result = _review_result_index().get(
+        record_id
+    )
+
+    if not result:
+        errors.append(
+            "human hash-bound review result missing"
+        )
+        return errors
+
+    canonical_hash = unit.get(
+        "source_grounded_content",
+        {},
+    ).get("text_sha256")
+
+    if result.get(
+        "reviewed_text_sha256"
+    ) != canonical_hash:
+        errors.append(
+            "reviewed text hash does not match canonical unit"
+        )
+
+    if not result.get(
+        "review_packet_sha256"
+    ):
+        errors.append(
+            "review packet hash missing"
+        )
+
+    if (
+        result.get("status")
+        != "APPROVED_FOR_EVIDENCE_READY"
+    ):
+        errors.append(
+            "hash-bound review is not approved"
+        )
+
+    if result.get("reviewer_type") != "HUMAN":
+        errors.append(
+            "child release requires HUMAN factual review"
+        )
+
+    reviewer_id = result.get("reviewer_id")
+    if (
+        not isinstance(reviewer_id, str)
+        or not reviewer_id.strip()
+    ):
+        errors.append(
+            "human reviewer_id missing"
+        )
+
+    for field in (
+        "factual_support",
+        "outcome_support",
+        "source_consistency",
+    ):
+        if result.get(field) is not True:
+            errors.append(
+                f"hash-bound review failed: {field}"
+            )
+
+    if result.get("student_ready") is not False:
+        errors.append(
+            "review result was mutated: student_ready"
+        )
+
+    if result.get("student_visible") is not False:
+        errors.append(
+            "review result was mutated: student_visible"
+        )
 
     return errors
 
@@ -194,6 +383,12 @@ def load_released_unit(unit_id: str):
         return None
 
     if validate_release_entry(entry, unit):
+        return None
+
+    if validate_human_hash_bound_release(
+        entry,
+        unit,
+    ):
         return None
 
     return unit
@@ -239,27 +434,48 @@ def match_released_unit(subject, grade, topic):
     candidates = []
 
     for unit in released_units():
-        if _normalize(unit.get("subject")) != subject_n:
+        if _normalize(
+            unit.get("subject")
+        ) != subject_n:
             continue
 
-        if _normalize(unit.get("grade")) != grade_n:
+        if _normalize(
+            unit.get("grade")
+        ) != grade_n:
             continue
 
-        unit_topic = unit.get("topic", "")
-        unit_topic_n = _normalize(unit_topic)
+        unit_topic = unit.get(
+            "topic",
+            "",
+        )
+        unit_topic_n = _normalize(
+            unit_topic
+        )
 
         if unit_topic_n == topic_n:
             return unit
 
-        overlap = len(topic_tokens & _tokens(unit_topic))
+        overlap = len(
+            topic_tokens
+            & _tokens(unit_topic)
+        )
         if overlap >= 2:
-            candidates.append((overlap, unit.get("id"), unit))
+            candidates.append(
+                (
+                    overlap,
+                    unit.get("id"),
+                    unit,
+                )
+            )
 
     if not candidates:
         return None
 
     candidates.sort(
-        key=lambda item: (-item[0], item[1])
+        key=lambda item: (
+            -item[0],
+            item[1],
+        )
     )
 
     best_score = candidates[0][0]
@@ -278,7 +494,9 @@ def match_released_unit(subject, grade, topic):
 def _context_json(unit):
     return json.dumps(
         {
-            "source": "KNOWLEDGE_FACTORY_V2_RELEASED_CANONICAL",
+            "source": (
+                "KNOWLEDGE_FACTORY_V2_RELEASED_CANONICAL"
+            ),
             "unit_id": unit["id"],
             "subject": unit["subject"],
             "grade": unit["grade"],
@@ -291,7 +509,9 @@ def _context_json(unit):
                 "source_grounded_content": unit[
                     "source_grounded_content"
                 ],
-                "provenance": unit["provenance"],
+                "provenance": unit[
+                    "provenance"
+                ],
             },
         },
         ensure_ascii=False,
@@ -332,7 +552,10 @@ def match_released_unit_from_question(question):
     candidates = []
 
     for unit in released_units():
-        topic = unit.get("topic", "")
+        topic = unit.get(
+            "topic",
+            "",
+        )
         topic_n = _normalize(topic)
 
         if topic_n and topic_n in question_n:
@@ -350,14 +573,23 @@ def match_released_unit_from_question(question):
             continue
 
         overlap = len(
-            question_tokens & topic_tokens
+            question_tokens
+            & topic_tokens
         )
-        coverage = overlap / len(topic_tokens)
+        coverage = (
+            overlap
+            / len(topic_tokens)
+        )
 
-        if overlap >= 4 and coverage >= 0.60:
+        if (
+            overlap >= 4
+            and coverage >= 0.60
+        ):
             score = (
                 overlap * 100
-                + int(coverage * 100)
+                + int(
+                    coverage * 100
+                )
             )
             candidates.append(
                 (
@@ -371,7 +603,10 @@ def match_released_unit_from_question(question):
         return None
 
     candidates.sort(
-        key=lambda item: (-item[0], item[1])
+        key=lambda item: (
+            -item[0],
+            item[1],
+        )
     )
 
     best_score = candidates[0][0]
